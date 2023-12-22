@@ -1,18 +1,12 @@
 import {
-  Github,
-  Info,
   LucideProps,
-  Moon,
-  SunMedium,
   type XIcon as LucideIcon,
 } from "lucide-react"
 
 export type Icon = typeof LucideIcon
 
 export const Icons = {
-  sun: SunMedium,
-  moon: Moon,
-  logo: (props: LucideProps) => (
+  nix: (props: LucideProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
