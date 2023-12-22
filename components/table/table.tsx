@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import {
   ColumnDef,
   flexRender,
@@ -13,7 +14,6 @@ import {
 } from "@tanstack/react-table"
 import { Search } from "lucide-react"
 
-import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import {
   Table,
@@ -35,8 +35,13 @@ export function DataTable<TData, TValue>({
   columns,
   data,
 }: DataTableProps<TData, TValue>) {
+  // TODO: use next-query-params?
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const pathname = usePathname()
+
   const [sorting, setSorting] = useState<SortingState>([])
-  const [globalFilter, setGlobalFilter] = useState<string>("")
+  const [globalFilter, setGlobalFilter] = useState<string>(searchParams.get("q") ?? "")
 
   const table = useReactTable({
     data,
@@ -51,6 +56,14 @@ export function DataTable<TData, TValue>({
       globalFilter,
     },
   })
+
+  useEffect(() => {
+    if (globalFilter) {
+      router.push(`${pathname}?q=${globalFilter}`)
+    } else {
+      router.push(pathname)
+    }
+  }, [globalFilter])
 
   return (
     <div>
