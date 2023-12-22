@@ -1,0 +1,20 @@
+name: "Update HM Options"
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@latest
+        with:
+          bun-version: latest
+      - run: bun run lib/scrape.ts
+      - run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Update options $(date -u)"
+          git push
