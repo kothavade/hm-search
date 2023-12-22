@@ -1,8 +1,10 @@
 import "@/styles/globals.css"
-import { Metadata } from "next"
+
+import { Metadata, Viewport } from "next"
+import options from "@/data/options.json"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
+import { fontMono, fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -14,15 +16,19 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 }
 
 interface RootLayoutProps {
@@ -37,13 +43,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
+            fontSans.variable,
+            fontMono.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
+              <p className="text-center text-sm text-gray-500 mb-4">
+                Last updated: {options.last_update}
+              </p>
             </div>
             <TailwindIndicator />
           </ThemeProvider>
