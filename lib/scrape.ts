@@ -73,11 +73,6 @@ async function scrape() {
             .replace(/\s+/g, "\n")
             .split("\n")
 
-          // if (declared.length > 1) {
-          // 	console.log(opt.title.toUpperCase());
-          // 	console.log(declared);
-          // }
-
           for (const decl of declared) {
             const decllink = `https://github.com/nix-community/home-manager/blob/master/${decl
               .replace("<home-manager/", "")
@@ -91,7 +86,9 @@ async function scrape() {
         } else if ($(ch).text().startsWith("Example:")) {
           const example = $(ch).nextAll("pre").first()
           opt.example =
-            example.length > 0 ? example.text() : $(ch).find("code").text()
+            example.length > 0
+              ? example.text()
+              : $(ch).find("code").text().trim()
         }
       }
     })
