@@ -13,6 +13,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
+      - run: bun install cheerio
       - run: bun run lib/scrape.ts
       - run: |
           git config --global user.name "github-actions[bot]"
