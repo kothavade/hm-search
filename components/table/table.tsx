@@ -58,12 +58,9 @@ export function DataTable<TData, TValue>({
   })
 
   useEffect(() => {
-    if (globalFilter) {
-      router.push(`${pathname}?q=${globalFilter}`)
-    } else {
-      router.push(pathname)
-    }
-  }, [globalFilter])
+    const path = globalFilter ? `${pathname}?q=${globalFilter}` : pathname;
+    router.push(path);
+  }, [globalFilter]);
 
   return (
     <div>
@@ -116,7 +113,8 @@ export function DataTable<TData, TValue>({
                       key={cell.id}
                       // @ts-ignore
                       style={{ width: cell.column.columnDef.meta.size }}
-                      className="overflow-auto"
+                      className="truncate py-2"
+                      // className="overflow-auto"
                     >
                       {flexRender(
                         cell.column.columnDef.cell,
