@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="relative flex min-h-screen flex-col">
               <SiteHeader />
               <div className="flex-1">{children}</div>
-              <p className="text-center text-sm text-gray-500 mb-4">
+              <p className="mb-4 text-center text-sm text-gray-500">
                 Last updated: {options.last_update}
               </p>
             </div>

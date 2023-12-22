@@ -27,7 +27,7 @@ export function RowInfo({ row }: { row: Row<Record> }) {
         </DialogHeader>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-              <h2 className="font-bold">Type</h2>
+            <h2 className="font-bold">Type</h2>
             <div>{row.getValue("type")}</div>
           </div>
           {row.original.note && (
@@ -57,7 +57,7 @@ export function RowInfo({ row }: { row: Row<Record> }) {
                     <a
                       href={item.link}
                       target="_blank"
-                      className="underline text-blue-600"
+                      className="text-blue-600 underline"
                     >
                       {item.text}
                     </a>
