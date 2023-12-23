@@ -41,7 +41,9 @@ export function DataTable<TData, TValue>({
   const pathname = usePathname()
 
   const [sorting, setSorting] = useState<SortingState>([])
-  const [globalFilter, setGlobalFilter] = useState<string>(searchParams.get("q") ?? "")
+  const [globalFilter, setGlobalFilter] = useState<string>(
+    searchParams.get("q") ?? ""
+  )
 
   const table = useReactTable({
     data,
@@ -58,9 +60,9 @@ export function DataTable<TData, TValue>({
   })
 
   useEffect(() => {
-    const path = globalFilter ? `${pathname}?q=${globalFilter}` : pathname;
-    router.push(path);
-  }, [globalFilter]);
+    const path = globalFilter ? `${pathname}?q=${globalFilter}` : pathname
+    router.push(path)
+  }, [globalFilter])
 
   return (
     <div>

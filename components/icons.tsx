@@ -1,7 +1,4 @@
-import {
-  LucideProps,
-  type XIcon as LucideIcon,
-} from "lucide-react"
+import { LucideProps, type XIcon as LucideIcon } from "lucide-react"
 
 export type Icon = typeof LucideIcon
 
