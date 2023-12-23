@@ -26,7 +26,7 @@ export function DataTablePagination<TData>({
     <div className="flex items-center justify-between">
       <div className="flex-1 text-sm text-muted-foreground">
         {table.getFilteredRowModel().rows.length} of{" "}
-        {table.getPreFilteredRowModel().rows.length} total row(s).
+        {table.getPreFilteredRowModel().rows.length} total rows.
       </div>
       <div className="flex items-center space-x-6 lg:space-x-8">
         <div className="flex items-center space-x-2">
