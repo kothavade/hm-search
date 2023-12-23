@@ -11,6 +11,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
+import { CodeView } from "@/components/code-view"
 
 export function RowInfo({ row }: { row: Row<Record> }) {
   return (
@@ -20,33 +21,29 @@ export function RowInfo({ row }: { row: Row<Record> }) {
           <Info />
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="flex flex-col">
         <DialogHeader>
-          <DialogTitle>{row.getValue("title")}</DialogTitle>
-          <DialogDescription>{row.getValue("description")}</DialogDescription>
+          <DialogTitle className="overflow-x-auto pb-2">
+            {row.original.title}
+          </DialogTitle>
+          <DialogDescription>{row.original.description}</DialogDescription>
         </DialogHeader>
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold">Type</h2>
-            <div>{row.getValue("type")}</div>
+            <p>{row.original.type}</p>
           </div>
           {row.original.note && (
             <div className="flex flex-col gap-1">
               <h2 className="font-bold">Note</h2>
-              <div>{row.original.note}</div>
+              <p>{row.original.note}</p>
             </div>
           )}
           {row.original.default && (
-            <div className="flex flex-col gap-1">
-              <h2 className="font-bold">Default</h2>
-              <code>{row.original.default}</code>
-            </div>
+            <CodeView title={"Default"} code={row.original.default} />
           )}
           {row.original.example && (
-            <div className="flex flex-col gap-1">
-              <h2 className="font-bold">Example</h2>
-              <code>{row.original.example}</code>
-            </div>
+            <CodeView title={"Example"} code={row.original.example} />
           )}
           {row.original.declared_by && (
             <div className="flex flex-col gap-1">

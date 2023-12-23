@@ -17,7 +17,7 @@ export const columns: ColumnDef<Record>[] = [
   },
   {
     accessorKey: "title",
-    cell: ({ row }) => <pre className="font-mono">{row.getValue("title")}</pre>,
+    cell: ({ row }) => <code className="font-mono">{row.original.title}</code>,
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Title" />
     ),
