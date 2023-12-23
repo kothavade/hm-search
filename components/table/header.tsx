@@ -1,5 +1,5 @@
 import { Column } from "@tanstack/react-table"
-import { ChevronDown, ChevronsUpDown, ChevronUp, EyeOff } from "lucide-react"
+import { ChevronDown, ChevronsUpDown, ChevronUp } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -22,7 +22,7 @@ export function DataTableColumnHeader<TData, TValue>({
   return (
     <Button
       variant="ghost"
-      className={cn("flex items-center space-x-2", className)}
+      className={cn("-ml-3 flex h-8 items-center space-x-2", className)}
       onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
     >
       <span>{title}</span>
