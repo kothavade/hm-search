@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 22 Dec 2023 08:42:41 GMT",
+  "last_update": "Sun, 24 Dec 2023 01:08:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9139,7 +9139,7 @@
       ],
       "note": null,
       "default": "pkgs.firefox",
-      "example": "pkgs.firefox.override {\n  # See nixpkgs' firefox/wrapper.nix to check which options you can use\n  cfg = {\n    # Gnome shell native connector\n    enableGnomeExtensions = true;\n    # Tridactyl native connector\n    enableTridactylNative = true;\n  };\n}\n\n"
+      "example": "pkgs.firefox.override {\n  # See nixpkgs' firefox/wrapper.nix to check which options you can use\n  nativeMessagingHosts = [\n    # Gnome shell native connector\n    pkgs.gnome-browser-connector\n    # Tridactyl native connector\n    pkgs.tridactyl-native\n  ];\n}\n\n"
     },
     {
       "title": "programs.firefox.finalPackage",
@@ -28478,6 +28478,20 @@
     {
       "title": "services.gpg-agent.enableFishIntegration",
       "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
+          "text": "home-manager/modules/services/gpg-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "services.gpg-agent.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
       "type": "boolean",
       "declared_by": [
         {
