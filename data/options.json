@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 27 Dec 2023 01:57:37 GMT",
+  "last_update": "Thu, 28 Dec 2023 01:57:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28654,7 +28654,7 @@
         }
       ],
       "note": "services.dbus.packages = [ pkgs.gcr ];",
-      "default": "\"gtk2\"",
+      "default": "null",
       "example": "\"gnome3\""
     },
     {
