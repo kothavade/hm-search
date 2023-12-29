@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 28 Dec 2023 01:57:26 GMT",
+  "last_update": "Fri, 29 Dec 2023 01:51:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5993,8 +5993,8 @@
     },
     {
       "title": "programs.alacritty.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/alacritty/alacritty.yml. See\nhttps://github.com/alacritty/alacritty/blob/master/alacritty.yml\nfor the default configuration.",
-      "type": "YAML value",
+      "description": "Configuration written to $XDG_CONFIG_HOME/alacritty/alacritty.yml or\n$XDG_CONFIG_HOME/alacritty/alacritty.toml\n(the latter being used for alacritty 0.13 and later).\nSee https://github.com/alacritty/alacritty/tree/master#configuration\nfor more info.",
+      "type": "TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alacritty.nix",
@@ -6003,7 +6003,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  window.dimensions = {\n    lines = 3;\n    columns = 200;\n  };\n  key_bindings = [\n    {\n      key = \"K\";\n      mods = \"Control\";\n      chars = \"\\\\x0c\";\n    }\n  ];\n}\n\n"
+      "example": "{\n  window.dimensions = {\n    lines = 3;\n    columns = 200;\n  };\n  keyboard.bindings = [\n    {\n      key = \"K\";\n      mods = \"Control\";\n      chars = \"\\\\x0c\";\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.alot.enable",
@@ -20272,6 +20272,174 @@
       "example": null
     },
     {
+      "title": "programs.sftpman.enable",
+      "description": "Whether to enable sftpman, an application that handles sshfs/sftp file systems mounting.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sftpman.package",
+      "description": "The sftpman package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sftpman",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.defaultSshKey",
+      "description": "Path to the SSH key to be used by default. Can be overridden per host.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts",
+      "description": "The sshfs mount configurations written to $XDG_CONFIG_HOME/sftpman/mounts/.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.authType",
+      "description": "The authentication method to use.",
+      "type": "one of “password”, “publickey”, “hostbased”, “keyboard-interactive”, “gssapi-with-mic”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"publickey\"",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.beforeMount",
+      "description": "Command to run before mounting.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"true\"",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.host",
+      "description": "The host to connect to.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.mountOptions",
+      "description": "Options to pass to sshfs.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.mountPoint",
+      "description": "The remote path to mount.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.port",
+      "description": "The port to connect to.",
+      "type": "16 bit unsigned integer; between 0 and 65535 (both inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "22",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.sshKey",
+      "description": "Path to the SSH key to use for authentication. Only applies if authMethod is publickey.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.programs.sftpman.defaultSshKey",
+      "example": null
+    },
+    {
+      "title": "programs.sftpman.mounts.<name>.user",
+      "description": "The username to authenticate with.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
+          "text": "home-manager/modules/programs/sftpman.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
       "title": "programs.sioyek.enable",
       "description": "Whether to enable Sioyek, a PDF viewer designed for reading research papers and technical books.",
       "type": "boolean",
@@ -25967,7 +26135,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"$HOME/.zprezto-contrib\"\n]\n"
+      "example": "[ \"${config.home.homeDirectory}/.zprezto-contrib\" ]"
     },
     {
       "title": "programs.zsh.prezto.pmodules",
@@ -26471,6 +26639,20 @@
       ],
       "note": null,
       "default": "\"~/.zplug\"",
+      "example": null
+    },
+    {
+      "title": "programs.zsh.zproof.enable",
+      "description": "Enable zproof in your zshrc.",
+      "type": "unspecified value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
@@ -30784,6 +30966,76 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.osmscout-server.enable",
+      "description": "Whether to enable OSM Scout Server.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/osmscout-server.nix",
+          "text": "home-manager/modules/services/osmscout-server.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.osmscout-server.package",
+      "description": "The osmscout-server package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/osmscout-server.nix",
+          "text": "home-manager/modules/services/osmscout-server.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.osmscout-server",
+      "example": null
+    },
+    {
+      "title": "services.osmscout-server.network.listenAddress",
+      "description": "The address for the server to listen on.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/osmscout-server.nix",
+          "text": "home-manager/modules/services/osmscout-server.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"127.0.0.1\"",
+      "example": null
+    },
+    {
+      "title": "services.osmscout-server.network.port",
+      "description": "The TCP port on which the server will listen.",
+      "type": "16 bit unsigned integer; between 0 and 65535 (both inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/osmscout-server.nix",
+          "text": "home-manager/modules/services/osmscout-server.nix"
+        }
+      ],
+      "note": null,
+      "default": "8553",
+      "example": null
+    },
+    {
+      "title": "services.osmscout-server.network.startWhenNeeded",
+      "description": "Enable systemd socket activation.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/osmscout-server.nix",
+          "text": "home-manager/modules/services/osmscout-server.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "services.owncloud-client.enable",
