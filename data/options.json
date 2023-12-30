@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 29 Dec 2023 01:51:32 GMT",
+  "last_update": "Sat, 30 Dec 2023 01:55:55 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7362,6 +7362,48 @@
       "note": null,
       "default": "{ }",
       "example": null
+    },
+    {
+      "title": "programs.bemenu.enable",
+      "description": "Whether to enable bemenu.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bemenu.nix",
+          "text": "home-manager/modules/programs/bemenu.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.bemenu.package",
+      "description": "The bemenu package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bemenu.nix",
+          "text": "home-manager/modules/programs/bemenu.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bemenu",
+      "example": null
+    },
+    {
+      "title": "programs.bemenu.settings",
+      "description": "Configuration options for bemenu. See bemenu(1).",
+      "type": "attribute set of (string or signed integer or boolean)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bemenu.nix",
+          "text": "home-manager/modules/programs/bemenu.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  line-height = 28;\n  prompt = \"open\";\n  ignorecase = true;\n  fb = \"#1e1e2e\";\n  ff = \"#cdd6f4\";\n  nb = \"#1e1e2e\";\n  nf = \"#cdd6f4\";\n  tb = \"#1e1e2e\";\n  hb = \"#1e1e2e\";\n  tf = \"#f38ba8\";\n  hf = \"#f9e2af\";\n  af = \"#cdd6f4\";\n  ab = \"#1e1e2e\";\n}\n\n"
     },
     {
       "title": "programs.borgmatic.enable",
