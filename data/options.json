@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 01 Jan 2024 02:06:19 GMT",
+  "last_update": "Tue, 02 Jan 2024 02:01:43 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -12234,6 +12234,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  preset = \"rainbow\";\n  mode = \"rgb\";\n  color_align = {\n    mode = \"horizontal\";\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.i3blocks.enable",
+      "description": "Whether to enable i3blocks i3 status command scheduler.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3blocks.nix",
+          "text": "home-manager/modules/programs/i3blocks.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.i3blocks.package",
+      "description": "Package providing i3blocks.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3blocks.nix",
+          "text": "home-manager/modules/programs/i3blocks.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.i3blocks",
+      "example": null
+    },
+    {
+      "title": "programs.i3blocks.bars",
+      "description": "Configuration written to i3blocks config",
+      "type": "attribute set of (DAG of attribute set of (INI atom (null, int, bool, string, or float)))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3blocks.nix",
+          "text": "home-manager/modules/programs/i3blocks.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "{\n  top = {\n    # The title block\n    title = {\n      interval = \"persist\";\n      command = \"xtitle -s\";\n    };\n  };\n  bottom = {\n    time = {\n      command = \"date +%r\";\n      interval = 1;\n    };\n    # Make sure this block comes after the time block\n    date = lib.hm.dag.entryAfter [ \"time\" ] {\n      command = \"date +%d\";\n      interval = 5;\n    };\n    # And this block after the example block\n    example = lib.hm.dag.entryAfter [ \"date\" ] {\n      command = \"echo hi $(date +%s)\";\n      interval = 3;\n    };\n  };\n}\n"
     },
     {
       "title": "programs.i3status.enable",
