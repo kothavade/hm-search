@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 03 Jan 2024 01:59:31 GMT",
+  "last_update": "Thu, 04 Jan 2024 01:59:35 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6610,7 +6610,7 @@
     {
       "title": "programs.autorandr.profiles.<name>.config.<name>.crtc",
       "description": "Output video display controller.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
@@ -6624,7 +6624,7 @@
     {
       "title": "programs.autorandr.profiles.<name>.config.<name>.dpi",
       "description": "Output DPI configuration.",
-      "type": "null or positive integer, meaning >0",
+      "type": "null or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
@@ -6764,7 +6764,7 @@
     {
       "title": "programs.autorandr.profiles.<name>.config.<name>.scale.x",
       "description": "Horizontal scaling factor/pixels.",
-      "type": "floating point number or positive integer, meaning >0",
+      "type": "floating point number or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
@@ -6778,7 +6778,7 @@
     {
       "title": "programs.autorandr.profiles.<name>.config.<name>.scale.y",
       "description": "Vertical scaling factor/pixels.",
-      "type": "floating point number or positive integer, meaning >0",
+      "type": "floating point number or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
@@ -13386,7 +13386,7 @@
     {
       "title": "programs.kakoune.config.indentWidth",
       "description": "The width of an indentation in spaces. The kakoune default is 4.\nIf 0, a tab will be used instead.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
@@ -13694,7 +13694,7 @@
     {
       "title": "programs.kakoune.config.tabStop",
       "description": "The width of a tab in spaces. The kakoune default is 6.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
@@ -13778,7 +13778,7 @@
     {
       "title": "programs.kakoune.config.ui.shiftFunctionKeys",
       "description": "Amount by which shifted function keys are offset. That is, if the terminal sends F13 for Shift-F1, this\nshould be 12.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
@@ -13904,7 +13904,7 @@
     {
       "title": "programs.kakoune.config.wrapLines.maxWidth",
       "description": "Wrap text at maxWidth, even if the window is wider.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
@@ -26726,8 +26726,8 @@
       "example": null
     },
     {
-      "title": "programs.zsh.zproof.enable",
-      "description": "Enable zproof in your zshrc.",
+      "title": "programs.zsh.zprof.enable",
+      "description": "Enable zprof in your zshrc.",
       "type": "unspecified value",
       "declared_by": [
         {
@@ -27344,7 +27344,7 @@
     {
       "title": "services.cbatticon.updateIntervalSeconds",
       "description": "Number of seconds between updates of the battery information.",
-      "type": "null or positive integer, meaning >0",
+      "type": "null or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/cbatticon.nix",
@@ -29024,7 +29024,7 @@
     {
       "title": "services.gromit-mpx.hotKey",
       "description": "A keysym or raw keycode that toggles the activation state of gromit-mpx.  Set to null to disable the\nhotkey in which case you’ll have to activate gromit-mpx\nmanually using the command line.",
-      "type": "null or string or positive integer, meaning >0",
+      "type": "null or string or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gromit-mpx.nix",
@@ -29066,7 +29066,7 @@
     {
       "title": "services.gromit-mpx.tools.*.arrowSize",
       "description": "If not null, automatically draw an arrow at the end of a stroke with the given size.",
-      "type": "null or positive integer, meaning >0",
+      "type": "null or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gromit-mpx.nix",
@@ -29150,7 +29150,7 @@
     {
       "title": "services.gromit-mpx.undoKey",
       "description": "A keysym or raw keycode that causes gromit-mpx to undo the last stroke.  Use this key along with the shift key to redo an\nundone stoke.  Set to null to disable the\nundo hotkey.",
-      "type": "null or string or positive integer, meaning >0",
+      "type": "null or string or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gromit-mpx.nix",
@@ -32804,7 +32804,7 @@
     {
       "title": "services.swayosd.maxVolume",
       "description": "Sets the maximum volume.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swayosd.nix",
@@ -33049,7 +33049,7 @@
           "text": "home-manager/modules/services/trayer.nix"
         }
       ],
-      "note": "SetDockTypeboolean (default: true)SetPartialStrutboolean (default: true)alignone of “left”, “right”, “center” (default: \"center\")alphasigned integer (default: 127)distancesigned integer (default: 0)distancefromone of “left”, “right”, “top”, “bottom” (default: \"top\")edgeone of “left”, “right”, “top”, “bottom”, “none” (default: \"bottom\")expandboolean (default: true)heightsigned integer (default: 26)heighttypeone of “request”, “pixel” (default: \"pixel\")iconspacingsigned integer (default: 0)marginsigned integer (default: 0)monitorunsigned integer, meaning >=0 or value “primary” (singular enum) (default: 0)paddingsigned integer (default: 0)tintstring (default: \"0xFFFFFFFF\")transparentboolean (default: false)widthsigned integer (default: 100)widthtypeone of “request”, “pixel”, “percent” (default: \"percent\")",
+      "note": "SetDockTypeboolean (default: true)SetPartialStrutboolean (default: true)alignone of “left”, “right”, “center” (default: \"center\")alphasigned integer (default: 127)distancesigned integer (default: 0)distancefromone of “left”, “right”, “top”, “bottom” (default: \"top\")edgeone of “left”, “right”, “top”, “bottom”, “none” (default: \"bottom\")expandboolean (default: true)heightsigned integer (default: 26)heighttypeone of “request”, “pixel” (default: \"pixel\")iconspacingsigned integer (default: 0)marginsigned integer (default: 0)monitorunsigned integer, meaning >=0, or value “primary” (singular enum) (default: 0)paddingsigned integer (default: 0)tintstring (default: \"0xFFFFFFFF\")transparentboolean (default: false)widthsigned integer (default: 100)widthtypeone of “request”, “pixel”, “percent” (default: \"percent\")",
       "default": "{ }",
       "example": "{\n  edge = \"top\";\n  padding = 6;\n  SetDockType = true;\n  tint = \"0x282c34\";\n}\n\n"
     },
@@ -33266,7 +33266,7 @@
     {
       "title": "services.twmn.text.maxLength",
       "description": "Maximum length of the text before it is cut and suffixed with “…”. Never cuts if null.",
-      "type": "null or unsigned integer, meaning >=0",
+      "type": "null or (unsigned integer, meaning >=0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/twmn.nix",
@@ -37560,6 +37560,76 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  \"mimetype1\" = [ \"default1.desktop\" \"default2.desktop\" ];\n}\n\n"
+    },
+    {
+      "title": "xdg.portal.enable",
+      "description": "Whether to enable XDG desktop integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-portal.nix",
+          "text": "home-manager/modules/misc/xdg-portal.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "xdg.portal.config",
+      "description": "Sets which portal backend should be used to provide the implementation for the requested interface. For details check portals.conf(5).",
+      "type": "attribute set of attribute set of (string or ((list of string) or string) convertible to it)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-portal.nix",
+          "text": "home-manager/modules/misc/xdg-portal.nix"
+        }
+      ],
+      "note": "These will be written with the name $desktop-portals.conf for\nxdg.portal.config.$desktop and portals.conf for\nxdg.portal.config.common as an exception.",
+      "default": "{ }",
+      "example": "{\n  common = {\n    default = [\n      \"gtk\"\n    ];\n  };\n  pantheon = {\n    default = [\n      \"pantheon\"\n      \"gtk\"\n    ];\n    \"org.freedesktop.impl.portal.Secret\" = [\n      \"gnome-keyring\"\n    ];\n  };\n  x-cinnamon = {\n    default = [\n      \"xapp\"\n      \"gtk\"\n    ];\n  };\n}\n"
+    },
+    {
+      "title": "xdg.portal.configPackages",
+      "description": "List of packages that provide XDG desktop portal configuration, usually in the form of share/xdg-desktop-portal/$desktop-portals.conf.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-portal.nix",
+          "text": "home-manager/modules/misc/xdg-portal.nix"
+        }
+      ],
+      "note": "Note that configs in xdg.portal.config will be preferred if set.",
+      "default": "[ ]",
+      "example": "[ pkgs.gnome.gnome-session ]"
+    },
+    {
+      "title": "xdg.portal.extraPortals",
+      "description": "List of additional portals that should be passed to the xdg-desktop-portal.service, via the XDG_DESKTOP_PORTAL_DIR\nvariable.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-portal.nix",
+          "text": "home-manager/modules/misc/xdg-portal.nix"
+        }
+      ],
+      "note": "Portals allow interaction with system, like choosing files or taking\nscreenshots. At minimum, a desktop portal implementation should be\nlisted.",
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "xdg.portal.xdgOpenUsePortal",
+      "description": "Sets environment variable NIXOS_XDG_OPEN_USE_PORTAL to 1 This will make xdg-open use the portal to open programs, which resolves bugs involving\nprograms opening inside FHS envs or with unexpected env vars set from wrappers.\nSee #160923 for more info.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-portal.nix",
+          "text": "home-manager/modules/misc/xdg-portal.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
     },
     {
       "title": "xdg.stateHome",
