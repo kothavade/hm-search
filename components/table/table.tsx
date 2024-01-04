@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import {
   ColumnDef,
+  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
@@ -41,9 +42,12 @@ export function DataTable<TData, TValue>({
   const pathname = usePathname()
 
   const [sorting, setSorting] = useState<SortingState>([])
-  const [globalFilter, setGlobalFilter] = useState<string>(
-    searchParams.get("q") ?? ""
-  )
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([
+    {
+      id: "title",
+      value: searchParams.get("q") ?? "",
+    },
+  ])
 
   const table = useReactTable({
     data,
@@ -53,16 +57,21 @@ export function DataTable<TData, TValue>({
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    onColumnFiltersChange: setColumnFilters,
     state: {
+      columnFilters,
       sorting,
-      globalFilter,
     },
   })
 
   useEffect(() => {
-    const path = globalFilter ? `${pathname}?q=${globalFilter}` : pathname
+    const path = columnFilters.find((filter) => filter.id === "title")
+      ? `${pathname}?q=${columnFilters.find((filter) => filter.id === "title")
+          ?.value}`
+      : pathname
     router.push(path)
-  }, [globalFilter])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [columnFilters])
 
   return (
     <div>
@@ -73,8 +82,10 @@ export function DataTable<TData, TValue>({
         />
         <Input
           placeholder="Search..."
-          value={globalFilter}
-          onChange={(e) => setGlobalFilter(e.target.value)}
+          value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
+          onChange={(event) =>
+            table.getColumn("title")?.setFilterValue(event.target.value)
+          }
           className="w-full pl-10"
         />
       </div>

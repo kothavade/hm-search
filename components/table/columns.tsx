@@ -4,6 +4,7 @@ import { ColumnDef } from "@tanstack/react-table"
 
 import { Record } from "@/lib/scrape"
 
+import { fuzzyFilter } from "./fuzzy"
 import { DataTableColumnHeader } from "./header"
 import { RowInfo } from "./info"
 
@@ -17,10 +18,15 @@ export const columns: ColumnDef<Record>[] = [
   },
   {
     accessorKey: "title",
-    cell: ({ row }) => <code className="font-mono" title={row.original.title}>{row.original.title}</code>,
+    cell: ({ row }) => (
+      <code className="font-mono" title={row.original.title}>
+        {row.original.title}
+      </code>
+    ),
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Title" />
     ),
+    filterFn: fuzzyFilter,
     meta: {
       size: "30%",
     },
