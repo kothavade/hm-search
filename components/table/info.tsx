@@ -21,14 +21,14 @@ export function RowInfo({ row }: { row: Row<Record> }) {
           <Info />
         </Button>
       </DialogTrigger>
-      <DialogContent className="flex flex-col">
+      <DialogContent className="flex min-w-[50vw] flex-col">
         <DialogHeader>
           <DialogTitle className="overflow-x-auto pb-2">
             {row.original.title}
           </DialogTitle>
           <DialogDescription>{row.original.description}</DialogDescription>
         </DialogHeader>
-        <div className="flex flex-col gap-4">
+        <div className="flex max-h-[75vh] flex-col gap-4 overflow-auto">
           <div className="flex flex-col gap-1">
             <h2 className="font-bold">Type</h2>
             <p>{row.original.type}</p>

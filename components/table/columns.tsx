@@ -9,7 +9,7 @@ import { RowInfo } from "./info"
 
 export const columns: ColumnDef<Record>[] = [
   {
-    id: "expand",
+    id: "info",
     cell: ({ row }) => <RowInfo row={row} />,
     meta: {
       size: "10%",
@@ -17,7 +17,7 @@ export const columns: ColumnDef<Record>[] = [
   },
   {
     accessorKey: "title",
-    cell: ({ row }) => <code className="font-mono">{row.original.title}</code>,
+    cell: ({ row }) => <code className="font-mono" title={row.original.title}>{row.original.title}</code>,
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Title" />
     ),

@@ -110,13 +110,11 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && "selected"}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    // @ts-ignore
                     <TableCell
                       key={cell.id}
                       // @ts-ignore
                       style={{ width: cell.column.columnDef.meta.size }}
                       className="truncate py-2"
-                      // className="overflow-auto"
                     >
                       {flexRender(
                         cell.column.columnDef.cell,
