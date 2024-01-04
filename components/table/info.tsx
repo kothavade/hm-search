@@ -54,6 +54,7 @@ export function RowInfo({ row }: { row: Row<Record> }) {
                     <a
                       href={item.link}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="text-blue-600 underline"
                     >
                       {item.text}
