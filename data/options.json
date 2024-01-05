@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 04 Jan 2024 01:59:35 GMT",
+  "last_update": "Fri, 05 Jan 2024 02:00:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -24753,17 +24753,17 @@
     },
     {
       "title": "programs.xplr.plugins",
-      "description": "Plugins to be added to your configuration file.",
-      "type": "null or (list of (package or string))",
+      "description": "An attribute set of plugin paths to be added to the [package.path]https://www.lua.org/manual/5.4/manual.html#pdf-package.path of the ~/config/xplr/init.lua configuration file.",
+      "type": "null or (attribute set of (package or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/xplr.nix",
           "text": "home-manager/modules/programs/xplr.nix"
         }
       ],
-      "note": "Must be a package, an absolute plugin path, or string to be recognized\nby xplr. Paths will be relative to\n$XDG_CONFIG_HOME/xplr/init.lua unless they are absolute.",
-      "default": "[]",
-      "example": null
+      "note": "Must be a package or string representing the plugin directory’s path.\nIf the path string is not absolute, it will be relative to $XDG_CONFIG_HOME/xplr/init.lua.",
+      "default": "{ }",
+      "example": "{\n  wl-clipboard = fetchFromGitHub {\n    owner = \"sayanarijit\";\n    repo = \"wl-clipboard.xplr\";\n    rev = \"a3ffc87460c5c7f560bffea689487ae14b36d9c3\";\n    hash = \"sha256-I4rh5Zks9hiXozBiPDuRdHwW5I7ppzEpQNtirY0Lcks=\";\n  }\n  local-plugin = \"/home/user/.config/plugins/local-plugin\";\n};\n\n"
     },
     {
       "title": "programs.yazi.enable",
