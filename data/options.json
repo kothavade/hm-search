@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 12 Jan 2024 02:02:48 GMT",
+  "last_update": "Sat, 13 Jan 2024 02:00:58 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35376,6 +35376,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "uninstall",
+      "description": "Whether to set up a minimal configuration that will remove all managed files and packages.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/uninstall.nix",
+          "text": "home-manager/modules/misc/uninstall.nix"
+        }
+      ],
+      "note": "Use this with extreme care since running the generated activation script\nwill remove all Home Manager state from your user environment. This\nincludes removing all your historic Home Manager generations.",
+      "default": "false",
+      "example": null
     },
     {
       "title": "wayland.windowManager.hyprland.enable",
