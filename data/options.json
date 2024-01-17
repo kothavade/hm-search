@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 16 Jan 2024 02:02:24 GMT",
+  "last_update": "Wed, 17 Jan 2024 02:02:36 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -19238,7 +19238,7 @@
     {
       "title": "programs.rbw.settings.pinentry",
       "description": "Which pinentry interface to use. Beware that pinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "package or one of “curses”, “tty”, “emacs”, “gnome3”, “qt”",
+      "type": "package or one of “curses”, “tty”, “gtk2”, “emacs”, “gnome3”, “qt”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rbw.nix",
@@ -28912,7 +28912,7 @@
     {
       "title": "services.gpg-agent.pinentryFlavor",
       "description": "Which pinentry interface to use. If not null, it sets\npinentry-program in\ngpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "null or one of “curses”, “tty”, “emacs”, “gnome3”, “qt”",
+      "type": "null or one of “curses”, “tty”, “gtk2”, “emacs”, “gnome3”, “qt”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
