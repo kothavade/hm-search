@@ -73,6 +73,15 @@ export function DataTable<TData, TValue>({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [columnFilters])
 
+  // reset title filter if query param is removed
+  useEffect(() => {
+    if (!searchParams.get("q")) {
+      console.log("reset")
+      table.getColumn("title")?.setFilterValue("")
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchParams.get("q")])
+
   return (
     <div>
       <div className="relative flex w-full items-center py-4">
