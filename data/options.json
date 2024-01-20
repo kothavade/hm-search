@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 19 Jan 2024 02:03:15 GMT",
+  "last_update": "Sat, 20 Jan 2024 02:00:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -15384,6 +15384,20 @@
       "note": null,
       "default": "0",
       "example": null
+    },
+    {
+      "title": "programs.mcfly.fzf.enable",
+      "description": "Whether to enable McFly fzf integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mcfly.nix",
+          "text": "home-manager/modules/programs/mcfly.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.mcfly.keyScheme",
