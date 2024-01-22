@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 21 Jan 2024 02:06:13 GMT",
+  "last_update": "Mon, 22 Jan 2024 02:06:13 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13091,7 +13091,7 @@
     },
     {
       "title": "programs.k9s.aliases",
-      "description": "Aliases written to $XDG_CONFIG_HOME/k9s/aliases.yml. See https://k9scli.io/topics/aliases/ for supported values.",
+      "description": "Aliases written to $XDG_CONFIG_HOME/k9s/aliases.yaml. See https://k9scli.io/topics/aliases/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13105,7 +13105,7 @@
     },
     {
       "title": "programs.k9s.hotkey",
-      "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkey.yml. See https://k9scli.io/topics/hotkeys/ for supported values.",
+      "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkey.yaml. See https://k9scli.io/topics/hotkeys/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13119,7 +13119,7 @@
     },
     {
       "title": "programs.k9s.plugin",
-      "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugin.yml. See https://k9scli.io/topics/plugins/ for supported values.",
+      "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugin.yaml. See https://k9scli.io/topics/plugins/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13133,7 +13133,7 @@
     },
     {
       "title": "programs.k9s.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/k9s/config.yml. See https://k9scli.io/topics/config/ for supported values.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/k9s/config.yaml. See https://k9scli.io/topics/config/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13146,9 +13146,9 @@
       "example": "k9s = {\n  refreshRate = 2;\n};\n\n"
     },
     {
-      "title": "programs.k9s.skin",
-      "description": "Skin written to $XDG_CONFIG_HOME/k9s/skin.yml. See https://k9scli.io/topics/skins/ for supported values.",
-      "type": "YAML value",
+      "title": "programs.k9s.skins",
+      "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/. See https://k9scli.io/topics/skins/ for supported values.",
+      "type": "attribute set of (YAML value)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -13157,11 +13157,11 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "k9s = {\n  body = {\n    fgColor = \"dodgerblue\";\n  };\n};\n\n"
+      "example": "my_blue_skin = {\n  k9s = {\n    body = {\n      fgColor = \"dodgerblue\";\n    };\n  };\n};\n\n"
     },
     {
       "title": "programs.k9s.views",
-      "description": "Resource column views written to $XDG_CONFIG_HOME/k9s/views.yml. See https://k9scli.io/topics/columns/ for supported values.",
+      "description": "Resource column views written to $XDG_CONFIG_HOME/k9s/views.yaml. See https://k9scli.io/topics/columns/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -15552,6 +15552,104 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  autosu = false;\n  cursorline = false;\n}\n\n"
+    },
+    {
+      "title": "programs.mise.enable",
+      "description": "Whether to enable mise.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mise.enableBashIntegration",
+      "description": "Whether to enable Bash Integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.mise.enableFishIntegration",
+      "description": "Whether to enable Fish Integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.mise.enableZshIntegration",
+      "description": "Whether to enable Zsh Integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.mise.package",
+      "description": "The mise package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mise",
+      "example": null
+    },
+    {
+      "title": "programs.mise.globalConfig",
+      "description": "Config written to $XDG_CONFIG_HOME/mise/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": "See https://mise.jdx.dev/configuration.html#global-config-config-mise-config-toml\nfor details on supported values.",
+      "default": "{ }",
+      "example": "tools = {\n  node = \"lts\";\n  python = [\"3.10\" \"3.11\"];\n};\n\naliases = {\n  my_custom_node = \"20\";\n};\n\n"
+    },
+    {
+      "title": "programs.mise.settings",
+      "description": "Settings written to $XDG_CONFIG_HOME/mise/settings.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": "See https://mise.jdx.dev/configuration.html#settings-file-config-mise-settings-toml\nfor details on supported values.",
+      "default": "{ }",
+      "example": "verbose = false;\nexperimental = false;\ndisable_tools = [\"node\"];\n\n"
     },
     {
       "title": "programs.mpv.enable",
@@ -19682,90 +19780,6 @@
       "note": null,
       "default": "\"\"",
       "example": null
-    },
-    {
-      "title": "programs.rtx.enable",
-      "description": "Whether to enable RTX. Runtime Executor (asdf Rust clone).",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
-    },
-    {
-      "title": "programs.rtx.enableBashIntegration",
-      "description": "Whether to enable Bash Integration.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": "true"
-    },
-    {
-      "title": "programs.rtx.enableFishIntegration",
-      "description": "Whether to enable Fish Integration.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": "true"
-    },
-    {
-      "title": "programs.rtx.enableZshIntegration",
-      "description": "Whether to enable Zsh Integration.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": "true"
-    },
-    {
-      "title": "programs.rtx.package",
-      "description": "The rtx package to use.",
-      "type": "package",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": null,
-      "default": "pkgs.rtx",
-      "example": null
-    },
-    {
-      "title": "programs.rtx.settings",
-      "description": "Settings written to $XDG_CONFIG_HOME/rtx/config.toml.",
-      "type": "TOML value",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtx.nix",
-          "text": "home-manager/modules/programs/rtx.nix"
-        }
-      ],
-      "note": "See https://github.com/jdxcode/rtx#global-config-configrtxconfigtoml\nfor details on supported values.",
-      "default": "{ }",
-      "example": "tools = {\n  node = \"lts\";\n  python = [\"3.10\" \"3.11\"];\n};\n\nsettings = {\n  verbose = false;\n  experimental = false;\n};\n\n"
     },
     {
       "title": "programs.ruff.enable",
