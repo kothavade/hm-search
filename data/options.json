@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 23 Jan 2024 02:03:56 GMT",
+  "last_update": "Wed, 24 Jan 2024 02:03:48 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7394,7 +7394,7 @@
     {
       "title": "programs.bemenu.settings",
       "description": "Configuration options for bemenu. See bemenu(1).",
-      "type": "attribute set of (string or signed integer or boolean)",
+      "type": "attribute set of (string or signed integer or floating point number or boolean)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bemenu.nix",
@@ -7403,7 +7403,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  line-height = 28;\n  prompt = \"open\";\n  ignorecase = true;\n  fb = \"#1e1e2e\";\n  ff = \"#cdd6f4\";\n  nb = \"#1e1e2e\";\n  nf = \"#cdd6f4\";\n  tb = \"#1e1e2e\";\n  hb = \"#1e1e2e\";\n  tf = \"#f38ba8\";\n  hf = \"#f9e2af\";\n  af = \"#cdd6f4\";\n  ab = \"#1e1e2e\";\n}\n\n"
+      "example": "{\n  line-height = 28;\n  prompt = \"open\";\n  ignorecase = true;\n  fb = \"#1e1e2e\";\n  ff = \"#cdd6f4\";\n  nb = \"#1e1e2e\";\n  nf = \"#cdd6f4\";\n  tb = \"#1e1e2e\";\n  hb = \"#1e1e2e\";\n  tf = \"#f38ba8\";\n  hf = \"#f9e2af\";\n  af = \"#cdd6f4\";\n  ab = \"#1e1e2e\";\n  width-factor = 0.3;\n}\n\n"
     },
     {
       "title": "programs.borgmatic.enable",
