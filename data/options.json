@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 24 Jan 2024 02:03:48 GMT",
+  "last_update": "Thu, 25 Jan 2024 02:04:30 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3721,7 +3721,7 @@
       ],
       "note": "If the script block produces any observable side effect, such\nas writing or deleting files, then it\nmust be placed after the special\nwriteBoundary script block. Prior to the\nwrite boundary one can place script blocks that verifies, but\ndoes not modify, the state of the system and exits if an\nunexpected state is found. For example, the\ncheckLinkTargets script block checks for\ncollisions between non-managed files and files defined in\nhome.file.",
       "default": "{ }",
-      "example": "{\n  myActivationAction = lib.hm.dag.entryAfter [\"writeBoundary\"] ''\n    $DRY_RUN_CMD ln -s $VERBOSE_ARG \\\n        ${builtins.toPath ./link-me-directly} $HOME\n  '';\n}\n\n"
+      "example": "{\n  myActivationAction = lib.hm.dag.entryAfter [\"writeBoundary\"] ''\n    run ln -s $VERBOSE_ARG \\\n        ${builtins.toPath ./link-me-directly} $HOME\n  '';\n}\n\n"
     },
     {
       "title": "home.extraOutputsToInstall",
@@ -9195,6 +9195,20 @@
       ],
       "note": null,
       "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.firefox.nativeMessagingHosts",
+      "description": "Additional packages containing native messaging hosts that should be made available to Firefox extensions.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
       "example": null
     },
     {
