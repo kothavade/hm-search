@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 25 Jan 2024 02:04:30 GMT",
+  "last_update": "Fri, 26 Jan 2024 01:55:58 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -29706,20 +29706,6 @@
       "note": null,
       "default": "false",
       "example": null
-    },
-    {
-      "title": "services.keepassx.enable",
-      "description": "Whether to enable the KeePassX password manager.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/keepassx.nix",
-          "text": "home-manager/modules/services/keepassx.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
     },
     {
       "title": "services.keybase.enable",
