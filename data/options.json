@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 28 Jan 2024 01:56:50 GMT",
+  "last_update": "Mon, 29 Jan 2024 01:54:09 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -33948,6 +33948,62 @@
       "note": null,
       "default": "4000",
       "example": null
+    },
+    {
+      "title": "services.wob.enable",
+      "description": "Whether to enable wob.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
+          "text": "home-manager/modules/services/wob.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.wob.package",
+      "description": "The wob package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
+          "text": "home-manager/modules/services/wob.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wob",
+      "example": null
+    },
+    {
+      "title": "services.wob.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/wob/wob.ini. See wob.ini(5) for documentation.",
+      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
+          "text": "home-manager/modules/services/wob.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"\" = {\n    border_size = 10;\n    height = 50;\n  };\n  \"output.foo\".name = \"DP-1\";\n  \"style.muted\".background_color = \"032cfc\";\n}\n\n"
+    },
+    {
+      "title": "services.wob.systemd",
+      "description": "Whether to enable systemd service and socket for wob.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
+          "text": "home-manager/modules/services/wob.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
     },
     {
       "title": "services.xcape.enable",
