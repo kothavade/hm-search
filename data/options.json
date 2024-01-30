@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 29 Jan 2024 01:54:09 GMT",
+  "last_update": "Tue, 30 Jan 2024 01:53:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -21964,6 +21964,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  display = {\n    compact = false;\n    use_pager = true;\n  };\n  updates = {\n    auto_update = false;\n  };\n};\n\n"
+    },
+    {
+      "title": "programs.tealdeer.updateOnActivation",
+      "description": "Whether to update tealdeer’s cache on activation.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
+          "text": "home-manager/modules/programs/tealdeer.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "programs.terminator.enable",
