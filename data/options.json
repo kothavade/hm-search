@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 04 Feb 2024 01:58:23 GMT",
+  "last_update": "Mon, 05 Feb 2024 01:58:12 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -456,7 +456,7 @@
     {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.postHook",
       "description": "Command to call for each item creation and modification. The command will be called with the path of the new/updated\nfile.",
-      "type": "strings concatenated with “\\n”",
+      "type": "null or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -464,7 +464,7 @@
         }
       ],
       "note": null,
-      "default": "\"\"",
+      "default": "null",
       "example": null
     },
     {
@@ -936,7 +936,7 @@
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.postHook",
       "description": "Command to call for each item creation and modification. The command will be called with the path of the new/updated\nfile.",
-      "type": "strings concatenated with “\\n”",
+      "type": "null or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
@@ -944,7 +944,7 @@
         }
       ],
       "note": null,
-      "default": "\"\"",
+      "default": "null",
       "example": null
     },
     {
@@ -9674,6 +9674,20 @@
       "example": null
     },
     {
+      "title": "programs.fish.shellInitLast",
+      "description": "Shell script code called during interactive fish shell initialisation, this will be the last thing executed in fish startup.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
       "title": "programs.foot.enable",
       "description": "Whether to enable Foot terminal.",
       "type": "boolean",
@@ -14570,7 +14584,7 @@
         }
       ],
       "note": null,
-      "default": "\"enabled\"",
+      "default": "\"no-rc\"",
       "example": "\"no-cursor\""
     },
     {
