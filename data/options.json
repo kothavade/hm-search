@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 05 Feb 2024 01:58:12 GMT",
+  "last_update": "Tue, 06 Feb 2024 01:53:06 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1681,7 +1681,7 @@
     },
     {
       "title": "accounts.email.accounts.<name>.himalaya.enable",
-      "description": "Whether to enable Himalaya for this email account.",
+      "description": "Whether to enable the email client Himalaya CLI for this email account.",
       "type": "boolean",
       "declared_by": [
         {
@@ -1694,36 +1694,8 @@
       "example": "true"
     },
     {
-      "title": "accounts.email.accounts.<name>.himalaya.backend",
-      "description": "Specifying accounts.email.accounts.*.himalaya.backend is deprecated, set accounts.email.accounts.*.himalaya.settings.backend instead.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "accounts.email.accounts.<name>.himalaya.sender",
-      "description": "Specifying accounts.email.accounts.*.himalaya.sender is deprecated, set {option}‘accounts.email.accounts.*.himalaya.settings.sender’ instead.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": null,
-      "example": null
-    },
-    {
       "title": "accounts.email.accounts.<name>.himalaya.settings",
-      "description": "Himalaya configuration for this email account. See https://pimalaya.org/himalaya/cli/configuration/account.html for supported values.",
+      "description": "Himalaya CLI configuration for this email account. See https://pimalaya.org/himalaya/cli/latest/configuration/index.html#account-configuration for supported values.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -5654,6 +5626,48 @@
       "note": null,
       "default": "\"\"",
       "example": "''\n  keep-outputs = true\n  keep-derivations = true\n''\n"
+    },
+    {
+      "title": "nix.gc.automatic",
+      "description": "Automatically run the garbage collector at a specific time.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
+          "text": "home-manager/modules/services/nix-gc.nix"
+        }
+      ],
+      "note": "Note: This will only garbage collect the current user’s profiles.",
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "nix.gc.frequency",
+      "description": "The frequency at which to run the garbage collector.",
+      "type": "one of “hourly”, “weekly”, “monthly”, “semiannually”, “annually”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
+          "text": "home-manager/modules/services/nix-gc.nix"
+        }
+      ],
+      "note": "These enums are based on special expressions from the\nsystemd.time(7)",
+      "default": "\"weekly\"",
+      "example": "\"monthly\""
+    },
+    {
+      "title": "nix.gc.options",
+      "description": "Options given to nix-collect-garbage when the garbage collector is run automatically.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
+          "text": "home-manager/modules/services/nix-gc.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"--max-freed $((64 * 1024**3))\""
     },
     {
       "title": "nix.registry",
@@ -12055,7 +12069,7 @@
     },
     {
       "title": "programs.himalaya.enable",
-      "description": "Whether to enable the Himalaya email client.",
+      "description": "Whether to enable the email client Himalaya CLI.",
       "type": "boolean",
       "declared_by": [
         {
@@ -12083,7 +12097,7 @@
     },
     {
       "title": "programs.himalaya.settings",
-      "description": "Himalaya global configuration. See https://pimalaya.org/himalaya/cli/configuration/global.html for supported values.",
+      "description": "Himalaya CLI global configuration. See https://pimalaya.org/himalaya/cli/latest/configuration/index.html#global-configuration for supported values.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -12878,6 +12892,34 @@
       "note": null,
       "default": "\"pkgs.jdk\"",
       "example": null
+    },
+    {
+      "title": "programs.jetbrains-remote.enable",
+      "description": "Whether to enable JetBrains remote development system.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jetbrains-remote.nix",
+          "text": "home-manager/modules/programs/jetbrains-remote.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.jetbrains-remote.ides",
+      "description": "IDEs accessible to the JetBrains remote development system.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jetbrains-remote.nix",
+          "text": "home-manager/modules/programs/jetbrains-remote.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "with pkgs.jetbrains; [ clion pycharm-professional ];\n\n"
     },
     {
       "title": "programs.joshuto.enable",
@@ -15426,6 +15468,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.mcfly.interfaceView",
+      "description": "Interface view to use.",
+      "type": "one of “TOP”, “BOTTOM”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mcfly.nix",
+          "text": "home-manager/modules/programs/mcfly.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"TOP\"",
+      "example": null
     },
     {
       "title": "programs.mcfly.keyScheme",
@@ -26894,6 +26950,48 @@
       "example": "\"adwaita-dark\""
     },
     {
+      "title": "services.arrpc.enable",
+      "description": "Whether to enable arrpc.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/arrpc.nix",
+          "text": "home-manager/modules/services/arrpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.arrpc.package",
+      "description": "The arrpc package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/arrpc.nix",
+          "text": "home-manager/modules/services/arrpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.arrpc",
+      "example": null
+    },
+    {
+      "title": "services.arrpc.systemdTarget",
+      "description": "Systemd target to bind to.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/arrpc.nix",
+          "text": "home-manager/modules/services/arrpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"graphical-session.target\"",
+      "example": "\"sway-session.target\""
+    },
+    {
       "title": "services.autorandr.enable",
       "description": "Whether to enable the Autorandr systemd service. This module is complementary to programs.autorandr\nwhich handles the configuration (profiles).",
       "type": "boolean",
@@ -29232,64 +29330,8 @@
       "example": null
     },
     {
-      "title": "services.himalaya-notify.enable",
-      "description": "Whether to enable the Himalaya new emails notifier service.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
-    },
-    {
-      "title": "services.himalaya-notify.environment",
-      "description": "Extra environment variables to be exported in the service.",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  \"PASSWORD_STORE_DIR\" = \"~/.password-store\";\n}\n\n"
-    },
-    {
-      "title": "services.himalaya-notify.settings.account",
-      "description": "Name of the account the notifier should be started for. If no account is given, the default one is used.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "\"gmail\""
-    },
-    {
-      "title": "services.himalaya-notify.settings.keepalive",
-      "description": "Notifier lifetime of the IDLE session (in seconds).",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "\"500\""
-    },
-    {
       "title": "services.himalaya-watch.enable",
-      "description": "Whether to enable the Himalaya folder changes watcher service.",
+      "description": "Whether to enable the email client Himalaya CLI envelopes watcher service.",
       "type": "boolean",
       "declared_by": [
         {
@@ -29327,21 +29369,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"gmail\""
-    },
-    {
-      "title": "services.himalaya-watch.settings.keepalive",
-      "description": "Watcher lifetime of the IDLE session (in seconds).",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "\"500\""
+      "example": "\"personal\""
     },
     {
       "title": "services.home-manager.autoUpgrade.enable",
@@ -32858,9 +32886,9 @@
       "example": null
     },
     {
-      "title": "services.swayosd.maxVolume",
-      "description": "Sets the maximum volume.",
-      "type": "null or (unsigned integer, meaning >=0)",
+      "title": "services.swayosd.display",
+      "description": "X display to use.",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swayosd.nix",
@@ -32869,7 +32897,21 @@
       ],
       "note": null,
       "default": "null",
-      "example": "120"
+      "example": "\"eDP-1\""
+    },
+    {
+      "title": "services.swayosd.topMargin",
+      "description": "OSD margin from top edge (0.5 would be screen center).",
+      "type": "null or float between 0.0 and 1.0 (inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swayosd.nix",
+          "text": "home-manager/modules/services/swayosd.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "1.0"
     },
     {
       "title": "services.sxhkd.enable",
