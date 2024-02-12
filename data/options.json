@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 11 Feb 2024 01:57:06 GMT",
+  "last_update": "Mon, 12 Feb 2024 01:54:45 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -2784,6 +2784,20 @@
       "note": null,
       "default": "null",
       "example": "\"==== <mailbox-name> ===\""
+    },
+    {
+      "title": "accounts.email.accounts.<name>.neomutt.mailboxType",
+      "description": "Whether this account uses maildir folders or IMAP mailboxes",
+      "type": "one of “maildir”, “imap”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
+          "text": "home-manager/modules/programs/neomutt.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"maildir\"",
+      "example": "\"imap\""
     },
     {
       "title": "accounts.email.accounts.<name>.neomutt.sendMailCommand",
