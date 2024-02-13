@@ -33,7 +33,7 @@ export function SiteHeader() {
                   variant: "ghost",
                 })}
               >
-                <Book className="h-5 w-5" />
+                <Book className="size-5" />
                 <span className="sr-only">Documentation</span>
               </div>
             </Link>
@@ -45,7 +45,7 @@ export function SiteHeader() {
                   variant: "ghost",
                 })}
               >
-                <Github className="h-5 w-5" />
+                <Github className="size-5" />
                 <span className="sr-only">GitHub</span>
               </div>
             </Link>

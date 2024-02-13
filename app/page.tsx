@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import options from "@/data/options.json"
 
 import { Record } from "@/lib/scrape"
@@ -7,10 +8,12 @@ import { DataTable } from "@/components/table/table"
 export default function IndexPage() {
   return (
     <section className="container">
-      <DataTable
-        columns={columns}
-        data={options.options as unknown as Record[]}
-      />
+      <Suspense>
+        <DataTable
+          columns={columns}
+          data={options.options as unknown as Record[]}
+        />
+      </Suspense>
     </section>
   )
 }
