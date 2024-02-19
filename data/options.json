@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 18 Feb 2024 01:56:28 GMT",
+  "last_update": "Mon, 19 Feb 2024 01:55:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -22037,8 +22037,22 @@
     },
     {
       "title": "programs.tealdeer.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/tealdeer/config.toml on Linux or\n$HOME/Library/Application Support/tealdeer/config.toml\non Darwin. See\nhttps://dbrgn.github.io/tealdeer/config.html\nfor more information.",
-      "type": "TOML value",
+      "description": "Configuration written to $XDG_CONFIG_HOME/tealdeer/config.toml on Linux or\n$HOME/Library/Application Support/tealdeer/config.toml on Darwin.\nSee https://dbrgn.github.io/tealdeer/config.html for more information.",
+      "type": "null or (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
+          "text": "home-manager/modules/programs/tealdeer.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n  display = {\n    compact = false;\n    use_pager = true;\n  };\n  updates = {\n    auto_update = false;\n  };\n};\n\n"
+    },
+    {
+      "title": "programs.tealdeer.settings.updates",
+      "description": "Tealdeer can refresh the cache automatically when it is outdated. This behavior can be configured in the updates section.",
+      "type": "submodule",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
@@ -22047,11 +22061,11 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  display = {\n    compact = false;\n    use_pager = true;\n  };\n  updates = {\n    auto_update = false;\n  };\n};\n\n"
+      "example": null
     },
     {
-      "title": "programs.tealdeer.updateOnActivation",
-      "description": "Whether to update tealdeer’s cache on activation.",
+      "title": "programs.tealdeer.settings.updates.auto_update",
+      "description": "Whether to enable auto-update.",
       "type": "boolean",
       "declared_by": [
         {
@@ -22060,8 +22074,22 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.tealdeer.settings.updates.auto_update_interval_hours",
+      "description": "Duration, since the last cache update, after which the cache will be refreshed. This parameter is ignored if auto_update is set to false.",
+      "type": "positive integer, meaning >0",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
+          "text": "home-manager/modules/programs/tealdeer.nix"
+        }
+      ],
+      "note": null,
+      "default": "720",
+      "example": "24"
     },
     {
       "title": "programs.terminator.enable",
