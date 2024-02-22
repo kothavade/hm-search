@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 21 Feb 2024 01:53:39 GMT",
+  "last_update": "Thu, 22 Feb 2024 01:52:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35707,6 +35707,132 @@
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
           "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.river.enable",
+      "description": "Whether to enable the river window manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.river.package",
+      "description": "The river package to use. Set to null to not add any river package to your path. This should be done if you want to use the NixOS river module to install river.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.river",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.river.extraConfig",
+      "description": "Extra lines appended to $XDG_CONFIG_HOME/river/init.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  rivertile -view-padding 6 -outer-padding 6 &\n''\n"
+    },
+    {
+      "title": "wayland.windowManager.river.extraSessionVariables",
+      "description": "Extra session variables set when running the compositor.",
+      "type": "attribute set",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  MOZ_ENABLE_WAYLAND = \"1\";\n}\n"
+    },
+    {
+      "title": "wayland.windowManager.river.settings",
+      "description": "General settings given to riverctl.",
+      "type": "River configuration value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  border-width = 2;\n  declare-mode = [\n    \"locked\"\n    \"normal\"\n    \"passthrough\"\n  ];\n  input = {\n    pointer-foo-bar = {\n      accel-profile = \"flat\";\n      events = true;\n      pointer-accel = -0.3;\n      tap = false;\n    };\n  };\n  map = {\n    normal = {\n      \"Alt Q\" = \"close\";\n    };\n  };\n  rule-add = {\n    \"-app-id\" = {\n      \"'bar'\" = \"csd\";\n      \"'float*'\" = {\n        \"-title\" = {\n          \"'foo'\" = \"float\";\n        };\n      };\n    };\n  };\n  set-cursor-warp = \"on-output-change\";\n  set-repeat = \"50 300\";\n  spawn = [\n    \"firefox\"\n    \"'foot -a terminal'\"\n  ];\n  xcursor-theme = \"someGreatTheme 12\";\n}\n"
+    },
+    {
+      "title": "wayland.windowManager.river.systemd.enable",
+      "description": "Whether to enable river-session.target on river startup. This links to graphical-session.target}.\nSome important environment variables will be imported to systemd\nand D-Bus user environment before reaching the target, including",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": "DISPLAYWAYLAND_DISPLAYXDG_CURRENT_DESKTOPNIXOS_OZONE_WLXCURSOR_THEMEXCURSOR_SIZE",
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.river.systemd.extraCommands",
+      "description": "Extra commands to be run after D-Bus activation.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.river.systemd.variables",
+      "description": "Environment variables to be imported in the systemd & D-Bus user environment.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"-all\"\n]\n"
+    },
+    {
+      "title": "wayland.windowManager.river.xwayland.enable",
+      "description": "Whether to enable XWayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/river.nix",
+          "text": "home-manager/modules/services/window-managers/river.nix"
         }
       ],
       "note": null,
