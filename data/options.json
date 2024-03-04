@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 03 Mar 2024 01:56:00 GMT",
+  "last_update": "Mon, 04 Mar 2024 02:07:10 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -77,7 +77,7 @@
     },
     {
       "title": "accounts.calendar.accounts.<name>.khal.priority",
-      "description": "Priority of a calendar used for coloring.",
+      "description": "Priority of a calendar used for coloring (calendar with highest priority is preferred).",
       "type": "signed integer",
       "declared_by": [
         {
@@ -610,6 +610,48 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.khal.collections",
+      "description": "VCARD collections to be searched for contact birthdays.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
+          "text": "home-manager/modules/accounts/contacts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.khal.color",
+      "description": "Color in which events in this calendar are displayed.",
+      "type": "null or one of “black”, “white”, “brown”, “yellow”, “dark gray”, “dark green”, “dark blue”, “light gray”, “light green”, “light blue”, “dark magenta”, “dark cyan”, “dark red”, “light magenta”, “light cyan”, “light red”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
+          "text": "home-manager/modules/accounts/contacts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"light green\""
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.khal.priority",
+      "description": "Priority of a calendar used for coloring (calendar with highest priority is preferred).",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
+          "text": "home-manager/modules/accounts/contacts.nix"
+        }
+      ],
+      "note": null,
+      "default": "10",
+      "example": null
     },
     {
       "title": "accounts.contact.accounts.<name>.khal.readOnly",
@@ -3320,7 +3362,7 @@
     {
       "title": "editorconfig.settings",
       "description": "Configuration written to $HOME/.editorconfig. root = true is automatically added to the file,\nit must not be added here.\nSee https://editorconfig.org for documentation.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/editorconfig.nix",
@@ -6932,7 +6974,7 @@
     {
       "title": "programs.awscli.credentials",
       "description": "Configuration written to $HOME/.aws/credentials.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/awscli.nix",
@@ -6946,7 +6988,7 @@
     {
       "title": "programs.awscli.settings",
       "description": "Configuration written to $HOME/.aws/config.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/awscli.nix",
@@ -8290,7 +8332,7 @@
     {
       "title": "programs.cava.settings",
       "description": "Settings to be written to the Cava configuration file. See https://github.com/karlstav/cava/blob/master/example_files/config for\nall available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cava.nix",
@@ -9760,7 +9802,7 @@
     {
       "title": "programs.foot.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/foot/foot.ini. See https://codeberg.org/dnkl/foot/src/branch/master/foot.ini\nfor a list of available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foot.nix",
@@ -9802,7 +9844,7 @@
     {
       "title": "programs.fuzzel.settings",
       "description": "Configuration for fuzzel written to $XDG_CONFIG_HOME/fuzzel/fuzzel.ini. See\nfuzzel.ini(5) for a list of available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fuzzel.nix",
@@ -11664,7 +11706,7 @@
     {
       "title": "programs.havoc.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/havoc.cfg. See https://raw.githubusercontent.com/ii8/havoc/master/havoc.cfg\nfor a list of available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/havoc.nix",
@@ -14338,7 +14380,7 @@
     {
       "title": "programs.khal.settings",
       "description": "Configuration options to add to the various sections in the configuration file.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
@@ -15066,7 +15108,7 @@
     {
       "title": "programs.looking-glass-client.settings",
       "description": "looking-glass-client settings.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/looking-glass-client.nix",
@@ -15850,7 +15892,7 @@
     {
       "title": "programs.mr.settings",
       "description": "Configuration written to $HOME/.mrconfig See https://myrepos.branchable.com/\nfor an example configuration.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string) or a non-empty list of them)",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a non-empty list of them)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mr.nix",
@@ -17096,7 +17138,7 @@
     {
       "title": "programs.nheko.settings",
       "description": "Attribute set of Nheko preferences (converted to an INI file).",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nheko.nix",
@@ -18790,7 +18832,7 @@
     {
       "title": "programs.pqiv.settings",
       "description": "Configuration written to <filename>$XDG_CONFIG_HOME/pqivrc</filename>. See <link\nxlink:href=“https://github.com/phillipberndt/pqiv/blob/master/pqiv.1”/>\nfor a list of available options. To set a boolean flag, set the value to 1.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pqiv.nix",
@@ -18958,7 +19000,7 @@
     {
       "title": "programs.pylint.settings",
       "description": "The pylint configuration.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string) or a non-empty list of them)",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a non-empty list of them)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pylint.nix",
@@ -24362,7 +24404,7 @@
     {
       "title": "programs.watson.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/watson/config on Linux or\n$HOME/Library/Application Support/watson/config on Darwin.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/watson.nix",
@@ -27050,7 +27092,7 @@
     {
       "title": "services.avizo.settings",
       "description": "The settings that will be written to the avizo configuration file.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/avizo.nix",
@@ -28380,7 +28422,7 @@
     {
       "title": "services.flameshot.settings",
       "description": "Configuration to use for Flameshot. See https://github.com/flameshot-org/flameshot/blob/master/flameshot.example.ini\nfor available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/flameshot.nix",
@@ -28506,7 +28548,7 @@
     {
       "title": "services.fnott.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/fnott/fnott.ini.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/fnott.nix",
@@ -28688,7 +28730,7 @@
     {
       "title": "services.gammastep.settings",
       "description": "The configuration to pass to Gammastep. Available options for Gammastep described in\ngammastep(1).",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/redshift-gammastep/gammastep.nix",
@@ -31264,7 +31306,7 @@
     {
       "title": "services.pantalaimon.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/pantalaimon/pantalaimon.conf.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pantalaimon.nix",
@@ -32244,7 +32286,7 @@
     {
       "title": "services.redshift.settings",
       "description": "The configuration to pass to Redshift. Available options for Redshift described in\nredshift(1).",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/redshift-gammastep/redshift.nix",
@@ -34050,7 +34092,7 @@
     {
       "title": "services.wob.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/wob/wob.ini. See wob.ini(5) for documentation.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
@@ -34918,7 +34960,7 @@
     {
       "title": "systemd.user.settings",
       "description": "Extra config options for user session service manager. See systemd-user.conf(5) for available options.",
-      "type": "attribute set of attribute set of (INI atom (null, bool, int, float or string) or a list of them for duplicate keys)",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a list of them for duplicate keys)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/systemd.nix",
