@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 06 Mar 2024 01:52:57 GMT",
+  "last_update": "Thu, 07 Mar 2024 01:36:00 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -106,7 +106,7 @@
     {
       "title": "accounts.calendar.accounts.<name>.khal.type",
       "description": "Either a single calendar (calendar which is the default) or a directory with multiple calendars (discover).",
-      "type": "null or one of “calendar”, “discover”",
+      "type": "one of “calendar”, “discover”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -114,13 +114,13 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\"calendar\"",
       "example": null
     },
     {
       "title": "accounts.calendar.accounts.<name>.local",
       "description": "Local configuration for the calendar.",
-      "type": "null or (submodule)",
+      "type": "submodule",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -128,7 +128,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "{ }",
       "example": null
     },
     {
@@ -156,7 +156,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\".ics\"",
       "example": null
     },
     {
@@ -184,7 +184,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "\"filesystem\"",
       "example": null
     },
     {
@@ -218,7 +218,7 @@
     {
       "title": "accounts.calendar.accounts.<name>.primaryCollection",
       "description": "The primary collection of the account. Required when an account has multiple collections.",
-      "type": "string",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -226,7 +226,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "null",
       "example": null
     },
     {
@@ -539,8 +539,8 @@
     },
     {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.verify",
-      "description": "Verify SSL certificate.",
-      "type": "null or boolean",
+      "description": "Null or path to certificate to verify SSL against",
+      "type": "null or path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -549,7 +549,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": null
+      "example": "\"/path/to/cert.pem\""
     },
     {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.verifyFingerprint",
@@ -577,7 +577,7 @@
       ],
       "note": null,
       "default": null,
-      "example": null
+      "example": "\".calendar\""
     },
     {
       "title": "accounts.contact.accounts",
@@ -1061,8 +1061,8 @@
     },
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.verify",
-      "description": "Verify SSL certificate.",
-      "type": "null or boolean",
+      "description": "Null or path to certificate to verify SSL against",
+      "type": "null or path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
@@ -1071,7 +1071,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": null
+      "example": "\"/path/to/cert.pem\""
     },
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.verifyFingerprint",
@@ -10078,6 +10078,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.gallery-dl.package",
+      "description": "The gallery-dl package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gallery-dl.nix",
+          "text": "home-manager/modules/programs/gallery-dl.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gallery-dl",
+      "example": null
     },
     {
       "title": "programs.gallery-dl.settings",
