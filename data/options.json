@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 08 Mar 2024 01:52:41 GMT",
+  "last_update": "Sat, 09 Mar 2024 01:49:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -19250,6 +19250,188 @@
       "example": "{\n  colors = {\n    hints = {\n      bg = \"#000000\";\n      fg = \"#ffffff\";\n    };\n    tabs.bar.bg = \"#000000\";\n  };\n  tabs.tabs_are_windows = true;\n}\n\n"
     },
     {
+      "title": "programs.ranger.enable",
+      "description": "Whether to enable ranger file manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.ranger.package",
+      "description": "The ranger package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ranger",
+      "example": null
+    },
+    {
+      "title": "programs.ranger.aliases",
+      "description": "Aliases written to $XDG_CONFIG_HOME/ranger/rc.conf.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  e = \"edit\";\n  filter = \"scout -prts\";\n  setl = \"setlocal\";\n}\n"
+    },
+    {
+      "title": "programs.ranger.extraConfig",
+      "description": "Extra configuration lines to add to $XDG_CONFIG_HOME/ranger/rc.conf.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.ranger.extraPackages",
+      "description": "Extra packages added to ranger.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.ranger.mappings",
+      "description": "Mappings written to $XDG_CONFIG_HOME/ranger/rc.conf.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Q = \"quitall\";\n  q = \"quit\";\n}\n"
+    },
+    {
+      "title": "programs.ranger.plugins",
+      "description": "List of files to be added to $XDG_CONFIG_HOME/ranger/plugins/.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    name = \"zoxide\";\n    src = builtins.fetchGit {\n      url = \"https://github.com/jchook/ranger-zoxide.git\";\n      rev = \"363df97af34c96ea873c5b13b035413f56b12ead\";\n    };\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.ranger.plugins.*.name",
+      "description": "Name of the plugin linked to $XDG_CONFIG_HOME/ranger/plugins/. In the case of a\nsingle-file plugin, it must also have .py suffix.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.ranger.plugins.*.src",
+      "description": "The plugin file or directory.",
+      "type": "path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.ranger.rifle",
+      "description": "Settings written to $XDG_CONFIG_HOME/ranger/rifle.conf.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.ranger.rifle.*.command",
+      "description": "A command to run for the matching file.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"${pkgs.vim}/bin/vim -- \\\"$@\\\"\""
+    },
+    {
+      "title": "programs.ranger.rifle.*.condition",
+      "description": "A condition to match a file.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"mime ^text, label editor\""
+    },
+    {
+      "title": "programs.ranger.settings",
+      "description": "Settings written to $XDG_CONFIG_HOME/ranger/rc.conf.",
+      "type": "attribute set of (boolean or floating point number or signed integer or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
+          "text": "home-manager/modules/programs/ranger.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  column_ratios = \"1,3,3\";\n  confirm_on_delete = \"never\";\n  scroll_offset = 8;\n  unicode_ellipsis = true;\n}\n"
+    },
+    {
       "title": "programs.rbenv.enable",
       "description": "Whether to enable rbenv.",
       "type": "boolean",
@@ -19573,7 +19755,7 @@
     },
     {
       "title": "programs.rio.settings",
-      "description": "Configuration written to <filename>$XDG_CONFIG_HOME/rio/config.toml</filename> on Linux or <filename>$HOME/Library/Application Support/rio/config.toml</filename> on Darwin. See\n<link xlink:href=“https://raphamorim.io/rio/docs/#configuration-file”/> for options.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/rio/config.toml. See https://raphamorim.io/rio/docs/#configuration-file for options.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -25368,6 +25550,48 @@
       "example": "{\n  theme = \"custom\";\n  themes.custom.fg = \"#ffffff\";\n}\n\n"
     },
     {
+      "title": "programs.zk.enable",
+      "description": "Whether to enable zk.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zk.nix",
+          "text": "home-manager/modules/programs/zk.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.zk.package",
+      "description": "The zk package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zk.nix",
+          "text": "home-manager/modules/programs/zk.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.zk",
+      "example": null
+    },
+    {
+      "title": "programs.zk.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/zk/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zk.nix",
+          "text": "home-manager/modules/programs/zk.nix"
+        }
+      ],
+      "note": "See https://github.com/mickael-menu/zk/blob/main/docs/config.md for\navailable options and documentation.",
+      "default": "{ }",
+      "example": "{\n  note = {\n    language = \"en\";\n    default-title = \"Untitled\";\n    filename = \"{{id}}-{{slug title}}\";\n    extension = \"md\";\n    template = \"default.md\";\n    id-charset = \"alphanum\";\n    id-length = 4;\n    id-case = \"lower\";\n  };\n  extra = {\n    author = \"Mickaël\";\n  };\n}\n\n"
+    },
+    {
       "title": "programs.zoxide.enable",
       "description": "Whether to enable zoxide.",
       "type": "boolean",
@@ -28866,6 +29090,20 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "services.git-sync.repositories.<name>.extraPackages",
+      "description": "Extra packages available to git-sync.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/git-sync.nix",
+          "text": "home-manager/modules/services/git-sync.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "with pkgs; [ git-crypt ]"
     },
     {
       "title": "services.git-sync.repositories.<name>.interval",
