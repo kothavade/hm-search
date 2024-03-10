@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 09 Mar 2024 01:49:14 GMT",
+  "last_update": "Sun, 10 Mar 2024 01:58:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7616,6 +7616,20 @@
       "example": null
     },
     {
+      "title": "programs.borgmatic.backups.<name>.location.patterns",
+      "description": "Patterns to include/exclude.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
+          "text": "home-manager/modules/programs/borgmatic.nix"
+        }
+      ],
+      "note": "See the output of borg help patterns for the syntax. Pattern paths\nare relative to / even when a different recursion root is set.",
+      "default": "null",
+      "example": "[\n  \"R /home/user\"\n  \"- home/user/.cache\"\n  \"- home/user/Downloads\"\n  \"+ home/user/Videos/Important Video\"\n  \"- home/user/Videos\"\n]\n\n"
+    },
+    {
       "title": "programs.borgmatic.backups.<name>.location.repositories",
       "description": "List of local or remote repositories with paths and optional labels.",
       "type": "list of (string or (submodule))",
@@ -7632,15 +7646,15 @@
     {
       "title": "programs.borgmatic.backups.<name>.location.sourceDirectories",
       "description": "Directories to backup.",
-      "type": "list of string",
+      "type": "null or (list of string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
           "text": "home-manager/modules/programs/borgmatic.nix"
         }
       ],
-      "note": null,
-      "default": null,
+      "note": "Mutually exclusive with programs.borgmatic.backups.<name>.location.patterns.",
+      "default": "null",
       "example": "[config.home.homeDirectory]"
     },
     {
