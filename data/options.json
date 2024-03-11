@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 10 Mar 2024 01:58:37 GMT",
+  "last_update": "Mon, 11 Mar 2024 01:53:45 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18858,8 +18858,22 @@
       "example": null
     },
     {
+      "title": "programs.pqiv.extraConfig",
+      "description": "Extra lines to be added to $XDG_CONFIG_HOME/pqivrc. See pqiv(1) for a list of available options.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pqiv.nix",
+          "text": "home-manager/modules/programs/pqiv.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "[actions]\nset_cursor_auto_hide(1)\n\n[keybindings]\nt { montage_mode_enter() }\n@MONTAGE {\n  t { montage_mode_return_cancel() }\n}\n\n"
+    },
+    {
       "title": "programs.pqiv.settings",
-      "description": "Configuration written to <filename>$XDG_CONFIG_HOME/pqivrc</filename>. See <link\nxlink:href=“https://github.com/phillipberndt/pqiv/blob/master/pqiv.1”/>\nfor a list of available options. To set a boolean flag, set the value to 1.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/pqivrc. See pqiv(1) for a list of available options. To set a\nboolean flag, set the value to 1.",
       "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
