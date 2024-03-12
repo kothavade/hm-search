@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 11 Mar 2024 01:53:45 GMT",
+  "last_update": "Tue, 12 Mar 2024 01:52:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16643,6 +16643,20 @@
       ],
       "note": null,
       "default": "\"threads\"",
+      "example": null
+    },
+    {
+      "title": "programs.neomutt.unmailboxes",
+      "description": "Set unmailboxes * at the start of account configurations. It removes previous sidebar mailboxes when sourcing an account configuration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
+          "text": "home-manager/modules/programs/neomutt.nix"
+        }
+      ],
+      "note": "See http://www.mutt.org/doc/manual/#mailboxes for more information.",
+      "default": "false",
       "example": null
     },
     {
