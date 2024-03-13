@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 12 Mar 2024 01:52:40 GMT",
+  "last_update": "Wed, 13 Mar 2024 01:55:45 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9100,8 +9100,50 @@
       "example": "true"
     },
     {
-      "title": "programs.eza.enableAliases",
-      "description": "Whether to enable recommended eza aliases (ls, ll…).",
+      "title": "programs.eza.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.eza.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.eza.enableIonIntegration",
+      "description": "Whether to enable Ion integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.eza.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -9111,6 +9153,20 @@
       ],
       "note": null,
       "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.eza.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
       "example": "true"
     },
     {
