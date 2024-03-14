@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 13 Mar 2024 01:55:45 GMT",
+  "last_update": "Thu, 14 Mar 2024 01:53:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13062,6 +13062,90 @@
       "example": "with pkgs.jetbrains; [ clion pycharm-professional ];\n\n"
     },
     {
+      "title": "programs.joplin-desktop.enable",
+      "description": "Whether to enable joplin-desktop.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.joplin-desktop.package",
+      "description": "The joplin-desktop package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.joplin-desktop",
+      "example": null
+    },
+    {
+      "title": "programs.joplin-desktop.extraConfig",
+      "description": "Use this to add other options to the Joplin config file. Settings are written in JSON, so \"sync.interval\": 600 would be written as\n\"sync.interval\" = 600.",
+      "type": "attribute set",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"markdown.plugin.mark\" = true;\n  newNoteFocus = \"title\";\n}\n"
+    },
+    {
+      "title": "programs.joplin-desktop.general.editor",
+      "description": "The editor command (may include arguments) that will be used to open a note. If none is provided Joplin will try to auto-detect the default\neditor.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"kate\""
+    },
+    {
+      "title": "programs.joplin-desktop.sync.interval",
+      "description": "Set the synchronisation interval.",
+      "type": "one of <null>, “disabled”, “5m”, “10m”, “30m”, “1h”, “12h”, “1d”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"10m\""
+    },
+    {
+      "title": "programs.joplin-desktop.sync.target",
+      "description": "What is the type of sync target.",
+      "type": "one of <null>, “none”, “file-system”, “onedrive”, “nextcloud”, “webdav”, “dropbox”, “s3”, “joplin-server”, “joplin-cloud”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
+          "text": "home-manager/modules/programs/joplin-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"dropbox\""
+    },
+    {
       "title": "programs.joshuto.enable",
       "description": "Whether to enable joshuto file manager.",
       "type": "boolean",
@@ -19742,7 +19826,7 @@
     {
       "title": "programs.rbw.settings.pinentry",
       "description": "Which pinentry interface to use. Beware that pinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "package or one of “curses”, “tty”, “gtk2”, “emacs”, “gnome3”, “qt”",
+      "type": "package or one of “curses”, “gtk2”, “gnome2”, “qt”, “emacs”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rbw.nix",
@@ -29472,7 +29556,7 @@
     {
       "title": "services.gpg-agent.pinentryFlavor",
       "description": "Which pinentry interface to use. If not null, it sets\npinentry-program in\ngpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "null or one of “curses”, “tty”, “gtk2”, “emacs”, “gnome3”, “qt”",
+      "type": "null or one of “curses”, “gtk2”, “gnome2”, “qt”, “emacs”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
