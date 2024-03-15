@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 14 Mar 2024 01:53:20 GMT",
+  "last_update": "Fri, 15 Mar 2024 01:54:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7361,7 +7361,7 @@
       ],
       "note": null,
       "default": "pkgs.beets",
-      "example": "(pkgs.beets.override { enableCheck = true; })"
+      "example": "(pkgs.beets.override { pluginOverrides = { beatport.enable = false; }; })"
     },
     {
       "title": "programs.beets.mpdIntegration.enableStats",
@@ -19350,7 +19350,7 @@
     {
       "title": "programs.qutebrowser.keyBindings",
       "description": "Key bindings mapping keys to commands in different modes. This setting is a dictionary containing mode names and dictionaries mapping keys to\ncommands: {mode: {key: command}} If you want to map\na key to another key, check the keyMappings setting\ninstead. For modifiers, you can use either - or\n+ as delimiters, and these names:",
-      "type": "attribute set of attribute set of strings concatenated with \" ;; \"",
+      "type": "attribute set of attribute set of (null or strings concatenated with \" ;; \")",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/qutebrowser.nix",
@@ -19765,7 +19765,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "{\n  email = \"name@example.com\";\n  lock_timeout = 300;\n  pinentry = \"gnome3\";\n}\n\n"
+      "example": "{\n  email = \"name@example.com\";\n  lock_timeout = 300;\n  pinentry = pkgs.pinentry-gnome3;\n}\n\n"
     },
     {
       "title": "programs.rbw.settings.base_url",
@@ -19826,7 +19826,7 @@
     {
       "title": "programs.rbw.settings.pinentry",
       "description": "Which pinentry interface to use. Beware that pinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "package or one of “curses”, “gtk2”, “gnome2”, “qt”, “emacs”",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rbw.nix",
@@ -19834,8 +19834,8 @@
         }
       ],
       "note": "services.dbus.packages = [ pkgs.gcr ];",
-      "default": "\"gtk2\"",
-      "example": "\"gnome3\""
+      "default": "null",
+      "example": "pkgs.pinentry-gnome3"
     },
     {
       "title": "programs.readline.enable",
@@ -29018,8 +29018,8 @@
         }
       ],
       "note": null,
-      "default": "pkgs.coreutils",
-      "example": "with pkgs; [ coreutils xdotool ];\n\n"
+      "default": "pkgs.xdotool pkgs.coreutils pkgs.xorg.xprop",
+      "example": "with pkgs; [ xdotool coreutils xorg.xprop ];\n\n"
     },
     {
       "title": "services.fusuma.settings",
@@ -29554,9 +29554,9 @@
       "example": null
     },
     {
-      "title": "services.gpg-agent.pinentryFlavor",
+      "title": "services.gpg-agent.pinentryPackage",
       "description": "Which pinentry interface to use. If not null, it sets\npinentry-program in\ngpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
-      "type": "null or one of “curses”, “gtk2”, “gnome2”, “qt”, “emacs”",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
@@ -29565,7 +29565,7 @@
       ],
       "note": "services.dbus.packages = [ pkgs.gcr ];",
       "default": "null",
-      "example": "\"gnome3\""
+      "example": "pkgs.pinentry-gnome3"
     },
     {
       "title": "services.gpg-agent.sshKeys",
