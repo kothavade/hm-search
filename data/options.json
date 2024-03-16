@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 15 Mar 2024 01:54:32 GMT",
+  "last_update": "Sat, 16 Mar 2024 01:51:36 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5700,7 +5700,7 @@
     {
       "title": "nix.gc.frequency",
       "description": "The frequency at which to run the garbage collector.",
-      "type": "one of “hourly”, “weekly”, “monthly”, “semiannually”, “annually”",
+      "type": "one of “hourly”, “daily”, “weekly”, “monthly”, “semiannually”, “annually”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
@@ -20792,7 +20792,7 @@
     {
       "title": "programs.senpai.config",
       "description": "Configuration for senpai. For a complete list of options, see senpai(5).",
-      "type": "YAML value",
+      "type": "attribute set of anything",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/senpai.nix",
@@ -20801,11 +20801,11 @@
       ],
       "note": null,
       "default": null,
-      "example": "{\n  addr = \"libera.chat:6697\";\n  nick = \"nicholas\";\n  password = \"verysecurepassword\";\n}\n\n"
+      "example": "{\n  address = \"libera.chat:6697\";\n  nickname = \"nicholas\";\n  password = \"verysecurepassword\";\n}\n\n"
     },
     {
-      "title": "programs.senpai.config.addr",
-      "description": "The address (host[:port]) of the IRC server. senpai uses TLS connections by default unless you specify no-tls option. TLS\nconnections default to port 6697, plain-text use port 6667.",
+      "title": "programs.senpai.config.address",
+      "description": "The address (host[:port]) of the IRC server. senpai uses TLS connections by default unless you specify tls option to be false.\nTLS connections default to port 6697, plain-text use port 6667.",
       "type": "string",
       "declared_by": [
         {
@@ -20813,12 +20813,12 @@
           "text": "home-manager/modules/programs/senpai.nix"
         }
       ],
-      "note": null,
+      "note": "URircs://, irc://, and irc+insecure:// URLs are supported,\nin which case only the hostname and port parts will be used. If\nthe scheme is ircs/irc+insecure, tls will be overriden and set\nto true/false accordingly.",
       "default": null,
       "example": null
     },
     {
-      "title": "programs.senpai.config.nick",
+      "title": "programs.senpai.config.nickname",
       "description": "Your nickname, sent with a NICK IRC message. It mustn’t contain spaces or colons (:).",
       "type": "string",
       "declared_by": [
@@ -20829,20 +20829,6 @@
       ],
       "note": null,
       "default": null,
-      "example": null
-    },
-    {
-      "title": "programs.senpai.config.no-tls",
-      "description": "Disables TLS encryption.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/senpai.nix",
-          "text": "home-manager/modules/programs/senpai.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
       "example": null
     },
     {
@@ -20858,6 +20844,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.senpai.config.password-cmd",
+      "description": "Alternatively to providing your SASL authentication password directly in plaintext, you can specify a command to be run to\nfetch the password at runtime. This is useful if you store your\npasswords in a separate (probably encrypted) file using gpg or a\ncommand line password manager such as pass or gopass. If a\npassword-cmd is provided, the value of password will be ignored\nand the first line of the output of password-cmd will be used\nfor login.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/senpai.nix",
+          "text": "home-manager/modules/programs/senpai.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"gopass\"\n  \"show\"\n  \"irc/guest\"\n]\n"
     },
     {
       "title": "programs.sftpman.enable",
@@ -25886,20 +25886,6 @@
       "example": "true"
     },
     {
-      "title": "programs.zsh.enableAutosuggestions",
-      "description": "Enable zsh autosuggestions",
-      "type": "unspecified value",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
       "title": "programs.zsh.enableCompletion",
       "description": "Enable zsh completion. Don’t forget to add",
       "type": "boolean",
@@ -26010,6 +25996,34 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.zsh.autosuggestion.enable",
+      "description": "Enable zsh autosuggestions",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.zsh.autosuggestion.highlight",
+      "description": "Custom styles for autosuggestion highlighting. See zshzle(1) for syntax.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"fg=#ff00ff,bg=cyan,bold,underline\""
     },
     {
       "title": "programs.zsh.cdpath",
@@ -26596,7 +26610,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "true",
       "example": "true"
     },
     {
@@ -27230,8 +27244,22 @@
       "example": "[\n  \"brackets\"\n]\n"
     },
     {
+      "title": "programs.zsh.syntaxHighlighting.patterns",
+      "description": "Custom syntax highlighting for user-defined patterns. Reference: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/pattern.md",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"rm -rf *\" = \"fg=white,bold,bg=red\";\n}\n"
+    },
+    {
       "title": "programs.zsh.syntaxHighlighting.styles",
-      "description": "Custom styles for syntax highlighting. See each highlighter’s options: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md",
+      "description": "Custom styles for syntax highlighting. See each highlighter style option: https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md",
       "type": "attribute set of string",
       "declared_by": [
         {
@@ -27410,6 +27438,160 @@
       "note": "Some examples are",
       "default": "null",
       "example": "\"adwaita-dark\""
+    },
+    {
+      "title": "services.activitywatch.enable",
+      "description": "Whether to enable ActivityWatch, an automated time tracker.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.activitywatch.package",
+      "description": "Package containing the Rust implementation of ActivityWatch server.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.activitywatch",
+      "example": "pkgs.aw-server-rust"
+    },
+    {
+      "title": "services.activitywatch.extraOptions",
+      "description": "Additional arguments to be passed on to the ActivityWatch server.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--port\"\n  \"5999\"\n]\n"
+    },
+    {
+      "title": "services.activitywatch.settings",
+      "description": "Configuration for aw-server-rust to be generated at $XDG_CONFIG_HOME/activitywatch/aw-server-rust/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  port = 3012;\n\n  custom_static = {\n    my-custom-watcher = \"${pkgs.my-custom-watcher}/share/my-custom-watcher/static\";\n    aw-keywatcher = \"${pkgs.aw-keywatcher}/share/aw-keywatcher/static\";\n  };\n}\n\n"
+    },
+    {
+      "title": "services.activitywatch.watchers",
+      "description": "Watchers to be included with the service alongside with their configuration.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": "If a configuration is set, a file will be generated in\n$XDG_CONFIG_HOME/activitywatch/$WATCHER_NAME/$WATCHER_SETTINGS_FILENAME.",
+      "default": "{ }",
+      "example": "{\n  aw-watcher-afk = {\n    package = pkgs.activitywatch;\n    settings = {\n      timeout = 300;\n      poll_time = 2;\n    };\n  };\n\n  aw-watcher-windows = {\n    package = pkgs.activitywatch;\n    settings = {\n      poll_time = 1;\n      exclude_title = true;\n    };\n  };\n\n  my-custom-watcher = {\n    package = pkgs.my-custom-watcher;\n    executable = \"mcw\";\n    settings = {\n      hello = \"there\";\n      enable_greetings = true;\n      poll_time = 5;\n    };\n    settingsFilename = \"config.toml\";\n  };\n}\n\n"
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.package",
+      "description": "The derivation containing the watcher executable.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "pkgs.activitywatch"
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.executable",
+      "description": "The name of the executable of the watcher. This is useful in case the watcher name is different from the executable. By default, this\noption uses the watcher name.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.extraOptions",
+      "description": "Extra arguments to be passed to the watcher executable.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--host\"\n  \"127.0.0.1\"\n]\n"
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.name",
+      "description": "The name of the watcher. This will be used as the directory name for $XDG_CONFIG_HOME/activitywatch/$NAME when\nservices.activitywatch.watchers.<name>.settings is set.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": "\"aw-watcher-afk\""
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.settings",
+      "description": "The settings for the individual watcher in TOML format. If set, a file will be generated at\n$XDG_CONFIG_HOME/activitywatch/$NAME/$FILENAME.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": "To set the basename of the settings file, see\nservices.activitywatch.watchers.<name>.settingsFilename.",
+      "default": "{ }",
+      "example": "{\n  poll_time = 2;\n  timeout = 300;\n}\n"
+    },
+    {
+      "title": "services.activitywatch.watchers.<name>.settingsFilename",
+      "description": "The filename of the generated settings file. By default, this uses the watcher name to be generated at\n$XDG_CONFIG_HOME/activitywatch/$NAME/$NAME.toml.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/activitywatch.nix",
+          "text": "home-manager/modules/services/activitywatch.nix"
+        }
+      ],
+      "note": "This is useful in case the watcher requires a different name for the\nconfiguration file.",
+      "default": "\"‹name›.toml\"",
+      "example": "\"config.toml\""
     },
     {
       "title": "services.arrpc.enable",
