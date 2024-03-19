@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 18 Mar 2024 01:53:52 GMT",
+  "last_update": "Tue, 19 Mar 2024 01:53:51 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4368,9 +4368,9 @@
       "example": "with pkgs; [ fcitx5-rime ]"
     },
     {
-      "title": "i18n.inputMethod.kime.config",
+      "title": "i18n.inputMethod.kime.extraConfig",
       "description": "kime configuration. Refer to https://github.com/Riey/kime/blob/develop/docs/CONFIGURATION.md\nfor details on supported values.",
-      "type": "YAML value",
+      "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/kime.nix",
@@ -4378,8 +4378,8 @@
         }
       ],
       "note": null,
-      "default": "{ }",
-      "example": "{\n  daemon = {\n    modules = [\"Xim\" \"Indicator\"];\n  };\n\n  indicator = {\n    icon_color = \"White\";\n  };\n\n  engine = {\n    hangul = {\n      layout = \"dubeolsik\";\n    };\n  };\n}\n\n"
+      "default": "\"\"",
+      "example": "daemon:\n  modules: [Xim,Indicator]\nindicator:\n  icon_color: White\nengine:\n  hangul:\n    layout: dubeolsik\n\n"
     },
     {
       "title": "i18n.inputMethod.uim.toolbar",
@@ -5699,17 +5699,17 @@
     },
     {
       "title": "nix.gc.frequency",
-      "description": "The frequency at which to run the garbage collector.",
-      "type": "one of “hourly”, “daily”, “weekly”, “monthly”, “semiannually”, “annually”",
+      "description": "When to run the Nix garbage collector.",
+      "type": "string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
           "text": "home-manager/modules/services/nix-gc.nix"
         }
       ],
-      "note": "These enums are based on special expressions from the\nsystemd.time(7)",
+      "note": "On Linux this is a string as defined by systemd.time(7).",
       "default": "\"weekly\"",
-      "example": "\"monthly\""
+      "example": "\"03:15\""
     },
     {
       "title": "nix.gc.options",
