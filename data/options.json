@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 22 Mar 2024 01:52:56 GMT",
+  "last_update": "Sat, 23 Mar 2024 01:53:15 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -524,6 +524,20 @@
       "example": null
     },
     {
+      "title": "accounts.calendar.accounts.<name>.vdirsyncer.urlCommand",
+      "description": "A command that prints the URL of the storage.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
+          "text": "home-manager/modules/accounts/calendar.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-url.sh\"\n]\n"
+    },
+    {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.userAgent",
       "description": "The user agent to report to the server. Defaults to vdirsyncer.",
       "type": "null or string",
@@ -536,6 +550,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "accounts.calendar.accounts.<name>.vdirsyncer.userNameCommand",
+      "description": "A command that prints the user name to standard output.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
+          "text": "home-manager/modules/accounts/calendar.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-username.sh\"\n]\n"
     },
     {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.verify",
@@ -1046,6 +1074,20 @@
       "example": null
     },
     {
+      "title": "accounts.contact.accounts.<name>.vdirsyncer.urlCommand",
+      "description": "A command that prints the URL of the storage.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
+          "text": "home-manager/modules/accounts/contacts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-url.sh\"\n]\n"
+    },
+    {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.userAgent",
       "description": "The user agent to report to the server. Defaults to vdirsyncer.",
       "type": "null or string",
@@ -1058,6 +1100,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.vdirsyncer.userNameCommand",
+      "description": "A command that prints the user name to standard output.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
+          "text": "home-manager/modules/accounts/contacts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-username.sh\"\n]\n"
     },
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.verify",
