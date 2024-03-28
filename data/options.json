@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 27 Mar 2024 01:54:13 GMT",
+  "last_update": "Thu, 28 Mar 2024 01:54:06 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28528,7 +28528,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": "{\n  lat = 52.3;\n  lng = 4.8;\n  usegeoclue = true;\n}\n\n"
     },
     {
