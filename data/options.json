@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 28 Mar 2024 01:54:06 GMT",
+  "last_update": "Fri, 29 Mar 2024 01:53:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4296,6 +4296,20 @@
       "note": null,
       "default": "\"left_ptr\"",
       "example": "\"X_cursor\""
+    },
+    {
+      "title": "home.preferXdgDirectories",
+      "description": "Whether to make programs use XDG directories whenever supported.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
+          "text": "home-manager/modules/home-environment.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "home.profileDirectory",
