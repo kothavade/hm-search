@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 31 Mar 2024 01:58:40 GMT",
+  "last_update": "Mon, 01 Apr 2024 02:03:01 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -49,8 +49,8 @@
     },
     {
       "title": "accounts.calendar.accounts.<name>.khal.color",
-      "description": "Color in which events in this calendar are displayed.",
-      "type": "null or one of “black”, “white”, “brown”, “yellow”, “dark gray”, “dark green”, “dark blue”, “light gray”, “light green”, “light blue”, “dark magenta”, “dark cyan”, “dark red”, “light magenta”, “light cyan”, “light red”",
+      "description": "Color in which events in this calendar are displayed. For instance ‘light green’ or an RGB color ‘#ff0000’",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -655,8 +655,8 @@
     },
     {
       "title": "accounts.contact.accounts.<name>.khal.color",
-      "description": "Color in which events in this calendar are displayed.",
-      "type": "null or one of “black”, “white”, “brown”, “yellow”, “dark gray”, “dark green”, “dark blue”, “light gray”, “light green”, “light blue”, “dark magenta”, “dark cyan”, “dark red”, “light magenta”, “light cyan”, “light red”",
+      "description": "Color in which events in this calendar are displayed. For instance ‘light green’ or an RGB color ‘#ff0000’",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
