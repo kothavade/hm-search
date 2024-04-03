@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 02 Apr 2024 01:58:08 GMT",
+  "last_update": "Wed, 03 Apr 2024 01:55:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7084,6 +7084,20 @@
       "example": "true"
     },
     {
+      "title": "programs.bacon.package",
+      "description": "The bacon package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bacon.nix",
+          "text": "home-manager/modules/programs/bacon.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bacon",
+      "example": null
+    },
+    {
       "title": "programs.bacon.settings",
       "description": "Bacon configuration. For available settings see https://dystroy.org/bacon/#global-preferences.",
       "type": "TOML value",
@@ -7094,7 +7108,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": "{\n  jobs = {\n    default = {\n      command = [\n        \"cargo\"\n        \"build\"\n        \"--all-features\"\n        \"--color\"\n        \"always\"\n      ];\n      need_stdout = true;\n    };\n  };\n}\n"
     },
     {
@@ -36439,7 +36453,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "[\n  \"-all\"\n]\n"
+      "example": "[\n  \"--all\"\n]\n"
     },
     {
       "title": "wayland.windowManager.hyprland.xwayland.enable",
