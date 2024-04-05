@@ -1,7 +1,6 @@
 import "@/styles/globals.css"
 
 import { Metadata, Viewport } from "next"
-import Script from "next/script"
 
 // import options from "@/data/options.json"
 
@@ -41,12 +40,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head>
-          <Script
-            src="/stats/script.js"
-            data-website-id="162108b3-4712-438f-862b-f0634d3c8272"
-          />
-        </head>
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
