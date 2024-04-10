@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 09 Apr 2024 01:54:54 GMT",
+  "last_update": "Wed, 10 Apr 2024 01:55:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8342,6 +8342,62 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  color_theme = \"Default\";\n  theme_background = false;\n}\n"
+    },
+    {
+      "title": "programs.bun.enable",
+      "description": "Whether to enable Bun JavaScript runtime.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bun.nix",
+          "text": "home-manager/modules/programs/bun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.bun.enableGitIntegration",
+      "description": "Whether to enable Git integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bun.nix",
+          "text": "home-manager/modules/programs/bun.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.bun.package",
+      "description": "The bun package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bun.nix",
+          "text": "home-manager/modules/programs/bun.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bun",
+      "example": null
+    },
+    {
+      "title": "programs.bun.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/.bunfig.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bun.nix",
+          "text": "home-manager/modules/programs/bun.nix"
+        }
+      ],
+      "note": "See https://bun.sh/docs/runtime/bunfig\nfor the full list of options.",
+      "default": "{ }",
+      "example": "{\n  smol = true;\n  telemetry = false;\n  test = {\n    coverage = true;\n    coverageThreshold = 0.9;\n  };\n  install.lockfile = {\n    print = \"yarn\";\n  };\n}\n\n"
     },
     {
       "title": "programs.carapace.enable",
