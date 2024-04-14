@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 13 Apr 2024 01:37:33 GMT",
+  "last_update": "Sun, 14 Apr 2024 02:58:38 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -17162,6 +17162,20 @@
       "note": null,
       "default": "ps: [ ]",
       "example": "pyPkgs: with pyPkgs; [ python-language-server ]"
+    },
+    {
+      "title": "programs.neovim.extraWrapperArgs",
+      "description": "Extra arguments to be passed to the neovim wrapper. This option sets environment variables required for building and running binaries\nwith external package managers like mason.nvim.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neovim.nix",
+          "text": "home-manager/modules/programs/neovim.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--suffix\"\n  \"LIBRARY_PATH\"\n  \":\"\n  \"${lib.makeLibraryPath [ pkgs.stdenv.cc.cc pkgs.zlib ]}\"\n  \"--suffix\"\n  \"PKG_CONFIG_PATH\"\n  \":\"\n  \"${lib.makeSearchPathOutput \"dev\" \"lib/pkgconfig\" [ pkgs.stdenv.cc.cc pkgs.zlib ]}\"\n]\n\n"
     },
     {
       "title": "programs.neovim.finalPackage",
