@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 14 Apr 2024 02:58:38 GMT",
+  "last_update": "Mon, 15 Apr 2024 03:52:48 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13525,7 +13525,7 @@
     },
     {
       "title": "programs.k9s.aliases",
-      "description": "Aliases written to $XDG_CONFIG_HOME/k9s/aliases.yaml. See https://k9scli.io/topics/aliases/ for supported values.",
+      "description": "Aliases written to $XDG_CONFIG_HOME/k9s/aliases.yaml (linux) or Library/Application Support/k9s/aliases.yaml (darwin). See\nhttps://k9scli.io/topics/aliases/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13539,7 +13539,7 @@
     },
     {
       "title": "programs.k9s.hotkey",
-      "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkey.yaml. See https://k9scli.io/topics/hotkeys/ for supported values.",
+      "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkeys.yaml (linux) or Library/Application Support/k9s/hotkeys.yaml (darwin). See\nhttps://k9scli.io/topics/hotkeys/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13553,7 +13553,7 @@
     },
     {
       "title": "programs.k9s.plugin",
-      "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugin.yaml. See https://k9scli.io/topics/plugins/ for supported values.",
+      "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugins.yaml (linux) or Library/Application Support/k9s/plugins.yaml (darwin). See\nhttps://k9scli.io/topics/plugins/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13567,7 +13567,7 @@
     },
     {
       "title": "programs.k9s.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/k9s/config.yaml. See https://k9scli.io/topics/config/ for supported values.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/k9s/config.yaml (linux) or Library/Application Support/k9s/config.yaml (darwin), See\nhttps://k9scli.io/topics/config/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -13581,7 +13581,7 @@
     },
     {
       "title": "programs.k9s.skins",
-      "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/. See https://k9scli.io/topics/skins/ for supported values.",
+      "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/ (linux) or Library/Application Support/k9s/skins/ (darwin). See\nhttps://k9scli.io/topics/skins/ for supported values.",
       "type": "attribute set of (YAML value)",
       "declared_by": [
         {
@@ -13595,7 +13595,7 @@
     },
     {
       "title": "programs.k9s.views",
-      "description": "Resource column views written to $XDG_CONFIG_HOME/k9s/views.yaml. See https://k9scli.io/topics/columns/ for supported values.",
+      "description": "Resource column views written to $XDG_CONFIG_HOME/k9s/views.yaml (linux)\nor Library/Application Support/k9s/views.yaml (darwin).\nSee https://k9scli.io/topics/columns/ for supported values.",
       "type": "YAML value",
       "declared_by": [
         {
