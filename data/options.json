@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 16 Apr 2024 01:55:35 GMT",
+  "last_update": "Wed, 17 Apr 2024 01:57:19 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35698,6 +35698,20 @@
       "note": null,
       "default": "{ }",
       "example": null
+    },
+    {
+      "title": "systemd.user.enable",
+      "description": "Whether to enable the user systemd service manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/systemd.nix",
+          "text": "home-manager/modules/systemd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.stdenv.isLinux",
+      "example": "true"
     },
     {
       "title": "systemd.user.automounts",
