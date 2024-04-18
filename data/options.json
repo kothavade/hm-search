@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 17 Apr 2024 01:57:19 GMT",
+  "last_update": "Thu, 18 Apr 2024 01:55:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9559,7 +9559,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  {\n    name = \"wikipedia\";\n    tags = [ \"wiki\" ];\n    keyword = \"wiki\";\n    url = \"https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go\";\n  }\n  {\n    name = \"kernel.org\";\n    url = \"https://www.kernel.org\";\n  }\n  {\n    name = \"Nix sites\";\n    toolbar = true;\n    bookmarks = [\n      {\n        name = \"homepage\";\n        url = \"https://nixos.org/\";\n      }\n      {\n        name = \"wiki\";\n        tags = [ \"wiki\" \"nix\" ];\n        url = \"https://nixos.wiki/\";\n      }\n    ];\n  }\n]\n\n"
+      "example": "[\n  {\n    name = \"wikipedia\";\n    tags = [ \"wiki\" ];\n    keyword = \"wiki\";\n    url = \"https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go\";\n  }\n  {\n    name = \"kernel.org\";\n    url = \"https://www.kernel.org\";\n  }\n  {\n    name = \"Nix sites\";\n    toolbar = true;\n    bookmarks = [\n      {\n        name = \"homepage\";\n        url = \"https://nixos.org/\";\n      }\n      {\n        name = \"wiki\";\n        tags = [ \"wiki\" \"nix\" ];\n        url = \"https://wiki.nixos.org/\";\n      }\n    ];\n  }\n]\n\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.containers",
@@ -9755,7 +9755,7 @@
       ],
       "note": "See SearchEngine.jsm\nin Firefox’s source for available options. We maintain a\nmapping to let you specify all options in the referenced\nlink without underscores, but it may fall out of date with\nfuture options.",
       "default": "{ }",
-      "example": "{\n  \"Nix Packages\" = {\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  \"NixOS Wiki\" = {\n    urls = [{ template = \"https://nixos.wiki/index.php?search={searchTerms}\"; }];\n    iconUpdateURL = \"https://nixos.wiki/favicon.png\";\n    updateInterval = 24 * 60 * 60 * 1000; # every day\n    definedAliases = [ \"@nw\" ];\n  };\n\n  \"Bing\".metaData.hidden = true;\n  \"Google\".metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
+      "example": "{\n  \"Nix Packages\" = {\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  \"NixOS Wiki\" = {\n    urls = [{ template = \"https://wiki.nixos.org/index.php?search={searchTerms}\"; }];\n    iconUpdateURL = \"https://wiki.nixos.org/favicon.png\";\n    updateInterval = 24 * 60 * 60 * 1000; # every day\n    definedAliases = [ \"@nw\" ];\n  };\n\n  \"Bing\".metaData.hidden = true;\n  \"Google\".metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.search.force",
@@ -19611,7 +19611,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  w = \"https://en.wikipedia.org/wiki/Special:Search?search={}&go=Go&ns0=1\";\n  aw = \"https://wiki.archlinux.org/?search={}\";\n  nw = \"https://nixos.wiki/index.php?search={}\";\n  g = \"https://www.google.com/search?hl=en&q={}\";\n}\n\n"
+      "example": "{\n  w = \"https://en.wikipedia.org/wiki/Special:Search?search={}&go=Go&ns0=1\";\n  aw = \"https://wiki.archlinux.org/?search={}\";\n  nw = \"https://wiki.nixos.org/index.php?search={}\";\n  g = \"https://www.google.com/search?hl=en&q={}\";\n}\n\n"
     },
     {
       "title": "programs.qutebrowser.settings",
