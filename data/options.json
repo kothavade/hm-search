@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 18 Apr 2024 01:55:32 GMT",
+  "last_update": "Fri, 19 Apr 2024 01:56:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27595,21 +27595,21 @@
     },
     {
       "title": "qt.platformTheme",
-      "description": "Platform theme to use for Qt applications.",
-      "type": "null or one of “gtk”, “gtk3”, “gnome”, “lxqt”, “qtct”, “kde”",
+      "description": "Deprecated. Use qt.platformTheme.name instead.",
+      "type": "null or one of “gtk”, “gtk3”, “gnome”, “adwaita”, “lxqt”, “qtct”, “kde” or (submodule)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/qt.nix",
           "text": "home-manager/modules/misc/qt.nix"
         }
       ],
-      "note": "The options are",
+      "note": null,
       "default": "null",
-      "example": "\"gnome\""
+      "example": null
     },
     {
       "title": "qt.style.package",
-      "description": "Theme package to be used in Qt5/Qt6 applications. Auto-detected from qt.style.name if possible.",
+      "description": "Theme package to be used in Qt5/Qt6 applications. Auto-detected from qt.style.name if possible.\nSee its documentation for available options.",
       "type": "null or package or list of package",
       "declared_by": [
         {
