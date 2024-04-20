@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 19 Apr 2024 01:56:25 GMT",
+  "last_update": "Sat, 20 Apr 2024 01:55:09 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -2938,6 +2938,20 @@
       "note": null,
       "default": "",
       "example": "\"msmtpq --read-envelope-from --read-recipients\""
+    },
+    {
+      "title": "accounts.email.accounts.<name>.neomutt.showDefaultMailbox",
+      "description": "Show the default mailbox (INBOX)",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
+          "text": "home-manager/modules/programs/neomutt.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "accounts.email.accounts.<name>.notmuch.enable",
@@ -6171,7 +6185,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  window.dimensions = {\n    lines = 3;\n    columns = 200;\n  };\n  keyboard.bindings = [\n    {\n      key = \"K\";\n      mods = \"Control\";\n      chars = \"\\\\x0c\";\n    }\n  ];\n}\n\n"
+      "example": "{\n  window.dimensions = {\n    lines = 3;\n    columns = 200;\n  };\n  keyboard.bindings = [\n    {\n      key = \"K\";\n      mods = \"Control\";\n      chars = \"\\\\u000c\";\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.alot.enable",
@@ -9394,6 +9408,76 @@
       "example": null
     },
     {
+      "title": "programs.fd.enable",
+      "description": "Whether to enable fd, a simple, fast and user-friendly alternative to find.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
+          "text": "home-manager/modules/programs/fd.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.fd.package",
+      "description": "The fd package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
+          "text": "home-manager/modules/programs/fd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.fd",
+      "example": null
+    },
+    {
+      "title": "programs.fd.extraOptions",
+      "description": "Extra command line options passed to fd.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
+          "text": "home-manager/modules/programs/fd.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--no-ignore\"\n  \"--absolute-path\"\n]\n"
+    },
+    {
+      "title": "programs.fd.hidden",
+      "description": "Search hidden files and directories (--hidden argument).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
+          "text": "home-manager/modules/programs/fd.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.fd.ignores",
+      "description": "List of paths that should be globally ignored.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
+          "text": "home-manager/modules/programs/fd.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \".git/\"\n  \"*.bak\"\n]\n"
+    },
+    {
       "title": "programs.feh.enable",
       "description": "Whether to enable feh - a fast and light image viewer.",
       "type": "boolean",
@@ -12038,6 +12122,20 @@
       "note": null,
       "default": "[ ]",
       "example": "[ pkgs.marksman ]"
+    },
+    {
+      "title": "programs.helix.ignores",
+      "description": "List of paths that should be globally ignored for file picker. Supports the usual ignore and negative ignore (unignore) rules used in .gitignore files.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/helix.nix",
+          "text": "home-manager/modules/programs/helix.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \".build/\"\n  \"!.gitignore\"\n]\n"
     },
     {
       "title": "programs.helix.languages",
@@ -16968,6 +17066,20 @@
       "example": null
     },
     {
+      "title": "programs.neomutt.sourcePrimaryAccount",
+      "description": "Whether to enable source the primary account by default.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
+          "text": "home-manager/modules/programs/neomutt.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "programs.neomutt.unmailboxes",
       "description": "Set unmailboxes * at the start of account configurations. It removes previous sidebar mailboxes when sourcing an account configuration.",
       "type": "boolean",
@@ -21532,6 +21644,76 @@
       "example": "{\n  fullscreen = false;\n  window_x = 0;\n  window_y = 0;\n  window_w = 1920;\n  window_h = 1080;\n  vsync = 1;\n  texture_filtering = 1;\n  master_volume = 127;\n  music_volume = 127;\n  sfx_volume = 127;\n  env_volume = 127;\n  key_a = [ \"0026\" \"1000\" \"1103\" ];\n  key_b = [ \"0033\" \"1002\" \"1101\" ];\n  key_start = [ \"0039\" \"1006\" \"ffff\" ];\n  key_l = [ \"0034\" \"1007\" \"1104\" ];\n  key_r = [ \"0036\" \"100a\" \"1105\" ];\n  key_z = [ \"0025\" \"1009\" \"1102\" ];\n  key_cup = [ \"100b\" \"ffff\" \"ffff\" ];\n  key_cdown = [ \"100c\" \"ffff\" \"ffff\" ];\n  key_cleft = [ \"100d\" \"ffff\" \"ffff\" ];\n  key_cright = [ \"100e\" \"ffff\" \"ffff\" ];\n  key_stickup = [ \"0011\" \"ffff\" \"ffff\" ];\n  key_stickdown = [ \"001f\" \"ffff\" \"ffff\" ];\n  key_stickleft = [ \"001e\" \"ffff\" \"ffff\" ];\n  key_stickright = [ \"0020\" \"ffff\" \"ffff\" ];\n  stick_deadzone = 16;\n  rumble_strength = 10;\n  skip_intro = 1;\n};\n\n"
     },
     {
+      "title": "programs.spotify-player.enable",
+      "description": "Whether to enable spotify-player.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.spotify-player.package",
+      "description": "The spotify-player package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.spotify-player",
+      "example": null
+    },
+    {
+      "title": "programs.spotify-player.keymaps",
+      "description": "Configuration written to the keymaps field of $XDG_CONFIG_HOME/spotify-player/keymap.toml.",
+      "type": "list of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": "See\nhttps://github.com/aome510/spotify-player/blob/master/docs/config.md#keymaps\nfor the full list of options.",
+      "default": "[ ]",
+      "example": "[\n  {\n    command = \"NextTrack\";\n    key_sequence = \"g n\";\n  }\n  {\n    command = \"PreviousTrack\";\n    key_sequence = \"g p\";\n  }\n  {\n    command = \"Search\";\n    key_sequence = \"C-c C-x /\";\n  }\n  {\n    command = \"ResumePause\";\n    key_sequence = \"M-enter\";\n  }\n  {\n    command = \"None\";\n    key_sequence = \"q\";\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.spotify-player.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/spotify-player/app.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": "See\nhttps://github.com/aome510/spotify-player/blob/master/docs/config.md#general\nfor the full list of options.",
+      "default": "{ }",
+      "example": "{\n  theme = \"default\";\n  playback_window_position = \"Top\";\n  copy_command = {\n    command = \"wl-copy\";\n    args = [];\n  };\n  device = {\n    audio_cache = false;\n    normalization = false;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.spotify-player.themes",
+      "description": "Configuration written to the themes field of $XDG_CONFIG_HOME/spotify-player/theme.toml.",
+      "type": "list of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": "See\nhttps://github.com/aome510/spotify-player/blob/master/docs/config.md#themes\nfor the full list of options.",
+      "default": "[ ]",
+      "example": "[\n  {\n    name = \"default2\";\n    palette = {\n      black = \"black\";\n      red = \"red\";\n      green = \"green\";\n      yellow = \"yellow\";\n      blue = \"blue\";\n      magenta = \"magenta\";\n      cyan = \"cyan\";\n      white = \"white\";\n      bright_black = \"bright_black\";\n      bright_red = \"bright_red\";\n      bright_green = \"bright_green\";\n      bright_yellow = \"bright_yellow\";\n      bright_blue = \"bright_blue\";\n      bright_magenta = \"bright_magenta\";\n      bright_cyan = \"bright_cyan\";\n      bright_white = \"bright_white\";\n    };\n    component_style = {\n      block_title = { fg = \"Magenta\"; };\n      border = {};\n      playback_track = { fg = \"Cyan\"; modifiers = [\"Bold\"]; };\n      playback_artists = { fg = \"Cyan\"; modifiers = [\"Bold\"]; };\n      playback_album = { fg = \"Yellow\"; };\n      playback_metadata = { fg = \"BrightBlack\"; };\n      playback_progress_bar = { bg = \"BrightBlack\"; fg = \"Green\"; };\n      current_playing = { fg = \"Green\"; modifiers = [\"Bold\"]; };\n      page_desc = { fg = \"Cyan\"; modifiers = [\"Bold\"]; };\n      table_header = { fg = \"Blue\"; };\n      selection = { modifiers = [\"Bold\" \"Reversed\"]; };\n    };\n  }\n]\n\n"
+    },
+    {
       "title": "programs.sqls.enable",
       "description": "Whether to enable sqls, a SQL language server written in Go.",
       "type": "boolean",
@@ -24148,6 +24330,48 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.tofi.enable",
+      "description": "Whether to enable Tofi, a tiny dynamic menu for Wayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tofi.nix",
+          "text": "home-manager/modules/programs/tofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.tofi.package",
+      "description": "The tofi package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tofi.nix",
+          "text": "home-manager/modules/programs/tofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tofi",
+      "example": null
+    },
+    {
+      "title": "programs.tofi.settings",
+      "description": "Settings to be written to the Tofi configuration file.",
+      "type": "attribute set of (string or signed integer or boolean)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tofi.nix",
+          "text": "home-manager/modules/programs/tofi.nix"
+        }
+      ],
+      "note": "See https://github.com/philj56/tofi/blob/master/doc/config\nfor the full list of options.",
+      "default": "{ }",
+      "example": "{\n  background-color = \"#000000\";\n  border-width = 0;\n  font = \"monospace\";\n  height = \"100%\";\n  num-results = 5;\n  outline-width = 0;\n  padding-left = \"35%\";\n  padding-top = \"35%\";\n  result-spacing = 25;\n  width = \"100%\";\n}\n\n"
     },
     {
       "title": "programs.topgrade.enable",
@@ -27592,6 +27816,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "qt.kde.settings",
+      "description": "A set of values to be modified by kwriteconfig5.",
+      "type": "attribute set of (KDE option value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/qt/kconfig.nix",
+          "text": "home-manager/modules/misc/qt/kconfig.nix"
+        }
+      ],
+      "note": "The example value would cause the following command to run in the\nactivation script:",
+      "default": "{ }",
+      "example": "{\n  powermanagementprofilesrc = {\n    AC = {\n      HandleButtonEvents = {\n        lidAction = 32;\n      };\n    };\n  };\n}\n"
     },
     {
       "title": "qt.platformTheme",
@@ -33166,6 +33404,76 @@
       "example": "true"
     },
     {
+      "title": "services.remmina.enable",
+      "description": "Whether to enable Remmina.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/remmina.nix",
+          "text": "home-manager/modules/services/remmina.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.remmina.package",
+      "description": "The remmina package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/remmina.nix",
+          "text": "home-manager/modules/services/remmina.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.remmina",
+      "example": null
+    },
+    {
+      "title": "services.remmina.addRdpMimeTypeAssoc",
+      "description": "Whether to enable Remmina RDP file open option.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/remmina.nix",
+          "text": "home-manager/modules/services/remmina.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "services.remmina.systemdService.enable",
+      "description": "Whether to enable systemd Remmina service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/remmina.nix",
+          "text": "home-manager/modules/services/remmina.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "services.remmina.systemdService.startupFlags",
+      "description": "Startup flags documented in the manpage to run at service startup.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/remmina.nix",
+          "text": "home-manager/modules/services/remmina.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
       "title": "services.rsibreak.enable",
       "description": "Whether to enable rsibreak.",
       "type": "boolean",
@@ -36456,20 +36764,6 @@
       "example": "true"
     },
     {
-      "title": "wayland.windowManager.hyprland.enableNvidiaPatches",
-      "description": "Whether to enable patching wlroots for better Nvidia support.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
-          "text": "home-manager/modules/services/window-managers/hyprland.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
-    },
-    {
       "title": "wayland.windowManager.hyprland.package",
       "description": "The hyprland package to use.",
       "type": "package",
@@ -36761,6 +37055,20 @@
       ],
       "note": null,
       "default": "${pkgs.sway}",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.sway.checkConfig",
+      "description": "If enabled (the default), validates the generated config file.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix",
+          "text": "home-manager/modules/services/window-managers/i3-sway/sway.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
       "example": null
     },
     {
@@ -38075,9 +38383,37 @@
           "text": "home-manager/modules/services/window-managers/i3-sway/sway.nix"
         }
       ],
-      "note": "DISPLAYWAYLAND_DISPLAYSWAYSOCKXDG_CURRENT_DESKTOP",
+      "note": "DISPLAYWAYLAND_DISPLAYSWAYSOCKXDG_CURRENT_DESKTOPXDG_SESSION_TYPENIXOS_OZONE_WLXCURSOR_THEMEXCURSOR_SIZE\nYou can extend this list using the systemd.variables option.",
       "default": "true",
       "example": "false"
+    },
+    {
+      "title": "wayland.windowManager.sway.systemd.extraCommands",
+      "description": "Extra commands to run after D-Bus activation.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix",
+          "text": "home-manager/modules/services/window-managers/i3-sway/sway.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.sway.systemd.variables",
+      "description": "Environment variables imported into the systemd and D-Bus user environment.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix",
+          "text": "home-manager/modules/services/window-managers/i3-sway/sway.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"-all\"\n]\n"
     },
     {
       "title": "wayland.windowManager.sway.systemd.xdgAutostart",
