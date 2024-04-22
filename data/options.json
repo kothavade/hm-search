@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 21 Apr 2024 02:00:06 GMT",
+  "last_update": "Mon, 22 Apr 2024 01:59:01 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13400,7 +13400,7 @@
     {
       "title": "programs.joplin-desktop.sync.interval",
       "description": "Set the synchronisation interval.",
-      "type": "one of <null>, “disabled”, “5m”, “10m”, “30m”, “1h”, “12h”, “1d”",
+      "type": "one of “undefined”, “disabled”, “5m”, “10m”, “30m”, “1h”, “12h”, “1d”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
@@ -13408,13 +13408,13 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\"undefined\"",
       "example": "\"10m\""
     },
     {
       "title": "programs.joplin-desktop.sync.target",
       "description": "What is the type of sync target.",
-      "type": "one of <null>, “none”, “file-system”, “onedrive”, “nextcloud”, “webdav”, “dropbox”, “s3”, “joplin-server”, “joplin-cloud”",
+      "type": "one of “undefined”, “none”, “file-system”, “onedrive”, “nextcloud”, “webdav”, “dropbox”, “s3”, “joplin-server”, “joplin-cloud”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/joplin-desktop.nix",
@@ -13422,7 +13422,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\"undefined\"",
       "example": "\"dropbox\""
     },
     {
@@ -19192,6 +19192,48 @@
       "note": null,
       "default": "pkgs.pls",
       "example": null
+    },
+    {
+      "title": "programs.poetry.enable",
+      "description": "Whether to enable poetry.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/poetry.nix",
+          "text": "home-manager/modules/programs/poetry.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.poetry.package",
+      "description": "The poetry package to use. May be used to install custom poetry plugins.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/poetry.nix",
+          "text": "home-manager/modules/programs/poetry.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.poetry",
+      "example": "pkgs.poetry.withPlugins (ps: with ps; [ poetry-plugin-up ])"
+    },
+    {
+      "title": "programs.poetry.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/pypoetry/config.toml on Linux or\n$HOME/Library/Application Support/pypoetry/config.toml on Darwin.\nSee\nhttps://python-poetry.org/docs/configuration/\nfor more information.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/poetry.nix",
+          "text": "home-manager/modules/programs/poetry.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  virtualenvs.create = true;\n  virtualenvs.in-project = true;\n}\n\n"
     },
     {
       "title": "programs.powerline-go.enable",
