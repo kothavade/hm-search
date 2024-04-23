@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 22 Apr 2024 01:59:01 GMT",
+  "last_update": "Tue, 23 Apr 2024 01:58:00 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7404,6 +7404,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.bat.package",
+      "description": "The bat package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bat.nix",
+          "text": "home-manager/modules/programs/bat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bat",
+      "example": null
     },
     {
       "title": "programs.bat.config",
@@ -28068,6 +28082,62 @@
       "note": "This is useful in case the watcher requires a different name for the\nconfiguration file.",
       "default": "\"‹name›.toml\"",
       "example": "\"config.toml\""
+    },
+    {
+      "title": "services.amberol.enable",
+      "description": "Whether to enable Amberol music player as a daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/amberol.nix",
+          "text": "home-manager/modules/services/amberol.nix"
+        }
+      ],
+      "note": "Note, it is necessary to add",
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.amberol.enableRecoloring",
+      "description": "UI recoloring using the album art.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/amberol.nix",
+          "text": "home-manager/modules/services/amberol.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.amberol.package",
+      "description": "The amberol package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/amberol.nix",
+          "text": "home-manager/modules/services/amberol.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.amberol",
+      "example": null
+    },
+    {
+      "title": "services.amberol.replaygain",
+      "description": "ReplayGain mode.",
+      "type": "one of “album”, “track”, “off”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/amberol.nix",
+          "text": "home-manager/modules/services/amberol.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"track\"",
+      "example": null
     },
     {
       "title": "services.arrpc.enable",
