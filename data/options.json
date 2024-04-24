@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 23 Apr 2024 01:58:00 GMT",
+  "last_update": "Wed, 24 Apr 2024 01:57:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -34186,6 +34186,20 @@
       "note": null,
       "default": "null",
       "example": "\"eDP-1\""
+    },
+    {
+      "title": "services.swayosd.stylePath",
+      "description": "Use a custom Stylesheet file instead of looking for one.",
+      "type": "null or path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swayosd.nix",
+          "text": "home-manager/modules/services/swayosd.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"/etc/xdg/swayosd/style.css\""
     },
     {
       "title": "services.swayosd.topMargin",
