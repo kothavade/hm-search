@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 28 Apr 2024 02:02:23 GMT",
+  "last_update": "Mon, 29 Apr 2024 01:59:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28742,6 +28742,20 @@
       "example": null
     },
     {
+      "title": "services.cliphist.allowImages",
+      "description": "Store images in clipboard history.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/cliphist.nix",
+          "text": "home-manager/modules/services/cliphist.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
       "title": "services.cliphist.systemdTarget",
       "description": "The systemd target that will automatically start the cliphist service.",
       "type": "string",
@@ -33122,6 +33136,34 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.psd.enable",
+      "description": "Whether to enable Profile-sync-daemon service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.psd.resyncTimer",
+      "description": "The amount of time to wait before syncing browser profiles back to the disk.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": "Takes a systemd time span, see systemd.time(7). The time unit\ndefaults to seconds if omitted.",
+      "default": "\"1h\"",
+      "example": "\"1h 30min\""
     },
     {
       "title": "services.pueue.enable",
