@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 29 Apr 2024 01:59:14 GMT",
+  "last_update": "Tue, 30 Apr 2024 01:57:28 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16282,6 +16282,20 @@
       "example": "[\n  \"gpu-hq\"\n]\n"
     },
     {
+      "title": "programs.mpv.extraInput",
+      "description": "Additional lines that are appended to $XDG_CONFIG_HOME/mpv/input.conf. See mpv(1) for the full list of options.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpv.nix",
+          "text": "home-manager/modules/programs/mpv.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  esc         quit                        #! Quit\n  #           script-binding uosc/video   #! Video tracks\n  # additional comments\n''\n"
+    },
+    {
       "title": "programs.mpv.profiles",
       "description": "Sub-configuration options for specific profiles written to $XDG_CONFIG_HOME/mpv/mpv.conf. See\nprograms.mpv.config for more information.",
       "type": "attribute set of attribute set of (string or signed integer or boolean or floating point number or list of (string or signed integer or boolean or floating point number))",
@@ -23630,6 +23644,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.thefuck.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thefuck.nix",
+          "text": "home-manager/modules/programs/thefuck.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "programs.thefuck.enableZshIntegration",
@@ -34188,6 +34216,62 @@
       "example": "60"
     },
     {
+      "title": "services.swaync.enable",
+      "description": "Whether to enable Swaync notification daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swaync.nix",
+          "text": "home-manager/modules/services/swaync.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.swaync.package",
+      "description": "The swaynotificationcenter package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swaync.nix",
+          "text": "home-manager/modules/services/swaync.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.swaynotificationcenter",
+      "example": null
+    },
+    {
+      "title": "services.swaync.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/swaync/config.json. See\nhttps://github.com/ErikReider/SwayNotificationCenter/blob/main/src/configSchema.json\nfor the documentation.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swaync.nix",
+          "text": "home-manager/modules/services/swaync.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  positionX = \"right\";\n  positionY = \"top\";\n  layer = \"overlay\";\n  control-center-layer = \"top\";\n  layer-shell = true;\n  cssPriority = \"application\";\n  control-center-margin-top = 0;\n  control-center-margin-bottom = 0;\n  control-center-margin-right = 0;\n  control-center-margin-left = 0;\n  notification-2fa-action = true;\n  notification-inline-replies = false;\n  notification-icon-size = 64;\n  notification-body-image-height = 100;\n  notification-body-image-width = 200\n};\n\n"
+    },
+    {
+      "title": "services.swaync.style",
+      "description": "CSS style of the bar. See https://github.com/ErikReider/SwayNotificationCenter/blob/main/src/style.css\nfor the documentation.",
+      "type": "null or path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swaync.nix",
+          "text": "home-manager/modules/services/swaync.nix"
+        }
+      ],
+      "note": "If the value is set to a path literal, then the path will be used as the CSS file.",
+      "default": "null",
+      "example": "''\n  .notification-row {\n    outline: none;\n  }\n  \n  .notification-row:focus,\n  .notification-row:hover {\n    background: @noti-bg-focus;\n  }\n  \n  .notification {\n    border-radius: 12px;\n    margin: 6px 12px;\n    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7),\n      0 2px 6px 2px rgba(0, 0, 0, 0.3);\n    padding: 0;\n  }\n''\n"
+    },
+    {
       "title": "services.swayosd.enable",
       "description": "Whether to enable swayosd, a GTK based on screen display for keyboard shortcuts like caps-lock and volume.",
       "type": "boolean",
@@ -36972,6 +37056,20 @@
       "note": null,
       "default": "wayland.windowManager.hyprland.package with applied configuration",
       "example": null
+    },
+    {
+      "title": "wayland.windowManager.hyprland.importantPrefixes",
+      "description": "List of prefix of attributes to source at the top of the config.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"$\"\n  \"bezier\"\n]\n"
     },
     {
       "title": "wayland.windowManager.hyprland.plugins",
