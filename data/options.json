@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 30 Apr 2024 01:57:28 GMT",
+  "last_update": "Wed, 01 May 2024 02:02:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10162,6 +10162,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  main = {\n    term = \"xterm-256color\";\n\n    font = \"Fira Code:size=11\";\n    dpi-aware = \"yes\";\n  };\n\n  mouse = {\n    hide-when-typing = \"yes\";\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.freetube.enable",
+      "description": "Whether to enable FreeTube, a YT client for Windows, Mac, and Linux.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/freetube.nix",
+          "text": "home-manager/modules/programs/freetube.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.freetube.package",
+      "description": "The freetube package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/freetube.nix",
+          "text": "home-manager/modules/programs/freetube.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.freetube",
+      "example": null
+    },
+    {
+      "title": "programs.freetube.settings",
+      "description": "Configuration settings for FreeTube.",
+      "type": "attribute set",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/freetube.nix",
+          "text": "home-manager/modules/programs/freetube.nix"
+        }
+      ],
+      "note": "All configurable options can be deduced by enabling them through the\nGUI and observing the changes in settings.db.",
+      "default": "{ }",
+      "example": "{\n  allowDashAv1Formats = true;\n  checkForUpdates     = false;\n  defaultQuality      = \"1080\";\n  baseTheme           = \"catppuccinMocha\";\n}\n\n"
     },
     {
       "title": "programs.fuzzel.enable",
@@ -28949,6 +28991,48 @@
       ],
       "note": null,
       "default": null,
+      "example": null
+    },
+    {
+      "title": "services.conky.enable",
+      "description": "Whether to enable Conky, a light-weight system monitor.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/conky.nix",
+          "text": "home-manager/modules/services/conky.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.conky.package",
+      "description": "The conky package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/conky.nix",
+          "text": "home-manager/modules/services/conky.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.conky",
+      "example": null
+    },
+    {
+      "title": "services.conky.extraConfig",
+      "description": "Configuration used by the Conky daemon. Check https://github.com/brndnmtthws/conky/wiki/Configurations for\noptions. If not set, the default configuration, as described by\nconky --print-config, will be used.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/conky.nix",
+          "text": "home-manager/modules/services/conky.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
       "example": null
     },
     {
