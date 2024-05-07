@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 06 May 2024 02:00:33 GMT",
+  "last_update": "Tue, 07 May 2024 02:02:02 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11268,6 +11268,104 @@
       "note": null,
       "default": "",
       "example": null
+    },
+    {
+      "title": "programs.gnome-shell.enable",
+      "description": "Whether to enable GNOME Shell customization.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.gnome-shell.extensions",
+      "description": "List of GNOME Shell extensions.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  { package = pkgs.gnomeExtensions.dash-to-panel; }\n  {\n    id = \"user-theme@gnome-shell-extensions.gcampax.github.com\";\n    package = pkgs.gnome.gnome-shell-extensions;\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.gnome-shell.extensions.*.package",
+      "description": "Package providing a GNOME Shell extension in $out/share/gnome-shell/extensions/${id}.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"pkgs.gnome.gnome-shell-extensions\""
+    },
+    {
+      "title": "programs.gnome-shell.extensions.*.id",
+      "description": "ID of the GNOME Shell extension. If not provided, it will be obtained from package.extensionUuid.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"user-theme@gnome-shell-extensions.gcampax.github.com\""
+    },
+    {
+      "title": "programs.gnome-shell.theme",
+      "description": "Theme to use for GNOME Shell.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n  name = \"Plata-Noir\";\n  package = pkgs.plata-theme;\n}\n\n"
+    },
+    {
+      "title": "programs.gnome-shell.theme.package",
+      "description": "Package providing a GNOME Shell theme in $out/share/themes/${name}/gnome-shell.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.plata-theme"
+    },
+    {
+      "title": "programs.gnome-shell.theme.name",
+      "description": "Name of the GNOME Shell theme.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-shell.nix",
+          "text": "home-manager/modules/programs/gnome-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Plata-Noir\""
     },
     {
       "title": "programs.gnome-terminal.enable",
