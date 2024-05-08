@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 07 May 2024 02:02:02 GMT",
+  "last_update": "Wed, 08 May 2024 01:38:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13731,6 +13731,20 @@
       ],
       "note": null,
       "default": "pkgs.jujutsu",
+      "example": null
+    },
+    {
+      "title": "programs.jujutsu.ediff",
+      "description": "Enable ediff as a merge tool",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jujutsu.nix",
+          "text": "home-manager/modules/programs/jujutsu.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.programs.emacs.enable",
       "example": null
     },
     {
