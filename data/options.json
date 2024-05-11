@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 10 May 2024 02:02:36 GMT",
+  "last_update": "Sat, 11 May 2024 01:57:16 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3483,6 +3483,62 @@
       ],
       "note": null,
       "default": "false",
+      "example": null
+    },
+    {
+      "title": "fonts.fontconfig.defaultFonts.emoji",
+      "description": "Per-user default emoji font(s). Multiple fonts may be listed in case a font does not support all emoji.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": "Note that fontconfig matches color emoji fonts preferentially,\nso if you want to use a black and white font while having\na color font installed (eg. Noto Color Emoji installed alongside\nNoto Emoji), fontconfig will still choose the color font even\nwhen it is later in the list.",
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "fonts.fontconfig.defaultFonts.monospace",
+      "description": "Per-user default monospace font(s). Multiple fonts may be listed in case multiple languages must be supported.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "fonts.fontconfig.defaultFonts.sansSerif",
+      "description": "Per-user default sans serif font(s). Multiple fonts may be listed in case multiple languages must be supported.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "fonts.fontconfig.defaultFonts.serif",
+      "description": "Per-user default serif font(s). Multiple fonts may be listed in case multiple languages must be supported.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
       "example": null
     },
     {
@@ -9422,6 +9478,48 @@
       "example": null
     },
     {
+      "title": "programs.fastfetch.enable",
+      "description": "Whether to enable Fastfetch.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fastfetch.nix",
+          "text": "home-manager/modules/programs/fastfetch.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.fastfetch.package",
+      "description": "The fastfetch package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fastfetch.nix",
+          "text": "home-manager/modules/programs/fastfetch.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.fastfetch",
+      "example": null
+    },
+    {
+      "title": "programs.fastfetch.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/fastfetch/config.jsonc. See https://github.com/fastfetch-cli/fastfetch/wiki/Json-Schema\nfor the documentation.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fastfetch.nix",
+          "text": "home-manager/modules/programs/fastfetch.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  logo = {\n    source = \"nixos_small\";\n    padding = {\n      right = 1;\n    };\n  };\n  display = {\n    binaryPrefix = \"si\";\n    color = \"blue\";\n    separator = \"  \";\n  };\n  modules = [\n    {\n      type = \"datetime\";\n      key = \"Date\";\n      format = \"{1}-{3}-{11}\";\n    }\n    {\n      type = \"datetime\";\n      key = \"Time\";\n      format = \"{14}:{17}:{20}\";\n    }\n    \"break\"\n    \"player\"\n    \"media\"\n  ];\n};\n\n"
+    },
+    {
       "title": "programs.fd.enable",
       "description": "Whether to enable fd, a simple, fast and user-friendly alternative to find.",
       "type": "boolean",
@@ -12852,6 +12950,90 @@
       "example": "{\n  preset = \"rainbow\";\n  mode = \"rgb\";\n  color_align = {\n    mode = \"horizontal\";\n  };\n}\n\n"
     },
     {
+      "title": "programs.hyprlock.enable",
+      "description": "Whether to enable Hyprlock, Hyprland’s GPU-accelerated lock screen utility.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": "Note that PAM must be configured to enable hyprlock to perform\nauthentication. The package installed through home-manager will not be\nable to unlock the session without this configuration.",
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.hyprlock.package",
+      "description": "The hyprlock package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprlock",
+      "example": null
+    },
+    {
+      "title": "programs.hyprlock.extraConfig",
+      "description": "Extra configuration lines to add to ~/.config/hypr/hyprlock.conf.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.hyprlock.importantPrefixes",
+      "description": "List of prefix of attributes to source at the top of the config.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"$\"\n  \"monitor\"\n  \"size\"\n]\n"
+    },
+    {
+      "title": "programs.hyprlock.settings",
+      "description": "Hyprlock configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be quoted. See\nhttps://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/ for more examples.",
+      "type": "Hyprlock configuration value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  general = {\n    disable_loading_bar = true;\n    grace = 300;\n    hide_cursor = true;\n    no_fade_in = false;\n  };\n\n  background = [\n    {\n      path = \"screenshot\";\n      blur_passes = 3;\n      blur_size = 8;\n    }\n  ];\n\n  input-field = [\n    {\n      size = \"200, 50\";\n      position = \"0, -80\";\n      monitor = \"\";\n      dots_center = true;\n      fade_on_empty = false;\n      font_color = \"rgb(202, 211, 245)\";\n      inner_color = \"rgb(91, 96, 120)\";\n      outer_color = \"rgb(24, 25, 38)\";\n      outline_thickness = 5;\n      placeholder_text = '\\'<span foreground=\"##cad3f5\">Password...</span>'\\';\n      shadow_passes = 2;\n    }\n  ];\n}\n\n"
+    },
+    {
+      "title": "programs.hyprlock.sourceFirst",
+      "description": "Whether to enable putting source entries at the top of the configuration .",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
+          "text": "home-manager/modules/programs/hyprlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "programs.i3blocks.enable",
       "description": "Whether to enable i3blocks i3 status command scheduler.",
       "type": "boolean",
@@ -13749,7 +13931,7 @@
     },
     {
       "title": "programs.jujutsu.settings",
-      "description": "Options to add to the .jjconfig.toml file. See https://github.com/martinvonz/jj/blob/main/docs/config.md\nfor options.",
+      "description": "Options to add to the config.toml file. See https://github.com/martinvonz/jj/blob/main/docs/config.md\nfor options.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -13759,7 +13941,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  user = {\n    name = \"John Doe\";\n    email = \"jdoe@example.org\";\n  };\n}\n\n"
+      "example": "{\n  user = {\n    email = \"jdoe@example.org\";\n    name = \"John Doe\";\n  };\n}\n"
     },
     {
       "title": "programs.k9s.enable",
@@ -25970,6 +26152,48 @@
       "example": "{\n  wl-clipboard = fetchFromGitHub {\n    owner = \"sayanarijit\";\n    repo = \"wl-clipboard.xplr\";\n    rev = \"a3ffc87460c5c7f560bffea689487ae14b36d9c3\";\n    hash = \"sha256-I4rh5Zks9hiXozBiPDuRdHwW5I7ppzEpQNtirY0Lcks=\";\n  }\n  local-plugin = \"/home/user/.config/plugins/local-plugin\";\n};\n\n"
     },
     {
+      "title": "programs.yambar.enable",
+      "description": "Whether to enable Yambar.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
+          "text": "home-manager/modules/programs/yambar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.yambar.package",
+      "description": "The yambar package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
+          "text": "home-manager/modules/programs/yambar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.yambar",
+      "example": null
+    },
+    {
+      "title": "programs.yambar.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/yambar/config.yml. See yambar(5) for options.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
+          "text": "home-manager/modules/programs/yambar.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "bar = {\n  location = \"top\";\n  height = 26;\n  background = \"00000066\";\n\n  right = [\n    {\n      clock.content = [\n        {\n          string.text = \"{time}\";\n        }\n      ];\n    }\n  ];\n};\n\n"
+    },
+    {
       "title": "programs.yazi.enable",
       "description": "Whether to enable yazi.",
       "type": "boolean",
@@ -30982,6 +31206,62 @@
       "example": "{\n  general = {\n    after_sleep_cmd = \"hyprctl dispatch dpms on\";\n    ignore_dbus_inhibit = false;\n    lock_cmd = \"hyprlock\";\n  };\n\n  listener = [\n    {\n      timeout = 900;\n      on-timeout = \"hyprlock\";\n    }\n    {\n      timeout = 1200;\n      on-timeout = \"hyprctl dispatch dpms off\";\n      on-resume = \"hyprctl dispatch dpms on\";\n    }\n  ];\n}\n\n"
     },
     {
+      "title": "services.hyprpaper.enable",
+      "description": "Whether to enable Hyprpaper, Hyprland’s wallpaper daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpaper.nix",
+          "text": "home-manager/modules/services/hyprpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.hyprpaper.package",
+      "description": "The hyprpaper package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpaper.nix",
+          "text": "home-manager/modules/services/hyprpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprpaper",
+      "example": null
+    },
+    {
+      "title": "services.hyprpaper.importantPrefixes",
+      "description": "List of prefix of attributes to source at the top of the config.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpaper.nix",
+          "text": "home-manager/modules/services/hyprpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"$\"\n]\n"
+    },
+    {
+      "title": "services.hyprpaper.settings",
+      "description": "hyprpaper configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/ for more examples.",
+      "type": "Hyprpaper configuration value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpaper.nix",
+          "text": "home-manager/modules/services/hyprpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  ipc = \"on\";\n  splash = false;\n  splash_offset = 2.0;\n\n  preload =\n    [ \"/share/wallpapers/buttons.png\" \"/share/wallpapers/cat_pacman.png\" ];\n\n  wallpaper = [\n    \"DP-3,/share/wallpapers/buttons.png\"\n    \"DP-1,/share/wallpapers/cat_pacman.png\"\n  ];\n}\n\n"
+    },
+    {
       "title": "services.imapnotify.enable",
       "description": "Whether to enable imapnotify.",
       "type": "boolean",
@@ -31053,7 +31333,7 @@
     },
     {
       "title": "services.kanshi.profiles",
-      "description": "List of profiles.",
+      "description": "Attribute set of profiles.",
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
@@ -31078,6 +31358,20 @@
       "note": null,
       "default": "[ ]",
       "example": "\"[ \\${pkg.sway}/bin/swaymsg workspace 1, move workspace to eDP-1 ]\""
+    },
+    {
+      "title": "services.kanshi.profiles.<name>.name",
+      "description": "Profile name",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
     },
     {
       "title": "services.kanshi.profiles.<name>.outputs",
@@ -31187,6 +31481,215 @@
           "text": "home-manager/modules/services/kanshi.nix"
         }
       ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings",
+      "description": "Ordered list of directives. See kanshi(5) for informations.",
+      "type": "list of attribute-tagged union",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "{ include = \"path/to/included/files\"; }\n{ output.criteria = \"eDP-1\";\n  output.scale = 2;\n}\n{ profile.name = \"undocked\";\n  profile.outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n  ];\n}\n{ profile.name = \"docked\";\n  profile.outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n    {\n      criteria = \"Some Company ASDF 4242\";\n      transform = \"90\";\n    }\n  ];\n}\n\n"
+    },
+    {
+      "title": "services.kanshi.settings.*.include",
+      "description": "Include as another file from path. Expands shell syntax (see wordexp(3) for details).",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.output",
+      "description": "output attribute set.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.output.adaptiveSync",
+      "description": "Enables or disables adaptive synchronization (aka. Variable Refresh Rate).",
+      "type": "null or boolean",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "services.kanshi.settings.*.output.criteria",
+      "description": "The criteria can either be an output name, an output description or “*”. The latter can be used to match any output.",
+      "type": "string",
+      "declared_by": [],
+      "note": "On\nsway(1),\noutput names and descriptions can be obtained via\nswaymsg -t get_outputs.",
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.output.mode",
+      "description": "<width>x<height>[@<rate>[Hz]]",
+      "type": "null or string",
+      "declared_by": [],
+      "note": "Configures the specified output to use the specified mode.\nModes are a combination of width and height (in pixels) and\na refresh rate (in Hz) that your display can be configured to use.",
+      "default": "null",
+      "example": "\"1920x1080@60Hz\""
+    },
+    {
+      "title": "services.kanshi.settings.*.output.position",
+      "description": "<x>,<y>",
+      "type": "null or string",
+      "declared_by": [],
+      "note": "Places the output at the specified position in the global coordinates\nspace.",
+      "default": "null",
+      "example": "\"1600,0\""
+    },
+    {
+      "title": "services.kanshi.settings.*.output.scale",
+      "description": "Scales the output by the specified scale factor.",
+      "type": "null or floating point number",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "2"
+    },
+    {
+      "title": "services.kanshi.settings.*.output.status",
+      "description": "Enables or disables the specified output.",
+      "type": "null or one of “enable”, “disable”",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.output.transform",
+      "description": "Sets the output transform.",
+      "type": "null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile",
+      "description": "profile attribute set.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.exec",
+      "description": "Commands executed after the profile is successfully applied. Note that if you provide multiple commands, they will be\nexecuted asynchronously with no guaranteed ordering.",
+      "type": "(list of string) or string convertible to it",
+      "declared_by": [],
+      "note": null,
+      "default": "[ ]",
+      "example": "\"[ \\${pkg.sway}/bin/swaymsg workspace 1, move workspace to eDP-1 ]\""
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.name",
+      "description": "Profile name",
+      "type": "string",
+      "declared_by": [],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs",
+      "description": "Outputs configuration.",
+      "type": "list of (submodule)",
+      "declared_by": [],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.adaptiveSync",
+      "description": "Enables or disables adaptive synchronization (aka. Variable Refresh Rate).",
+      "type": "null or boolean",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.criteria",
+      "description": "The criteria can either be an output name, an output description or “*”. The latter can be used to match any output.",
+      "type": "string",
+      "declared_by": [],
+      "note": "On\nsway(1),\noutput names and descriptions can be obtained via\nswaymsg -t get_outputs.",
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.mode",
+      "description": "<width>x<height>[@<rate>[Hz]]",
+      "type": "null or string",
+      "declared_by": [],
+      "note": "Configures the specified output to use the specified mode.\nModes are a combination of width and height (in pixels) and\na refresh rate (in Hz) that your display can be configured to use.",
+      "default": "null",
+      "example": "\"1920x1080@60Hz\""
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.position",
+      "description": "<x>,<y>",
+      "type": "null or string",
+      "declared_by": [],
+      "note": "Places the output at the specified position in the global coordinates\nspace.",
+      "default": "null",
+      "example": "\"1600,0\""
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.scale",
+      "description": "Scales the output by the specified scale factor.",
+      "type": "null or floating point number",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "2"
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.status",
+      "description": "Enables or disables the specified output.",
+      "type": "null or one of “enable”, “disable”",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.transform",
+      "description": "Sets the output transform.",
+      "type": "null or one of “normal”, “90”, “180”, “270”, “flipped”, “flipped-90”, “flipped-180”, “flipped-270”",
+      "declared_by": [],
       "note": null,
       "default": "null",
       "example": null
@@ -36904,6 +37407,34 @@
       "example": "true"
     },
     {
+      "title": "targets.darwin.defaults.NSGlobalDomain.ApplePressAndHoldEnabled",
+      "description": "Repeat a key when it is held down (false) or display the accented character selector (true)",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.NSGlobalDomain.AppleShowAllExtensions",
+      "description": "Always show file extensions in Finder",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
       "title": "targets.darwin.defaults.NSGlobalDomain.AppleTemperatureUnit",
       "description": "Sets the temperature unit.",
       "type": "null or one of “Celsius”, “Fahrenheit”",
@@ -36916,6 +37447,20 @@
       "note": null,
       "default": "null",
       "example": "\"Celsius\""
+    },
+    {
+      "title": "targets.darwin.defaults.NSGlobalDomain.KeyRepeat",
+      "description": "Interval between key repetitions when holding down a key. Lower is faster. When setting through the control panel, 2 is the lowest value,\nand 120 the highest.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "2"
     },
     {
       "title": "targets.darwin.defaults.NSGlobalDomain.NSAutomaticCapitalizationEnabled",
@@ -37128,6 +37673,20 @@
       "example": "false"
     },
     {
+      "title": "targets.darwin.defaults.\"com.apple.dock\".autohide",
+      "description": "Hide the Dock automatically",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
       "title": "targets.darwin.defaults.\"com.apple.dock\".expose-group-apps",
       "description": "Whether to enable grouping of windows by application in Mission Control.",
       "type": "null or boolean",
@@ -37140,6 +37699,20 @@
       "note": null,
       "default": "null",
       "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.dock\".orientation",
+      "description": "Position of the Dock on the screen",
+      "type": "null or one of “left”, “bottom”, “right”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"left\""
     },
     {
       "title": "targets.darwin.defaults.\"com.apple.dock\".size-immutable",
@@ -37170,6 +37743,62 @@
       "example": "64"
     },
     {
+      "title": "targets.darwin.defaults.\"com.apple.finder\".AppleShowAllFiles",
+      "description": "Show hidden files in Finder",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.finder\".FXRemoveOldTrashItems",
+      "description": "Automatically delete items from trash after 30 days",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.finder\".ShowPathBar",
+      "description": "Show the path bar at the bottom of a Finder window",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.finder\".ShowStatusBar",
+      "description": "Show the status bar at the bottom of a Finder window",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
       "title": "targets.darwin.defaults.\"com.apple.menuextra.battery\".ShowPercent",
       "description": "This option no longer works on macOS 11 and later. Instead, use targets.darwin.currentHostDefaults.\\\"com.apple.controlcenter\\\".BatteryShowPercentage.",
       "type": "null or one of “YES”, “NO”",
@@ -37182,6 +37811,104 @@
       "note": "Whether to show battery percentage in the menu bar.",
       "default": "null",
       "example": "\"NO\""
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".IsAnalog",
+      "description": "Whether to enable showing an analog clock instead of a digital one.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".Show24Hour",
+      "description": "Whether to enable showing a 24-hour clock, instead of a 12-hour clock.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".ShowAMPM",
+      "description": "Show the AM/PM label. Useful if Show24Hour is false. Default is null.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".ShowDate",
+      "description": "Show the full date. Default is null.",
+      "type": "null or one of 0, 1, 2",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": "0 = Show the date\n1 = Don’t show\n2 = Don’t show",
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".ShowDayOfMonth",
+      "description": "Whether to enable showing the day of the month.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".ShowDayOfWeek",
+      "description": "Whether to enable showing the day of the week.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.defaults.\"com.apple.menuextra.clock\".ShowSeconds",
+      "description": "Whether to enable showing the clock with second precision, instead of minutes.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/user-defaults/opts-allhosts.nix",
+          "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
     },
     {
       "title": "targets.darwin.defaults.\"com.googlecode.iterm2\".AddNewTabAtEndOfTabs",
@@ -37433,6 +38160,20 @@
       ],
       "note": "DISPLAYHYPRLAND_INSTANCE_SIGNATUREWAYLAND_DISPLAYXDG_CURRENT_DESKTOP",
       "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.hyprland.systemd.enableXdgAutostart",
+      "description": "Whether to enable autostart of applications using systemd-xdg-autostart-generator(8).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": "true"
     },
     {
