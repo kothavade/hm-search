@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 26 May 2024 02:04:51 GMT",
+  "last_update": "Mon, 27 May 2024 02:02:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -31343,7 +31343,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "undocked = {\n  outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n  ];\n};\ndocked = {\n  outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n    {\n      criteria = \"Some Company ASDF 4242\";\n      transform = \"90\";\n    }\n  ];\n};\n\n"
+      "example": "{\n  undocked = {\n    outputs = [\n      {\n        criteria = \"eDP-1\";\n      }\n    ];\n  };\n  docked = {\n    outputs = [\n      {\n        criteria = \"eDP-1\";\n      }\n      {\n        criteria = \"Some Company ASDF 4242\";\n        transform = \"90\";\n      }\n    ];\n  };\n}\n\n"
     },
     {
       "title": "services.kanshi.profiles.<name>.exec",
@@ -31497,7 +31497,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "{ include = \"path/to/included/files\"; }\n{ output.criteria = \"eDP-1\";\n  output.scale = 2;\n}\n{ profile.name = \"undocked\";\n  profile.outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n  ];\n}\n{ profile.name = \"docked\";\n  profile.outputs = [\n    {\n      criteria = \"eDP-1\";\n    }\n    {\n      criteria = \"Some Company ASDF 4242\";\n      transform = \"90\";\n    }\n  ];\n}\n\n"
+      "example": "[\n  { include = \"path/to/included/files\"; }\n  { output.criteria = \"eDP-1\";\n    output.scale = 2;\n  }\n  { profile.name = \"undocked\";\n    profile.outputs = [\n      {\n        criteria = \"eDP-1\";\n      }\n    ];\n  }\n  { profile.name = \"docked\";\n    profile.outputs = [\n      {\n        criteria = \"eDP-1\";\n      }\n      {\n        criteria = \"Some Company ASDF 4242\";\n        transform = \"90\";\n      }\n    ];\n  }\n]\n\n"
     },
     {
       "title": "services.kanshi.settings.*.include",
