@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 27 May 2024 02:02:40 GMT",
+  "last_update": "Tue, 28 May 2024 02:02:55 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7268,7 +7268,7 @@
     {
       "title": "programs.bash.historyControl",
       "description": "Controlling how commands are saved on the history list.",
-      "type": "list of (one of “erasedups”, “ignoredups”, “ignorespace”)",
+      "type": "list of (one of “erasedups”, “ignoredups”, “ignorespace”, “ignoreboth”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
@@ -15020,6 +15020,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.khal.package",
+      "description": "The khal package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
+          "text": "home-manager/modules/programs/khal.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.khal",
+      "example": null
     },
     {
       "title": "programs.khal.locale",
@@ -24833,7 +24847,7 @@
       ],
       "note": "See https://github.com/r-darwish/topgrade/wiki/Step-list for the full list\nof options.",
       "default": "{ }",
-      "example": "{\n  assume_yes = true;\n  disable = [\n    \"flutter\"\n    \"node\"\n  ];\n  set_title = false;\n  cleanup = true;\n  commands = {\n    \"Run garbage collection on Nix store\" = \"nix-collect-garbage\";\n  };\n}\n\n"
+      "example": "{\n  misc = {\n    assume_yes = true;\n    disable = [\n      \"flutter\"\n      \"node\"\n    ];\n    set_title = false;\n    cleanup = true;\n  };\n  commands = {\n    \"Run garbage collection on Nix store\" = \"nix-collect-garbage\";\n  };\n}\n\n"
     },
     {
       "title": "programs.translate-shell.enable",
@@ -31874,7 +31888,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  submission = {\n    tokenFile = \"/run/secrets/listenbrainz-mpd\";\n  };\n}\n"
+      "example": "{\n  submission = {\n    token_file = \"/run/secrets/listenbrainz-mpd\";\n  };\n}\n"
     },
     {
       "title": "services.lorri.enable",
