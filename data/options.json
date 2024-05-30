@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 29 May 2024 02:04:11 GMT",
+  "last_update": "Thu, 30 May 2024 02:02:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26279,7 +26279,7 @@
     },
     {
       "title": "programs.yazi.package",
-      "description": "Yazi package to install.",
+      "description": "The yazi package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -26290,6 +26290,34 @@
       "note": null,
       "default": "pkgs.yazi",
       "example": null
+    },
+    {
+      "title": "programs.yazi.flavors",
+      "description": "Pre-made themes.",
+      "type": "attribute set of (path or package)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
+          "text": "home-manager/modules/programs/yazi.nix"
+        }
+      ],
+      "note": "See https://yazi-rs.github.io/docs/flavors/overview/ for documentation.",
+      "default": "{ }",
+      "example": "{\n  foo = ./foo;\n  bar = pkgs.bar;\n}\n\n"
+    },
+    {
+      "title": "programs.yazi.initLua",
+      "description": "The init.lua for Yazi itself.",
+      "type": "null or path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
+          "text": "home-manager/modules/programs/yazi.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "./init.lua"
     },
     {
       "title": "programs.yazi.keymap",
@@ -26304,6 +26332,20 @@
       "note": "See https://yazi-rs.github.io/docs/configuration/keymap\nfor the full list of options.",
       "default": "{ }",
       "example": "{\n  input.keymap = [\n    { exec = \"close\"; on = [ \"<C-q>\" ]; }\n    { exec = \"close --submit\"; on = [ \"<Enter>\" ]; }\n    { exec = \"escape\"; on = [ \"<Esc>\" ]; }\n    { exec = \"backspace\"; on = [ \"<Backspace>\" ]; }\n  ];\n  manager.keymap = [\n    { exec = \"escape\"; on = [ \"<Esc>\" ]; }\n    { exec = \"quit\"; on = [ \"q\" ]; }\n    { exec = \"close\"; on = [ \"<C-q>\" ]; }\n  ];\n}\n\n"
+    },
+    {
+      "title": "programs.yazi.plugins",
+      "description": "Lua plugins.",
+      "type": "attribute set of (path or package)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
+          "text": "home-manager/modules/programs/yazi.nix"
+        }
+      ],
+      "note": "See https://yazi-rs.github.io/docs/plugins/overview/ for documentation.",
+      "default": "{ }",
+      "example": "{\n  foo = ./foo;\n  bar = pkgs.bar;\n}\n\n"
     },
     {
       "title": "programs.yazi.settings",
