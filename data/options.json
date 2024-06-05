@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 04 Jun 2024 02:03:23 GMT",
+  "last_update": "Wed, 05 Jun 2024 02:02:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3417,7 +3417,7 @@
     },
     {
       "title": "accounts.email.maildirBasePath",
-      "description": "The base directory for account maildir directories. May be a relative path, in which case it is relative the home\ndirectory.",
+      "description": "The base directory for account maildir directories. May be a relative path (e.g. the user setting this value as “MyMaildir”),\nin which case it is relative the home directory (e.g. resulting\nin “~/MyMaildir”).",
       "type": "string",
       "declared_by": [
         {
@@ -3426,7 +3426,7 @@
         }
       ],
       "note": null,
-      "default": "\"$HOME/Maildir\"",
+      "default": "\"Maildir\"",
       "example": null
     },
     {
@@ -5892,6 +5892,20 @@
       "note": null,
       "default": "null",
       "example": "\"--max-freed $((64 * 1024**3))\""
+    },
+    {
+      "title": "nix.gc.persistent",
+      "description": "If true, the time when the service unit was last triggered is stored on disk. When the timer is activated, the service unit is\ntriggered immediately if it would have been triggered at least once\nduring the time when the timer was inactive.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
+          "text": "home-manager/modules/services/nix-gc.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
     },
     {
       "title": "nix.registry",
@@ -23292,7 +23306,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation terminator-2.1.3>",
+      "default": "<derivation terminator-2.1.4>",
       "example": "pkgs.terminator"
     },
     {
