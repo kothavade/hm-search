@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 11 Jun 2024 02:04:53 GMT",
+  "last_update": "Wed, 12 Jun 2024 02:05:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16600,7 +16600,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation mpv-with-scripts-0.37.0>",
+      "default": "<derivation mpv-with-scripts-0.38.0>",
       "example": "pkgs.wrapMpv (pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }) { youtubeSupport = true; }"
     },
     {
