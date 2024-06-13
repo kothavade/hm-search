@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 12 Jun 2024 02:05:05 GMT",
+  "last_update": "Thu, 13 Jun 2024 02:04:18 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5824,6 +5824,20 @@
       "example": "pkgs.nix"
     },
     {
+      "title": "nix.channels",
+      "description": "A declarative alternative to Nix channels. Whereas with stock channels, you would register URLs and fetch them into the Nix store with\nnix-channel(1), this option allows you to register the store\npath directly. One particularly useful example is registering flake\ninputs as channels.",
+      "type": "attribute set of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nix.nix",
+          "text": "home-manager/modules/misc/nix.nix"
+        }
+      ],
+      "note": "This option can coexist with stock Nix channels. If the same channel is\ndefined in both, this option takes precedence.",
+      "default": "{ }",
+      "example": "{ inherit nixpkgs; }"
+    },
+    {
       "title": "nix.checkConfig",
       "description": "If enabled (the default), checks for data type mismatches and that Nix can parse the generated nix.conf.",
       "type": "boolean",
@@ -5906,6 +5920,34 @@
       "note": null,
       "default": "true",
       "example": "false"
+    },
+    {
+      "title": "nix.keepOldNixPath",
+      "description": "Whether nix.nixPath should keep the previously set values in NIX_PATH.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nix.nix",
+          "text": "home-manager/modules/misc/nix.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
+    },
+    {
+      "title": "nix.nixPath",
+      "description": "Adds new directories to the Nix expression search path.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nix.nix",
+          "text": "home-manager/modules/misc/nix.nix"
+        }
+      ],
+      "note": "Used by Nix when looking up paths in angular brackets\n(e.g. <nixpkgs>).",
+      "default": "[ ]",
+      "example": "[\n  \"$HOME/.nix-defexpr/channels\"\n  \"darwin-config=$HOME/.config/nixpkgs/darwin-configuration.nix\"\n]\n"
     },
     {
       "title": "nix.registry",
