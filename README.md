@@ -4,8 +4,6 @@ Search for options and modules defined in the Nix tool [Home Manager](https://gi
 
 Live at [hm-search.kothavade.com](https://hm-search.kothavade.com)!
 
-I wrote a bit about this project [here](https://kothavade.com/posts/hm-search).
-
 ## Features
 
 - Search for any module within Home Manager
