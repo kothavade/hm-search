@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 22 Jun 2024 02:01:53 GMT",
+  "last_update": "Sun, 23 Jun 2024 02:07:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28949,6 +28949,34 @@
       ],
       "note": null,
       "default": "10",
+      "example": null
+    },
+    {
+      "title": "services.blanket.enable",
+      "description": "Whether to enable blanket.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/blanket.nix",
+          "text": "home-manager/modules/services/blanket.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.blanket.package",
+      "description": "The blanket package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/blanket.nix",
+          "text": "home-manager/modules/services/blanket.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.blanket",
       "example": null
     },
     {
