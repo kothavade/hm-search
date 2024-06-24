@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 23 Jun 2024 02:07:59 GMT",
+  "last_update": "Mon, 24 Jun 2024 02:06:22 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26349,7 +26349,7 @@
     },
     {
       "title": "programs.yazi.flavors",
-      "description": "Pre-made themes.",
+      "description": "Pre-made themes. Values should be a package or path containing the required files.\nWill be linked to $XDG_CONFIG_HOME/yazi/flavors/<name>.yazi.",
       "type": "attribute set of (path or package)",
       "declared_by": [
         {
@@ -26391,7 +26391,7 @@
     },
     {
       "title": "programs.yazi.plugins",
-      "description": "Lua plugins.",
+      "description": "Lua plugins. Values should be a package or path containing an init.lua file.\nWill be linked to $XDG_CONFIG_HOME/yazi/plugins/<name>.yazi.",
       "type": "attribute set of (path or package)",
       "declared_by": [
         {
@@ -26399,7 +26399,7 @@
           "text": "home-manager/modules/programs/yazi.nix"
         }
       ],
-      "note": "See https://yazi-rs.github.io/docs/plugins/overview/ for documentation.",
+      "note": "See https://yazi-rs.github.io/docs/plugins/overview\nfor documentation.",
       "default": "{ }",
       "example": "{\n  foo = ./foo;\n  bar = pkgs.bar;\n}\n\n"
     },
