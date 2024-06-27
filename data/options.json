@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 26 Jun 2024 02:04:28 GMT",
+  "last_update": "Thu, 27 Jun 2024 02:04:36 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26416,6 +26416,20 @@
       "note": "See https://yazi-rs.github.io/docs/configuration/yazi\nfor the full list of options.",
       "default": "{ }",
       "example": "{\n  log = {\n    enabled = false;\n  };\n  manager = {\n    show_hidden = false;\n    sort_by = \"modified\";\n    sort_dir_first = true;\n    sort_reverse = true;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.yazi.shellWrapperName",
+      "description": "Name of the shell wrapper to be called.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
+          "text": "home-manager/modules/programs/yazi.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"yy\"",
+      "example": "\"y\""
     },
     {
       "title": "programs.yazi.theme",
