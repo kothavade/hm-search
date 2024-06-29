@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 28 Jun 2024 02:05:19 GMT",
+  "last_update": "Sat, 29 Jun 2024 02:03:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -20563,7 +20563,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"bitwarden.example.com\""
+      "example": "\"https://bitwarden.example.com/\""
     },
     {
       "title": "programs.rbw.settings.email",
@@ -20591,7 +20591,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"identity.example.com\""
+      "example": "\"https://identity.example.com/\""
     },
     {
       "title": "programs.rbw.settings.lock_timeout",
@@ -30686,6 +30686,48 @@
       "note": "This option is not supported on Darwin.",
       "default": null,
       "example": "\"git+ssh://user@example.com:/~[user]/path/to/repo.git\""
+    },
+    {
+      "title": "services.glance.enable",
+      "description": "Whether to enable glance.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/glance.nix",
+          "text": "home-manager/modules/services/glance.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.glance.package",
+      "description": "The glance package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/glance.nix",
+          "text": "home-manager/modules/services/glance.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.glance",
+      "example": null
+    },
+    {
+      "title": "services.glance.settings",
+      "description": "Configuration written to a yaml file that is read by glance. See https://github.com/glanceapp/glance/blob/main/docs/configuration.md\nfor more.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/glance.nix",
+          "text": "home-manager/modules/services/glance.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "{\n  pages = [\n    {\n      columns = [\n        {\n          size = \"full\";\n          widgets = [\n            {\n              type = \"calendar\";\n            }\n            {\n              location = \"London, United Kingdom\";\n              type = \"weather\";\n            }\n          ];\n        }\n      ];\n      name = \"Home\";\n    }\n  ];\n  server = {\n    port = 5678;\n  };\n}\n"
     },
     {
       "title": "services.gnome-keyring.enable",
