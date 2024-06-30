@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 29 Jun 2024 02:03:14 GMT",
+  "last_update": "Sun, 30 Jun 2024 02:10:29 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9126,6 +9126,20 @@
       "note": null,
       "default": "pkgs.nix-direnv",
       "example": null
+    },
+    {
+      "title": "programs.direnv.silent",
+      "description": "Whether to enable silent mode, that is, disabling direnv logging.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/direnv.nix",
+          "text": "home-manager/modules/programs/direnv.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.direnv.stdlib",
