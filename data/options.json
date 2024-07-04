@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 03 Jul 2024 02:04:53 GMT",
+  "last_update": "Thu, 04 Jul 2024 02:05:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26378,7 +26378,7 @@
     {
       "title": "programs.yazi.initLua",
       "description": "The init.lua for Yazi itself.",
-      "type": "null or path",
+      "type": "null or path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
@@ -39938,7 +39938,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "[\n  \"-all\"\n]\n"
+      "example": "[\n  \"--all\"\n]\n"
     },
     {
       "title": "wayland.windowManager.sway.systemd.xdgAutostart",
