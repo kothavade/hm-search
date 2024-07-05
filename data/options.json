@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 04 Jul 2024 02:05:49 GMT",
+  "last_update": "Fri, 05 Jul 2024 02:04:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -38248,7 +38248,7 @@
     },
     {
       "title": "wayland.windowManager.hyprland.enable",
-      "description": "Whether to enable Hyprland wayland compositor.",
+      "description": "Whether to enable configuration for Hyprland, a tiling Wayland compositor that doesn’t sacrifice on its looks.",
       "type": "boolean",
       "declared_by": [
         {
@@ -38256,9 +38256,9 @@
           "text": "home-manager/modules/services/window-managers/hyprland.nix"
         }
       ],
-      "note": null,
+      "note": "NoteThis module configures Hyprland and adds it to your user’s PATH,\nbut does not make certain system-level changes. NixOS users should\nenable the NixOS module with programs.hyprland.enable, which\nmakes system-level changes such as adding a desktop session entry.",
       "default": "false",
-      "example": "true"
+      "example": null
     },
     {
       "title": "wayland.windowManager.hyprland.package",
