@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 06 Jul 2024 02:02:42 GMT",
+  "last_update": "Sun, 07 Jul 2024 02:11:13 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -23046,7 +23046,7 @@
     {
       "title": "programs.starship.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/starship.toml.",
-      "type": "Starship configuration",
+      "type": "TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/starship.nix",
