@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 10 Jul 2024 02:06:54 GMT",
+  "last_update": "Thu, 11 Jul 2024 02:08:36 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -40517,7 +40517,7 @@
     {
       "title": "xdg.desktopEntries.<name>.terminal",
       "description": "Whether the program runs in a terminal window.",
-      "type": "boolean",
+      "type": "null or boolean",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-desktop-entries.nix",
