@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 24 Jul 2024 02:07:44 GMT",
+  "last_update": "Thu, 25 Jul 2024 02:08:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9784,6 +9784,20 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.firefox.languagePacks",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"en-GB\"\n  \"de\"\n]\n"
     },
     {
       "title": "programs.firefox.nativeMessagingHosts",
