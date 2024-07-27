@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 26 Jul 2024 02:07:17 GMT",
+  "last_update": "Sat, 27 Jul 2024 02:05:31 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27088,6 +27088,20 @@
       "note": null,
       "default": "null",
       "example": "\"fg=#ff00ff,bg=cyan,bold,underline\""
+    },
+    {
+      "title": "programs.zsh.autosuggestion.strategy",
+      "description": "ZSH_AUTOSUGGEST_STRATEGY is an array that specifies how suggestions should be generated. The strategies in the array are tried successively until a suggestion is found.\nThere are currently three built-in strategies to choose from:",
+      "type": "list of (one of “history”, “completion”, “match_prev_cmd”)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": "history: Chooses the most recent match from history.completion: Chooses a suggestion based on what tab-completion would suggest. (requires zpty module)match_prev_cmd: Like history, but chooses the most recent match whose preceding history item matches\nthe most recently executed command. Note that this strategy won’t work as expected with ZSH options that\ndon’t preserve the history order such as HIST_IGNORE_ALL_DUPS or HIST_EXPIRE_DUPS_FIRST.",
+      "default": "",
+      "example": null
     },
     {
       "title": "programs.zsh.cdpath",
