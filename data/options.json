@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 27 Jul 2024 02:05:31 GMT",
+  "last_update": "Sun, 28 Jul 2024 02:12:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16420,6 +16420,20 @@
       "note": null,
       "default": "\"emacs\"",
       "example": null
+    },
+    {
+      "title": "programs.mcfly.settings",
+      "description": "Settings written to ~/.config/mcfly/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mcfly.nix",
+          "text": "home-manager/modules/programs/mcfly.nix"
+        }
+      ],
+      "note": "Note, if your McFly database is currently in ~/.mcfly,\nthen this option has no effect.\nMove the database to $XDG_DATA_DIR/mcfly/history.db and\nremove ~/.mcfly to make the settings take effect. See\nhttps://github.com/cantino/mcfly#database-location.",
+      "default": "{ }",
+      "example": "{\n  colors = {\n    menubar = {\n      bg = \"black\";\n      fg = \"red\";\n    };\n    darkmode = {\n      prompt = \"cyan\";\n      timing = \"yellow\";\n      results_selection_fg = \"cyan\";\n      results_selection_bg = \"black\";\n      results_selection_hl = \"red\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.mercurial.enable",
