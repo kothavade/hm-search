@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 28 Jul 2024 02:12:26 GMT",
+  "last_update": "Mon, 29 Jul 2024 02:10:43 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9394,6 +9394,48 @@
       "example": "true"
     },
     {
+      "title": "programs.eww.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eww.nix",
+          "text": "home-manager/modules/programs/eww.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.eww.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eww.nix",
+          "text": "home-manager/modules/programs/eww.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.eww.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eww.nix",
+          "text": "home-manager/modules/programs/eww.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "programs.eww.package",
       "description": "The eww package to install.",
       "type": "package",
@@ -9759,7 +9801,7 @@
     },
     {
       "title": "programs.firefox.package",
-      "description": "The Firefox package to use. If state version ≥ 19.09 then this should be a wrapped Firefox package. For earlier state\nversions it should be an unwrapped Firefox package.\nSet to null to disable installing Firefox.",
+      "description": "The Firefox package to use. If state version ≥ 19.09 then this should be a wrapped Firefox package. For earlier state\nversions it should be an unwrapped Firefox package.\nSet to null to disable installing Firefox.",
       "type": "null or package",
       "declared_by": [
         {
@@ -9927,7 +9969,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.containersForce",
-      "description": "Whether to force replace the existing containers configuration. This is recommended since Firefox will\nreplace the symlink on every launch, but note that you’ll\nlose any existing configuration by enabling this.",
+      "description": "Whether to force replace the existing containers configuration. This is recommended since Firefox will replace the symlink on\nevery launch, but note that you’ll lose any existing configuration\nby enabling this.",
       "type": "boolean",
       "declared_by": [
         {
@@ -9941,7 +9983,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.extensions",
-      "description": "List of Firefox add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
+      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
       "type": "list of package",
       "declared_by": [
         {
@@ -10039,7 +10081,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.search.engines",
-      "description": "Attribute set of search engine configurations. Engines that only have metaData specified will\nbe treated as builtin to Firefox.",
+      "description": "Attribute set of search engine configurations. Engines that only have metaData specified will\nbe treated as builtin to ‹name›.",
       "type": "attribute set of attribute set of (JSON value)",
       "declared_by": [
         {
@@ -10053,7 +10095,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.search.force",
-      "description": "Whether to force replace the existing search configuration. This is recommended since Firefox will\nreplace the symlink for the search configuration on every\nlaunch, but note that you’ll lose any existing\nconfiguration by enabling this.",
+      "description": "Whether to force replace the existing search configuration. This is recommended since ‹name› will\nreplace the symlink for the search configuration on every\nlaunch, but note that you’ll lose any existing\nconfiguration by enabling this.",
       "type": "boolean",
       "declared_by": [
         {
@@ -10095,21 +10137,21 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.settings",
-      "description": "Attribute set of Firefox preferences.",
-      "type": "attribute set of (Firefox preference (int, bool, string, and also attrs, list, float as a JSON string))",
+      "description": "Attribute set of ‹name› preferences.",
+      "type": "attribute set of (‹name› preference (int, bool, string, and also attrs, list, float as a JSON string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
           "text": "home-manager/modules/programs/firefox.nix"
         }
       ],
-      "note": "Firefox only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
+      "note": "‹name› only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
       "default": "{ }",
       "example": "{\n  \"browser.startup.homepage\" = \"https://nixos.org\";\n  \"browser.search.region\" = \"GB\";\n  \"browser.search.isUS\" = false;\n  \"distribution.searchplugins.defaultLocale\" = \"en-GB\";\n  \"general.useragent.locale\" = \"en-GB\";\n  \"browser.bookmarks.showMobileBookmarks\" = true;\n  \"browser.newtabpage.pinned\" = [{\n    title = \"NixOS\";\n    url = \"https://nixos.org\";\n  }];\n}\n\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.userChrome",
-      "description": "Custom Firefox user chrome CSS.",
+      "description": "Custom ‹name› user chrome CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -10123,7 +10165,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.userContent",
-      "description": "Custom Firefox user content CSS.",
+      "description": "Custom ‹name› user content CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -16560,6 +16602,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.micro.package",
+      "description": "The micro package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/micro.nix",
+          "text": "home-manager/modules/programs/micro.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.micro",
+      "example": null
     },
     {
       "title": "programs.micro.settings",
