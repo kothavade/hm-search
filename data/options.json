@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 30 Jul 2024 02:08:15 GMT",
+  "last_update": "Wed, 31 Jul 2024 01:49:27 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10161,7 +10161,7 @@
       ],
       "note": null,
       "default": "\"\"",
-      "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(\"chrome://browser/content/browser.xul\") {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
+      "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.userContent",
