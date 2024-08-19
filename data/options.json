@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 18 Aug 2024 02:12:47 GMT",
+  "last_update": "Mon, 19 Aug 2024 02:11:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7320,6 +7320,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.bash.package",
+      "description": "The bash package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
+          "text": "home-manager/modules/programs/bash.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bashInteractive",
+      "example": null
     },
     {
       "title": "programs.bash.bashrcExtra",
