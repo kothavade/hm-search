@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 23 Aug 2024 02:09:58 GMT",
+  "last_update": "Sat, 24 Aug 2024 02:09:31 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27283,6 +27283,20 @@
       ],
       "note": null,
       "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.zsh.history.append",
+      "description": "If set, zsh sessions will append their history list to the history file, rather than replace it. Thus, multiple parallel zsh sessions\nwill all have the new entries from their history lists added to the\nhistory file, in the order that they exit.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": "This file will still be periodically re-written to trim it when the\nnumber of lines grows 20% beyond the value specified by\nprograms.zsh.history.save.",
+      "default": "false",
       "example": null
     },
     {
