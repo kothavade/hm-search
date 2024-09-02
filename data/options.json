@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 01 Sep 2024 02:31:36 GMT",
+  "last_update": "Mon, 02 Sep 2024 02:16:21 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11128,6 +11128,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.git.difftastic.package",
+      "description": "The difftastic package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.difftastic",
+      "example": null
     },
     {
       "title": "programs.git.difftastic.background",
