@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 07 Sep 2024 02:13:06 GMT",
+  "last_update": "Sun, 08 Sep 2024 02:20:22 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -23349,7 +23349,7 @@
       ],
       "note": null,
       "default": "pkgs.taskwarrior",
-      "example": null
+      "example": "pkgs.taskwarrior3"
     },
     {
       "title": "programs.taskwarrior.colorTheme",
@@ -35682,7 +35682,7 @@
       ],
       "note": null,
       "default": "pkgs.taskwarrior",
-      "example": null
+      "example": "pkgs.taskwarrior3"
     },
     {
       "title": "services.taskwarrior-sync.frequency",
