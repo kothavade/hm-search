@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 09 Sep 2024 02:18:39 GMT",
+  "last_update": "Tue, 10 Sep 2024 02:16:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -14198,7 +14198,7 @@
     {
       "title": "programs.k9s.skins",
       "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/ (linux) or Library/Application Support/k9s/skins/ (darwin). See\nhttps://k9scli.io/topics/skins/ for supported values.",
-      "type": "attribute set of (YAML value)",
+      "type": "attribute set of (YAML value or path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -14207,7 +14207,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "my_blue_skin = {\n  k9s = {\n    body = {\n      fgColor = \"dodgerblue\";\n    };\n  };\n};\n\n"
+      "example": "{\n  my_blue_skin = {\n    k9s = {\n      body = {\n        fgColor = \"dodgerblue\";\n      };\n    };\n  };\n  my_red_skin = ./red_skin.yaml;\n}\n\n"
     },
     {
       "title": "programs.k9s.views",
@@ -19965,7 +19965,7 @@
     },
     {
       "title": "programs.pqiv.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/pqivrc. See pqiv(1) for a list of available options. To set a\nboolean flag, set the value to 1.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/pqivrc. See pqiv(1) for a list of available options.",
       "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
@@ -19975,7 +19975,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  options = {\n    lazy-load = 1;\n    hide-info-box = 1;\n    background-pattern = \"black\";\n    thumbnail-size = \"256x256\";\n    command-1 = \"thunar\";\n  };\n};\n\n"
+      "example": "{\n  options = {\n    lazy-load = true;\n    hide-info-box = true;\n    background-pattern = \"black\";\n    thumbnail-size = \"256x256\";\n    command-1 = \"thunar\";\n  };\n};\n\n"
     },
     {
       "title": "programs.pubs.enable",
