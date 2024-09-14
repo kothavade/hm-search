@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 13 Sep 2024 02:17:12 GMT",
+  "last_update": "Sat, 14 Sep 2024 02:14:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6944,6 +6944,20 @@
       "example": "96"
     },
     {
+      "title": "programs.autorandr.profiles.<name>.config.<name>.extraConfig",
+      "description": "Extra lines to append to this profile’s config.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
+          "text": "home-manager/modules/programs/autorandr.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  x-prop-non_desktop 0\n  some-key some-value\n''\n\n"
+    },
+    {
       "title": "programs.autorandr.profiles.<name>.config.<name>.filter",
       "description": "Interpolation method to be used for scaling the output.",
       "type": "null or one of “bilinear”, “nearest”",
@@ -10304,6 +10318,20 @@
       "example": null
     },
     {
+      "title": "programs.fish.preferAbbrs",
+      "description": "If enabled, abbreviations will be preferred over aliases when other modules define aliases for fish.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
       "title": "programs.fish.shellAbbrs",
       "description": "An attribute set that maps aliases (the top level attribute names in this option) to abbreviations. Abbreviations are expanded with\nthe longer phrase after they are entered.",
       "type": "attribute set of (string or (submodule))",
@@ -12513,7 +12541,7 @@
       ],
       "note": null,
       "default": "pkgs.helix",
-      "example": null
+      "example": "pkgs.evil-helix"
     },
     {
       "title": "programs.helix.defaultEditor",
@@ -12569,7 +12597,7 @@
       ],
       "note": "See https://docs.helix-editor.com/languages.html\nfor more information.",
       "default": "{ }",
-      "example": "{\n  # the language-server option currently requires helix from the master branch at https://github.com/helix-editor/helix/\n  language-server.typescript-language-server = with pkgs.nodePackages; {\n    command = \"${typescript-language-server}/bin/typescript-language-server\";\n    args = [ \"--stdio\" \"--tsserver-path=${typescript}/lib/node_modules/typescript/lib\" ];\n  };\n\n  language = [{\n    name = \"rust\";\n    auto-format = false;\n  }];\n}\n\n"
+      "example": "{\n  language-server.typescript-language-server = with pkgs.nodePackages; {\n    command = \"${typescript-language-server}/bin/typescript-language-server\";\n    args = [ \"--stdio\" \"--tsserver-path=${typescript}/lib/node_modules/typescript/lib\" ];\n  };\n\n  language = [{\n    name = \"rust\";\n    auto-format = false;\n  }];\n}\n\n"
     },
     {
       "title": "programs.helix.settings",
@@ -17680,6 +17708,48 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.neovide.enable",
+      "description": "Whether to enable Neovide, No Nonsense Neovim Client in Rust.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neovide.nix",
+          "text": "home-manager/modules/programs/neovide.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.neovide.package",
+      "description": "The neovide package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neovide.nix",
+          "text": "home-manager/modules/programs/neovide.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.neovide",
+      "example": null
+    },
+    {
+      "title": "programs.neovide.settings",
+      "description": "Neovide configuration. For available settings see https://neovide.dev/config-file.html.\nFor any option not found will need to be done in your neovim’s config instead.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neovide.nix",
+          "text": "home-manager/modules/programs/neovide.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "{\n  fork = false;\n  frame = \"full\";\n  idle = true;\n  maximized = false;\n  neovim-bin = \"/usr/bin/nvim\";\n  no-multigrid = false;\n  srgb = false;\n  tabs = true;\n  theme = \"auto\";\n  title-hidden = true;\n  vsync = true;\n  wsl = false;\n\n  font = {\n    normal = [];\n    size = 14.0;\n  };\n}\n\n"
     },
     {
       "title": "programs.neovim.enable",
@@ -31780,6 +31850,20 @@
       "example": "true"
     },
     {
+      "title": "services.kanshi.profiles.<name>.outputs.*.alias",
+      "description": "Defines an alias for the output",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kanshi.nix",
+          "text": "home-manager/modules/services/kanshi.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"laptopMonitor\""
+    },
+    {
       "title": "services.kanshi.profiles.<name>.outputs.*.criteria",
       "description": "The criteria can either be an output name, an output description or “*”. The latter can be used to match any output.",
       "type": "string",
@@ -31915,6 +31999,15 @@
       "example": "true"
     },
     {
+      "title": "services.kanshi.settings.*.output.alias",
+      "description": "Defines an alias for the output",
+      "type": "null or string",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "\"laptopMonitor\""
+    },
+    {
       "title": "services.kanshi.settings.*.output.criteria",
       "description": "The criteria can either be an output name, an output description or “*”. The latter can be used to match any output.",
       "type": "string",
@@ -32017,6 +32110,15 @@
       "note": null,
       "default": "null",
       "example": "true"
+    },
+    {
+      "title": "services.kanshi.settings.*.profile.outputs.*.alias",
+      "description": "Defines an alias for the output",
+      "type": "null or string",
+      "declared_by": [],
+      "note": null,
+      "default": "null",
+      "example": "\"laptopMonitor\""
     },
     {
       "title": "services.kanshi.settings.*.profile.outputs.*.criteria",
@@ -35739,6 +35841,48 @@
       "note": "SetDockTypeboolean (default: true)SetPartialStrutboolean (default: true)alignone of “left”, “right”, “center” (default: \"center\")alphasigned integer (default: 127)distancesigned integer (default: 0)distancefromone of “left”, “right”, “top”, “bottom” (default: \"top\")edgeone of “left”, “right”, “top”, “bottom”, “none” (default: \"bottom\")expandboolean (default: true)heightsigned integer (default: 26)heighttypeone of “request”, “pixel” (default: \"pixel\")iconspacingsigned integer (default: 0)marginsigned integer (default: 0)monitorunsigned integer, meaning >=0, or value “primary” (singular enum) (default: 0)paddingsigned integer (default: 0)tintstring (default: \"0xFFFFFFFF\")transparentboolean (default: false)widthsigned integer (default: 100)widthtypeone of “request”, “pixel”, “percent” (default: \"percent\")",
       "default": "{ }",
       "example": "{\n  edge = \"top\";\n  padding = 6;\n  SetDockType = true;\n  tint = \"0x282c34\";\n}\n\n"
+    },
+    {
+      "title": "services.trayscale.enable",
+      "description": "Whether to enable An unofficial GUI wrapper around the Tailscale CLI client…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/trayscale.nix",
+          "text": "home-manager/modules/services/trayscale.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.trayscale.package",
+      "description": "The trayscale package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/trayscale.nix",
+          "text": "home-manager/modules/services/trayscale.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.trayscale",
+      "example": null
+    },
+    {
+      "title": "services.trayscale.hideWindow",
+      "description": "Whether to hide the trayscale window on startup.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/trayscale.nix",
+          "text": "home-manager/modules/services/trayscale.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "services.twmn.enable",
