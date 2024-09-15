@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 14 Sep 2024 02:14:49 GMT",
+  "last_update": "Sun, 15 Sep 2024 02:24:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11044,6 +11044,34 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  decorations = {\n    commit-decoration-style = \"bold yellow box ul\";\n    file-decoration-style = \"none\";\n    file-style = \"bold yellow ul\";\n  };\n  features = \"decorations\";\n  whitespace-error-style = \"22 reverse\";\n}\n"
+    },
+    {
+      "title": "programs.git.diff-highlight.enable",
+      "description": "Enable the contrib diff-highlight syntax highlighter. See https://github.com/git/git/blob/master/contrib/diff-highlight/README,",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git.diff-highlight.pagerOpts",
+      "description": "Arguments to be passed to less.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--tabs=4\"\n  \"-RFX\"\n]\n"
     },
     {
       "title": "programs.git.diff-so-fancy.enable",
@@ -35504,7 +35532,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  positionX = \"right\";\n  positionY = \"top\";\n  layer = \"overlay\";\n  control-center-layer = \"top\";\n  layer-shell = true;\n  cssPriority = \"application\";\n  control-center-margin-top = 0;\n  control-center-margin-bottom = 0;\n  control-center-margin-right = 0;\n  control-center-margin-left = 0;\n  notification-2fa-action = true;\n  notification-inline-replies = false;\n  notification-icon-size = 64;\n  notification-body-image-height = 100;\n  notification-body-image-width = 200\n};\n\n"
+      "example": "{\n  positionX = \"right\";\n  positionY = \"top\";\n  layer = \"overlay\";\n  control-center-layer = \"top\";\n  layer-shell = true;\n  cssPriority = \"application\";\n  control-center-margin-top = 0;\n  control-center-margin-bottom = 0;\n  control-center-margin-right = 0;\n  control-center-margin-left = 0;\n  notification-2fa-action = true;\n  notification-inline-replies = false;\n  notification-icon-size = 64;\n  notification-body-image-height = 100;\n  notification-body-image-width = 200;\n};\n\n"
     },
     {
       "title": "services.swaync.style",
