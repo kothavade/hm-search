@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 15 Sep 2024 02:24:23 GMT",
+  "last_update": "Mon, 16 Sep 2024 02:24:34 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -38924,7 +38924,7 @@
     },
     {
       "title": "wayland.windowManager.sway.package",
-      "description": "Sway package to use. Will override the options ‘wrapperFeatures’, ‘extraSessionCommands’, and ‘extraOptions’.\nSet to null to not add any Sway package to your\npath. This should be done if you want to use the NixOS Sway\nmodule to install Sway.",
+      "description": "Sway package to use. Will override the options ‘wrapperFeatures’, ‘extraSessionCommands’, and ‘extraOptions’.\nSet to null to not add any Sway package to your\npath. This should be done if you want to use the NixOS Sway\nmodule to install Sway. Beware setting to null will also disable\nreloading Sway when new config is activated.",
       "type": "null or package",
       "declared_by": [
         {
@@ -38938,7 +38938,7 @@
     },
     {
       "title": "wayland.windowManager.sway.checkConfig",
-      "description": "If enabled (the default), validates the generated config file.",
+      "description": "If enabled, validates the generated config file.",
       "type": "boolean",
       "declared_by": [
         {
@@ -38947,7 +38947,7 @@
         }
       ],
       "note": null,
-      "default": "true",
+      "default": "wayland.windowManager.sway.package != null",
       "example": null
     },
     {
