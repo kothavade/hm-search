@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 17 Sep 2024 01:57:06 GMT",
+  "last_update": "Wed, 18 Sep 2024 02:16:41 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -24432,7 +24432,7 @@
     {
       "title": "programs.thunderbird.profiles.<name>.settings",
       "description": "Preferences to add to this profile’s user.js.",
-      "type": "attribute set of (boolean or signed integer or string)",
+      "type": "Thunderbird preference (int, bool, string, and also attrs, list, float as a JSON string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
@@ -24441,7 +24441,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  \"mail.spellcheck.inline\" = false;\n}\n\n"
+      "example": "{\n  \"mail.spellcheck.inline\" = false;\n  \"mailnews.database.global.views.global.columns\" = {\n    selectCol = {\n      visible = false;\n      ordinal = 1;\n    };\n    threadCol = {\n      visible = true;\n      ordinal = 2;\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.userChrome",
@@ -24488,7 +24488,7 @@
     {
       "title": "programs.thunderbird.settings",
       "description": "Attribute set of Thunderbird preferences to be added to all profiles.",
-      "type": "attribute set of (boolean or signed integer or string)",
+      "type": "Thunderbird preference (int, bool, string, and also attrs, list, float as a JSON string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
