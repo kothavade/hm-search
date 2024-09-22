@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 21 Sep 2024 02:16:38 GMT",
+  "last_update": "Sun, 22 Sep 2024 02:27:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27119,7 +27119,7 @@
     },
     {
       "title": "programs.zoxide.options",
-      "description": "List of options to pass to zoxide.",
+      "description": "List of options to pass to zoxide init.",
       "type": "list of string",
       "declared_by": [
         {
