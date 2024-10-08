@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 07 Oct 2024 02:24:22 GMT",
+  "last_update": "Tue, 08 Oct 2024 02:24:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -15612,7 +15612,7 @@
     {
       "title": "programs.kitty.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/kitty/kitty.conf. See\nhttps://sw.kovidgoyal.net/kitty/conf.html\nfor the documentation.",
-      "type": "attribute set of (string or boolean or signed integer)",
+      "type": "attribute set of (string or boolean or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kitty.nix",
@@ -26896,7 +26896,7 @@
     {
       "title": "programs.zathura.options",
       "description": "Add :set command options to zathura and make them permanent. See\nzathurarc(5)\nfor the full list of options.",
-      "type": "attribute set of (string or boolean or signed integer)",
+      "type": "attribute set of (string or boolean or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zathura.nix",
@@ -40922,6 +40922,34 @@
       ],
       "note": null,
       "default": "true if host platform is Linux, false otherwise",
+      "example": null
+    },
+    {
+      "title": "xdg.mime.desktopFileUtilsPackage",
+      "description": "The package to use when running update-desktop-database.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-mime.nix",
+          "text": "home-manager/modules/misc/xdg-mime.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.desktop-file-utils",
+      "example": null
+    },
+    {
+      "title": "xdg.mime.sharedMimeInfoPackage",
+      "description": "The package to use when running update-mime-database.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-mime.nix",
+          "text": "home-manager/modules/misc/xdg-mime.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.shared-mime-info",
       "example": null
     },
     {
