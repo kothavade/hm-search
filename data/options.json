@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 10 Oct 2024 02:21:27 GMT",
+  "last_update": "Fri, 11 Oct 2024 02:20:33 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35213,6 +35213,48 @@
       "example": "8081"
     },
     {
+      "title": "services.snixembed.enable",
+      "description": "Whether to enable snixembed: proxy StatusNotifierItems as XEmbedded systemtray-spec icons.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/snixembed.nix",
+          "text": "home-manager/modules/services/snixembed.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.snixembed.package",
+      "description": "The snixembed package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/snixembed.nix",
+          "text": "home-manager/modules/services/snixembed.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.snixembed",
+      "example": null
+    },
+    {
+      "title": "services.snixembed.beforeUnits",
+      "description": "List of other units that should be started after snixembed.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/snixembed.nix",
+          "text": "home-manager/modules/services/snixembed.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"safeeyes.service\"\n]\n"
+    },
+    {
       "title": "services.spotifyd.enable",
       "description": "Whether to enable SpotifyD connect.",
       "type": "boolean",
@@ -40402,7 +40444,7 @@
           "text": "home-manager/modules/misc/xdg.nix"
         }
       ],
-      "note": null,
+      "note": "Sets XDG_CACHE_HOME for the user if xdg.enable is set true.",
       "default": "\"~/.cache\"",
       "example": null
     },
@@ -40528,7 +40570,7 @@
           "text": "home-manager/modules/misc/xdg.nix"
         }
       ],
-      "note": null,
+      "note": "Sets XDG_CONFIG_HOME for the user if xdg.enable is set true.",
       "default": "\"~/.config\"",
       "example": null
     },
@@ -40654,7 +40696,7 @@
           "text": "home-manager/modules/misc/xdg.nix"
         }
       ],
-      "note": null,
+      "note": "Sets XDG_DATA_HOME for the user if xdg.enable is set true.",
       "default": "\"~/.local/share\"",
       "example": null
     },
@@ -41200,7 +41242,7 @@
           "text": "home-manager/modules/misc/xdg.nix"
         }
       ],
-      "note": null,
+      "note": "Sets XDG_STATE_HOME for the user if xdg.enable is set true.",
       "default": "\"~/.local/state\"",
       "example": null
     },
