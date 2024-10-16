@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 15 Oct 2024 02:23:04 GMT",
+  "last_update": "Wed, 16 Oct 2024 02:23:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9620,15 +9620,15 @@
     {
       "title": "programs.eza.icons",
       "description": "Display icons next to file names (--icons argument).",
-      "type": "boolean",
+      "type": "one of <null>, true, false, “auto”, “always”, “never”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
           "text": "home-manager/modules/programs/eza.nix"
         }
       ],
-      "note": null,
-      "default": "false",
+      "note": "Note, the support for Boolean values is deprecated.\nSetting this option to true corresponds to --icons=auto.",
+      "default": "null",
       "example": null
     },
     {
