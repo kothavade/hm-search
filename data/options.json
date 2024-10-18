@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 17 Oct 2024 02:21:38 GMT",
+  "last_update": "Fri, 18 Oct 2024 02:22:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8430,7 +8430,7 @@
     {
       "title": "programs.broot.settings.verbs",
       "description": "Define new verbs. For more information, see Verb Definition Attributes\nin the broot documentation.",
-      "type": "list of attribute set of (boolean or string)",
+      "type": "list of attribute set of (boolean or string or list of string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/broot.nix",
@@ -10260,6 +10260,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  __fish_command_not_found_handler = {\n    body = \"__fish_default_command_not_found_handler $argv[1]\";\n    onEvent = \"fish_command_not_found\";\n  };\n\n  gitignore = \"curl -sL https://www.gitignore.io/api/$argv\";\n}\n\n"
+    },
+    {
+      "title": "programs.fish.generateCompletions",
+      "description": "Whether to enable the automatic generation of completions based upon installed man pages.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
     },
     {
       "title": "programs.fish.interactiveShellInit",
@@ -19237,17 +19251,17 @@
     },
     {
       "title": "programs.nushell.environmentVariables",
-      "description": "An attribute set that maps an environment variable to a shell interpreted string.",
-      "type": "attribute set of string",
+      "description": "Environment variables to be set.",
+      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or path or (attribute set of Nushell values) or (list of Nushell values))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
           "text": "home-manager/modules/programs/nushell.nix"
         }
       ],
-      "note": null,
+      "note": "Inline values can be set with lib.hm.nushell.mkNushellInline.",
       "default": "{ }",
-      "example": "{\n  FOO = \"BAR\";\n}\n"
+      "example": "{\n  FOO = \"BAR\";\n  LIST_VALUE = [ \"foo\" \"bar\" ];\n  NU_LIB_DIRS = lib.concatStringsSep \":\" [ ./scripts ];\n  PROMPT_COMMAND = lib.hm.nushell.mkNushellInline ''{|| \"> \"}'';\n  ENV_CONVERSIONS.PATH = {\n    from_string = lib.hm.nushell.mkNushellInline \"{|s| $s | split row (char esep) }\";\n    to_string = lib.hm.nushell.mkNushellInline \"{|v| $v | str join (char esep) }\";\n  };\n}\n\n"
     },
     {
       "title": "programs.nushell.extraConfig",
@@ -27508,6 +27522,76 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  default-bg = \"#000000\";\n  default-fg = \"#FFFFFF\";\n}\n"
+    },
+    {
+      "title": "programs.zed-editor.enable",
+      "description": "Whether to enable Zed, the high performance, multiplayer code editor from the creators of Atom and Tree-sitter.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.zed-editor.package",
+      "description": "The zed-editor package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.zed-editor",
+      "example": null
+    },
+    {
+      "title": "programs.zed-editor.extensions",
+      "description": "A list of the extensions Zed should install on startup. Use the name of a repository in the extension list.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ \"swift\" \"nix\" \"xy-zed\" ]\n\n"
+    },
+    {
+      "title": "programs.zed-editor.userKeymaps",
+      "description": "Configuration written to Zed’s keymap.json.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "[\n  {\n    context = \"Workspace\";\n    bindings = {\n      ctrl-shift-t = \"workspace::NewTerminal\";\n    };\n  };\n]\n\n"
+    },
+    {
+      "title": "programs.zed-editor.userSettings",
+      "description": "Configuration written to Zed’s settings.json.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  features = {\n    copilot = false;\n  };\n  telemetry = {\n    metrics = false;\n  };\n  vim_mode = false;\n  ui_font_size = 16;\n  buffer_font_size = 16;\n}\n\n"
     },
     {
       "title": "programs.zellij.enable",
