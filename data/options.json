@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 18 Oct 2024 02:22:20 GMT",
+  "last_update": "Sat, 19 Oct 2024 02:19:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8832,6 +8832,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.cmus.enable",
+      "description": "Whether to enable Enable cmus, the music player…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cmus.nix",
+          "text": "home-manager/modules/programs/cmus.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.cmus.extraConfig",
+      "description": "Extra configuration to add to cmus rc.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cmus.nix",
+          "text": "home-manager/modules/programs/cmus.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  set audio_backend = \"mpd\"\n  set status_display = \"default\"\n''\n"
+    },
+    {
+      "title": "programs.cmus.theme",
+      "description": "Select color theme. A list of available color themes can be found here: https://github.com/cmus/cmus/tree/master/data.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cmus.nix",
+          "text": "home-manager/modules/programs/cmus.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "\"gruvbox\""
     },
     {
       "title": "programs.command-not-found.enable",
