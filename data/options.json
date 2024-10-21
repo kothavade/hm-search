@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 20 Oct 2024 02:33:44 GMT",
+  "last_update": "Mon, 21 Oct 2024 02:24:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18800,6 +18800,90 @@
       "note": null,
       "default": null,
       "example": "\"http://example.com\""
+    },
+    {
+      "title": "programs.nh.enable",
+      "description": "Whether to enable nh, yet another Nix CLI helper.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.nh.package",
+      "description": "The nh package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.nh",
+      "example": null
+    },
+    {
+      "title": "programs.nh.clean.enable",
+      "description": "Whether to enable periodic garbage collection for user profile and nix store with nh clean user.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.nh.clean.dates",
+      "description": "How often cleanup is performed.",
+      "type": "(optionally newline-terminated) single-line string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "The format is described in systemd.time(7).",
+      "default": "\"weekly\"",
+      "example": null
+    },
+    {
+      "title": "programs.nh.clean.extraArgs",
+      "description": "Options given to nh clean when the service is run automatically.",
+      "type": "(optionally newline-terminated) single-line string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "See nh clean all --help for more information.",
+      "default": "\"\"",
+      "example": "\"--keep 5 --keep-since 3d\""
+    },
+    {
+      "title": "programs.nh.flake",
+      "description": "The path that will be used for the FLAKE environment variable.",
+      "type": "null or path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "FLAKE is used by nh as the default flake for performing actions,\nlike nh os switch.",
+      "default": "null",
+      "example": null
     },
     {
       "title": "programs.nheko.enable",
