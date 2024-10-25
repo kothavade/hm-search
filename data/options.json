@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 24 Oct 2024 02:21:23 GMT",
+  "last_update": "Fri, 25 Oct 2024 02:22:55 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -184,7 +184,7 @@
         }
       ],
       "note": null,
-      "default": "\"‹accounts.calendar.basePath›/‹name›\"",
+      "default": "‹accounts.calendar.basePath›/‹name›",
       "example": null
     },
     {
@@ -804,7 +804,7 @@
         }
       ],
       "note": null,
-      "default": "\"‹accounts.contact.basePath›/‹name›\"",
+      "default": "‹accounts.contact.basePath›/‹name›",
       "example": null
     },
     {
