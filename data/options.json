@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 25 Oct 2024 02:22:55 GMT",
+  "last_update": "Sat, 26 Oct 2024 02:18:30 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5936,6 +5936,20 @@
       "example": "false"
     },
     {
+      "title": "nix.gc.randomizedDelaySec",
+      "description": "Add a randomized delay before each garbage collection. The delay will be chosen between zero and this value.\nThis value must be a time span in the format specified by\nsystemd.time(7)",
+      "type": "(optionally newline-terminated) single-line string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
+          "text": "home-manager/modules/services/nix-gc.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"0\"",
+      "example": "\"45min\""
+    },
+    {
       "title": "nix.keepOldNixPath",
       "description": "Whether nix.nixPath should keep the previously set values in NIX_PATH.",
       "type": "boolean",
@@ -6046,6 +6060,118 @@
       "note": "Configuration specified in nix.extraOptions will be appended\nverbatim to the resulting config file.",
       "default": "{ }",
       "example": "{\n  use-sandbox = true;\n  show-trace = true;\n  system-features = [ \"big-parallel\" \"kvm\" \"recursive-nix\" ];\n}\n\n"
+    },
+    {
+      "title": "nixGL.packages",
+      "description": "The nixGL package set containing GPU library wrappers. This can be used to provide OpenGL and Vulkan access to applications on non-NixOS systems\nby using (config.lib.nixGL.wrap <package>) for the default wrapper, or\n(config.lib.nixGL.wrappers.<wrapper> <package>) for any available\nwrapper.",
+      "type": "null or (attribute set)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "The wrapper functions are always available. If this option is empty (the\ndefault), they are a no-op. This is useful on NixOS where the wrappers\nare unnecessary.",
+      "default": "null",
+      "example": "inputs.nixGL.packages"
+    },
+    {
+      "title": "nixGL.defaultWrapper",
+      "description": "The package wrapper function available for use as (config.lib.nixGL.wrap <package>). Intended to start programs on the main GPU.",
+      "type": "one of “mesa”, “mesaPrime”, “nvidia”, “nvidiaPrime”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "Wrapper functions can be found under config.lib.nixGL.wrappers. They\ncan be used directly, however, setting this option provides a convenient\nshorthand.",
+      "default": "\"mesa\"",
+      "example": null
+    },
+    {
+      "title": "nixGL.installScripts",
+      "description": "For each wrapper wrp named in the provided list, a wrapper script named nixGLWrp is installed into the environment. These scripts are\nuseful for running programs not installed via Home Manager.",
+      "type": "null or (list of (one of “mesa”, “mesaPrime”, “nvidia”, “nvidiaPrime”))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "The following wrappers are available:",
+      "default": "null",
+      "example": "[\n  \"mesa\"\n  \"mesaPrime\"\n]\n"
+    },
+    {
+      "title": "nixGL.offloadWrapper",
+      "description": "The package wrapper function available for use as (config.lib.nixGL.wrapOffload <package>). Intended to start programs\non the secondary GPU.",
+      "type": "one of “mesa”, “mesaPrime”, “nvidia”, “nvidiaPrime”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "Wrapper functions can be found under config.lib.nixGL.wrappers. They\ncan be used directly, however, setting this option provides a convenient\nshorthand.",
+      "default": "\"mesaPrime\"",
+      "example": null
+    },
+    {
+      "title": "nixGL.prime.card",
+      "description": "Selects the non-default graphics card used for PRIME render offloading. The value can be:",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "a number, selecting the n-th non-default GPU;a PCI bus id in the form pci-XXX_YY_ZZ_U;a PCI id in the form vendor_id:device_id",
+      "default": "\"1\"",
+      "example": "\"pci-0000_06_00_0\""
+    },
+    {
+      "title": "nixGL.prime.installScript",
+      "description": "If this option is set, the wrapper script prime-offload is installed into the environment. It allows starting programs on the secondary GPU\nselected by the nixGL.prime.card option. This makes sense when the\nprogram is not already using one of nixGL PRIME wrappers, or for\nprograms not installed from Nixpkgs.",
+      "type": "null or one of “mesa”, “nvidia”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "This option can be set to either “mesa” or “nvidia”, making the script\nuse one or the other graphics library.",
+      "default": "null",
+      "example": "\"mesa\""
+    },
+    {
+      "title": "nixGL.prime.nvidiaProvider",
+      "description": "If this option is set, it overrides the offload provider for Nvidia PRIME offloading. Consult the proprietary Nvidia driver documentation\non the __NV_PRIME_RENDER_OFFLOAD_PROVIDER environment variable.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"NVIDIA-G0\""
+    },
+    {
+      "title": "nixGL.vulkan.enable",
+      "description": "Whether to enable Vulkan in nixGL wrappers.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/nixgl.nix",
+          "text": "home-manager/modules/misc/nixgl.nix"
+        }
+      ],
+      "note": "This is disabled by default bacause Vulkan brings in several libraries\nthat can cause symbol version conflicts in wrapped programs. Your\nmileage may vary.",
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "nixpkgs.config",
@@ -9184,6 +9310,34 @@
       "example": null
     },
     {
+      "title": "programs.direnv.mise.enable",
+      "description": "Whether to enable mise, integration of use_mise for direnv.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/direnv.nix",
+          "text": "home-manager/modules/programs/direnv.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.direnv.mise.package",
+      "description": "The mise package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/direnv.nix",
+          "text": "home-manager/modules/programs/direnv.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mise",
+      "example": null
+    },
+    {
       "title": "programs.direnv.nix-direnv.enable",
       "description": "Whether to enable nix-direnv, a fast, persistent use_nix implementation for direnv.",
       "type": "boolean",
@@ -9629,6 +9783,20 @@
       ],
       "note": null,
       "default": "pkgs.eza",
+      "example": null
+    },
+    {
+      "title": "programs.eza.colors",
+      "description": "Use terminal colors in output (--color argument).",
+      "type": "one of <null>, “auto”, “always”, “never”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
       "example": null
     },
     {
@@ -12068,6 +12236,20 @@
       "example": null
     },
     {
+      "title": "programs.git-credential-oauth.extraFlags",
+      "description": "Extra command-line arguments passed to git-credential-oauth.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-credential-oauth.nix",
+          "text": "home-manager/modules/programs/git-credential-oauth.nix"
+        }
+      ],
+      "note": "For valid arguments, see git-credential-oauth(1).",
+      "default": "[ ]",
+      "example": "[ \"-device\" ]"
+    },
+    {
       "title": "programs.gitui.enable",
       "description": "Whether to enable gitui, blazing fast terminal-ui for git written in rust.",
       "type": "boolean",
@@ -13652,7 +13834,7 @@
     {
       "title": "programs.htop.settings",
       "description": "Configuration options to add to $XDG_CONFIG_HOME/htop/htoprc.",
-      "type": "attribute set",
+      "type": "attribute set of (boolean or signed integer or string or list of (signed integer or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/htop.nix",
@@ -23016,6 +23198,20 @@
       "example": null
     },
     {
+      "title": "programs.spotify-player.actions",
+      "description": "Configuration written to the actions field of $XDG_CONFIG_HOME/spotify-player/keymap.toml.",
+      "type": "list of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
+          "text": "home-manager/modules/programs/spotify-player.nix"
+        }
+      ],
+      "note": "See\nhttps://github.com/aome510/spotify-player/blob/master/docs/config.md#actions\nfor the full list of options.",
+      "default": "[ ]",
+      "example": "[\n  {\n    action = \"GoToArtist\";\n    key_sequence = \"g A\";\n  }\n  {\n    action = \"GoToAlbum\";\n    key_sequence = \"g B\";\n    target = \"PlayingTrack\";\n  }\n  {\n    action = \"ToggleLiked\";\n    key_sequence = \"C-l\";\n  }\n]\n\n"
+    },
+    {
       "title": "programs.spotify-player.keymaps",
       "description": "Configuration written to the keymaps field of $XDG_CONFIG_HOME/spotify-player/keymap.toml.",
       "type": "list of (TOML value)",
@@ -27282,7 +27478,7 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "true",
       "example": "true"
     },
     {
@@ -27296,7 +27492,7 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "true",
       "example": "true"
     },
     {
@@ -27310,7 +27506,7 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "true",
       "example": "true"
     },
     {
@@ -27324,7 +27520,7 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "true",
       "example": "true"
     },
     {
