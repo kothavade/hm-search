@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 01 Nov 2024 02:36:32 GMT",
+  "last_update": "Sat, 02 Nov 2024 02:19:34 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35351,6 +35351,552 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  adaptive_transcode = false;\n  allow_http = false;\n  always_transcode = false;\n  audio_ac3passthrough = false;\n  audio_dtspassthrough = false;\n  auto_play = true;\n  auto_transcode = true;\n}\n\n"
+    },
+    {
+      "title": "services.podman.enable",
+      "description": "Whether to enable Podman, a daemonless container engine.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.podman.enableTypeChecks",
+      "description": "Whether to enable type checks for podman quadlets.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/options.nix",
+          "text": "home-manager/modules/services/podman-linux/options.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.podman.package",
+      "description": "The podman package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/options.nix",
+          "text": "home-manager/modules/services/podman-linux/options.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.podman",
+      "example": null
+    },
+    {
+      "title": "services.podman.autoUpdate.enable",
+      "description": "Automatically update the podman images.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/services.nix",
+          "text": "home-manager/modules/services/podman-linux/services.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.podman.autoUpdate.onCalendar",
+      "description": "The systemd OnCalendar expression for the update. See systemd.time(7) for a description of the format.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/services.nix",
+          "text": "home-manager/modules/services/podman-linux/services.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Sun *-*-* 00:00\"",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers",
+      "description": "Defines Podman container quadlet configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.addCapabilities",
+      "description": "The capabilities to add to the container.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"CAP_DAC_OVERRIDE\"\n  \"CAP_IPC_OWNER\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.autoStart",
+      "description": "Whether to start the container on boot (requires user lingering).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.autoUpdate",
+      "description": "The autoupdate policy for the container.",
+      "type": "one of <null>, “registry”, “local”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"registry\""
+    },
+    {
+      "title": "services.podman.containers.<name>.description",
+      "description": "The description of the container.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"My Container\""
+    },
+    {
+      "title": "services.podman.containers.<name>.devices",
+      "description": "The devices to mount into the container",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/dev/<host>:/dev/<container>\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.dropCapabilities",
+      "description": "The capabilities to drop from the container.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"CAP_DAC_OVERRIDE\"\n  \"CAP_IPC_OWNER\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.entrypoint",
+      "description": "The container entrypoint.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"/foo.sh\""
+    },
+    {
+      "title": "services.podman.containers.<name>.environment",
+      "description": "Environment variables to set in the container.",
+      "type": "attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  VAR1 = \"0:100\";\n  VAR2 = true;\n  VAR3 = 5;\n}\n\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.environmentFile",
+      "description": "Paths to files containing container environment variables.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/etc/environment\"\n  \"/etc/other-env\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.exec",
+      "description": "The command to run after the container start.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"sleep inf\""
+    },
+    {
+      "title": "services.podman.containers.<name>.extraConfig",
+      "description": "INI sections and values to populate the Container Quadlet.",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))) or list of (null or boolean or signed integer or string or path) or null or boolean or signed integer or string or path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Container = {\n    User = 1000;\n  };\n  Service = {\n    TimeoutStartSec = 15;\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.extraPodmanArgs",
+      "description": "Extra arguments to pass to the podman run command.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--security-opt=no-new-privileges\"\n  \"--security-opt=seccomp=unconfined\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.group",
+      "description": "The group ID inside the container.",
+      "type": "null or signed integer or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.image",
+      "description": "The container image.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"registry.access.redhat.com/ubi9-minimal:latest\""
+    },
+    {
+      "title": "services.podman.containers.<name>.ip4",
+      "description": "Set an IPv4 address for the container.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.ip6",
+      "description": "Set an IPv6 address for the container.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.labels",
+      "description": "The labels to apply to the container.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  app = \"myapp\";\n  some-label = \"somelabel\";\n}\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.network",
+      "description": "The network mode or network/s to connect the container to. Equivalent to podman run --network=<option>.",
+      "type": "string or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "\"host\"\"bridge_network_1\"[ \"bridge_network_1\" \"bridge_network_2\" ]"
+    },
+    {
+      "title": "services.podman.containers.<name>.networkAlias",
+      "description": "Network aliases for the container.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"mycontainer\"\n  \"web\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.ports",
+      "description": "A mapping of ports between host and container",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"8080:80\"\n  \"8443:443\"\n]\n"
+    },
+    {
+      "title": "services.podman.containers.<name>.user",
+      "description": "The user ID inside the container.",
+      "type": "null or signed integer or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.userNS",
+      "description": "Use a user namespace for the container.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.containers.<name>.volumes",
+      "description": "The volumes to mount into the container.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
+          "text": "home-manager/modules/services/podman-linux/containers.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/tmp:/tmp\"\n  \"/var/run/test.secret:/etc/secret:ro\"\n]\n"
+    },
+    {
+      "title": "services.podman.networks",
+      "description": "Defines Podman network quadlet configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.networks.<name>.autoStart",
+      "description": "Whether to start the network on boot (requires user lingering).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.networks.<name>.description",
+      "description": "The description of the network.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"My Network\""
+    },
+    {
+      "title": "services.podman.networks.<name>.driver",
+      "description": "The network driver to use.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"bridge\""
+    },
+    {
+      "title": "services.podman.networks.<name>.extraConfig",
+      "description": "INI sections and values to populate the Network Quadlet",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))) or list of (null or boolean or signed integer or string or path) or null or boolean or signed integer or string or path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Network = {\n    ContainerConfModule = \"/etc/nvd.conf\";\n  };\n  Service = {\n    TimeoutStartSec = 30;\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.networks.<name>.extraPodmanArgs",
+      "description": "Extra arguments to pass to the podman network create command.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--dns=192.168.55.1\"\n  \"--ipam-driver\"\n]\n"
+    },
+    {
+      "title": "services.podman.networks.<name>.gateway",
+      "description": "The gateway IP to use for the network.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"192.168.20.1\""
+    },
+    {
+      "title": "services.podman.networks.<name>.internal",
+      "description": "Whether the network should be internal",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.networks.<name>.labels",
+      "description": "The labels to apply to the network.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  app = \"myapp\";\n  some-label = \"somelabel\";\n}\n"
+    },
+    {
+      "title": "services.podman.networks.<name>.subnet",
+      "description": "The subnet to use for the network.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
+          "text": "home-manager/modules/services/podman-linux/networks.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"192.168.20.0/24\""
     },
     {
       "title": "services.polybar.enable",
