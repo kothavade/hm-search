@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 13 Nov 2024 02:20:09 GMT",
+  "last_update": "Thu, 14 Nov 2024 02:20:55 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -31917,7 +31917,7 @@
       ],
       "note": null,
       "default": null,
-      "example": null
+      "example": "{\n  xyz = {\n    path = \"${config.home.homeDirectory}/foo/home-manager\";\n    uri = \"git@github.com:nix-community/home-manager.git\";\n    interval = 1000;\n  };\n}\n\n"
     },
     {
       "title": "services.git-sync.repositories.<name>.extraPackages",
