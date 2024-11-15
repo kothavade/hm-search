@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 14 Nov 2024 02:20:55 GMT",
+  "last_update": "Fri, 15 Nov 2024 02:33:51 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9983,7 +9983,7 @@
     },
     {
       "title": "programs.feh.buttons",
-      "description": "Override feh’s default mouse button mapping. If you want to disable an action, set its value to null. If you want to bind multiple buttons to\nan action, set its value to a list.\nSee https://man.finalrewind.org/1/feh/#x425554544f4e53 for\ndefault bindings and available commands.",
+      "description": "Override feh’s default mouse button mapping. If you want to disable an action, set its value to null. If you want to bind multiple buttons to\nan action, set its value to a list.\nSee https://man.finalrewind.org/1/feh/#BUTTONS_CONFIG_SYNTAX for\ndefault bindings and available commands.",
       "type": "attribute set of (null or string or signed integer or list of (string or signed integer))",
       "declared_by": [
         {
@@ -9997,7 +9997,7 @@
     },
     {
       "title": "programs.feh.keybindings",
-      "description": "Override feh’s default keybindings. If you want to disable a keybinding set its value to null. If you want to bind multiple keys to an action,\nset its value to a list.\nSee https://man.finalrewind.org/1/feh/#x4b455953 for\ndefault bindings and available commands.",
+      "description": "Override feh’s default keybindings. If you want to disable a keybinding set its value to null. If you want to bind multiple keys to an action,\nset its value to a list.\nSee https://man.finalrewind.org/1/feh/#KEYS_CONFIG_SYNTAX for\ndefault bindings and available commands.",
       "type": "attribute set of (null or string or list of string)",
       "declared_by": [
         {
@@ -10008,6 +10008,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  prev_img = [\n    \"h\"\n    \"Left\"\n  ];\n  zoom_in = \"plus\";\n  zoom_out = \"minus\";\n}\n"
+    },
+    {
+      "title": "programs.feh.themes",
+      "description": "Define themes for feh. See https://man.finalrewind.org/1/feh/#THEMES_CONFIG_SYNTAX for\nimportant guidelines and limitations related to theme configuration.",
+      "type": "attribute set of list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/feh.nix",
+          "text": "home-manager/modules/programs/feh.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  booth = [\n    \"--full-screen\"\n    \"--hide-pointer\"\n    \"--slideshow-delay\"\n    \"20\"\n  ];\n  example = [\n    \"--info\"\n    \"foo bar\"\n  ];\n  feh = [\n    \"--image-bg\"\n    \"black\"\n  ];\n  imagemap = [\n    \"-rVq\"\n    \"--thumb-width\"\n    \"40\"\n    \"--thumb-height\"\n    \"30\"\n    \"--index-info\"\n    \"%n\\\\n%wx%h\"\n  ];\n  present = [\n    \"--full-screen\"\n    \"--sort\"\n    \"name\"\n    \"--hide-pointer\"\n  ];\n  webcam = [\n    \"--multiwindow\"\n    \"--reload\"\n    \"20\"\n  ];\n}\n"
     },
     {
       "title": "programs.firefox.enable",
