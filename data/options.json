@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 16 Nov 2024 02:24:37 GMT",
+  "last_update": "Sun, 17 Nov 2024 02:37:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3805,7 +3805,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "pkgs.gnome.adwaita-icon-theme"
+      "example": "pkgs.adwaita-icon-theme"
     },
     {
       "title": "gtk.iconTheme.name",
@@ -3973,6 +3973,20 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "home.file.<name>.force",
+      "description": "Whether the target path should be unconditionally replaced by the managed file source. Warning, this will silently\ndelete the target regardless of whether it is a file or\nlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/files.nix",
+          "text": "home-manager/modules/files.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
@@ -31077,7 +31091,7 @@
       ],
       "note": null,
       "default": null,
-      "example": "pkgs.gnome.adwaita-icon-theme"
+      "example": "pkgs.adwaita-icon-theme"
     },
     {
       "title": "services.dunst.iconTheme.name",
@@ -42059,6 +42073,20 @@
       "example": null
     },
     {
+      "title": "xdg.configFile.<name>.force",
+      "description": "Whether the target path should be unconditionally replaced by the managed file source. Warning, this will silently\ndelete the target regardless of whether it is a file or\nlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
       "title": "xdg.configFile.<name>.onChange",
       "description": "Shell commands to run when file has changed between generations. The script will be run\nafter the new files have been linked\ninto place.",
       "type": "strings concatenated with “\\n”",
@@ -42182,6 +42210,20 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "xdg.dataFile.<name>.force",
+      "description": "Whether the target path should be unconditionally replaced by the managed file source. Warning, this will silently\ndelete the target regardless of whether it is a file or\nlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
@@ -42728,6 +42770,20 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "xdg.stateFile.<name>.force",
+      "description": "Whether the target path should be unconditionally replaced by the managed file source. Warning, this will silently\ndelete the target regardless of whether it is a file or\nlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
