@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 17 Nov 2024 02:37:04 GMT",
+  "last_update": "Mon, 18 Nov 2024 02:36:31 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4496,7 +4496,7 @@
     {
       "title": "home.stateVersion",
       "description": "It is occasionally necessary for Home Manager to change configuration defaults in a way that is incompatible with\nstateful data. This could, for example, include switching the\ndefault data format or location of a file.",
-      "type": "one of “18.09”, “19.03”, “19.09”, “20.03”, “20.09”, “21.03”, “21.05”, “21.11”, “22.05”, “22.11”, “23.05”, “23.11”, “24.05”, “24.11”",
+      "type": "one of “18.09”, “19.03”, “19.09”, “20.03”, “20.09”, “21.03”, “21.05”, “21.11”, “22.05”, “22.11”, “23.05”, “23.11”, “24.05”, “24.11”, “25.05”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/version.nix",
