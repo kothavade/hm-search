@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 18 Nov 2024 02:36:31 GMT",
+  "last_update": "Tue, 19 Nov 2024 02:33:46 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16787,7 +16787,7 @@
     },
     {
       "title": "programs.librewolf.enable",
-      "description": "Whether to enable Librewolf browser, a privacy enhanced Firefox fork.",
+      "description": "Whether to enable LibreWolf. LibreWolf is a privacy enhanced Firefox fork. See programs.firefox for more configuration options.",
       "type": "boolean",
       "declared_by": [
         {
@@ -16800,9 +16800,9 @@
       "example": "true"
     },
     {
-      "title": "programs.librewolf.package",
-      "description": "The LibreWolf package to use.",
-      "type": "package",
+      "title": "programs.librewolf.languagePacks",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have.",
+      "type": "list of string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
@@ -16810,12 +16810,12 @@
         }
       ],
       "note": null,
-      "default": "pkgs.librewolf",
-      "example": null
+      "default": "[ ]",
+      "example": "[\n  \"en-GB\"\n  \"de\"\n]\n"
     },
     {
       "title": "programs.librewolf.settings",
-      "description": "Attribute set of LibreWolf settings and overrides. Refer to https://librewolf.net/docs/settings/\nfor details on supported values.",
+      "description": "Attribute set of global LibreWolf settings and overrides. Refer to https://librewolf.net/docs/settings/\nfor details on supported values.",
       "type": "attribute set of (boolean or signed integer or string)",
       "declared_by": [
         {
@@ -37328,7 +37328,7 @@
     },
     {
       "title": "services.syncthing.enable",
-      "description": "Whether to enable Syncthing continuous file synchronization.",
+      "description": "Whether to enable Syncthing, a self-hosted open-source alternative to Dropbox and Bittorrent Sync. Further declarative configuration options only supported on Linux devices.\n.",
       "type": "boolean",
       "declared_by": [
         {
@@ -37341,8 +37341,50 @@
       "example": "true"
     },
     {
+      "title": "services.syncthing.package",
+      "description": "The syncthing package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.syncthing",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.allProxy",
+      "description": "Overwrites the all_proxy environment variable for the Syncthing process to the given value. This is normally used to let Syncthing\nconnect through a SOCKS5 proxy server. See\nhttps://docs.syncthing.net/users/proxying.html.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"socks5://address.com:1234\""
+    },
+    {
+      "title": "services.syncthing.cert",
+      "description": "Path to the cert.pem file, which will be copied into Syncthing’s config directory.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "services.syncthing.extraOptions",
-      "description": "Extra command-line arguments to pass to syncthing.",
+      "description": "Extra command-line arguments to pass to syncthing",
       "type": "list of string",
       "declared_by": [
         {
@@ -37352,7 +37394,385 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"--gui-apikey=apiKey\"\n]\n"
+      "example": "[\n  \"--reset-deltas\"\n]\n"
+    },
+    {
+      "title": "services.syncthing.guiAddress",
+      "description": "The address to serve the web interface at.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"127.0.0.1:8384\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.key",
+      "description": "Path to the key.pem file, which will be copied into Syncthing’s config directory.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.overrideDevices",
+      "description": "Whether to delete the devices which are not configured via the devices option.\nIf set to false, devices added via the web\ninterface will persist and will have to be deleted manually.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.overrideFolders",
+      "description": "Whether to delete the folders which are not configured via the folders option.\nIf set to false, folders added via the web\ninterface will persist and will have to be deleted manually.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.passwordFile",
+      "description": "Path to the gui password file.",
+      "type": "null or path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings",
+      "description": "Extra configuration options for Syncthing. See https://docs.syncthing.net/users/config.html.\nNote that this attribute set does not exactly match the documented\nXML format. Instead, this is the format of the JSON REST API. There\nare slight differences. For example, this XML:",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": "<options>\n  <listenAddress>default</listenAddress>\n  <minHomeDiskFree unit=\"%\">1</minHomeDiskFree>\n</options>",
+      "default": "{ }",
+      "example": "{\n  gui = {\n    theme = \"black\";\n  };\n  options = {\n    localAnnounceEnabled = false;\n  };\n}\n"
+    },
+    {
+      "title": "services.syncthing.settings.devices",
+      "description": "Peers/devices which Syncthing should communicate with.",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": "Note that you can still add devices manually, but those changes\nwill be reverted on restart if overrideDevices\nis enabled.",
+      "default": "{ }",
+      "example": "{\n  bigbox = {\n    addresses = [\n      \"tcp://192.168.0.10:51820\"\n    ];\n    id = \"7CFNTQM-IMTJBHJ-3UWRDIU-ZGQJFR6-VCXZ3NB-XUH3KZO-N52ITXR-LAIYUAU\";\n  };\n}\n"
+    },
+    {
+      "title": "services.syncthing.settings.devices.<name>.autoAcceptFolders",
+      "description": "Automatically create or share folders that this device advertises at the default path. See https://docs.syncthing.net/users/config.html?highlight=autoaccept#config-file-format.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.devices.<name>.id",
+      "description": "The device ID. See https://docs.syncthing.net/dev/device-ids.html.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.devices.<name>.name",
+      "description": "The name of the device.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders",
+      "description": "Folders which should be shared by Syncthing.",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": "Note that you can still add folders manually, but those changes\nwill be reverted on restart if overrideFolders\nis enabled.",
+      "default": "{ }",
+      "example": "{\n  \"/home/user/sync\" = {\n    id = \"syncme\";\n    devices = [ \"bigbox\" ];\n  };\n}\n\n"
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.enable",
+      "description": "Whether to share this folder. This option is useful when you want to define all folders\nin one place, but not every machine should share all folders.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.copyOwnershipFromParent",
+      "description": "On Unix systems, tries to copy file/folder ownership from the parent directory (the directory it’s located in).\nRequires running Syncthing as a privileged user, or\ngranting it additional capabilities (e.g. CAP_CHOWN on\nLinux).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.devices",
+      "description": "The devices this folder should be shared with. Each device must be defined in the devices option.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.id",
+      "description": "The ID of the folder. Must be the same on all devices.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.label",
+      "description": "The label of the folder.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.path",
+      "description": "The path to the folder which should be shared. Only absolute paths (starting with /) and paths relative to\nthe user’s home directory (starting with ~/) are allowed.",
+      "type": "string starting with / or ~/",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.type",
+      "description": "Controls how the folder is handled by Syncthing. See https://docs.syncthing.net/users/config.html#config-option-folder.type.",
+      "type": "one of “sendreceive”, “sendonly”, “receiveonly”, “receiveencrypted”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"sendreceive\"",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.versioning",
+      "description": "How to keep changed/deleted files with Syncthing. There are 4 different types of versioning with different parameters.\nSee https://docs.syncthing.net/users/versioning.html.",
+      "type": "null or (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  {\n    versioning = {\n      type = \"simple\";\n      params.keep = \"10\";\n    };\n  }\n  {\n    versioning = {\n      type = \"trashcan\";\n      params.cleanoutDays = \"1000\";\n    };\n  }\n  {\n    versioning = {\n      type = \"staggered\";\n      fsPath = \"/syncthing/backup\";\n      params = {\n        cleanInterval = \"3600\";\n        maxAge = \"31536000\";\n      };\n    };\n  }\n  {\n    versioning = {\n      type = \"external\";\n      params.versionsPath = pkgs.writers.writeBash \"backup\" ''\n        folderpath=\"$1\"\n        filepath=\"$2\"\n        rm -rf \"$folderpath/$filepath\"\n      '';\n    };\n  }\n]\n\n"
+    },
+    {
+      "title": "services.syncthing.settings.folders.<name>.versioning.type",
+      "description": "The type of versioning. See https://docs.syncthing.net/users/versioning.html.",
+      "type": "one of “external”, “simple”, “staggered”, “trashcan”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options",
+      "description": "The options element contains all other global configuration options",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.limitBandwidthInLan",
+      "description": "Whether to apply bandwidth limits to devices in the same broadcast domain as the local device.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.localAnnounceEnabled",
+      "description": "Whether to send announcements to the local LAN, also use such announcements to find other devices.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.localAnnouncePort",
+      "description": "The port on which to listen and send IPv4 broadcast announcements to.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.maxFolderConcurrency",
+      "description": "This option controls how many folders may concurrently be in I/O-intensive operations such as syncing or scanning. The mechanism is described in detail in a separate chapter.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.relaysEnabled",
+      "description": "When true, relays will be connected to and potentially used for device to device connections.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.syncthing.settings.options.urAccepted",
+      "description": "Whether the user has accepted to submit anonymous usage data. The default, 0, mean the user has not made a choice, and Syncthing will ask at some point in the future.\n“-1” means no, a number above zero means that that version of usage reporting has been accepted.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
+          "text": "home-manager/modules/services/syncthing.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
     },
     {
       "title": "services.syncthing.tray",
