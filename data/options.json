@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 28 Nov 2024 02:36:39 GMT",
+  "last_update": "Fri, 29 Nov 2024 02:36:29 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4366,6 +4366,34 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "home.pointerCursor.hyprcursor.enable",
+      "description": "Whether to enable hyprcursor config generation.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
+          "text": "home-manager/modules/config/home-cursor.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "home.pointerCursor.hyprcursor.size",
+      "description": "The cursor size for hyprcursor.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
+          "text": "home-manager/modules/config/home-cursor.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "32"
     },
     {
       "title": "home.pointerCursor.name",
@@ -15048,6 +15076,20 @@
       "note": null,
       "default": "pkgs.kakoune-unwrapped",
       "example": null
+    },
+    {
+      "title": "programs.kakoune.colorSchemePackage",
+      "description": "A kakoune color schemes to add to your colors folder. This works because kakoune recursively checks\n$XDG_CONFIG_HOME/kak/colors/. To apply the color scheme use\nprograms.kakoune.config.colorScheme = \"theme\".",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
+          "text": "home-manager/modules/programs/kakoune.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.kakounePlugins.kakoune-catppuccin"
     },
     {
       "title": "programs.kakoune.config",
@@ -25924,7 +25966,7 @@
         }
       ],
       "note": null,
-      "default": "true",
+      "default": "false",
       "example": null
     },
     {
@@ -27914,6 +27956,20 @@
       "note": null,
       "default": "[ ]",
       "example": "[ \"swift\" \"nix\" \"xy-zed\" ]\n\n"
+    },
+    {
+      "title": "programs.zed-editor.extraPackages",
+      "description": "Extra packages available to Zed.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ pkgs.nixd ]"
     },
     {
       "title": "programs.zed-editor.userKeymaps",
@@ -33319,8 +33375,8 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-23.08.5>",
-      "example": "pkgs.kdePackages.kdeconnect-kde"
+      "default": "<derivation kdeconnect-kde-24.08.3>",
+      "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
       "title": "services.kdeconnect.indicator",
@@ -35925,6 +35981,90 @@
       "note": null,
       "default": "null",
       "example": "\"192.168.20.0/24\""
+    },
+    {
+      "title": "services.podman.settings.containers",
+      "description": "containers.conf configuration",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.settings.policy",
+      "description": "Signature verification policy file. If this option is empty the default policy file from\nskopeo will be used.",
+      "type": "attribute set",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  default = [ { type = \"insecureAcceptAnything\"; } ];\n  transports = {\n    docker-daemon = {\n      \"\" = [ { type = \"insecureAcceptAnything\"; } ];\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.settings.registries.block",
+      "description": "List of blocked repositories.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.podman.settings.registries.insecure",
+      "description": "List of insecure repositories.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.podman.settings.registries.search",
+      "description": "List of repositories to search.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "services.podman.settings.storage",
+      "description": "storage.conf configuration",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
     },
     {
       "title": "services.polybar.enable",
