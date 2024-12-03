@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 02 Dec 2024 02:40:42 GMT",
+  "last_update": "Tue, 03 Dec 2024 02:38:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -25967,6 +25967,20 @@
       ],
       "note": null,
       "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.tmux.focusEvents",
+      "description": "On supported terminals, request focus events and pass them through to applications running in tmux.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tmux.nix",
+          "text": "home-manager/modules/programs/tmux.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
