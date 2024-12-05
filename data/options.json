@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 04 Dec 2024 02:39:04 GMT",
+  "last_update": "Thu, 05 Dec 2024 02:39:22 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6899,6 +6899,34 @@
       ],
       "note": null,
       "default": "pkgs.atuin",
+      "example": null
+    },
+    {
+      "title": "programs.atuin.daemon.enable",
+      "description": "Whether to enable Atuin daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/atuin.nix",
+          "text": "home-manager/modules/programs/atuin.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.atuin.daemon.logLevel",
+      "description": "Verbosity of Atuin daemon logging.",
+      "type": "null or one of “trace”, “debug”, “info”, “warn”, “error”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/atuin.nix",
+          "text": "home-manager/modules/programs/atuin.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
       "example": null
     },
     {
@@ -17175,7 +17203,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  mpv = {\n    no_display = true;\n  }\n}\n\n"
+      "example": "{\n  mpv = {\n    no_display = true;\n  };\n}\n\n"
     },
     {
       "title": "programs.matplotlib.enable",
@@ -24234,6 +24262,20 @@
       "example": "true"
     },
     {
+      "title": "programs.starship.enableInteractive",
+      "description": "Only enable starship when the shell is interactive. This option is only valid for the Fish shell.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/starship.nix",
+          "text": "home-manager/modules/programs/starship.nix"
+        }
+      ],
+      "note": "Some plugins require this to be set to false to function correctly.",
+      "default": "true",
+      "example": null
+    },
+    {
       "title": "programs.starship.enableIonIntegration",
       "description": "Whether to enable Ion integration.",
       "type": "boolean",
@@ -29947,7 +29989,7 @@
     },
     {
       "title": "qt.kde.settings",
-      "description": "A set of values to be modified by kwriteconfig5.",
+      "description": "A set of values to be modified by kwriteconfig6.",
       "type": "attribute set of (KDE option value)",
       "declared_by": [
         {
@@ -31692,7 +31734,7 @@
         }
       ],
       "note": null,
-      "default": "\"https://api.etesync.com/\"",
+      "default": "\"https://api.etebase.com/partner/etesync/\"",
       "example": null
     },
     {
