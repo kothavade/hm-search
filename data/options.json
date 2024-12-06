@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 05 Dec 2024 02:39:22 GMT",
+  "last_update": "Fri, 06 Dec 2024 02:38:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -33066,6 +33066,20 @@
       "note": null,
       "default": "pkgs.goimapnotify",
       "example": "pkgs.imapnotify"
+    },
+    {
+      "title": "services.imapnotify.path",
+      "description": "List of packages to provide in PATH for the imapnotify service.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
+          "text": "home-manager/modules/services/imapnotify.nix"
+        }
+      ],
+      "note": "Note, this does not apply to the Darwin launchd service.",
+      "default": "[ ]",
+      "example": null
     },
     {
       "title": "services.kanshi.enable",
