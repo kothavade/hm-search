@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 10 Dec 2024 02:40:52 GMT",
+  "last_update": "Wed, 11 Dec 2024 02:38:38 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -19894,6 +19894,20 @@
       "example": null
     },
     {
+      "title": "programs.nushell.plugins",
+      "description": "A list of nushell plugins to write to the plugin registry file.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
+          "text": "home-manager/modules/programs/nushell.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ pkgs.nushellPlugins.formats ]"
+    },
+    {
       "title": "programs.nushell.shellAliases",
       "description": "An attribute set that maps aliases (the top level attribute names in this option) to command strings or directly to build outputs.",
       "type": "attribute set of string",
@@ -32537,7 +32551,7 @@
     },
     {
       "title": "services.gpg-agent.pinentryPackage",
-      "description": "Which pinentry interface to use. If not null, it sets\npinentry-program in\ngpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-Gnome\nsystems. You can fix it by adding the following to your\nsystem configuration:",
+      "description": "Which pinentry interface to use. If not null, it sets pinentry-program in gpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-GNOME systems. You can fix it by\nadding the following to your configuration:",
       "type": "null or package",
       "declared_by": [
         {
@@ -32545,7 +32559,7 @@
           "text": "home-manager/modules/services/gpg-agent.nix"
         }
       ],
-      "note": "services.dbus.packages = [ pkgs.gcr ];",
+      "note": "home.packages = [ pkgs.gcr ];",
       "default": "null",
       "example": "pkgs.pinentry-gnome3"
     },
