@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 12 Dec 2024 02:38:43 GMT",
+  "last_update": "Fri, 13 Dec 2024 02:40:03 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -12429,7 +12429,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  { package = pkgs.gnomeExtensions.dash-to-panel; }\n  {\n    id = \"user-theme@gnome-shell-extensions.gcampax.github.com\";\n    package = pkgs.gnome.gnome-shell-extensions;\n  }\n]\n\n"
+      "example": "[\n  { package = pkgs.gnomeExtensions.dash-to-panel; }\n  {\n    id = \"user-theme@gnome-shell-extensions.gcampax.github.com\";\n    package = pkgs.gnome-shell-extensions;\n  }\n]\n\n"
     },
     {
       "title": "programs.gnome-shell.extensions.*.package",
@@ -12443,7 +12443,7 @@
       ],
       "note": null,
       "default": null,
-      "example": "\"pkgs.gnome.gnome-shell-extensions\""
+      "example": "\"pkgs.gnome-shell-extensions\""
     },
     {
       "title": "programs.gnome-shell.extensions.*.id",
