@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 21 Dec 2024 02:18:28 GMT",
+  "last_update": "Sun, 22 Dec 2024 02:31:52 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -20566,6 +20566,90 @@
       "example": "{\n  PASSWORD_STORE_DIR = \"/some/directory\";\n  PASSWORD_STORE_KEY = \"12345678\";\n  PASSWORD_STORE_CLIP_TIME = \"60\";\n}\n\n"
     },
     {
+      "title": "programs.pay-respects.enable",
+      "description": "Whether to enable pay-respects.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.pay-respects.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.pay-respects.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.pay-respects.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.pay-respects.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.pay-respects.package",
+      "description": "The pay-respects package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pay-respects",
+      "example": null
+    },
+    {
       "title": "programs.pazi.enable",
       "description": "Whether to enable pazi.",
       "type": "boolean",
@@ -25466,6 +25550,20 @@
       "example": null
     },
     {
+      "title": "programs.thunderbird.profiles.<name>.extensions",
+      "description": "List of ‹name› add-on packages to install for this profile.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": "Note that it is necessary to manually enable extensions\ninside ‹name› after the first installation.",
+      "default": "[ ]",
+      "example": "[\n  pkgs.some-thunderbird-extension\n]\n\n"
+    },
+    {
       "title": "programs.thunderbird.profiles.<name>.extraConfig",
       "description": "Extra preferences to add to user.js.",
       "type": "strings concatenated with “\\n”",
@@ -27885,7 +27983,7 @@
       ],
       "note": "See https://yazi-rs.github.io/docs/configuration/yazi\nfor the full list of options.",
       "default": "{ }",
-      "example": "{\n  log = {\n    enabled = false;\n  };\n  manager = {\n    show_hidden = false;\n    sort_by = \"modified\";\n    sort_dir_first = true;\n    sort_reverse = true;\n  };\n}\n\n"
+      "example": "{\n  log = {\n    enabled = false;\n  };\n  manager = {\n    show_hidden = false;\n    sort_by = \"mtime\";\n    sort_dir_first = true;\n    sort_reverse = true;\n  };\n}\n\n"
     },
     {
       "title": "programs.yazi.shellWrapperName",
@@ -27913,7 +28011,7 @@
       ],
       "note": "See https://yazi-rs.github.io/docs/configuration/theme\nfor the full list of options",
       "default": "{ }",
-      "example": "{\n  filetype = {\n    rules = [\n      { fg = \"#7AD9E5\"; mime = \"image/*\"; }\n      { fg = \"#F3D398\"; mime = \"video/*\"; }\n      { fg = \"#F3D398\"; mime = \"audio/*\"; }\n      { fg = \"#CD9EFC\"; mime = \"application/x-bzip\"; }\n    ];\n  };\n}\n\n"
+      "example": "{\n  filetype = {\n    rules = [\n      { fg = \"#7AD9E5\"; mime = \"image/*\"; }\n      { fg = \"#F3D398\"; mime = \"video/*\"; }\n      { fg = \"#F3D398\"; mime = \"audio/*\"; }\n      { fg = \"#CD9EFC\"; mime = \"application/bzip\"; }\n    ];\n  };\n}\n\n"
     },
     {
       "title": "programs.yt-dlp.enable",
