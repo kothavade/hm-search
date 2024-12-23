@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 22 Dec 2024 02:31:52 GMT",
+  "last_update": "Mon, 23 Dec 2024 02:22:24 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8916,6 +8916,62 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  general.framerate = 60;\n  input.method = \"alsa\";\n  smoothing.noise_reduction = 88;\n  color = {\n    background = \"'#000000'\";\n    foreground = \"'#FFFFFF'\";\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.cavalier.enable",
+      "description": "Whether to enable Cava audio visualizer GUI.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cavalier.nix",
+          "text": "home-manager/modules/programs/cavalier.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.cavalier.package",
+      "description": "The cavalier package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cavalier.nix",
+          "text": "home-manager/modules/programs/cavalier.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.cavalier",
+      "example": null
+    },
+    {
+      "title": "programs.cavalier.settings.cava",
+      "description": "Settings to be written to the underlying Cava configuration file. See https://github.com/karlstav/cava/blob/master/example_files/config for\nall available options.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cavalier.nix",
+          "text": "home-manager/modules/programs/cavalier.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  general.framerate = 60;\n  input.method = \"alsa\";\n  smoothing.noise_reduction = 88;\n  color = {\n    background = \"'#000000'\";\n    foreground = \"'#FFFFFF'\";\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.cavalier.settings.general",
+      "description": "Settings to be written to the Cavalier configuration file. See https://github.com/NickvisionApps/Cavalier/blob/main/NickvisionCavalier.Shared/Models/Configuration.cs\nfor all available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cavalier.nix",
+          "text": "home-manager/modules/programs/cavalier.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  ShowControls = true;\n  ColorProfiles = [\n    {\n      Name = \"Default\";\n      FgColors = [\n        \"#ffed333b\"\n        \"#ffffa348\"\n        \"#fff8e45c\"\n        \"#ff57e389\"\n        \"#ff62a0ea\"\n        \"#ffc061cb\"\n      ];\n      BgColors = [\n        \"#ff1e1e2e\"\n      ];\n      Theme = 1;\n    }\n  ];\n  ActiveProfile = 0;\n}\n\n"
     },
     {
       "title": "programs.chromium.enable",
@@ -43993,7 +44049,7 @@
     {
       "title": "xresources.properties",
       "description": "X server resources that should be set. Booleans are formatted as “true” or “false” respectively.\nList elements are recursively formatted as a string and joined by commas.\nAll other values are directly formatted using builtins.toString.\nNote, that 2-dimensional lists are not supported and specifying one will throw an exception.\nIf this and all other xresources options are\nnull, then this feature is disabled and no\n~/.Xresources link is produced.",
-      "type": "null or (attribute set of (boolean or signed integer or string or list of (boolean or signed integer or string)))",
+      "type": "null or (attribute set of (boolean or signed integer or floating point number or string or list of (boolean or signed integer or floating point number or string)))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/xresources.nix",
