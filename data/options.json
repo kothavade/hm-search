@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 27 Dec 2024 02:20:42 GMT",
+  "last_update": "Sat, 28 Dec 2024 02:17:48 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16854,6 +16854,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.lesspipe.package",
+      "description": "The lesspipe package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lesspipe.nix",
+          "text": "home-manager/modules/programs/lesspipe.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lesspipe",
+      "example": null
     },
     {
       "title": "programs.lf.enable",
