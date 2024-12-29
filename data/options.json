@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 28 Dec 2024 02:17:48 GMT",
+  "last_update": "Sun, 29 Dec 2024 02:33:03 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -31330,6 +31330,20 @@
       "note": null,
       "default": "pkgs.copyq",
       "example": null
+    },
+    {
+      "title": "services.copyq.forceXWayland",
+      "description": "Force the CopyQ to use the X backend on wayland",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/copyq.nix",
+          "text": "home-manager/modules/services/copyq.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
     },
     {
       "title": "services.copyq.systemdTarget",
