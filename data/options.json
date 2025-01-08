@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 07 Jan 2025 02:22:10 GMT",
+  "last_update": "Wed, 08 Jan 2025 02:20:39 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18776,7 +18776,7 @@
     {
       "title": "programs.neomutt.sort",
       "description": "Sorting method on messages.",
-      "type": "one of “date”, “date-received”, “from”, “mailbox-order”, “score”, “size”, “spam”, “subject”, “threads”, “to”, “reverse-date”, “reverse-date-received”, “reverse-from”, “reverse-mailbox-order”, “reverse-score”, “reverse-size”, “reverse-spam”, “reverse-subject”, “reverse-threads”, “reverse-to”",
+      "type": "one of “date”, “date-received”, “from”, “mailbox-order”, “score”, “size”, “spam”, “subject”, “threads”, “to”, “reverse-date”, “reverse-date-received”, “reverse-from”, “reverse-mailbox-order”, “reverse-score”, “reverse-size”, “reverse-spam”, “reverse-subject”, “reverse-threads”, “reverse-to”, “last-date”, “last-date-received”, “last-from”, “last-mailbox-order”, “last-score”, “last-size”, “last-spam”, “last-subject”, “last-threads”, “last-to”, “reverse-last-date”, “reverse-last-date-received”, “reverse-last-from”, “reverse-last-mailbox-order”, “reverse-last-score”, “reverse-last-size”, “reverse-last-spam”, “reverse-last-subject”, “reverse-last-threads”, “reverse-last-to”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
