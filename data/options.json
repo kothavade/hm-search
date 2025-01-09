@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 08 Jan 2025 02:20:39 GMT",
+  "last_update": "Thu, 09 Jan 2025 02:53:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13228,6 +13228,48 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  \"*.corp.example.com\"\n  \"rsc.io/private\"\n]\n"
+    },
+    {
+      "title": "programs.go.telemetry",
+      "description": "Options to configure Go telemetry mode.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/go.nix",
+          "text": "home-manager/modules/programs/go.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.go.telemetry.date",
+      "description": "The date indicating the date at which the modefile was updated, in YYYY-MM-DD format. It’s used to\nreset the timeout before the next telemetry report\nis uploaded when telemetry mode is set to “on”.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/go.nix",
+          "text": "home-manager/modules/programs/go.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"1970-01-01\"",
+      "example": null
+    },
+    {
+      "title": "programs.go.telemetry.mode",
+      "description": "Go telemetry mode to be set.",
+      "type": "null or one of “off”, “local”, “on”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/go.nix",
+          "text": "home-manager/modules/programs/go.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
     },
     {
       "title": "programs.gpg.enable",
@@ -43135,6 +43177,174 @@
       "note": null,
       "default": "true",
       "example": null
+    },
+    {
+      "title": "wayland.windowManager.wayfire.enable",
+      "description": "Whether to enable Wayfire, a wayland compositor based on wlroots.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.package",
+      "description": "The wayfire package to use. Set to null to not add any wayfire package to your path. This should be done if you want to use the NixOS wayfire module to install wayfire.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wayfire",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.wayfire.plugins",
+      "description": "Additional plugins to use with wayfire",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "with pkgs.wayfirePlugins; [ wf-shell ]",
+      "example": "with pkgs.wayfirePlugins; [\n  wcm\n  wf-shell\n  wayfire-plugins-extra\n];\n\n"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.settings",
+      "description": "Wayfire configuration written in Nix.",
+      "type": "attribute set of attribute set of (string or boolean or signed integer or floating point number)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": "See https://github.com/WayfireWM/wayfire/wiki/Configuration",
+      "default": "{ }",
+      "example": "{\n  core.plugins = \"command expo cube\";\n  command = {\n    binding_terminal = \"alacritty\";\n    command_terminal = \"alacritty\";\n  };\n}\n\n"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.settings.core.plugins",
+      "description": "Load the specified plugins",
+      "type": "strings concatenated with \" \"",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.wayfire.systemd.enable",
+      "description": "Whether to enable wayfire-session.target on wayfire startup. This links to graphical-session.target}.\nSome important environment variables will be imported to systemd\nand D-Bus user environment before reaching the target, including",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": "DISPLAYWAYLAND_DISPLAYXDG_CURRENT_DESKTOPNIXOS_OZONE_WLXCURSOR_THEMEXCURSOR_SIZE",
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.systemd.extraCommands",
+      "description": "Extra commands to be run after D-Bus activation.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.wayfire.systemd.variables",
+      "description": "Environment variables to be imported in the systemd & D-Bus user environment.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"-all\"\n]\n"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.wf-shell.enable",
+      "description": "Whether to enable Manage wf-shell Configuration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.wf-shell.package",
+      "description": "The wf-shell package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wf-shell",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.wayfire.wf-shell.settings",
+      "description": "Wf-shell configuration written in Nix.",
+      "type": "attribute set of attribute set of (string or boolean or signed integer or floating point number)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": "See https://github.com/WayfireWM/wf-shell/blob/master/wf-shell.ini.example",
+      "default": "{ }",
+      "example": "{\n  panel = {\n    widgets_left = \"menu spacing4 launchers window-list\";\n    autohide = true;\n  };\n}\n\n"
+    },
+    {
+      "title": "wayland.windowManager.wayfire.xwayland.enable",
+      "description": "Whether to enable XWayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
+          "text": "home-manager/modules/services/window-managers/wayfire.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
     },
     {
       "title": "xdg.enable",
