@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 09 Jan 2025 02:53:05 GMT",
+  "last_update": "Fri, 10 Jan 2025 02:23:39 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26600,6 +26600,48 @@
       "example": "true"
     },
     {
+      "title": "programs.todoman.enable",
+      "description": "Whether to enable todoman.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/todoman.nix",
+          "text": "home-manager/modules/programs/todoman.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.todoman.extraConfig",
+      "description": "Text for configuration of todoman. The syntax is Python.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/todoman.nix",
+          "text": "home-manager/modules/programs/todoman.nix"
+        }
+      ],
+      "note": "See docs.\nfor the full list of options.",
+      "default": "\"\"",
+      "example": "''\n  date_format = \"%Y-%m-%d\";\n  time_format = \"%H:%M\";\n  default_list = \"Personal\";\n  default_due = 48;\n''\n"
+    },
+    {
+      "title": "programs.todoman.glob",
+      "description": "The glob expansion which matches all directories relevant.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/todoman.nix",
+          "text": "home-manager/modules/programs/todoman.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"*\"",
+      "example": "\"*/*\""
+    },
+    {
       "title": "programs.tofi.enable",
       "description": "Whether to enable Tofi, a tiny dynamic menu for Wayland.",
       "type": "boolean",
@@ -29524,6 +29566,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.zsh.prezto.package",
+      "description": "The prezto package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/prezto.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.zsh-prezto",
+      "example": null
     },
     {
       "title": "programs.zsh.prezto.autosuggestions.color",
