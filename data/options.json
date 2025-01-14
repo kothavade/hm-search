@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 13 Jan 2025 02:32:10 GMT",
+  "last_update": "Tue, 14 Jan 2025 02:15:47 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -22438,7 +22438,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation rofi-1.7.6>",
+      "default": "<derivation rofi-1.7.7>",
       "example": "pkgs.rofi.override { plugins = [ pkgs.rofi-emoji ]; };\n\n"
     },
     {
@@ -34033,7 +34033,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-24.12.0>",
+      "default": "<derivation kdeconnect-kde-24.12.1>",
       "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
@@ -35326,7 +35326,7 @@
     },
     {
       "title": "services.network-manager-applet.enable",
-      "description": "Whether to enable the Network Manager applet.",
+      "description": "Whether to enable the Network Manager applet (nm-applet).",
       "type": "boolean",
       "declared_by": [
         {
@@ -43027,7 +43027,7 @@
     {
       "title": "wayland.windowManager.sway.config.window.hideEdgeBorders",
       "description": "Hide window borders adjacent to the screen edges.",
-      "type": "one of “none”, “vertical”, “horizontal”, “both”, “smart”",
+      "type": "one of “none”, “vertical”, “horizontal”, “both”, “smart”, “smart_no_gaps”, “–i3 none”, “–i3 vertical”, “–i3 horizontal”, “–i3 both”, “–i3 smart”, “–i3 smart_no_gaps”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix",
