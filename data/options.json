@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 16 Jan 2025 02:16:43 GMT",
+  "last_update": "Fri, 17 Jan 2025 02:16:18 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -14277,7 +14277,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "[\n  \"$\"\n  \"monitor\"\n  \"size\"\n]\n"
+      "example": "[\n  \"$\"\n  \"bezier\"\n  \"monitor\"\n  \"size\"\n]\n"
     },
     {
       "title": "programs.hyprlock.settings",
