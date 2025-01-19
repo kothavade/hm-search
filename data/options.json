@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 18 Jan 2025 02:13:29 GMT",
+  "last_update": "Sun, 19 Jan 2025 02:22:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -23042,6 +23042,20 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.sbt.pluginsExtra",
+      "description": "A list of extra commands to put in plugins conf file. Use it in last resort when you can’t use the plugins option.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sbt.nix",
+          "text": "home-manager/modules/programs/sbt.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"addDependencyTreePlugin\"\n]\n\n"
     },
     {
       "title": "programs.sbt.repositories",
