@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 21 Jan 2025 02:17:15 GMT",
+  "last_update": "Wed, 22 Jan 2025 02:19:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -17346,6 +17346,20 @@
       "example": "{\n  size = {\n    large = \"dark_yellow\";\n    none = \"grey\";\n    small = \"yellow\";\n  };\n}\n"
     },
     {
+      "title": "programs.lsd.icons",
+      "description": "Configuration written to $XDG_CONFIG_HOME/lsd/icons.yaml. See https://github.com/lsd-rs/lsd?tab=readme-ov-file#icon-theme-file-content for\ndetails.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
+          "text": "home-manager/modules/programs/lsd.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  extension = {\n    go = \"\";\n    hs = \"\";\n  };\n  filetype = {\n    dir = \"📂\";\n    file = \"📄\";\n  };\n  name = {\n    \".cargo\" = \"\";\n    \".trash\" = \"\";\n  };\n}\n"
+    },
+    {
       "title": "programs.lsd.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/lsd/config.yaml. See\nhttps://github.com/Peltoche/lsd#config-file-content\nfor supported values.",
       "type": "YAML value",
@@ -18212,6 +18226,20 @@
       "note": null,
       "default": "pkgs.mu",
       "example": null
+    },
+    {
+      "title": "programs.mu.home",
+      "description": "Directory to store Mu’s database.",
+      "type": "path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mu.nix",
+          "text": "home-manager/modules/programs/mu.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.xdg.cacheHome + \"/mu\"",
+      "example": "\"\\${config.home.homeDirectory}/Maildir/.mu\""
     },
     {
       "title": "programs.mujmap.enable",
