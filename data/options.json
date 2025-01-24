@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 23 Jan 2025 02:17:21 GMT",
+  "last_update": "Fri, 24 Jan 2025 02:17:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11897,7 +11897,7 @@
       ],
       "note": "See https://ghostty.org/docs/config/reference for more information.",
       "default": "{ }",
-      "example": "{\n  theme = \"catppuccin-mocha\";\n  font-size = 10;\n}\n\n"
+      "example": "{\n  theme = \"catppuccin-mocha\";\n  font-size = 10;\n  keybind = [\n    \"ctrl+h=goto_split:left\"\n    \"ctrl+l=goto_split:right\"\n  ];\n}\n\n"
     },
     {
       "title": "programs.ghostty.themes",
@@ -24991,7 +24991,7 @@
     },
     {
       "title": "programs.tealdeer.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/tealdeer/config.toml on Linux or\n$HOME/Library/Application Support/tealdeer/config.toml on Darwin.\nSee https://dbrgn.github.io/tealdeer/config.html for more information.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/tealdeer/config.toml on Linux or\n$HOME/Library/Application Support/tealdeer/config.toml on Darwin.\nSee https://tealdeer-rs.github.io/tealdeer/config.html for more information.",
       "type": "null or (TOML value)",
       "declared_by": [
         {
