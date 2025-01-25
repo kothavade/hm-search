@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 24 Jan 2025 02:17:49 GMT",
+  "last_update": "Sat, 25 Jan 2025 02:12:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1835,7 +1835,7 @@
     },
     {
       "title": "accounts.email.accounts.<name>.himalaya.settings",
-      "description": "Himalaya CLI configuration for this email account. See https://pimalaya.org/himalaya/cli/latest/configuration/index.html#account-configuration for supported values.",
+      "description": "Himalaya CLI configuration for this email account. See https://github.com/pimalaya/himalaya/blob/master/config.sample.toml for supported values.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -14057,7 +14057,7 @@
     },
     {
       "title": "programs.himalaya.settings",
-      "description": "Himalaya CLI global configuration. See https://pimalaya.org/himalaya/cli/latest/configuration/index.html#global-configuration for supported values.",
+      "description": "Himalaya CLI global configuration. See https://github.com/pimalaya/himalaya/blob/master/config.sample.toml for supported values.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -33276,48 +33276,6 @@
       "note": null,
       "default": "\"F10\"",
       "example": null
-    },
-    {
-      "title": "services.himalaya-watch.enable",
-      "description": "Whether to enable the email client Himalaya CLI envelopes watcher service.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
-    },
-    {
-      "title": "services.himalaya-watch.environment",
-      "description": "Extra environment variables to be exported in the service.",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  \"PASSWORD_STORE_DIR\" = \"~/.password-store\";\n}\n\n"
-    },
-    {
-      "title": "services.himalaya-watch.settings.account",
-      "description": "Name of the account the watcher should be started for. If no account is given, the default one is used.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
-          "text": "home-manager/modules/programs/himalaya.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "\"personal\""
     },
     {
       "title": "services.home-manager.autoUpgrade.enable",
