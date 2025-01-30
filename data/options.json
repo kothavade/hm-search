@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 29 Jan 2025 02:16:45 GMT",
+  "last_update": "Thu, 30 Jan 2025 02:15:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6426,6 +6426,356 @@
       "example": "{ new_message = \"Hello!\"; };\n\n"
     },
     {
+      "title": "programs.aerospace.enable",
+      "description": "Whether to enable Whether to enable AeroSpace window manager…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.aerospace.package",
+      "description": "The aerospace package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.aerospace",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings",
+      "description": "AeroSpace configuration, see <link xlink:href=“https://nikitabobko.github.io/AeroSpace/guide#configuring-aerospace”/>\nfor supported values.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  gaps = {\n    outer.left = 8;\n    outer.bottom = 8;\n    outer.top = 8;\n    outer.right = 8;\n  };\n  mode.main.binding = {\n    alt-h = \"focus left\";\n    alt-j = \"focus down\";\n    alt-k = \"focus up\";\n    alt-l = \"focus right\";\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.enable-normalization-flatten-containers",
+      "description": "Containers that have only one child are “flattened”.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.enable-normalization-opposite-orientation-for-nested-containers",
+      "description": "Containers that nest into each other must have opposite orientations.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.accordion-padding",
+      "description": "Padding between windows in an accordion container.",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "30",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.after-login-command",
+      "description": "You can use it to add commands that run after login to macOS user session. ‘start-at-login’ needs to be ‘true’ for ‘after-login-command’ to work.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.after-startup-command",
+      "description": "You can use it to add commands that run after AeroSpace startup. ‘after-startup-command’ is run after ‘after-login-command’",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"layout tiles\"\n]\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.default-root-container-layout",
+      "description": "Default layout for the root container.",
+      "type": "one of “tiles”, “accordion”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"tiles\"",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.default-root-container-orientation",
+      "description": "Default orientation for the root container.",
+      "type": "one of “horizontal”, “vertical”, “auto”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"auto\"",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.exec-on-workspace-change",
+      "description": "Commands to run every time workspace changes.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/bin/bash\"\n  \"-c\"\n  \"sketchybar --trigger aerospace_workspace_change FOCUSED=$AEROSPACE_FOCUSED_WORKSPACE\"\n]\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.key-mapping.preset",
+      "description": "Keymapping preset.",
+      "type": "one of “qwerty”, “dvorak”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"qwerty\"",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-focus-changed",
+      "description": "Commands to run every time focused window or workspace changes.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"move-mouse monitor-lazy-center\"\n]\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-focused-monitor-changed",
+      "description": "Commands to run every time focused monitor changes.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected",
+      "description": "Commands to run every time a new window is detected with optional conditions.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    check-further-callbacks = false;\n    if = {\n      app-id = \"Another.Cool.App\";\n      app-name-regex-substring = \"CoolApp\";\n      during-aerospace-startup = false;\n      window-title-regex-substring = \"Title\";\n      workspace = \"cool-workspace\";\n    };\n    run = [\n      \"move-node-to-workspace m\"\n      \"resize-node\"\n    ];\n  }\n]\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.check-further-callbacks",
+      "description": "Whether to check further callbacks after this rule (optional).",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if",
+      "description": "Conditions for detecting a window.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if.app-id",
+      "description": "The application ID to match (optional).",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if.app-name-regex-substring",
+      "description": "Regex substring to match the app name (optional).",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if.during-aerospace-startup",
+      "description": "Whether to match during aerospace startup (optional).",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if.window-title-regex-substring",
+      "description": "Substring to match in the window title (optional).",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.if.workspace",
+      "description": "The workspace name to match (optional).",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.on-window-detected.*.run",
+      "description": "Commands to execute when the conditions match (required).",
+      "type": "string or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "[\n  \"move-node-to-workspace m\"\n  \"resize-node\"\n]\n"
+    },
+    {
+      "title": "programs.aerospace.userSettings.start-at-login",
+      "description": "Start AeroSpace at login.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.userSettings.workspace-to-monitor-force-assignment",
+      "description": "Map workspaces to specific monitors. Left-hand side is the workspace name, and right-hand side is the monitor pattern.",
+      "type": "attribute set of (signed integer or string or list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"1\" = 1;\n  \"2\" = \"main\";\n  \"3\" = \"secondary\";\n  \"4\" = \"built-in\";\n  \"5\" = \"^built-in retina display$\";\n  \"6\" = [\n    \"secondary\"\n    \"dell\"\n  ];\n}\n"
+    },
+    {
       "title": "programs.afew.enable",
       "description": "Whether to enable the afew initial tagging script for Notmuch.",
       "type": "boolean",
@@ -10472,6 +10822,20 @@
       "example": null
     },
     {
+      "title": "programs.firefox.profiles.<name>.preConfig",
+      "description": "Extra preferences to add to user.js, before programs.firefox.profiles.<name>.settings.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": "Use programs.firefox.profiles.<name>.extraConfig, unless\nyou want to overwrite in\nprograms.firefox.profiles.<name>.settings, then use this\noption.",
+      "default": "\"\"",
+      "example": null
+    },
+    {
       "title": "programs.firefox.profiles.<name>.search",
       "description": "Declarative search engine configuration.",
       "type": "submodule",
@@ -11085,6 +11449,20 @@
       ],
       "note": null,
       "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.preConfig",
+      "description": "Extra preferences to add to user.js, before programs.firefox.profiles.<name>.settings.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": "Use programs.firefox.profiles.<name>.extraConfig, unless\nyou want to overwrite in\nprograms.firefox.profiles.<name>.settings, then use this\noption.",
+      "default": "\"\"",
       "example": null
     },
     {
@@ -11831,8 +12209,8 @@
     },
     {
       "title": "programs.ghostty.package",
-      "description": "The ghostty package to use.",
-      "type": "package",
+      "description": "The ghostty package to use. Set programs.ghostty.package to null on platfroms where ghostty is not available or marked broken",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ghostty.nix",
@@ -11868,7 +12246,7 @@
         }
       ],
       "note": null,
-      "default": "true",
+      "default": "true if programs.ghostty.package is not null",
       "example": "true"
     },
     {
@@ -19993,7 +20371,7 @@
     },
     {
       "title": "programs.nushell.package",
-      "description": "The package to use for nushell.",
+      "description": "The nushell package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -20017,7 +20395,7 @@
       ],
       "note": "See https://www.nushell.sh/book/configuration.html#configuration for more information.",
       "default": "null",
-      "example": "{ text = ''\n    let $config = {\n      filesize_metric: false\n      table_mode: rounded\n      use_ls_colors: true\n    }\n  '';\n}\n\n"
+      "example": "{\n  text = ''\n    const NU_LIB_DIRS = $NU_LIB_DIRS ++ ${\n      lib.hm.nushell.toNushell (lib.concatStringsSep \":\" [ ./scripts ])\n    }\n    $env.config.filesize_metric = false\n    $env.config.table_mode = 'rounded'\n    $env.config.use_ls_colors = true\n  '';\n}\n\n"
     },
     {
       "title": "programs.nushell.configFile.source",
@@ -20101,7 +20479,7 @@
       ],
       "note": "Inline values can be set with lib.hm.nushell.mkNushellInline.",
       "default": "{ }",
-      "example": "{\n  FOO = \"BAR\";\n  LIST_VALUE = [ \"foo\" \"bar\" ];\n  NU_LIB_DIRS = lib.concatStringsSep \":\" [ ./scripts ];\n  PROMPT_COMMAND = lib.hm.nushell.mkNushellInline ''{|| \"> \"}'';\n  ENV_CONVERSIONS.PATH = {\n    from_string = lib.hm.nushell.mkNushellInline \"{|s| $s | split row (char esep) }\";\n    to_string = lib.hm.nushell.mkNushellInline \"{|v| $v | str join (char esep) }\";\n  };\n}\n\n"
+      "example": "{\n  FOO = \"BAR\";\n  LIST_VALUE = [ \"foo\" \"bar\" ];\n  PROMPT_COMMAND = lib.hm.nushell.mkNushellInline ''{|| \"> \"}'';\n  ENV_CONVERSIONS.PATH = {\n    from_string = lib.hm.nushell.mkNushellInline \"{|s| $s | split row (char esep) }\";\n    to_string = lib.hm.nushell.mkNushellInline \"{|v| $v | str join (char esep) }\";\n  };\n}\n\n"
     },
     {
       "title": "programs.nushell.extraConfig",
@@ -20202,6 +20580,20 @@
       "example": "[ pkgs.nushellPlugins.formats ]"
     },
     {
+      "title": "programs.nushell.settings",
+      "description": "Nushell settings. These will be flattened and assigned one by one to $env.config to avoid overwriting the default or existing options.",
+      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or path or (attribute set of Nushell values) or (list of Nushell values))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
+          "text": "home-manager/modules/programs/nushell.nix"
+        }
+      ],
+      "note": "For example:",
+      "default": "{ }",
+      "example": "{\n  history = {\n    format = \"sqlite\";\n  };\n  show_banner = false;\n}\n"
+    },
+    {
       "title": "programs.nushell.shellAliases",
       "description": "An attribute set that maps aliases (the top level attribute names in this option) to command strings or directly to build outputs.",
       "type": "attribute set of string",
@@ -20213,7 +20605,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  ll = \"ls -l\";\n}\n"
+      "example": "{\n  g = \"git\";\n  ll = \"ls -l\";\n}\n"
     },
     {
       "title": "programs.obs-studio.enable",
@@ -27694,7 +28086,7 @@
     {
       "title": "programs.waybar.systemd.target",
       "description": "The systemd target that will automatically start the Waybar service.",
-      "type": "string",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waybar.nix",
@@ -28630,6 +29022,20 @@
       "example": "[ pkgs.nixd ]"
     },
     {
+      "title": "programs.zed-editor.installRemoteServer",
+      "description": "Whether to symlink the Zed’s remote server binary to the expected location. This allows remotely connecting to this system from a\ndistant Zed client.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": "For more information, consult the\n“Remote Server” section\nin the wiki.",
+      "default": "false",
+      "example": "true"
+    },
+    {
       "title": "programs.zed-editor.userKeymaps",
       "description": "Configuration written to Zed’s keymap.json.",
       "type": "JSON value",
@@ -29190,6 +29596,20 @@
       "example": null
     },
     {
+      "title": "programs.zsh.history.findNoDups",
+      "description": "Do not display a line previously found in the history file.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
       "title": "programs.zsh.history.ignoreAllDups",
       "description": "If a new command line being added to the history list duplicates an older one, the older command is removed\nfrom the list (even if it is not the previous event).",
       "type": "boolean",
@@ -29271,6 +29691,20 @@
       ],
       "note": null,
       "default": "10000",
+      "example": null
+    },
+    {
+      "title": "programs.zsh.history.saveNoDups",
+      "description": "Do not write duplicate entries into the history file.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
@@ -31388,17 +31822,17 @@
       "example": null
     },
     {
-      "title": "services.cliphist.systemdTarget",
-      "description": "The systemd target that will automatically start the cliphist service.",
-      "type": "string",
+      "title": "services.cliphist.systemdTargets",
+      "description": "The systemd targets that will automatically start the cliphist service.",
+      "type": "(list of string) or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/cliphist.nix",
           "text": "home-manager/modules/services/cliphist.nix"
         }
       ],
-      "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
-      "default": "\"graphical-session.target\"",
+      "note": "When setting this value to [\"sway-session.target\"],\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
+      "default": "",
       "example": "\"sway-session.target\""
     },
     {
@@ -41584,8 +42018,8 @@
     },
     {
       "title": "wayland.windowManager.hyprland.package",
-      "description": "The hyprland package to use.",
-      "type": "package",
+      "description": "The hyprland package to use. Set this to null if you use the NixOS module to install Hyprland.",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
@@ -41625,6 +42059,20 @@
       "example": null
     },
     {
+      "title": "wayland.windowManager.hyprland.finalPortalPackage",
+      "description": "The xdg-desktop-portal-hyprland package after overriding its hyprland input.",
+      "type": "package (read only)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "wayland.windowManager.hyprland.portalPackage withwayland.windowManager.hyprland.finalPackage override",
+      "example": null
+    },
+    {
       "title": "wayland.windowManager.hyprland.importantPrefixes",
       "description": "List of prefix of attributes to source at the top of the config.",
       "type": "list of string",
@@ -41650,6 +42098,20 @@
       ],
       "note": null,
       "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.hyprland.portalPackage",
+      "description": "The xdg-desktop-portal-hyprland package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.xdg-desktop-portal-hyprland",
       "example": null
     },
     {
@@ -43513,6 +43975,34 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "xdg.autostart.enable",
+      "description": "Whether to enable creation of XDG autostart entries.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-autostart.nix",
+          "text": "home-manager/modules/misc/xdg-autostart.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "xdg.autostart.entries",
+      "description": "Paths to desktop files that should be linked to XDG_CONFIG_HOME/autostart",
+      "type": "list of path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-autostart.nix",
+          "text": "home-manager/modules/misc/xdg-autostart.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"${pkgs.evolution}/share/applications/org.gnome.Evolution.desktop\"\n]\n\n"
     },
     {
       "title": "xdg.cacheHome",
