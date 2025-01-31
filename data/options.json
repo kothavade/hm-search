@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 30 Jan 2025 02:15:40 GMT",
+  "last_update": "Fri, 31 Jan 2025 02:17:17 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6427,7 +6427,7 @@
     },
     {
       "title": "programs.aerospace.enable",
-      "description": "Whether to enable Whether to enable AeroSpace window manager…",
+      "description": "Whether to enable AeroSpace window manager.",
       "type": "boolean",
       "declared_by": [
         {
@@ -6455,7 +6455,7 @@
     },
     {
       "title": "programs.aerospace.userSettings",
-      "description": "AeroSpace configuration, see <link xlink:href=“https://nikitabobko.github.io/AeroSpace/guide#configuring-aerospace”/>\nfor supported values.",
+      "description": "AeroSpace configuration, see https://nikitabobko.github.io/AeroSpace/guide#configuring-aerospace\nfor supported values.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -34541,6 +34541,188 @@
       "example": "true"
     },
     {
+      "title": "services.linux-wallpaperengine.enable",
+      "description": "Whether to enable linux-wallpaperengine, an implementation of Wallpaper Engine functionality.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.linux-wallpaperengine.package",
+      "description": "The linux-wallpaperengine package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.linux-wallpaperengine",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.assetsPath",
+      "description": "Path to the assets directory.",
+      "type": "path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.clamping",
+      "description": "Clamping mode for all wallpapers.",
+      "type": "null or one of “clamp”, “border”, “repeat”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers",
+      "description": "Define wallpapers.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.audio.automute",
+      "description": "Automute when another app is playing sound.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.audio.processing",
+      "description": "Enables audio processing for background.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.audio.silent",
+      "description": "Mutes all sound of the wallpaper.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.extraOptions",
+      "description": "Extra arguments to pass to the linux-wallpaperengine command for this wallpaper.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.fps",
+      "description": "Limits the FPS to a given number.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.monitor",
+      "description": "Which monitor to display the wallpaper.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.scaling",
+      "description": "Scaling mode for this wallpaper.",
+      "type": "null or one of “stretch”, “fit”, “fill”, “default”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.linux-wallpaperengine.wallpapers.*.wallpaperId",
+      "description": "Wallpaper ID to be used.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
+          "text": "home-manager/modules/services/linux-wallpaperengine.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
       "title": "services.listenbrainz-mpd.enable",
       "description": "Whether to enable listenbrainz-mpd.",
       "type": "boolean",
@@ -42047,7 +42229,7 @@
     {
       "title": "wayland.windowManager.hyprland.finalPackage",
       "description": "The Hyprland package after applying configuration.",
-      "type": "package (read only)",
+      "type": "null or package (read only)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
@@ -42061,7 +42243,7 @@
     {
       "title": "wayland.windowManager.hyprland.finalPortalPackage",
       "description": "The xdg-desktop-portal-hyprland package after overriding its hyprland input.",
-      "type": "package (read only)",
+      "type": "null or package (read only)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
@@ -42103,7 +42285,7 @@
     {
       "title": "wayland.windowManager.hyprland.portalPackage",
       "description": "The xdg-desktop-portal-hyprland package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
