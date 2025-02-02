@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 01 Feb 2025 02:20:54 GMT",
+  "last_update": "Sun, 02 Feb 2025 02:19:50 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4604,6 +4604,20 @@
       "note": null,
       "default": "<derivation fcitx5-with-addons-5.1.11>",
       "example": "pkgs.kdePackages.fcitx5-with-addons"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.waylandFrontend",
+      "description": "Use the Wayland input method frontend. See Using Fcitx 5 on Wayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
     },
     {
       "title": "i18n.inputMethod.kime.extraConfig",
@@ -12806,7 +12820,7 @@
         }
       ],
       "note": "Set to null to let GnuPG decide what signing key\nto use depending on commit’s author.",
-      "default": null,
+      "default": "null",
       "example": null
     },
     {
@@ -17288,6 +17302,146 @@
       "note": null,
       "default": "{ }",
       "example": "kubectl = lib.getExe pkgs.kubectl\npreset = \"dark\";\npaging = \"auto\";\n\n"
+    },
+    {
+      "title": "programs.lapce.enable",
+      "description": "Whether to enable lapce.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.lapce.package",
+      "description": "The lapce package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lapce",
+      "example": null
+    },
+    {
+      "title": "programs.lapce.channel",
+      "description": "Lapce channel to configure. Should correspond to the package channel.\nThis is used to determine the correct configuration and data directories.",
+      "type": "one of “stable”, “nightly”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"stable\"",
+      "example": null
+    },
+    {
+      "title": "programs.lapce.keymaps",
+      "description": "Keymaps written to $XDG_CONFIG_HOME/lapce/keymaps.toml. See https://github.com/lapce/lapce/blob/master/defaults/keymaps-common.toml for examples.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    command = \"open_log_file\";\n    key = \"Ctrl+Shift+L\";\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.lapce.plugins",
+      "description": "Plugins to install.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    author = \"MrFoxPro\";\n    name = \"lapce-nix\";\n    version = \"0.0.1\";\n    hash = \"sha256-...\";\n  }\n  {\n    author = \"dzhou121\";\n    name = \"lapce-rust\";\n    version = \"0.3.1932\";\n    hash = \"sha256-...\";\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.lapce.plugins.*.author",
+      "description": "Author of the plugin.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.lapce.plugins.*.hash",
+      "description": "Hash of the plugin tarball. To find the hash leave this empty, rebuild and copy the hash from the error message.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.lapce.plugins.*.name",
+      "description": "Name of the plugin.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.lapce.plugins.*.version",
+      "description": "Version of the plugin.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.lapce.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/lapce/settings.toml. See https://github.com/lapce/lapce/blob/master/extra/schemas/settings.json for schema.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
+          "text": "home-manager/modules/programs/lapce.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  core = {\n    custom-titlebar = false;\n    color-theme = \"Custom\";\n    icon-theme = \"Material Icons\";\n  };\n  editor = {\n    font-family = \"FiraCode Nerd Bold Font, monospace\";\n    font-size = 22;\n    tab-width = 2;\n    cursor-surrounding-lines = 4;\n    render-whitespace = \"all\";\n    bracket-pair-colorization = true;\n    highlight-matching-brackets = true;\n  };\n  ui = {\n    font-size = 20;\n    open-editors-visible = false;\n  };\n  lapce-nix.lsp-path = \"$\\{pkgs.nil\\}/bin/nil\";\n}\n\n"
     },
     {
       "title": "programs.lazygit.enable",
