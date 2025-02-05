@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 04 Feb 2025 02:17:29 GMT",
+  "last_update": "Wed, 05 Feb 2025 02:19:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18592,6 +18592,20 @@
       "example": "''\n  esc         quit                        #! Quit\n  #           script-binding uosc/video   #! Video tracks\n  # additional comments\n''\n"
     },
     {
+      "title": "programs.mpv.includes",
+      "description": "List of configuration files to include at the end of mpv.conf.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpv.nix",
+          "text": "home-manager/modules/programs/mpv.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"~/path/to/config.inc\";\n  \"~/path/to/conditional.inc\";\n]\n\n"
+    },
+    {
       "title": "programs.mpv.profiles",
       "description": "Sub-configuration options for specific profiles written to $XDG_CONFIG_HOME/mpv/mpv.conf. See\nprograms.mpv.config for more information.",
       "type": "attribute set of attribute set of (string or signed integer or boolean or floating point number or list of (string or signed integer or boolean or floating point number))",
@@ -23026,7 +23040,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation rofi-1.7.7>",
+      "default": "<derivation rofi-1.7.8>",
       "example": "pkgs.rofi.override { plugins = [ pkgs.rofi-emoji ]; };\n\n"
     },
     {
@@ -33611,6 +33625,20 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.gpg-agent.noAllowExternalCache",
+      "description": "Tell Pinentry not to enable features which use an external cache for passphrases.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
+          "text": "home-manager/modules/services/gpg-agent.nix"
+        }
+      ],
+      "note": "Some desktop environments prefer to unlock all credentials with one\nmaster password and may have installed a Pinentry which employs an\nadditional external cache to implement such a policy. By using this\noption the Pinentry is advised not to make use of such a cache and\ninstead always ask the user for the requested passphrase.",
+      "default": "false",
       "example": null
     },
     {
