@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 05 Feb 2025 02:19:04 GMT",
+  "last_update": "Thu, 06 Feb 2025 02:19:02 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10753,7 +10753,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.extensions",
-      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
+      "description": "List of Firefox add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
       "type": "list of package",
       "declared_by": [
         {
@@ -10935,21 +10935,21 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.settings",
-      "description": "Attribute set of ‹name› preferences.",
-      "type": "attribute set of (‹name› preference (int, bool, string, and also attrs, list, float as a JSON string))",
+      "description": "Attribute set of Firefox preferences.",
+      "type": "attribute set of (Firefox preference (int, bool, string, and also attrs, list, float as a JSON string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
           "text": "home-manager/modules/programs/firefox.nix"
         }
       ],
-      "note": "‹name› only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
+      "note": "Firefox only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
       "default": "{ }",
       "example": "{\n  \"browser.startup.homepage\" = \"https://nixos.org\";\n  \"browser.search.region\" = \"GB\";\n  \"browser.search.isUS\" = false;\n  \"distribution.searchplugins.defaultLocale\" = \"en-GB\";\n  \"general.useragent.locale\" = \"en-GB\";\n  \"browser.bookmarks.showMobileBookmarks\" = true;\n  \"browser.newtabpage.pinned\" = [{\n    title = \"NixOS\";\n    url = \"https://nixos.org\";\n  }];\n}\n\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.userChrome",
-      "description": "Custom ‹name› user chrome CSS.",
+      "description": "Custom Firefox user chrome CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -10963,7 +10963,7 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.userContent",
-      "description": "Custom ‹name› user content CSS.",
+      "description": "Custom Firefox user content CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -11229,7 +11229,7 @@
     },
     {
       "title": "programs.floorp.languagePacks",
-      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have.",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Floorp you have.",
       "type": "list of string",
       "declared_by": [
         {
@@ -11369,7 +11369,7 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.containersForce",
-      "description": "Whether to force replace the existing containers configuration. This is recommended since Firefox will replace the symlink on\nevery launch, but note that you’ll lose any existing configuration\nby enabling this.",
+      "description": "Whether to force replace the existing containers configuration. This is recommended since Floorp will replace the symlink on\nevery launch, but note that you’ll lose any existing configuration\nby enabling this.",
       "type": "boolean",
       "declared_by": [
         {
@@ -11383,7 +11383,7 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.extensions",
-      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
+      "description": "List of Floorp add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
       "type": "list of package",
       "declared_by": [
         {
@@ -11565,21 +11565,21 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.settings",
-      "description": "Attribute set of ‹name› preferences.",
-      "type": "attribute set of (‹name› preference (int, bool, string, and also attrs, list, float as a JSON string))",
+      "description": "Attribute set of Floorp preferences.",
+      "type": "attribute set of (Floorp preference (int, bool, string, and also attrs, list, float as a JSON string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
           "text": "home-manager/modules/programs/floorp.nix"
         }
       ],
-      "note": "‹name› only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
+      "note": "Floorp only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
       "default": "{ }",
       "example": "{\n  \"browser.startup.homepage\" = \"https://nixos.org\";\n  \"browser.search.region\" = \"GB\";\n  \"browser.search.isUS\" = false;\n  \"distribution.searchplugins.defaultLocale\" = \"en-GB\";\n  \"general.useragent.locale\" = \"en-GB\";\n  \"browser.bookmarks.showMobileBookmarks\" = true;\n  \"browser.newtabpage.pinned\" = [{\n    title = \"NixOS\";\n    url = \"https://nixos.org\";\n  }];\n}\n\n"
     },
     {
       "title": "programs.floorp.profiles.<name>.userChrome",
-      "description": "Custom ‹name› user chrome CSS.",
+      "description": "Custom Floorp user chrome CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -11593,7 +11593,7 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.userContent",
-      "description": "Custom ‹name› user content CSS.",
+      "description": "Custom Floorp user content CSS.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -17739,7 +17739,7 @@
     },
     {
       "title": "programs.librewolf.languagePacks",
-      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have.",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of LibreWolf you have.",
       "type": "list of string",
       "declared_by": [
         {
