@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 08 Feb 2025 02:15:52 GMT",
+  "last_update": "Sun, 09 Feb 2025 02:21:46 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4508,6 +4508,90 @@
       "example": "{\n  EDITOR = \"emacs\";\n  GS_OPTIONS = \"-sPAPERSIZE=a4\";\n}\n"
     },
     {
+      "title": "home.shell.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableShellIntegration",
+      "example": "false"
+    },
+    {
+      "title": "home.shell.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableShellIntegration",
+      "example": "false"
+    },
+    {
+      "title": "home.shell.enableIonIntegration",
+      "description": "Whether to enable Ion integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableShellIntegration",
+      "example": "false"
+    },
+    {
+      "title": "home.shell.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableShellIntegration",
+      "example": "false"
+    },
+    {
+      "title": "home.shell.enableShellIntegration",
+      "description": "Whether to globally enable shell integration for all supported shells.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": "Individual shell integrations can be overridden with their respective\nshell.enable<SHELL>Integration option. For example, the following\ndeclaration globally disables shell integration for Bash:",
+      "default": "true",
+      "example": "false"
+    },
+    {
+      "title": "home.shell.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/shell.nix",
+          "text": "home-manager/modules/misc/shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableShellIntegration",
+      "example": "false"
+    },
+    {
       "title": "home.shellAliases",
       "description": "An attribute set that maps aliases (the top level attribute names in this option) to command strings or directly to build outputs.",
       "type": "attribute set of string",
@@ -7211,7 +7295,7 @@
     },
     {
       "title": "programs.atuin.enableBashIntegration",
-      "description": "Whether to enable Atuin’s Bash integration. This will bind ctrl-r to open the Atuin history.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -7219,13 +7303,13 @@
           "text": "home-manager/modules/programs/atuin.nix"
         }
       ],
-      "note": null,
-      "default": "true",
-      "example": null
+      "note": "If enabled, this will bind ctrl-r to open the Atuin history.",
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.atuin.enableFishIntegration",
-      "description": "Whether to enable Atuin’s Fish integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -7234,8 +7318,8 @@
         }
       ],
       "note": "If enabled, this will bind the up-arrow key to open the Atuin history.",
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.atuin.enableNushellIntegration",
@@ -7248,12 +7332,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.atuin.enableZshIntegration",
-      "description": "Whether to enable Atuin’s Zsh integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -7261,9 +7345,9 @@
           "text": "home-manager/modules/programs/atuin.nix"
         }
       ],
-      "note": "If enabled, this will bind ctrl-r and the up-arrow\nkey to open the Atuin history.",
-      "default": "true",
-      "example": null
+      "note": "If enabled, this will bind ctrl-r and the up-arrow key to open the\nAtuin history.",
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.atuin.package",
@@ -7360,8 +7444,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.autojump.enableFishIntegration",
@@ -7374,8 +7458,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.autojump.enableZshIntegration",
@@ -7388,8 +7472,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.autorandr.enable",
@@ -8914,8 +8998,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.broot.enableFishIntegration",
@@ -8928,8 +9012,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.broot.enableNushellIntegration",
@@ -8942,8 +9026,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.broot.enableZshIntegration",
@@ -8956,8 +9040,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.broot.package",
@@ -9194,8 +9278,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.carapace.enableFishIntegration",
@@ -9208,8 +9292,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.carapace.enableNushellIntegration",
@@ -9222,8 +9306,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.carapace.enableZshIntegration",
@@ -9236,8 +9320,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.carapace.package",
@@ -9670,8 +9754,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.dircolors.enableFishIntegration",
@@ -9684,8 +9768,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.dircolors.enableZshIntegration",
@@ -9698,8 +9782,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.dircolors.extraConfig",
@@ -9754,12 +9838,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.direnv.enableFishIntegration",
-      "description": "Whether to enable Fish integration. Note, enabling the direnv module will always active its functionality for Fish since the direnv package\nautomatically gets loaded in Fish. If this is not the case try adding",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean (read only)",
       "declared_by": [
         {
@@ -9767,9 +9851,9 @@
           "text": "home-manager/modules/programs/direnv.nix"
         }
       ],
-      "note": "environment.pathsToLink = [ \"/share/fish\" ];",
-      "default": "true",
-      "example": null
+      "note": "Note, enabling the direnv module will always active its functionality\nfor Fish since the direnv package automatically gets loaded in Fish.\nIf this is not the case try adding",
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.direnv.enableNushellIntegration",
@@ -9782,8 +9866,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.direnv.enableZshIntegration",
@@ -9796,8 +9880,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.direnv.package",
@@ -10146,8 +10230,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eww.enableFishIntegration",
@@ -10160,8 +10244,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eww.enableZshIntegration",
@@ -10174,8 +10258,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eww.package",
@@ -10230,8 +10314,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eza.enableFishIntegration",
@@ -10244,8 +10328,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eza.enableIonIntegration",
@@ -10258,8 +10342,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableIonIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eza.enableNushellIntegration",
@@ -10272,8 +10356,8 @@
         }
       ],
       "note": null,
-      "default": "false",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eza.enableZshIntegration",
@@ -10286,8 +10370,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.eza.package",
@@ -11770,8 +11854,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.fzf.enableFishIntegration",
@@ -11784,8 +11868,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.fzf.enableZshIntegration",
@@ -11798,8 +11882,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.fzf.package",
@@ -12181,7 +12265,7 @@
     },
     {
       "title": "programs.ghostty.enableBashIntegration",
-      "description": "Whether to enable bash shell integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -12189,13 +12273,13 @@
           "text": "home-manager/modules/programs/ghostty.nix"
         }
       ],
-      "note": "This is ensures that shell integration works in more scenarios, such as switching shells within Ghostty.\nBut it is not needed to have shell integration.\nSee https://ghostty.org/docs/features/shell-integration#manual-shell-integration-setup for more information\n.",
-      "default": "false",
-      "example": "true"
+      "note": "This ensures that shell integration works in more scenarios, such as\nswitching shells within Ghostty. But it is not needed to have shell\nintegration.",
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.ghostty.enableFishIntegration",
-      "description": "Whether to enable fish shell integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -12203,13 +12287,13 @@
           "text": "home-manager/modules/programs/ghostty.nix"
         }
       ],
-      "note": "This is ensures that shell integration works in more scenarios, such as switching shells within Ghostty.\nBut it is not needed to have shell integration.\nSee https://ghostty.org/docs/features/shell-integration#manual-shell-integration-setup for more information\n.",
-      "default": "false",
-      "example": "true"
+      "note": "This ensures that shell integration works in more scenarios, such as\nswitching shells within Ghostty. But it is not needed to have shell\nintegration.",
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.ghostty.enableZshIntegration",
-      "description": "Whether to enable zsh shell integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -12217,9 +12301,9 @@
           "text": "home-manager/modules/programs/ghostty.nix"
         }
       ],
-      "note": "This is ensures that shell integration works in more scenarios, such as switching shells within Ghostty.\nBut it is not needed to have shell integration.\nSee https://ghostty.org/docs/features/shell-integration#manual-shell-integration-setup for more information\n.",
-      "default": "false",
-      "example": "true"
+      "note": "This ensures that shell integration works in more scenarios, such as\nswitching shells within Ghostty. But it is not needed to have shell\nintegration.",
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.ghostty.package",
@@ -13954,8 +14038,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.havoc.enable",
@@ -14514,8 +14598,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.hstr.enableZshIntegration",
@@ -14528,8 +14612,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.hstr.package",
@@ -16572,8 +16656,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.keychain.enableFishIntegration",
@@ -16586,8 +16670,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.keychain.enableNushellIntegration",
@@ -16600,8 +16684,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.keychain.enableXsessionIntegration",
@@ -16628,8 +16712,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.keychain.package",
@@ -17095,7 +17179,7 @@
     },
     {
       "title": "programs.kitty.shellIntegration.enableBashIntegration",
-      "description": "Whether to enable Kitty Bash integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -17105,11 +17189,11 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": "false"
     },
     {
       "title": "programs.kitty.shellIntegration.enableFishIntegration",
-      "description": "Whether to enable Kitty fish integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -17119,11 +17203,11 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": "false"
     },
     {
       "title": "programs.kitty.shellIntegration.enableZshIntegration",
-      "description": "Whether to enable Kitty Z Shell integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -17133,7 +17217,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": "false"
     },
     {
       "title": "programs.kitty.shellIntegration.mode",
@@ -18140,8 +18224,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mcfly.enableFishIntegration",
@@ -18154,8 +18238,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mcfly.enableLightTheme",
@@ -18182,8 +18266,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mcfly.fuzzySearchFactor",
@@ -18425,7 +18509,7 @@
     },
     {
       "title": "programs.mise.enableBashIntegration",
-      "description": "Whether to enable Bash Integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -18434,12 +18518,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mise.enableFishIntegration",
-      "description": "Whether to enable Fish Integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -18448,12 +18532,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mise.enableZshIntegration",
-      "description": "Whether to enable Zsh Integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -18462,8 +18546,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.mise.package",
@@ -18840,8 +18924,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.navi.enableFishIntegration",
@@ -18854,8 +18938,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.navi.enableZshIntegration",
@@ -18868,8 +18952,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.navi.package",
@@ -20142,8 +20226,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-index.enableFishIntegration",
@@ -20156,8 +20240,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-index.enableZshIntegration",
@@ -20170,8 +20254,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-index.package",
@@ -20212,8 +20296,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-your-shell.enableNushellIntegration",
@@ -20226,8 +20310,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-your-shell.enableZshIntegration",
@@ -20240,8 +20324,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.nix-your-shell.package",
@@ -20968,8 +21052,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.oh-my-posh.enableFishIntegration",
@@ -20982,8 +21066,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.oh-my-posh.enableNushellIntegration",
@@ -20996,8 +21080,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.oh-my-posh.enableZshIntegration",
@@ -21010,8 +21094,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.oh-my-posh.package",
@@ -21080,8 +21164,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.opam.enableFishIntegration",
@@ -21094,8 +21178,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.opam.enableZshIntegration",
@@ -21108,8 +21192,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.opam.package",
@@ -21444,8 +21528,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pay-respects.enableFishIntegration",
@@ -21458,8 +21542,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pay-respects.enableNushellIntegration",
@@ -21472,8 +21556,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pay-respects.enableZshIntegration",
@@ -21486,8 +21570,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pay-respects.package",
@@ -21528,8 +21612,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pazi.enableFishIntegration",
@@ -21542,8 +21626,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pazi.enableZshIntegration",
@@ -21556,8 +21640,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pet.enable",
@@ -22121,7 +22205,7 @@
     },
     {
       "title": "programs.pyenv.enableBashIntegration",
-      "description": "Whether to enable pyenv’s Bash integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -22130,12 +22214,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pyenv.enableFishIntegration",
-      "description": "Whether to enable pyenv’s Fish integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -22144,12 +22228,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pyenv.enableZshIntegration",
-      "description": "Whether to enable pyenv’s Zsh integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -22158,8 +22242,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pyenv.package",
@@ -22662,8 +22746,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.rbenv.enableFishIntegration",
@@ -22676,8 +22760,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.rbenv.enableZshIntegration",
@@ -22690,8 +22774,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.rbenv.package",
@@ -23712,12 +23796,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.scmpuff.enableFishIntegration",
-      "description": "Whether to enable fish integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -23726,8 +23810,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.scmpuff.enableZshIntegration",
@@ -23740,8 +23824,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.scmpuff.package",
@@ -24146,8 +24230,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.skim.enableFishIntegration",
@@ -24160,8 +24244,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.skim.enableZshIntegration",
@@ -24174,8 +24258,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.skim.package",
@@ -25210,8 +25294,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.starship.enableFishIntegration",
@@ -25224,8 +25308,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.starship.enableInteractive",
@@ -25252,8 +25336,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableIonIntegration",
+      "example": "false"
     },
     {
       "title": "programs.starship.enableNushellIntegration",
@@ -25266,8 +25350,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.starship.enableTransience",
@@ -25294,8 +25378,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.starship.package",
@@ -26302,8 +26386,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.thefuck.enableFishIntegration",
@@ -26316,8 +26400,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.thefuck.enableInstantMode",
@@ -26344,8 +26428,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.thefuck.enableZshIntegration",
@@ -26358,8 +26442,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.thefuck.package",
@@ -28113,7 +28197,7 @@
     },
     {
       "title": "programs.watson.enableBashIntegration",
-      "description": "Whether to enable watson’s bash integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -28122,12 +28206,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.watson.enableFishIntegration",
-      "description": "Whether to enable watson’s fish integration.",
+      "description": "Whether to enable Fish integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -28136,12 +28220,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.watson.enableZshIntegration",
-      "description": "Whether to enable watson’s zsh integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -28150,8 +28234,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.watson.package",
@@ -28281,7 +28365,7 @@
     },
     {
       "title": "programs.wezterm.enableBashIntegration",
-      "description": "Whether to enable WezTerm’s Bash integration.",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -28290,12 +28374,12 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.wezterm.enableZshIntegration",
-      "description": "Whether to enable WezTerm’s Zsh integration.",
+      "description": "Whether to enable Zsh integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -28304,8 +28388,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.wezterm.package",
@@ -28766,8 +28850,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.yazi.enableFishIntegration",
@@ -28780,8 +28864,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.yazi.enableNushellIntegration",
@@ -28794,8 +28878,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.yazi.enableZshIntegration",
@@ -28808,8 +28892,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.yazi.package",
@@ -29018,8 +29102,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.z-lua.enableFishIntegration",
@@ -29032,8 +29116,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.z-lua.enableZshIntegration",
@@ -29046,8 +29130,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.z-lua.options",
@@ -29256,8 +29340,8 @@
         }
       ],
       "note": null,
-      "default": "false",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zellij.enableFishIntegration",
@@ -29270,8 +29354,8 @@
         }
       ],
       "note": null,
-      "default": "false",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zellij.enableZshIntegration",
@@ -29284,8 +29368,8 @@
         }
       ],
       "note": null,
-      "default": "false",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zellij.package",
@@ -29382,8 +29466,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zoxide.enableFishIntegration",
@@ -29396,8 +29480,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zoxide.enableNushellIntegration",
@@ -29410,8 +29494,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zoxide.enableZshIntegration",
@@ -29424,8 +29508,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.zoxide.package",
@@ -33456,8 +33540,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
     },
     {
       "title": "services.gpg-agent.enableExtraSocket",
@@ -33484,8 +33568,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
     },
     {
       "title": "services.gpg-agent.enableNushellIntegration",
@@ -33498,8 +33582,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
     },
     {
       "title": "services.gpg-agent.enableScDaemon",
@@ -33540,8 +33624,8 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": "true"
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "services.gpg-agent.defaultCacheTtl",
@@ -34663,7 +34747,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-24.12.1>",
+      "default": "<derivation kdeconnect-kde-24.12.2>",
       "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
