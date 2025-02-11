@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 10 Feb 2025 02:20:39 GMT",
+  "last_update": "Tue, 11 Feb 2025 02:20:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -17221,8 +17221,8 @@
     },
     {
       "title": "programs.kitty.shellIntegration.mode",
-      "description": "Set the mode of the shell integration. This accepts the same options as the shell_integration option of Kitty. Note that\nno-rc is always implied. See\nhttps://sw.kovidgoyal.net/kitty/shell-integration\nfor more details.",
-      "type": "string",
+      "description": "Set the mode of the shell integration. This accepts the same options as the shell_integration option of Kitty. Note that\nno-rc is always implied, unless this set to null. See\nhttps://sw.kovidgoyal.net/kitty/shell-integration\nfor more details.",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kitty.nix",
@@ -25632,6 +25632,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.tealdeer.enableAutoUpdates",
+      "description": "Whether to enable Auto updates.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
+          "text": "home-manager/modules/programs/tealdeer.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
     },
     {
       "title": "programs.tealdeer.settings",
@@ -39662,6 +39676,48 @@
       ],
       "note": null,
       "default": "\"*:0/5\"",
+      "example": null
+    },
+    {
+      "title": "services.tldr-update.enable",
+      "description": "Whether to enable Automatic updates for the tldr CLI .",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/tldr-update.nix",
+          "text": "home-manager/modules/services/tldr-update.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.tldr-update.package",
+      "description": "The tldr package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/tldr-update.nix",
+          "text": "home-manager/modules/services/tldr-update.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tldr",
+      "example": "tlrc"
+    },
+    {
+      "title": "services.tldr-update.period",
+      "description": "Systemd timer period to create for scheduled tldr --update.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/tldr-update.nix",
+          "text": "home-manager/modules/services/tldr-update.nix"
+        }
+      ],
+      "note": "The format is described in systemd.time(7).",
+      "default": "\"weekly\"",
       "example": null
     },
     {
