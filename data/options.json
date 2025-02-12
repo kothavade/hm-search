@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 11 Feb 2025 02:20:25 GMT",
+  "last_update": "Wed, 12 Feb 2025 02:19:09 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1612,7 +1612,7 @@
     {
       "title": "accounts.email.accounts.<name>.flavor",
       "description": "Some email providers have peculiar behavior that require special treatment. This option is therefore intended to\nindicate the nature of the provider.",
-      "type": "one of “plain”, “gmail.com”, “runbox.com”, “fastmail.com”, “yandex.com”, “outlook.office365.com”",
+      "type": "one of “plain”, “gmail.com”, “runbox.com”, “fastmail.com”, “yandex.com”, “outlook.office365.com”, “migadu.com”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -10278,7 +10278,7 @@
     {
       "title": "programs.eww.configDir",
       "description": "The directory that gets symlinked to $XDG_CONFIG_HOME/eww.",
-      "type": "path",
+      "type": "null or path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eww.nix",
@@ -10286,7 +10286,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "null",
       "example": "./eww-config-dir"
     },
     {
@@ -13032,6 +13032,76 @@
       "note": "For valid arguments, see git-credential-oauth(1).",
       "default": "[ ]",
       "example": "[ \"-device\" ]"
+    },
+    {
+      "title": "programs.git-worktree-switcher.enable",
+      "description": "Whether to enable git-worktree-switcher.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-worktree-switcher.nix",
+          "text": "home-manager/modules/programs/git-worktree-switcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git-worktree-switcher.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-worktree-switcher.nix",
+          "text": "home-manager/modules/programs/git-worktree-switcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.git-worktree-switcher.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-worktree-switcher.nix",
+          "text": "home-manager/modules/programs/git-worktree-switcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.git-worktree-switcher.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-worktree-switcher.nix",
+          "text": "home-manager/modules/programs/git-worktree-switcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.git-worktree-switcher.package",
+      "description": "The git-worktree-switcher package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-worktree-switcher.nix",
+          "text": "home-manager/modules/programs/git-worktree-switcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.git-worktree-switcher",
+      "example": null
     },
     {
       "title": "programs.gitui.enable",
@@ -19288,7 +19358,7 @@
         }
       ],
       "note": null,
-      "default": "\"index\"",
+      "default": "",
       "example": null
     },
     {
@@ -19400,7 +19470,7 @@
         }
       ],
       "note": null,
-      "default": "\"index\"",
+      "default": "",
       "example": null
     },
     {
