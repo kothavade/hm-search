@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 13 Feb 2025 02:19:51 GMT",
+  "last_update": "Fri, 14 Feb 2025 02:19:33 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6862,7 +6862,7 @@
     {
       "title": "programs.aerospace.userSettings.workspace-to-monitor-force-assignment",
       "description": "Map workspaces to specific monitors. Left-hand side is the workspace name, and right-hand side is the monitor pattern.",
-      "type": "attribute set of (signed integer or string or list of string)",
+      "type": "null or (attribute set of (signed integer or string or list of string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
@@ -6870,7 +6870,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "null",
       "example": "{\n  \"1\" = 1;\n  \"2\" = \"main\";\n  \"3\" = \"secondary\";\n  \"4\" = \"built-in\";\n  \"5\" = \"^built-in retina display$\";\n  \"6\" = [\n    \"secondary\"\n    \"dell\"\n  ];\n}\n"
     },
     {
@@ -8066,7 +8066,7 @@
     {
       "title": "programs.bash.historyFileSize",
       "description": "Number of history lines to keep on file.",
-      "type": "signed integer",
+      "type": "null or signed integer",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
@@ -8094,7 +8094,7 @@
     {
       "title": "programs.bash.historySize",
       "description": "Number of history lines to keep in memory.",
-      "type": "signed integer",
+      "type": "null or signed integer",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
@@ -29471,7 +29471,7 @@
     },
     {
       "title": "programs.zellij.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/zellij/config.yaml.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/zellij/config.kdl.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -29479,7 +29479,7 @@
           "text": "home-manager/modules/programs/zellij.nix"
         }
       ],
-      "note": "See https://zellij.dev/documentation for the full\nlist of options.",
+      "note": "If programs.zellij.package.version is older than 0.32.0, then\nthe configuration is written to $XDG_CONFIG_HOME/zellij/config.yaml.",
       "default": "{ }",
       "example": "{\n  theme = \"custom\";\n  themes.custom.fg = \"#ffffff\";\n}\n\n"
     },
