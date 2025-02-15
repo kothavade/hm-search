@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 14 Feb 2025 02:19:33 GMT",
+  "last_update": "Sat, 15 Feb 2025 02:18:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -12866,9 +12866,9 @@
       "example": null
     },
     {
-      "title": "programs.git.signing",
-      "description": "Options related to signing commits using GnuPG.",
-      "type": "null or (submodule)",
+      "title": "programs.git.signing.format",
+      "description": "The signing method to use when signing commits and tags. Valid values are openpgp (OpenPGP/GnuPG), ssh (SSH), and x509 (X.509 certificates).",
+      "type": "one of “openpgp”, “ssh”, “x509”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -12876,26 +12876,12 @@
         }
       ],
       "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "programs.git.signing.gpgPath",
-      "description": "Path to GnuPG binary to use.",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
-          "text": "home-manager/modules/programs/git.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\\${pkgs.gnupg}/bin/gpg2\"",
+      "default": "",
       "example": null
     },
     {
       "title": "programs.git.signing.key",
-      "description": "The default GPG signing key fingerprint.",
+      "description": "The default signing key fingerprint.",
       "type": "null or string",
       "declared_by": [
         {
@@ -12903,7 +12889,7 @@
           "text": "home-manager/modules/programs/git.nix"
         }
       ],
-      "note": "Set to null to let GnuPG decide what signing key\nto use depending on commit’s author.",
+      "note": "Set to null to let the signer decide what signing key\nto use depending on commit’s author.",
       "default": "null",
       "example": null
     },
@@ -12919,6 +12905,20 @@
       ],
       "note": null,
       "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.git.signing.signer",
+      "description": "Path to signer binary to use.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
       "example": null
     },
     {
@@ -41566,6 +41566,34 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.yubikey-agent.enable",
+      "description": "Whether to enable Seamless ssh-agent for YubiKeys.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/yubikey-agent.nix",
+          "text": "home-manager/modules/services/yubikey-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.yubikey-agent.package",
+      "description": "The yubikey-agent package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/yubikey-agent.nix",
+          "text": "home-manager/modules/services/yubikey-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.yubikey-agent",
       "example": null
     },
     {
