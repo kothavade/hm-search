@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 17 Feb 2025 02:22:49 GMT",
+  "last_update": "Tue, 18 Feb 2025 02:18:53 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10837,7 +10837,21 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.extensions",
-      "description": "List of Firefox add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
+      "description": "Submodule for installing and configuring extensions.",
+      "type": "(submodule) or (list of package) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  packages = with pkgs.nur.repos.rycee.firefox-addons; [\n    ublock-origin\n  ];\n  settings.\"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.extensions.packages",
+      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the Nix User Repository.\nOnce you have NUR installed run",
       "type": "list of package",
       "declared_by": [
         {
@@ -10848,6 +10862,48 @@
       "note": "$ nix-env -f '<nixpkgs>' -qaP -A nur.repos.rycee.firefox-addons",
       "default": "[ ]",
       "example": "with pkgs.nur.repos.rycee.firefox-addons; [\n  privacy-badger\n]\n\n"
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.extensions.settings",
+      "description": "Attribute set of options for each extension. The keys of the attribute set consist of the ID of the extension\nor its UUID wrapped in curly braces.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  # Example with uBlock origin's extensionID\n  \"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n\n  # Example with Stylus' UUID-form extensionID\n  \"{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}\".settings = {\n    dbInChromeStorage = true; # required for Stylus\n  }\n}\n\n"
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.extensions.settings.<name>.force",
+      "description": "Forcibly override any existing configuration for this extension.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.extensions.settings.<name>.settings",
+      "description": "Json formatted options for the specified extensionID",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
     },
     {
       "title": "programs.firefox.profiles.<name>.extraConfig",
@@ -11467,7 +11523,21 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.extensions",
-      "description": "List of Floorp add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the\nNix User Repository.\nOnce you have NUR installed run",
+      "description": "Submodule for installing and configuring extensions.",
+      "type": "(submodule) or (list of package) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  packages = with pkgs.nur.repos.rycee.firefox-addons; [\n    ublock-origin\n  ];\n  settings.\"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.extensions.packages",
+      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the Nix User Repository.\nOnce you have NUR installed run",
       "type": "list of package",
       "declared_by": [
         {
@@ -11478,6 +11548,48 @@
       "note": "$ nix-env -f '<nixpkgs>' -qaP -A nur.repos.rycee.firefox-addons",
       "default": "[ ]",
       "example": "with pkgs.nur.repos.rycee.firefox-addons; [\n  privacy-badger\n]\n\n"
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.extensions.settings",
+      "description": "Attribute set of options for each extension. The keys of the attribute set consist of the ID of the extension\nor its UUID wrapped in curly braces.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  # Example with uBlock origin's extensionID\n  \"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n\n  # Example with Stylus' UUID-form extensionID\n  \"{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}\".settings = {\n    dbInChromeStorage = true; # required for Stylus\n  }\n}\n\n"
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.extensions.settings.<name>.force",
+      "description": "Forcibly override any existing configuration for this extension.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.extensions.settings.<name>.settings",
+      "description": "Json formatted options for the specified extensionID",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
     },
     {
       "title": "programs.floorp.profiles.<name>.extraConfig",
@@ -12868,7 +12980,7 @@
     {
       "title": "programs.git.signing.format",
       "description": "The signing method to use when signing commits and tags. Valid values are openpgp (OpenPGP/GnuPG), ssh (SSH), and x509 (X.509 certificates).",
-      "type": "one of “openpgp”, “ssh”, “x509”",
+      "type": "null or one of “openpgp”, “ssh”, “x509”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -12896,7 +13008,7 @@
     {
       "title": "programs.git.signing.signByDefault",
       "description": "Whether commits and tags should be signed by default.",
-      "type": "boolean",
+      "type": "null or boolean",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -12904,13 +13016,13 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "null",
       "example": null
     },
     {
       "title": "programs.git.signing.signer",
       "description": "Path to signer binary to use.",
-      "type": "string",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -17879,7 +17991,7 @@
     },
     {
       "title": "programs.librewolf.enable",
-      "description": "Whether to enable LibreWolf. LibreWolf is a privacy enhanced Firefox fork. See programs.firefox for more configuration options.",
+      "description": "Whether to enable LibreWolf. LibreWolf is a privacy enhanced Firefox fork. See programs.librewolf for more configuration options.",
       "type": "boolean",
       "declared_by": [
         {
@@ -18606,6 +18718,20 @@
       "example": "false"
     },
     {
+      "title": "programs.mise.enableNushellIntegration",
+      "description": "Whether to enable Nushell integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
+          "text": "home-manager/modules/programs/mise.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableNushellIntegration",
+      "example": "false"
+    },
+    {
       "title": "programs.mise.enableZshIntegration",
       "description": "Whether to enable Zsh integration.",
       "type": "boolean",
@@ -18687,7 +18813,7 @@
       ],
       "note": null,
       "default": "<derivation mpv-with-scripts-0.39.0>",
-      "example": "pkgs.wrapMpv (pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }) { youtubeSupport = true; }"
+      "example": "pkgs.mpv-unwrapped.wrapper { mpv = pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }; youtubeSupport = true; }"
     },
     {
       "title": "programs.mpv.bindings",
@@ -20218,7 +20344,7 @@
     {
       "title": "programs.nh.flake",
       "description": "The path that will be used for the FLAKE environment variable.",
-      "type": "null or path",
+      "type": "null or (optionally newline-terminated) single-line string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
@@ -35448,6 +35574,20 @@
       ],
       "note": null,
       "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.mako.maxHistory",
+      "description": "Set maximum number of expired notifications to keep in the history buffer. Set 0 to disable history.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
+          "text": "home-manager/modules/services/mako.nix"
+        }
+      ],
+      "note": null,
+      "default": "5",
       "example": null
     },
     {
