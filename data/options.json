@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 18 Feb 2025 02:18:53 GMT",
+  "last_update": "Wed, 19 Feb 2025 02:20:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10864,6 +10864,20 @@
       "example": "with pkgs.nur.repos.rycee.firefox-addons; [\n  privacy-badger\n]\n\n"
     },
     {
+      "title": "programs.firefox.profiles.<name>.extensions.force",
+      "description": "Whether to override all previous firefox settings.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": "This is required when using settings.",
+      "default": "false",
+      "example": "true"
+    },
+    {
       "title": "programs.firefox.profiles.<name>.extensions.settings",
       "description": "Attribute set of options for each extension. The keys of the attribute set consist of the ID of the extension\nor its UUID wrapped in curly braces.",
       "type": "attribute set of (submodule)",
@@ -11548,6 +11562,20 @@
       "note": "$ nix-env -f '<nixpkgs>' -qaP -A nur.repos.rycee.firefox-addons",
       "default": "[ ]",
       "example": "with pkgs.nur.repos.rycee.firefox-addons; [\n  privacy-badger\n]\n\n"
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.extensions.force",
+      "description": "Whether to override all previous firefox settings.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": "This is required when using settings.",
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.floorp.profiles.<name>.extensions.settings",
