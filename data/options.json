@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 19 Feb 2025 02:20:20 GMT",
+  "last_update": "Thu, 20 Feb 2025 02:20:36 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -582,7 +582,7 @@
     {
       "title": "accounts.calendar.accounts.<name>.vdirsyncer.verify",
       "description": "Null or path to certificate to verify SSL against",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/calendar.nix",
@@ -1160,7 +1160,7 @@
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.verify",
       "description": "Null or path to certificate to verify SSL against",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/contacts.nix",
@@ -1920,7 +1920,7 @@
     {
       "title": "accounts.email.accounts.<name>.imap.tls.certificatesFile",
       "description": "Path to file containing certificate authorities that should be used to validate the connection authenticity. If\nnull then the system default is used.\nNote, if set then the system default may still be accepted.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -3194,7 +3194,7 @@
     {
       "title": "accounts.email.accounts.<name>.signature.command",
       "description": "A command that generates a signature.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -3320,7 +3320,7 @@
     {
       "title": "accounts.email.accounts.<name>.smtp.tls.certificatesFile",
       "description": "Path to file containing certificate authorities that should be used to validate the connection authenticity. If\nnull then the system default is used.\nNote, if set then the system default may still be accepted.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -3418,7 +3418,7 @@
     {
       "title": "accounts.email.certificatesFile",
       "description": "Path to default file containing certificate authorities that should be used to validate the connection authenticity. This\npath may be overridden on a per-account basis.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -3684,7 +3684,7 @@
     {
       "title": "gtk.gtk2.configLocation",
       "description": "The location to put the GTK configuration file.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
@@ -4020,7 +4020,7 @@
     {
       "title": "home.file.<name>.source",
       "description": "Path of the source file or directory. If home.file.<name>.text\nis non-null then this option will automatically point to a file\ncontaining that text.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/files.nix",
@@ -4062,7 +4062,7 @@
     {
       "title": "home.homeDirectory",
       "description": "The user’s home directory. Must be an absolute path.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
@@ -4468,7 +4468,7 @@
     {
       "title": "home.profileDirectory",
       "description": "The profile directory where Home Manager generations are installed.",
-      "type": "path (read only)",
+      "type": "absolute path (read only)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
@@ -4496,7 +4496,7 @@
     {
       "title": "home.sessionVariables",
       "description": "Environment variables to always set at login.",
-      "type": "lazy attribute set of (string or path or signed integer or floating point number)",
+      "type": "lazy attribute set of (string or absolute path or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
@@ -4636,7 +4636,7 @@
     {
       "title": "i18n.glibcLocales",
       "description": "Customized glibcLocales package providing the LOCALE_ARCHIVE_* environment variable.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/i18n.nix",
@@ -4686,7 +4686,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation fcitx5-with-addons-5.1.11>",
+      "default": "<derivation fcitx5-with-addons-5.1.12>",
       "example": "pkgs.kdePackages.fcitx5-with-addons"
     },
     {
@@ -5252,7 +5252,7 @@
     {
       "title": "launchd.agents.<name>.config.Program",
       "description": "This key maps to the first argument of execvp(3).  If this key is missing, then the first element of the array of strings provided to the ProgramArguments will be used instead.  This key is required in\nthe absence of the ProgramArguments key.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5434,7 +5434,7 @@
     {
       "title": "launchd.agents.<name>.config.Sockets.<name>.SockPathName",
       "description": "This optional key implies SockFamily is set to “Unix”. It specifies the path to connect(2) or bind(2) to.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5630,7 +5630,7 @@
     {
       "title": "launchd.agents.<name>.config.StandardErrorPath",
       "description": "This optional key specifies what file should be used for data being sent to stderr when using stdio(3).",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5644,7 +5644,7 @@
     {
       "title": "launchd.agents.<name>.config.StandardInPath",
       "description": "This optional key specifies what file should be used for data being supplied to stdin when using stdio(3).",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5658,7 +5658,7 @@
     {
       "title": "launchd.agents.<name>.config.StandardOutPath",
       "description": "This optional key specifies what file should be used for data being sent to stdout when using stdio(3).",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5854,7 +5854,7 @@
     {
       "title": "launchd.agents.<name>.config.WatchPaths",
       "description": "This optional key causes the job to be started if any one of the listed paths are modified.",
-      "type": "null or (list of path)",
+      "type": "null or (list of absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -9508,7 +9508,7 @@
     {
       "title": "programs.chromium.extensions.*.crxPath",
       "description": "Path to the extension’s crx file. Linux only.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix",
@@ -9620,7 +9620,7 @@
     {
       "title": "programs.command-not-found.dbPath",
       "description": "Absolute path to programs.sqlite. By default this file will be provided by your channel\n(nixexprs.tar.xz).",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/command-not-found/command-not-found.nix",
@@ -10278,7 +10278,7 @@
     {
       "title": "programs.eww.configDir",
       "description": "The directory that gets symlinked to $XDG_CONFIG_HOME/eww.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eww.nix",
@@ -11244,7 +11244,7 @@
     {
       "title": "programs.fish.plugins.*.src",
       "description": "Path to the plugin folder.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
@@ -12840,7 +12840,7 @@
     {
       "title": "programs.git.hooks",
       "description": "Configuration helper for Git hooks. See https://git-scm.com/docs/githooks\nfor reference.",
-      "type": "attribute set of path",
+      "type": "attribute set of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -12924,7 +12924,7 @@
     {
       "title": "programs.git.includes.*.path",
       "description": "Path of the configuration file to include.",
-      "type": "string or path",
+      "type": "string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
@@ -13274,7 +13274,7 @@
     {
       "title": "programs.gitui.keyConfig",
       "description": "Key config in Ron file format. This is written to $XDG_CONFIG_HOME/gitui/key_config.ron.",
-      "type": "path or strings concatenated with “\\n”",
+      "type": "absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gitui.nix",
@@ -13288,7 +13288,7 @@
     {
       "title": "programs.gitui.theme",
       "description": "Theme in Ron file format. This is written to $XDG_CONFIG_HOME/gitui/theme.ron.",
-      "type": "path or strings concatenated with “\\n”",
+      "type": "absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gitui.nix",
@@ -13862,7 +13862,7 @@
     {
       "title": "programs.go.packages",
       "description": "Packages to add to GOPATH.",
-      "type": "attribute set of path",
+      "type": "attribute set of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/go.nix",
@@ -14002,7 +14002,7 @@
     {
       "title": "programs.gpg.homedir",
       "description": "Directory to store keychains and configuration.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gpg.nix",
@@ -14058,7 +14058,7 @@
     {
       "title": "programs.gpg.publicKeys.*.source",
       "description": "Path of an OpenPGP public key file.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gpg.nix",
@@ -14184,7 +14184,7 @@
     {
       "title": "programs.gradle.initScripts.<name>.source",
       "description": "Path of the init script file. If text is non-null then this option will automatically point\nto a file containing that text.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gradle.nix",
@@ -15556,7 +15556,7 @@
     {
       "title": "programs.irssi.networks.<name>.server.ssl.certificateFile",
       "description": "Path to a file containing the certificate used for client authentication to the server.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/irssi.nix",
@@ -16004,7 +16004,7 @@
     {
       "title": "programs.k9s.skins",
       "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/ (linux) or Library/Application Support/k9s/skins/ (darwin). See\nhttps://k9scli.io/topics/skins/ for supported values.",
-      "type": "attribute set of (YAML value or path)",
+      "type": "attribute set of (YAML value or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -17502,7 +17502,7 @@
     {
       "title": "programs.kodi.datadir",
       "description": "Directory to store configuration and metadata.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kodi.nix",
@@ -17992,7 +17992,7 @@
     {
       "title": "programs.lf.previewer.source",
       "description": "Script or executable to use to preview files. Sets lf’s previewer option.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lf.nix",
@@ -18286,7 +18286,7 @@
     {
       "title": "programs.mangohud.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/MangoHud/MangoHud.conf. See\nhttps://github.com/flightlessmango/MangoHud/blob/master/data/MangoHud.conf\nfor the default configuration.",
-      "type": "attribute set of (boolean or signed integer or floating point number or string or path or list of (signed integer or string))",
+      "type": "attribute set of (boolean or signed integer or floating point number or string or absolute path or list of (signed integer or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mangohud.nix",
@@ -18300,7 +18300,7 @@
     {
       "title": "programs.mangohud.settingsPerApplication",
       "description": "Sets MangoHud settings per application. Configuration written to\n$XDG_CONFIG_HOME/MangoHud/{application_name}.conf. See\nhttps://github.com/flightlessmango/MangoHud/blob/master/data/MangoHud.conf\nfor the default configuration.",
-      "type": "attribute set of attribute set of (boolean or signed integer or floating point number or string or path or list of (signed integer or string))",
+      "type": "attribute set of attribute set of (boolean or signed integer or floating point number or string or absolute path or list of (signed integer or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mangohud.nix",
@@ -19084,7 +19084,7 @@
     {
       "title": "programs.mu.home",
       "description": "Directory to store Mu’s database.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mu.nix",
@@ -19280,7 +19280,7 @@
     {
       "title": "programs.ncmpcpp.mpdMusicDir",
       "description": "Value of the mpd_music_dir setting. On Linux platforms the value of services.mpd.musicDirectory is used as the\ndefault if services.mpd.enable is\ntrue.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ncmpcpp.nix",
@@ -20652,7 +20652,7 @@
     {
       "title": "programs.nnn.plugins.src",
       "description": "Path to the plugin folder.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nnn.nix",
@@ -20876,7 +20876,7 @@
     {
       "title": "programs.nushell.configFile.source",
       "description": "Path of the nushell config.nu file to use. If the text option is set, it will be preferred.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -20918,7 +20918,7 @@
     {
       "title": "programs.nushell.envFile.source",
       "description": "Path of the nushell env.nu file to use. If the text option is set, it will be preferred.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -20946,7 +20946,7 @@
     {
       "title": "programs.nushell.environmentVariables",
       "description": "Environment variables to be set.",
-      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or path or (attribute set of Nushell values) or (list of Nushell values))",
+      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or absolute path or (attribute set of Nushell values) or (list of Nushell values))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -21016,7 +21016,7 @@
     {
       "title": "programs.nushell.loginFile.source",
       "description": "Path of the nushell login.nu file to use. If the text option is set, it will be preferred.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -21058,7 +21058,7 @@
     {
       "title": "programs.nushell.settings",
       "description": "Nushell settings. These will be flattened and assigned one by one to $env.config to avoid overwriting the default or existing options.",
-      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or path or (attribute set of Nushell values) or (list of Nushell values))",
+      "type": "attribute set of (null or (Nushell inline value) or boolean or signed integer or floating point number or string or absolute path or (attribute set of Nushell values) or (list of Nushell values))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -21520,7 +21520,7 @@
     {
       "title": "programs.pandoc.citationStyles",
       "description": "List of .csl files to install.",
-      "type": "list of path",
+      "type": "list of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pandoc.nix",
@@ -21548,7 +21548,7 @@
     {
       "title": "programs.pandoc.defaultsFile",
       "description": "Resulting defaults file.",
-      "type": "path (read only)",
+      "type": "absolute path (read only)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pandoc.nix",
@@ -21576,7 +21576,7 @@
     {
       "title": "programs.pandoc.templates",
       "description": "Custom templates.",
-      "type": "attribute set of path",
+      "type": "attribute set of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pandoc.nix",
@@ -22486,7 +22486,7 @@
     {
       "title": "programs.pyenv.rootDirectory",
       "description": "The pyenv root directory (PYENV_ROOT).",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pyenv.nix",
@@ -22878,7 +22878,7 @@
     {
       "title": "programs.ranger.plugins.*.src",
       "description": "The plugin file or directory.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
@@ -23046,7 +23046,7 @@
     {
       "title": "programs.rbenv.plugins.*.src",
       "description": "Path to the plugin folder.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rbenv.nix",
@@ -23522,7 +23522,7 @@
     {
       "title": "programs.rofi.theme",
       "description": "Name of theme or path to theme file in rasi format or attribute set with theme configuration. Available named themes can be viewed using the\nrofi-theme-selector tool.",
-      "type": "null or string or path or attribute set of ((attribute set of (string or signed integer or boolean or (Rasi literal string) or list of (string or signed integer or boolean or (Rasi literal string)))) or string)",
+      "type": "null or string or absolute path or attribute set of ((attribute set of (string or signed integer or boolean or (Rasi literal string) or list of (string or signed integer or boolean or (Rasi literal string)))) or string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rofi.nix",
@@ -24628,7 +24628,7 @@
     {
       "title": "programs.sm64ex.baserom",
       "description": "The path to the Super Mario 64 baserom to extract assets from.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sm64ex.nix",
@@ -25426,7 +25426,7 @@
     {
       "title": "programs.ssh.matchBlocks.<name>.setEnv",
       "description": "Environment variables and their value to send to the server.",
-      "type": "attribute set of (string or path or signed integer or floating point number)",
+      "type": "attribute set of (string or absolute path or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
@@ -25790,7 +25790,7 @@
     {
       "title": "programs.taskwarrior.colorTheme",
       "description": "Either one of the default provided theme as string, or a path to a theme configuration file.",
-      "type": "null or string or path",
+      "type": "null or string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/taskwarrior.nix",
@@ -28282,7 +28282,7 @@
     {
       "title": "programs.vscode.haskell.hie.executablePath",
       "description": "The path to the Haskell IDE Engine executable.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode/haskell.nix",
@@ -28548,7 +28548,7 @@
     {
       "title": "programs.waybar.style",
       "description": "CSS style of the bar.",
-      "type": "null or path or strings concatenated with “\\n”",
+      "type": "null or absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waybar.nix",
@@ -28716,7 +28716,7 @@
     {
       "title": "programs.wlogout.layout.*.action",
       "description": "Command to execute when clicked.",
-      "type": "path or string",
+      "type": "absolute path or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wlogout.nix",
@@ -28814,7 +28814,7 @@
     {
       "title": "programs.wlogout.style",
       "description": "CSS style of the bar.",
-      "type": "null or path or string",
+      "type": "null or absolute path or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wlogout.nix",
@@ -29150,7 +29150,7 @@
     {
       "title": "programs.yazi.flavors",
       "description": "Pre-made themes. Values should be a package or path containing the required files.\nWill be linked to $XDG_CONFIG_HOME/yazi/flavors/<name>.yazi.",
-      "type": "attribute set of (path or package)",
+      "type": "attribute set of (absolute path or package)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
@@ -29164,7 +29164,7 @@
     {
       "title": "programs.yazi.initLua",
       "description": "The init.lua for Yazi itself.",
-      "type": "null or path or strings concatenated with “\\n”",
+      "type": "null or absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
@@ -29192,7 +29192,7 @@
     {
       "title": "programs.yazi.plugins",
       "description": "Lua plugins. Values should be a package or path containing an init.lua file.\nWill be linked to $XDG_CONFIG_HOME/yazi/plugins/<name>.yazi.",
-      "type": "attribute set of (path or package)",
+      "type": "attribute set of (absolute path or package)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
@@ -30508,7 +30508,7 @@
     {
       "title": "programs.zsh.plugins.*.src",
       "description": "Path to the plugin folder.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
@@ -30788,7 +30788,7 @@
     {
       "title": "programs.zsh.prezto.pmoduleDirs",
       "description": "Add additional directories to load prezto modules from.",
-      "type": "list of path",
+      "type": "list of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
@@ -31306,7 +31306,7 @@
     {
       "title": "programs.zsh.zplug.zplugHome",
       "description": "Path to zplug home directory.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zplug.nix",
@@ -32048,7 +32048,7 @@
     {
       "title": "services.cachix-agent.credentialsFile",
       "description": "Required file that needs to contain CACHIX_AGENT_TOKEN=....",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/cachix-agent.nix",
@@ -32608,7 +32608,7 @@
     {
       "title": "services.darkman.darkModeScripts",
       "description": "Scripts to run when switching to “dark mode”.",
-      "type": "attribute set of (path or strings concatenated with “\\n”)",
+      "type": "attribute set of (absolute path or strings concatenated with “\\n”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/darkman.nix",
@@ -32622,7 +32622,7 @@
     {
       "title": "services.darkman.lightModeScripts",
       "description": "Scripts to run when switching to “light mode”.",
-      "type": "attribute set of (path or strings concatenated with “\\n”)",
+      "type": "attribute set of (absolute path or strings concatenated with “\\n”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/darkman.nix",
@@ -32692,7 +32692,7 @@
     {
       "title": "services.dropbox.path",
       "description": "Where to put the Dropbox directory.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/dropbox.nix",
@@ -32734,7 +32734,7 @@
     {
       "title": "services.dunst.configFile",
       "description": "Path to the configuration file read by dunst.",
-      "type": "null or string or path",
+      "type": "null or string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/dunst.nix",
@@ -33238,7 +33238,7 @@
     {
       "title": "services.fluidsynth.soundFont",
       "description": "The soundfont file to use, in SoundFont 2 format.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/fluidsynth.nix",
@@ -33294,7 +33294,7 @@
     {
       "title": "services.fnott.configFile",
       "description": "Path to the configuration file read by fnott.",
-      "type": "string or path",
+      "type": "string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/fnott.nix",
@@ -33658,7 +33658,7 @@
     {
       "title": "services.git-sync.repositories.<name>.path",
       "description": "The path at which to sync the repository",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/git-sync.nix",
@@ -34260,7 +34260,7 @@
     {
       "title": "services.hound.databasePath",
       "description": "The Hound database path.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hound.nix",
@@ -35075,7 +35075,7 @@
     {
       "title": "services.linux-wallpaperengine.assetsPath",
       "description": "Path to the assets directory.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
@@ -35761,7 +35761,7 @@
     {
       "title": "services.mbsync.configFile",
       "description": "Optional configuration file to link to use instead of the default file (~/.mbsyncrc).",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mbsync.nix",
@@ -35887,7 +35887,7 @@
     {
       "title": "services.mopidy.extraConfigFiles",
       "description": "Extra configuration files read by Mopidy when the service starts. Later files in the list override earlier configuration files and\nstructured settings.",
-      "type": "list of path",
+      "type": "list of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mopidy.nix",
@@ -35943,7 +35943,7 @@
     {
       "title": "services.mpd.dataDir",
       "description": "The directory where MPD stores its state, tag cache, playlists etc.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpd.nix",
@@ -35999,7 +35999,7 @@
     {
       "title": "services.mpd.musicDirectory",
       "description": "The directory where mpd reads music from.",
-      "type": "path or string",
+      "type": "absolute path or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpd.nix",
@@ -36055,7 +36055,7 @@
     {
       "title": "services.mpd.playlistDirectory",
       "description": "The directory where mpd stores playlists.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpd.nix",
@@ -36251,7 +36251,7 @@
     {
       "title": "services.mpdris2.mpd.musicDirectory",
       "description": "If set, mpDris2 will use this directory to access music artwork.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdris2.nix",
@@ -37511,7 +37511,7 @@
     {
       "title": "services.podman.containers.<name>.environment",
       "description": "Environment variables to set in the container.",
-      "type": "attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))",
+      "type": "attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
@@ -37553,7 +37553,7 @@
     {
       "title": "services.podman.containers.<name>.extraConfig",
       "description": "INI sections and values to populate the Container Quadlet.",
-      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))) or list of (null or boolean or signed integer or string or path) or null or boolean or signed integer or string or path)",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))) or list of (null or boolean or signed integer or string or absolute path) or null or boolean or signed integer or string or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/containers.nix",
@@ -37791,7 +37791,7 @@
     {
       "title": "services.podman.networks.<name>.extraConfig",
       "description": "INI sections and values to populate the Network Quadlet",
-      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or path or list of (null or boolean or signed integer or string or path))) or list of (null or boolean or signed integer or string or path) or null or boolean or signed integer or string or path)",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))) or list of (null or boolean or signed integer or string or absolute path) or null or boolean or signed integer or string or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/networks.nix",
@@ -37987,7 +37987,7 @@
     {
       "title": "services.polybar.config",
       "description": "Polybar configuration. Can be either path to a file, or set of attributes that will be used to create the final configuration.\nSee also services.polybar.settings for a more nix-friendly format.",
-      "type": "(attribute set of attribute set of (string or boolean or signed integer or list of string)) or path convertible to it",
+      "type": "(attribute set of attribute set of (string or boolean or signed integer or list of string)) or absolute path convertible to it",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/polybar.nix",
@@ -39205,7 +39205,7 @@
     {
       "title": "services.swaync.style",
       "description": "CSS style of the bar. See https://github.com/ErikReider/SwayNotificationCenter/blob/main/src/style.css\nfor the documentation.",
-      "type": "null or path or strings concatenated with “\\n”",
+      "type": "null or absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swaync.nix",
@@ -39261,7 +39261,7 @@
     {
       "title": "services.swayosd.stylePath",
       "description": "Use a custom Stylesheet file instead of looking for one.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swayosd.nix",
@@ -39345,7 +39345,7 @@
     {
       "title": "services.sxhkd.keybindings",
       "description": "An attribute set that assigns hotkeys to commands.",
-      "type": "attribute set of (null or string or path)",
+      "type": "attribute set of (null or string or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/sxhkd.nix",
@@ -39485,7 +39485,7 @@
     {
       "title": "services.syncthing.passwordFile",
       "description": "Path to the gui password file.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/syncthing.nix",
@@ -40101,7 +40101,7 @@
     {
       "title": "services.twmn.icons.critical",
       "description": "Path to the critical notifications’ icon.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/twmn.nix",
@@ -40115,7 +40115,7 @@
     {
       "title": "services.twmn.icons.info",
       "description": "Path to the informative notifications’ icon.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/twmn.nix",
@@ -40129,7 +40129,7 @@
     {
       "title": "services.twmn.icons.warning",
       "description": "Path to the warning notifications’ icon.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/twmn.nix",
@@ -40689,7 +40689,7 @@
     {
       "title": "services.unison.pairs.<name>.stateDirectory",
       "description": "Unison state directory to use.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/unison.nix",
@@ -40731,7 +40731,7 @@
     {
       "title": "services.vdirsyncer.configFile",
       "description": "Optional configuration file to link to use instead of the default file ($XDG_CONFIG_HOME/vdirsyncer/config).",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/vdirsyncer.nix",
@@ -41907,7 +41907,7 @@
     {
       "title": "systemd.user.settings.Manager.DefaultEnvironment",
       "description": "Configures environment variables passed to all executed processes.",
-      "type": "attribute set of (null or string or path or package)",
+      "type": "attribute set of (null or string or absolute path or package)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/systemd.nix",
@@ -41921,7 +41921,7 @@
     {
       "title": "systemd.user.settings.Manager.ManagerEnvironment",
       "description": "Sets environment variables just for the manager process itself.",
-      "type": "attribute set of (null or string or path or package)",
+      "type": "attribute set of (null or string or absolute path or package)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/systemd.nix",
@@ -42859,7 +42859,7 @@
     {
       "title": "wayland.windowManager.hyprland.plugins",
       "description": "List of Hyprland plugins to use. Can either be packages or absolute plugin paths.",
-      "type": "list of (package or path)",
+      "type": "list of (package or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
@@ -44763,7 +44763,7 @@
     {
       "title": "xdg.autostart.entries",
       "description": "Paths to desktop files that should be linked to XDG_CONFIG_HOME/autostart",
-      "type": "list of path",
+      "type": "list of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-autostart.nix",
@@ -44777,7 +44777,7 @@
     {
       "title": "xdg.cacheHome",
       "description": "Absolute path to directory holding application caches.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -44875,7 +44875,7 @@
     {
       "title": "xdg.configFile.<name>.source",
       "description": "Path of the source file or directory. If xdg.configFile.<name>.text\nis non-null then this option will automatically point to a file\ncontaining that text.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -44917,7 +44917,7 @@
     {
       "title": "xdg.configHome",
       "description": "Absolute path to directory holding application configurations.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -45015,7 +45015,7 @@
     {
       "title": "xdg.dataFile.<name>.source",
       "description": "Path of the source file or directory. If xdg.dataFile.<name>.text\nis non-null then this option will automatically point to a file\ncontaining that text.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -45057,7 +45057,7 @@
     {
       "title": "xdg.dataHome",
       "description": "Absolute path to directory holding application data.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -45113,7 +45113,7 @@
     {
       "title": "xdg.desktopEntries.<name>.actions.<name>.icon",
       "description": "Icon to display in file manager, menus, etc.",
-      "type": "null or string or path",
+      "type": "null or string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-desktop-entries.nix",
@@ -45197,7 +45197,7 @@
     {
       "title": "xdg.desktopEntries.<name>.icon",
       "description": "Icon to display in file manager, menus, etc.",
-      "type": "null or string or path",
+      "type": "null or string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-desktop-entries.nix",
@@ -45575,7 +45575,7 @@
     {
       "title": "xdg.stateFile.<name>.source",
       "description": "Path of the source file or directory. If xdg.stateFile.<name>.text\nis non-null then this option will automatically point to a file\ncontaining that text.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -45617,7 +45617,7 @@
     {
       "title": "xdg.stateHome",
       "description": "Absolute path to directory holding application states.",
-      "type": "path",
+      "type": "absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
@@ -45687,7 +45687,7 @@
     {
       "title": "xdg.userDirs.desktop",
       "description": "The Desktop directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45701,7 +45701,7 @@
     {
       "title": "xdg.userDirs.documents",
       "description": "The Documents directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45715,7 +45715,7 @@
     {
       "title": "xdg.userDirs.download",
       "description": "The Downloads directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45729,7 +45729,7 @@
     {
       "title": "xdg.userDirs.extraConfig",
       "description": "Other user directories.",
-      "type": "attribute set of (string or path convertible to it)",
+      "type": "attribute set of (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45743,7 +45743,7 @@
     {
       "title": "xdg.userDirs.music",
       "description": "The Music directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45757,7 +45757,7 @@
     {
       "title": "xdg.userDirs.pictures",
       "description": "The Pictures directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45771,7 +45771,7 @@
     {
       "title": "xdg.userDirs.publicShare",
       "description": "The Public share directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45785,7 +45785,7 @@
     {
       "title": "xdg.userDirs.templates",
       "description": "The Templates directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -45799,7 +45799,7 @@
     {
       "title": "xdg.userDirs.videos",
       "description": "The Videos directory.",
-      "type": "null or (string or path convertible to it)",
+      "type": "null or (string or absolute path convertible to it)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-user-dirs.nix",
@@ -48011,7 +48011,7 @@
     {
       "title": "xsession.windowManager.xmonad.config",
       "description": "The configuration file to be used for xmonad. This must be an absolute path or null in which case\n~/.xmonad/xmonad.hs will not be managed\nby Home Manager.",
-      "type": "null or path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/xmonad.nix",
@@ -48053,7 +48053,7 @@
     {
       "title": "xsession.windowManager.xmonad.libFiles",
       "description": "Additional files that will be saved in ~/.xmonad/lib/ and included in the configuration\nbuild. The keys are the file names while the values are paths to the\ncontents of the files.",
-      "type": "attribute set of path",
+      "type": "attribute set of absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/xmonad.nix",
