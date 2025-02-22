@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 21 Feb 2025 02:20:57 GMT",
+  "last_update": "Sat, 22 Feb 2025 02:17:15 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4422,6 +4422,20 @@
       "note": null,
       "default": "32",
       "example": "64"
+    },
+    {
+      "title": "home.pointerCursor.sway.enable",
+      "description": "Whether to enable sway config generation for home.pointerCursor.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
+          "text": "home-manager/modules/config/home-cursor.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "home.pointerCursor.x11.enable",
@@ -25634,6 +25648,48 @@
       "example": "{\n  add_newline = false;\n  format = lib.concatStrings [\n    \"$line_break\"\n    \"$package\"\n    \"$line_break\"\n    \"$character\"\n  ];\n  scan_timeout = 10;\n  character = {\n    success_symbol = \"➜\";\n    error_symbol = \"➜\";\n  };\n}\n\n"
     },
     {
+      "title": "programs.swayimg.enable",
+      "description": "Whether to enable swayimg.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swayimg.nix",
+          "text": "home-manager/modules/programs/swayimg.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.swayimg.package",
+      "description": "The swayimg package to install",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swayimg.nix",
+          "text": "home-manager/modules/programs/swayimg.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.swayimg",
+      "example": null
+    },
+    {
+      "title": "programs.swayimg.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/swayimg/config. See https://github.com/artemsen/swayimg/blob/master/extra/swayimgrc for a list of available options.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swayimg.nix",
+          "text": "home-manager/modules/programs/swayimg.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  viewer = {\n    window = \"#10000010\";\n    scale = \"fill\";\n  };\n  \"info.viewer\" = {\n    top_left = \"+name,+format\";\n  };\n  \"keys.viewer\" = {\n    \"Shift+r\" = \"rand_file\";\n  };\n}\n\n"
+    },
+    {
       "title": "programs.swaylock.enable",
       "description": "Whether to enable swaylock.",
       "type": "boolean",
@@ -26724,6 +26780,20 @@
       "note": null,
       "default": "pkgs.thunderbird",
       "example": "pkgs.thunderbird-91"
+    },
+    {
+      "title": "programs.thunderbird.nativeMessagingHosts",
+      "description": "Additional packages containing native messaging hosts that should be made available to Thunderbird extensions.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
     },
     {
       "title": "programs.thunderbird.profiles",
@@ -28166,6 +28236,48 @@
       "note": null,
       "default": "{ }",
       "example": null
+    },
+    {
+      "title": "programs.vinegar.enable",
+      "description": "Whether to enable Vinegar.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vinegar.nix",
+          "text": "home-manager/modules/programs/vinegar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.vinegar.package",
+      "description": "The vinegar package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vinegar.nix",
+          "text": "home-manager/modules/programs/vinegar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.vinegar",
+      "example": null
+    },
+    {
+      "title": "programs.vinegar.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/vinegar/config.toml.",
+      "type": "attribute set of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vinegar.nix",
+          "text": "home-manager/modules/programs/vinegar.nix"
+        }
+      ],
+      "note": "See https://vinegarhq.org/Configuration/ for more information.",
+      "default": "{ }",
+      "example": "{\n  env = {\n    WINEFSYNC = \"1\";\n  };\n  studio = {\n    dxvk = false;\n    env = {\n      DXVK_HUD = \"0\";\n      MANGOHUD = \"1\";\n    };\n    fflags = {\n      DFIntTaskSchedulerTargetFps = 144;\n    };\n    renderer = \"Vulkan\";\n  };\n}\n"
     },
     {
       "title": "programs.vscode.enable",
@@ -38083,6 +38195,34 @@
       "example": "true"
     },
     {
+      "title": "services.psd.backupLimit",
+      "description": "Maximum number of crash recovery snapshots to keep (the oldest ones are deleted first).",
+      "type": "unsigned integer, meaning >=0",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": null,
+      "default": "5",
+      "example": null
+    },
+    {
+      "title": "services.psd.browsers",
+      "description": "A list of browsers to sync. An empty list will enable all browsers to be managed by profile-sync-daemon.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": "Available choices are:\nchromium chromium-dev conkeror.mozdev.org epiphany falkon firefox firefox-trunk google-chrome google-chrome-beta google-chrome-unstable heftig-aurora icecat inox luakit midori opera opera-beta opera-developer opera-legacy otter-browser qupzilla qutebrowser palemoon rekonq seamonkey surf vivaldi vivaldi-snapshot",
+      "default": "[ ]",
+      "example": "[\n  \"chromium\"\n  \"google-chrome\"\n  \"firefox\"\n]\n"
+    },
+    {
       "title": "services.psd.resyncTimer",
       "description": "The amount of time to wait before syncing browser profiles back to the disk.",
       "type": "string",
@@ -38095,6 +38235,20 @@
       "note": "Takes a systemd time span, see systemd.time(7). The time unit\ndefaults to seconds if omitted.",
       "default": "\"1h\"",
       "example": "\"1h 30min\""
+    },
+    {
+      "title": "services.psd.useBackup",
+      "description": "Whether to completly enable or disable the crash recovery feature.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
     },
     {
       "title": "services.pueue.enable",
@@ -40951,6 +41105,76 @@
       "note": null,
       "default": "4000",
       "example": null
+    },
+    {
+      "title": "services.wluma.enable",
+      "description": "Whether to enable Enable wluma, a service for automatic brightness adjustment.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wluma.nix",
+          "text": "home-manager/modules/services/wluma.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.wluma.package",
+      "description": "Package providing wluma.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wluma.nix",
+          "text": "home-manager/modules/services/wluma.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wluma",
+      "example": null
+    },
+    {
+      "title": "services.wluma.settings",
+      "description": "Configuration to use for wluma. See https://github.com/maximbaz/wluma/blob/main/config.toml\nfor available options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wluma.nix",
+          "text": "home-manager/modules/services/wluma.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  als = {\n    iio = {\n      path = \"\";\n      thresholds = {\n        \"0\" = \"night\";\n        \"20\" = \"dark\";\n        \"250\" = \"normal\";\n        \"500\" = \"bright\";\n        \"80\" = \"dim\";\n        \"800\" = \"outdoors\";\n      };\n    };\n  };\n}\n"
+    },
+    {
+      "title": "services.wluma.systemd.enable",
+      "description": "Wluma systemd integration",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wluma.nix",
+          "text": "home-manager/modules/services/wluma.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.wluma.systemd.target",
+      "description": "The systemd target that will automatically start the Wluma service.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wluma.nix",
+          "text": "home-manager/modules/services/wluma.nix"
+        }
+      ],
+      "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
+      "default": "config.wayland.systemd.target",
+      "example": "\"sway-session.target\""
     },
     {
       "title": "services.wob.enable",
