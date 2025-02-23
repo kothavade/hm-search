@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 22 Feb 2025 02:17:15 GMT",
+  "last_update": "Sun, 23 Feb 2025 02:26:07 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1513,8 +1513,8 @@
     },
     {
       "title": "accounts.email.accounts.<name>.aliases",
-      "description": "Alternative email addresses of this account.",
-      "type": "list of string matching the pattern .*@.*",
+      "description": "Alternative identities of this account.",
+      "type": "list of (string matching the pattern .*@.* or (submodule))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -1974,6 +1974,20 @@
       "example": "[\n  \"Inbox\"\n  \"[Gmail]/MyLabel\"\n]\n"
     },
     {
+      "title": "accounts.email.accounts.<name>.imapnotify.extraArgs",
+      "description": "Extra arguments to pass to goimapnotify.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
+          "text": "home-manager/modules/services/imapnotify.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"-wait 1\"\n]\n"
+    },
+    {
       "title": "accounts.email.accounts.<name>.imapnotify.extraConfig",
       "description": "Additional configuration to add for this account.",
       "type": "JSON value",
@@ -1985,7 +1999,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  wait = 10;\n}\n"
+      "example": null
     },
     {
       "title": "accounts.email.accounts.<name>.imapnotify.onNotify",
@@ -8988,6 +9002,20 @@
       "example": "\"~/.ssh\""
     },
     {
+      "title": "programs.brave.nativeMessagingHosts",
+      "description": "List of Brave Browser native messaging hosts to install.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix",
+          "text": "home-manager/modules/programs/chromium.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
       "title": "programs.broot.enable",
       "description": "Whether to enable Broot, a better way to navigate directories.",
       "type": "boolean",
@@ -9576,6 +9604,20 @@
       "example": null
     },
     {
+      "title": "programs.chromium.nativeMessagingHosts",
+      "description": "List of Chromium native messaging hosts to install.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix",
+          "text": "home-manager/modules/programs/chromium.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
       "title": "programs.cmus.enable",
       "description": "Whether to enable Enable cmus, the music player…",
       "type": "boolean",
@@ -10078,6 +10120,48 @@
       "note": null,
       "default": "pkgs.discord",
       "example": null
+    },
+    {
+      "title": "programs.earthly.enable",
+      "description": "Whether to enable earthly.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/earthly.nix",
+          "text": "home-manager/modules/programs/earthly.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.earthly.package",
+      "description": "The earthly package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/earthly.nix",
+          "text": "home-manager/modules/programs/earthly.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.earthly",
+      "example": null
+    },
+    {
+      "title": "programs.earthly.settings",
+      "description": "Configuration written to ~/.earthly/config.yml file. See https://docs.earthly.dev/docs/earthly-config for supported values.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/earthly.nix",
+          "text": "home-manager/modules/programs/earthly.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "global = {\n  disable_analytics = true;\n  disable_log_sharing = true;\n};\n\n"
     },
     {
       "title": "programs.eclipse.enable",
@@ -10712,6 +10796,20 @@
     {
       "title": "programs.firefox.nativeMessagingHosts",
       "description": "Additional packages containing native messaging hosts that should be made available to Firefox extensions.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.firefox.pkcs11Modules",
+      "description": "Additional packages to be loaded as PKCS #11 modules in Firefox.",
       "type": "list of package",
       "declared_by": [
         {
@@ -11412,6 +11510,20 @@
     {
       "title": "programs.floorp.nativeMessagingHosts",
       "description": "Additional packages containing native messaging hosts that should be made available to Floorp extensions.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.floorp.pkcs11Modules",
+      "description": "Additional packages to be loaded as PKCS #11 modules in Firefox.",
       "type": "list of package",
       "declared_by": [
         {
@@ -13018,6 +13130,48 @@
       "note": "Key is passed to --schedule argument in git maintenance run\nand value is passed to Timer.OnCalendar in systemd.user.timers.",
       "default": "",
       "example": null
+    },
+    {
+      "title": "programs.git.riff.enable",
+      "description": "Enable the <command>riff</command> diff highlighter. See <link xlink:href=“https://github.com/walles/riff” />.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git.riff.package",
+      "description": "The riffdiff package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.riffdiff",
+      "example": null
+    },
+    {
+      "title": "programs.git.riff.commandLineOptions",
+      "description": "Command line arguments to include in the <command>RIFF</command> environment variable.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": "Run <command>riff --help</command> for a full list of options",
+      "default": "[ ]",
+      "example": "[ \"--no-adds-only-special\" ]"
     },
     {
       "title": "programs.git.signing.format",
@@ -15876,6 +16030,48 @@
       "example": "{\n  null    = \"1;30\";\n  false   = \"0;31\";\n  true    = \"0;32\";\n  numbers = \"0;36\";\n  strings = \"0;33\";\n  arrays  = \"1;35\";\n  objects = \"1;37\";\n}\n\n"
     },
     {
+      "title": "programs.jqp.enable",
+      "description": "Whether to enable jqp, jq playground.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jqp.nix",
+          "text": "home-manager/modules/programs/jqp.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.jqp.package",
+      "description": "The jqp package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jqp.nix",
+          "text": "home-manager/modules/programs/jqp.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.jqp",
+      "example": null
+    },
+    {
+      "title": "programs.jqp.settings",
+      "description": "Jqp configuration",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jqp.nix",
+          "text": "home-manager/modules/programs/jqp.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  theme = {\n    chromaStyleOverrides = {\n      kc = \"#009900 underline\";\n    };\n    name = \"monokai\";\n  };\n}\n"
+    },
+    {
       "title": "programs.jujutsu.enable",
       "description": "Whether to enable a Git-compatible DVCS that is both simple and powerful.",
       "type": "boolean",
@@ -18058,6 +18254,20 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  \"en-GB\"\n  \"de\"\n]\n"
+    },
+    {
+      "title": "programs.librewolf.pkcs11Modules",
+      "description": "Additional packages to be loaded as PKCS #11 modules in Firefox.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
     },
     {
       "title": "programs.librewolf.settings",
@@ -26838,6 +27048,34 @@
       "example": null
     },
     {
+      "title": "programs.thunderbird.profiles.<name>.feedAccounts",
+      "description": "Attribute set of feed accounts. Feeds themselves have to be managed through Thunderbird’s settings. This option allows\nfeeds to coexist with declaratively managed email accounts.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.thunderbird.profiles.<name>.feedAccounts.<name>.name",
+      "description": "This feed account’s name.",
+      "type": "string (read only)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
       "title": "programs.thunderbird.profiles.<name>.isDefault",
       "description": "Whether this is a default profile. There must be exactly one default profile.",
       "type": "boolean",
@@ -28280,6 +28518,20 @@
       "example": "{\n  env = {\n    WINEFSYNC = \"1\";\n  };\n  studio = {\n    dxvk = false;\n    env = {\n      DXVK_HUD = \"0\";\n      MANGOHUD = \"1\";\n    };\n    fflags = {\n      DFIntTaskSchedulerTargetFps = 144;\n    };\n    renderer = \"Vulkan\";\n  };\n}\n"
     },
     {
+      "title": "programs.vivaldi.nativeMessagingHosts",
+      "description": "List of Vivaldi Browser native messaging hosts to install.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix",
+          "text": "home-manager/modules/programs/chromium.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
       "title": "programs.vscode.enable",
       "description": "Whether to enable Visual Studio Code.",
       "type": "boolean",
@@ -28294,34 +28546,6 @@
       "example": "true"
     },
     {
-      "title": "programs.vscode.enableExtensionUpdateCheck",
-      "description": "Whether to enable update notifications for extensions.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": null
-    },
-    {
-      "title": "programs.vscode.enableUpdateCheck",
-      "description": "Whether to enable update checks/notifications.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": null
-    },
-    {
       "title": "programs.vscode.package",
       "description": "Version of Visual Studio Code to install.",
       "type": "package",
@@ -28334,34 +28558,6 @@
       "note": null,
       "default": "pkgs.vscode",
       "example": "pkgs.vscodium"
-    },
-    {
-      "title": "programs.vscode.extensions",
-      "description": "The extensions Visual Studio Code should be started with.",
-      "type": "list of package",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "[ ]",
-      "example": "[ pkgs.vscode-extensions.bbenoist.nix ]"
-    },
-    {
-      "title": "programs.vscode.globalSnippets",
-      "description": "Defines global user snippets.",
-      "type": "JSON value",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  fixme = {\n    body = [\n      \"$LINE_COMMENT FIXME: $0\"\n    ];\n    description = \"Insert a FIXME remark\";\n    prefix = [\n      \"fixme\"\n    ];\n  };\n}\n"
     },
     {
       "title": "programs.vscode.haskell.enable",
@@ -28406,7 +28602,91 @@
       "example": "(import ~/src/haskell-ide-engine {}).hies + \"/bin/hie-wrapper\";\n\n"
     },
     {
-      "title": "programs.vscode.keybindings",
+      "title": "programs.vscode.mutableExtensionsDir",
+      "description": "Whether extensions can be installed or updated manually or by Visual Studio Code. Mutually exclusive to\nprograms.vscode.profiles.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
+    },
+    {
+      "title": "programs.vscode.profiles",
+      "description": "A list of all VSCode profiles. Mutually exclusive to programs.vscode.mutableExtensionsDir",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.enableExtensionUpdateCheck",
+      "description": "Whether to enable update notifications for extensions. Can only be set for the default profile, but\nit applies to all profiles.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.enableUpdateCheck",
+      "description": "Whether to enable update checks/notifications. Can only be set for the default profile, but\nit applies to all profiles.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.extensions",
+      "description": "The extensions Visual Studio Code should be started with.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ pkgs.vscode-extensions.bbenoist.nix ]"
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.globalSnippets",
+      "description": "Defines global user snippets.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
+          "text": "home-manager/modules/programs/vscode.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  fixme = {\n    body = [\n      \"$LINE_COMMENT FIXME: $0\"\n    ];\n    description = \"Insert a FIXME remark\";\n    prefix = [\n      \"fixme\"\n    ];\n  };\n}\n"
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.keybindings",
       "description": "Keybindings written to Visual Studio Code’s keybindings.json.",
       "type": "list of (submodule)",
       "declared_by": [
@@ -28420,7 +28700,7 @@
       "example": "[\n  {\n    key = \"ctrl+c\";\n    command = \"editor.action.clipboardCopyAction\";\n    when = \"textInputFocus\";\n  }\n]\n\n"
     },
     {
-      "title": "programs.vscode.keybindings.*.args",
+      "title": "programs.vscode.profiles.<name>.keybindings.*.args",
       "description": "Optional arguments for a command.",
       "type": "null or JSON value",
       "declared_by": [
@@ -28434,7 +28714,7 @@
       "example": "{\n  direction = \"up\";\n}\n"
     },
     {
-      "title": "programs.vscode.keybindings.*.command",
+      "title": "programs.vscode.profiles.<name>.keybindings.*.command",
       "description": "The VS Code command to execute.",
       "type": "string",
       "declared_by": [
@@ -28448,7 +28728,7 @@
       "example": "\"editor.action.clipboardCopyAction\""
     },
     {
-      "title": "programs.vscode.keybindings.*.key",
+      "title": "programs.vscode.profiles.<name>.keybindings.*.key",
       "description": "The key or key-combination to bind.",
       "type": "string",
       "declared_by": [
@@ -28462,7 +28742,7 @@
       "example": "\"ctrl+c\""
     },
     {
-      "title": "programs.vscode.keybindings.*.when",
+      "title": "programs.vscode.profiles.<name>.keybindings.*.when",
       "description": "Optional context filter.",
       "type": "null or string",
       "declared_by": [
@@ -28476,7 +28756,7 @@
       "example": "\"textInputFocus\""
     },
     {
-      "title": "programs.vscode.languageSnippets",
+      "title": "programs.vscode.profiles.<name>.languageSnippets",
       "description": "Defines user snippets for different languages.",
       "type": "JSON value",
       "declared_by": [
@@ -28490,21 +28770,7 @@
       "example": "{\n  haskell = {\n    fixme = {\n      body = [\n        \"$LINE_COMMENT FIXME: $0\"\n      ];\n      description = \"Insert a FIXME remark\";\n      prefix = [\n        \"fixme\"\n      ];\n    };\n  };\n}\n"
     },
     {
-      "title": "programs.vscode.mutableExtensionsDir",
-      "description": "Whether extensions can be installed or updated manually or by Visual Studio Code.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": "false"
-    },
-    {
-      "title": "programs.vscode.userSettings",
+      "title": "programs.vscode.profiles.<name>.userSettings",
       "description": "Configuration written to Visual Studio Code’s settings.json.",
       "type": "JSON value",
       "declared_by": [
@@ -28518,7 +28784,7 @@
       "example": "{\n  \"files.autoSave\" = \"off\";\n  \"[nix]\".\"editor.tabSize\" = 2;\n}\n\n"
     },
     {
-      "title": "programs.vscode.userTasks",
+      "title": "programs.vscode.profiles.<name>.userTasks",
       "description": "Configuration written to Visual Studio Code’s tasks.json.",
       "type": "JSON value",
       "declared_by": [
@@ -28992,48 +29258,6 @@
       "note": null,
       "default": "null",
       "example": "''\n  * {\n      font-family: monospace;\n  }\n  \n  window {\n      background-color: #7c818c;\n  }\n''\n"
-    },
-    {
-      "title": "programs.wpaperd.enable",
-      "description": "Whether to enable wpaperd.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wpaperd.nix",
-          "text": "home-manager/modules/programs/wpaperd.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": "true"
-    },
-    {
-      "title": "programs.wpaperd.package",
-      "description": "The wpaperd package to use.",
-      "type": "package",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wpaperd.nix",
-          "text": "home-manager/modules/programs/wpaperd.nix"
-        }
-      ],
-      "note": null,
-      "default": "pkgs.wpaperd",
-      "example": null
-    },
-    {
-      "title": "programs.wpaperd.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/wpaperd/wallpaper.toml.\nSee https://github.com/danyspin97/wpaperd#wallpaper-configuration\nfor the full list of options.",
-      "type": "TOML value",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wpaperd.nix",
-          "text": "home-manager/modules/programs/wpaperd.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  eDP-1 = {\n    path = \"/home/foo/Pictures/Wallpaper\";\n    apply-shadow = true;\n  };\n  DP-2 = {\n    path = \"/home/foo/Pictures/Anime\";\n    sorting = \"descending\";\n  };\n}\n\n"
     },
     {
       "title": "programs.xmobar.enable",
@@ -32520,6 +32744,90 @@
       "note": null,
       "default": "null",
       "example": "\"rofi\""
+    },
+    {
+      "title": "services.clipse.enable",
+      "description": "Whether to enable Enable clipse clipboard manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.clipse.package",
+      "description": "The clipse package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.clipse",
+      "example": null
+    },
+    {
+      "title": "services.clipse.allowDuplicates",
+      "description": "Allow duplicates",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.clipse.historySize",
+      "description": "Number of history lines to keep.",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "100",
+      "example": null
+    },
+    {
+      "title": "services.clipse.systemdTarget",
+      "description": "The systemd target that will automatically start the clipse service.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
+      "default": "\"graphical-session.target\"",
+      "example": "\"sway-session.target\""
+    },
+    {
+      "title": "services.clipse.theme",
+      "description": "Configuration written to $XDG_CONFIG_HOME/clipse/custom_theme.json.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "{\n  useCustomTheme = true;\n  DimmedDesc = \"#ffffff\";\n  DimmedTitle = \"#ffffff\";\n  FilteredMatch = \"#ffffff\";\n  NormalDesc = \"#ffffff\";\n  NormalTitle = \"#ffffff\";\n  SelectedDesc = \"#ffffff\";\n  SelectedTitle = \"#ffffff\";\n  SelectedBorder = \"#ffffff\";\n  SelectedDescBorder = \"#ffffff\";\n  TitleFore = \"#ffffff\";\n  Titleback = \"#434C5E\";\n  StatusMsg = \"#ffffff\";\n  PinIndicatorColor = \"#ff0000\";\n};\n\n"
     },
     {
       "title": "services.comodoro.enable",
@@ -41233,6 +41541,48 @@
       "example": "true"
     },
     {
+      "title": "services.wpaperd.enable",
+      "description": "Whether to enable wpaperd.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wpaperd.nix",
+          "text": "home-manager/modules/services/wpaperd.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.wpaperd.package",
+      "description": "The wpaperd package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wpaperd.nix",
+          "text": "home-manager/modules/services/wpaperd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wpaperd",
+      "example": null
+    },
+    {
+      "title": "services.wpaperd.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/wpaperd/wallpaper.toml.\nSee https://github.com/danyspin97/wpaperd#wallpaper-configuration\nfor the full list of options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wpaperd.nix",
+          "text": "home-manager/modules/services/wpaperd.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  eDP-1 = {\n    path = \"/home/foo/Pictures/Wallpaper\";\n    apply-shadow = true;\n  };\n  DP-2 = {\n    path = \"/home/foo/Pictures/Anime\";\n    sorting = \"descending\";\n  };\n}\n\n"
+    },
+    {
       "title": "services.xcape.enable",
       "description": "Whether to enable xcape.",
       "type": "boolean",
@@ -42939,6 +43289,34 @@
       "note": "WarningExisting keybinding configuration will be wiped when using this\noption.",
       "default": "{ }",
       "example": "{\n  \"^u\" = \"deleteToBeginningOfLine:\";\n  \"^w\" = \"deleteWordBackward:\";\n}\n"
+    },
+    {
+      "title": "targets.darwin.linkApps.enable",
+      "description": "Whether to enable linking macOS applications to the user environment.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/linkapps.nix",
+          "text": "home-manager/modules/targets/darwin/linkapps.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "targets.darwin.linkApps.directory",
+      "description": "Path to link apps relative to the home directory.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/targets/darwin/linkapps.nix",
+          "text": "home-manager/modules/targets/darwin/linkapps.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Applications/Home Manager Apps\"",
+      "example": null
     },
     {
       "title": "targets.darwin.search",
