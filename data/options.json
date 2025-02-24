@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 23 Feb 2025 02:26:07 GMT",
+  "last_update": "Mon, 24 Feb 2025 02:24:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28948,6 +28948,20 @@
         }
       ],
       "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.waybar.systemd.enableInspect",
+      "description": "Inspect objects and find their CSS classes, experiment with live CSS styles, and lookup the current value of CSS properties.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waybar.nix",
+          "text": "home-manager/modules/programs/waybar.nix"
+        }
+      ],
+      "note": "See https://developer.gnome.org/documentation/tools/inspector.html",
       "default": "false",
       "example": "true"
     },
