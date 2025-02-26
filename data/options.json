@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 25 Feb 2025 02:23:12 GMT",
+  "last_update": "Wed, 26 Feb 2025 02:22:39 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -32814,6 +32814,76 @@
       "note": null,
       "default": "100",
       "example": null
+    },
+    {
+      "title": "services.clipse.imageDisplay.heightCut",
+      "description": "Height cut",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "2",
+      "example": null
+    },
+    {
+      "title": "services.clipse.imageDisplay.scaleX",
+      "description": "Image scaling factor X",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "9",
+      "example": null
+    },
+    {
+      "title": "services.clipse.imageDisplay.scaleY",
+      "description": "Image scaling factor Y",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "9",
+      "example": null
+    },
+    {
+      "title": "services.clipse.imageDisplay.type",
+      "description": "Preview image method",
+      "type": "one of “basic”, “kitty”, “sixel”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"basic\"",
+      "example": null
+    },
+    {
+      "title": "services.clipse.keyBindings",
+      "description": "Custom key bindings",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
+          "text": "home-manager/modules/services/clipse.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": " {\n   \"choose\": \"enter\",\n   \"clearSelected\": \"S\",\n   \"down\": \"down\",\n   \"end\": \"end\",\n   \"filter\": \"/\",\n   \"home\": \"home\",\n   \"more\": \"?\",\n   \"nextPage\": \"right\",\n   \"prevPage\": \"left\",\n   \"preview\": \"t\",\n   \"quit\": \"q\",\n   \"remove\": \"x\",\n   \"selectDown\": \"ctrl+down\",\n   \"selectSingle\": \"s\",\n   \"selectUp\": \"ctrl+up\",\n   \"togglePin\": \"p\",\n   \"togglePinned\": \"tab\",\n   \"up\": \"up\",\n   \"yankFilter\": \"ctrl+s\"\n}\n\n"
     },
     {
       "title": "services.clipse.systemdTarget",
