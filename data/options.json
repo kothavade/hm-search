@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 26 Feb 2025 02:22:39 GMT",
+  "last_update": "Thu, 27 Feb 2025 02:23:38 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27787,7 +27787,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"\\${pkgs.zsh}/bin/zsh\""
+      "example": "${pkgs.zsh}/bin/zsh"
     },
     {
       "title": "programs.tmux.shortcut",
