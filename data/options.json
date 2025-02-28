@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 27 Feb 2025 02:23:38 GMT",
+  "last_update": "Fri, 28 Feb 2025 02:24:07 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5168,7 +5168,21 @@
     {
       "title": "launchd.agents.<name>.config.LimitLoadToSessionType",
       "description": "This configuration file only applies to sessions of the type specified. This key is used in concert with the -S flag to launchctl.",
-      "type": "null or string",
+      "type": "null or string or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
+          "text": "home-manager/modules/launchd/default.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "launchd.agents.<name>.config.LowPriorityBackgroundIO",
+      "description": "This optional key specifies whether the kernel should consider this daemon to be low priority when doing file system I/O when the process is throttled with the Darwin-background classification.",
+      "type": "null or boolean",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5196,7 +5210,7 @@
     {
       "title": "launchd.agents.<name>.config.MachServices",
       "description": "This optional key is used to specify Mach services to be registered with the Mach bootstrap sub-system. Each key in this dictionary should be the name of service to be advertised. The value of the key must\nbe a boolean and set to true.  Alternatively, a dictionary can be used instead of a simple true value.",
-      "type": "null or (submodule)",
+      "type": "null or (attribute set of (boolean or (submodule)))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
@@ -5205,35 +5219,7 @@
       ],
       "note": "Finally, for the job itself, the values will be replaced with Mach ports at the time of check-in with\nlaunchd.",
       "default": "null",
-      "example": "{\n  ResetAtClose = true;\n}\n"
-    },
-    {
-      "title": "launchd.agents.<name>.config.MachServices.HideUntilCheckIn",
-      "description": "Reserve the name in the namespace, but cause bootstrap_look_up() to fail until the job has checked in with launchd.",
-      "type": "null or boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "launchd.agents.<name>.config.MachServices.ResetAtClose",
-      "description": "If this boolean is false, the port is recycled, thus leaving clients to remain oblivious to the demand nature of job. If the value is set to true, clients receive port death notifications when\nthe job lets go of the receive right. The port will be recreated atomically with respect to bootstrap_look_up()\ncalls, so that clients can trust that after receiving a port death notification,\nthe new port will have already been recreated. Setting the value to true should be done with\ncare. Not all clients may be able to handle this behavior. The default value is false.",
-      "type": "null or boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
+      "example": "{\n  \"org.nixos.service\" = {\n    ResetAtClose = true;\n  };\n}\n"
     },
     {
       "title": "launchd.agents.<name>.config.Nice",
@@ -5336,6 +5322,34 @@
     {
       "title": "launchd.agents.<name>.config.RunAtLoad",
       "description": "This optional key is used to control whether your job is launched once at the time the job is loaded. The default is false.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
+          "text": "home-manager/modules/launchd/default.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "launchd.agents.<name>.config.ServiceIPC",
+      "description": "This optional key specifies whether the job participates in advanced communication with launchd. The default is false. This flag is\nincompatible with the inetdCompatibility key.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
+          "text": "home-manager/modules/launchd/default.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "launchd.agents.<name>.config.SessionCreate",
+      "description": "This key specifies that the job should be spawned into a new security audit session rather than the default session for the context is belongs\nto. See auditon(2) for details.",
       "type": "null or boolean",
       "declared_by": [
         {
@@ -5699,87 +5713,17 @@
     },
     {
       "title": "launchd.agents.<name>.config.StartCalendarInterval",
-      "description": "This optional key causes the job to be started every calendar interval as specified. Missing arguments are considered to be wildcard. The semantics are much like crontab(5).  Unlike cron which skips job\ninvocations when the computer is asleep, launchd will start the job the next time the computer wakes\nup.  If multiple intervals transpire before the computer is woken, those events will be coalesced into\none event upon wake from sleep.",
-      "type": "null or (list of (submodule))",
+      "description": "This optional key causes the job to be started every calendar interval as specified. The semantics are much like crontab(5): Missing attributes are considered to be wildcard. Unlike cron which skips\njob invocations when the computer is asleep, launchd will start the job the next time the computer wakes\nup.  If multiple intervals transpire before the computer is woken, those events will be coalesced into\none event upon waking from sleep.",
+      "type": "null or (submodule) or unique (non-empty (list of (submodule)))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
           "text": "home-manager/modules/launchd/default.nix"
         }
       ],
-      "note": null,
+      "note": "ImportantThe list must not be empty and must not contain duplicate entries (attrsets which compare equally).",
       "default": "null",
-      "example": "{\n  Hour = 2;\n  Minute = 30;\n}\n"
-    },
-    {
-      "title": "launchd.agents.<name>.config.StartCalendarInterval.*.Day",
-      "description": "The day on which this job will be run.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "launchd.agents.<name>.config.StartCalendarInterval.*.Hour",
-      "description": "The hour on which this job will be run.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "launchd.agents.<name>.config.StartCalendarInterval.*.Minute",
-      "description": "The minute on which this job will be run.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "launchd.agents.<name>.config.StartCalendarInterval.*.Month",
-      "description": "The month on which this job will be run.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "launchd.agents.<name>.config.StartCalendarInterval.*.Weekday",
-      "description": "The weekday on which this job will be run (0 and 7 are Sunday).",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/launchd/default.nix",
-          "text": "home-manager/modules/launchd/default.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
+      "example": "[\n  {\n    Hour = 2;\n    Minute = 30;\n  }\n]\n"
     },
     {
       "title": "launchd.agents.<name>.config.StartInterval",
@@ -12573,7 +12517,7 @@
     },
     {
       "title": "programs.ghostty.package",
-      "description": "The ghostty package to use. Set programs.ghostty.package to null on platfroms where ghostty is not available or marked broken",
+      "description": "The ghostty package to use. Set programs.ghostty.package to null on platforms where ghostty is not available or marked broken",
       "type": "null or package",
       "declared_by": [
         {
@@ -17470,6 +17414,20 @@
       "note": null,
       "default": "pkgs.kitty",
       "example": null
+    },
+    {
+      "title": "programs.kitty.actionAliases",
+      "description": "Define action aliases.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kitty.nix",
+          "text": "home-manager/modules/programs/kitty.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"launch_tab\" = \"launch --cwd=current --type=tab\";\n  \"launch_window\" = \"launch --cwd=current --type=os-window\";\n}\n\n"
     },
     {
       "title": "programs.kitty.darwinLaunchOptions",
@@ -36544,7 +36502,7 @@
     },
     {
       "title": "services.mpd.network.startWhenNeeded",
-      "description": "Enable systemd socket activation.",
+      "description": "Enable systemd socket activation. This is only supported on Linux.",
       "type": "boolean",
       "declared_by": [
         {
