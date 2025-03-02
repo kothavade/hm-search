@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 01 Mar 2025 02:34:30 GMT",
+  "last_update": "Sun, 02 Mar 2025 02:33:18 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -45417,6 +45417,132 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  \"${pkgs.evolution}/share/applications/org.gnome.Evolution.desktop\"\n]\n\n"
+    },
+    {
+      "title": "xdg.cacheFile",
+      "description": "Attribute set of files to link into the user’s XDG cache home.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.enable",
+      "description": "Whether this file should be generated. This option allows specific files to be disabled.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.executable",
+      "description": "Set the execute bit. If null, defaults to the mode of the source file or to false\nfor files created through the text option.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.force",
+      "description": "Whether the target path should be unconditionally replaced by the managed file source. Warning, this will silently\ndelete the target regardless of whether it is a file or\nlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.onChange",
+      "description": "Shell commands to run when file has changed between generations. The script will be run\nafter the new files have been linked\ninto place.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "Note, this code is always run when recursive is\nenabled.",
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.recursive",
+      "description": "If the file source is a directory, then this option determines whether the directory should be recursively\nlinked to the target location. This option has no effect\nif the source is a file.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "If false (the default) then the target\nwill be a symbolic link to the source directory. If\ntrue then the target will be a\ndirectory structure matching the source’s but whose leafs\nare symbolic links to the files of the source directory.",
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.source",
+      "description": "Path of the source file or directory. If xdg.cacheFile.<name>.text\nis non-null then this option will automatically point to a file\ncontaining that text.",
+      "type": "absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.target",
+      "description": "Path to target file relative to xdg.cacheHome.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "name",
+      "example": null
+    },
+    {
+      "title": "xdg.cacheFile.<name>.text",
+      "description": "Text of the file. If this option is null then xdg.cacheFile.<name>.source\nmust be set.",
+      "type": "null or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
     },
     {
       "title": "xdg.cacheHome",
