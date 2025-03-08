@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 07 Mar 2025 02:32:31 GMT",
+  "last_update": "Sat, 08 Mar 2025 02:01:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6414,7 +6414,7 @@
     {
       "title": "programs.aerc.package",
       "description": "The aerc package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
@@ -6512,7 +6512,7 @@
     {
       "title": "programs.aerospace.package",
       "description": "The aerospace package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
@@ -6932,7 +6932,7 @@
     {
       "title": "programs.alot.package",
       "description": "The alot package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
@@ -7912,7 +7912,7 @@
     {
       "title": "programs.bacon.package",
       "description": "The bacon package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bacon.nix",
@@ -7982,7 +7982,7 @@
     {
       "title": "programs.bash.package",
       "description": "The bash package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
@@ -8388,7 +8388,7 @@
     {
       "title": "programs.bemenu.package",
       "description": "The bemenu package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bemenu.nix",
@@ -8430,7 +8430,7 @@
     {
       "title": "programs.borgmatic.package",
       "description": "The borgmatic package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -8822,7 +8822,7 @@
     {
       "title": "programs.boxxy.package",
       "description": "The boxxy package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/boxxy.nix",
@@ -9144,7 +9144,7 @@
     {
       "title": "programs.btop.package",
       "description": "The btop package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/btop.nix",
@@ -9214,7 +9214,7 @@
     {
       "title": "programs.bun.package",
       "description": "The bun package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bun.nix",
@@ -9340,7 +9340,7 @@
     {
       "title": "programs.cava.package",
       "description": "The cava package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cava.nix",
@@ -9382,7 +9382,7 @@
     {
       "title": "programs.cavalier.package",
       "description": "The cavalier package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cavalier.nix",
@@ -9648,7 +9648,7 @@
     {
       "title": "programs.comodoro.package",
       "description": "The comodoro package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/comodoro.nix",
@@ -9690,7 +9690,7 @@
     {
       "title": "programs.darcs.package",
       "description": "The darcs package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/darcs.nix",
@@ -10012,7 +10012,7 @@
     {
       "title": "programs.discocss.package",
       "description": "The discocss package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/discocss.nix",
@@ -10054,7 +10054,7 @@
     {
       "title": "programs.discocss.discordPackage",
       "description": "The discord package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/discocss.nix",
@@ -10082,7 +10082,7 @@
     {
       "title": "programs.earthly.package",
       "description": "The earthly package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/earthly.nix",
@@ -10418,7 +10418,7 @@
     {
       "title": "programs.eza.package",
       "description": "The eza package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
@@ -10502,7 +10502,7 @@
     {
       "title": "programs.fastfetch.package",
       "description": "The fastfetch package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fastfetch.nix",
@@ -10544,7 +10544,7 @@
     {
       "title": "programs.fd.package",
       "description": "The fd package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fd.nix",
@@ -10614,7 +10614,7 @@
     {
       "title": "programs.feh.package",
       "description": "The feh package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/feh.nix",
@@ -11160,7 +11160,7 @@
     {
       "title": "programs.firefox.profiles.<name>.userChrome",
       "description": "Custom Firefox user chrome CSS.",
-      "type": "strings concatenated with “\\n”",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
@@ -11174,7 +11174,7 @@
     {
       "title": "programs.firefox.profiles.<name>.userContent",
       "description": "Custom Firefox user content CSS.",
-      "type": "strings concatenated with “\\n”",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
@@ -11874,7 +11874,7 @@
     {
       "title": "programs.floorp.profiles.<name>.userChrome",
       "description": "Custom Floorp user chrome CSS.",
-      "type": "strings concatenated with “\\n”",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
@@ -11888,7 +11888,7 @@
     {
       "title": "programs.floorp.profiles.<name>.userContent",
       "description": "Custom Floorp user content CSS.",
-      "type": "strings concatenated with “\\n”",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
@@ -11972,7 +11972,7 @@
     {
       "title": "programs.freetube.package",
       "description": "The freetube package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/freetube.nix",
@@ -12014,7 +12014,7 @@
     {
       "title": "programs.fuzzel.package",
       "description": "The fuzzel package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fuzzel.nix",
@@ -12266,7 +12266,7 @@
     {
       "title": "programs.gallery-dl.package",
       "description": "The gallery-dl package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gallery-dl.nix",
@@ -12434,7 +12434,7 @@
     {
       "title": "programs.gh-dash.package",
       "description": "The gh-dash package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gh-dash.nix",
@@ -13218,7 +13218,7 @@
     {
       "title": "programs.git-cliff.package",
       "description": "The git-cliff package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-cliff.nix",
@@ -14254,7 +14254,7 @@
     {
       "title": "programs.gradle.package",
       "description": "The gradle package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gradle.nix",
@@ -14350,6 +14350,20 @@
       "example": "true"
     },
     {
+      "title": "programs.granted.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/granted.nix",
+          "text": "home-manager/modules/programs/granted.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
       "title": "programs.granted.enableZshIntegration",
       "description": "Whether to enable Zsh integration.",
       "type": "boolean",
@@ -14380,7 +14394,7 @@
     {
       "title": "programs.havoc.package",
       "description": "The havoc package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/havoc.nix",
@@ -14842,7 +14856,7 @@
     {
       "title": "programs.himalaya.package",
       "description": "The himalaya package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/himalaya.nix",
@@ -15052,7 +15066,7 @@
     {
       "title": "programs.hyprlock.package",
       "description": "The hyprlock package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprlock.nix",
@@ -15192,7 +15206,7 @@
     {
       "title": "programs.i3status.package",
       "description": "The i3status package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3status.nix",
@@ -15388,7 +15402,7 @@
     {
       "title": "programs.imv.package",
       "description": "The imv package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/imv.nix",
@@ -15990,7 +16004,7 @@
     {
       "title": "programs.jqp.package",
       "description": "The jqp package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jqp.nix",
@@ -16032,7 +16046,7 @@
     {
       "title": "programs.jujutsu.package",
       "description": "The jujutsu package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jujutsu.nix",
@@ -16088,7 +16102,7 @@
     {
       "title": "programs.k9s.package",
       "description": "The k9s package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -16200,7 +16214,7 @@
     {
       "title": "programs.kakoune.package",
       "description": "The kakoune-unwrapped package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
@@ -16991,7 +17005,7 @@
           "text": "home-manager/modules/programs/kakoune.nix"
         }
       ],
-      "note": null,
+      "note": "Requires package to not be set to have effect.",
       "default": "[ ]",
       "example": "[ pkgs.kakounePlugins.kak-fzf ]"
     },
@@ -17166,7 +17180,7 @@
     {
       "title": "programs.khal.package",
       "description": "The khal package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
@@ -17782,7 +17796,7 @@
     {
       "title": "programs.lapce.package",
       "description": "The lapce package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lapce.nix",
@@ -17922,7 +17936,7 @@
     {
       "title": "programs.lazygit.package",
       "description": "The lazygit package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazygit.nix",
@@ -17964,7 +17978,7 @@
     {
       "title": "programs.ledger.package",
       "description": "The ledger package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ledger.nix",
@@ -18286,7 +18300,7 @@
     {
       "title": "programs.looking-glass-client.package",
       "description": "The looking-glass-client package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/looking-glass-client.nix",
@@ -18860,7 +18874,7 @@
     {
       "title": "programs.micro.package",
       "description": "The micro package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/micro.nix",
@@ -18958,7 +18972,7 @@
     {
       "title": "programs.mise.package",
       "description": "The mise package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mise.nix",
@@ -19154,7 +19168,7 @@
     {
       "title": "programs.mr.package",
       "description": "The mr package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mr.nix",
@@ -19966,7 +19980,7 @@
     {
       "title": "programs.neovide.package",
       "description": "The neovide package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neovide.nix",
@@ -20582,7 +20596,7 @@
     {
       "title": "programs.nheko.package",
       "description": "The nheko package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nheko.nix",
@@ -21030,7 +21044,7 @@
     {
       "title": "programs.nushell.package",
       "description": "The nushell package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nushell.nix",
@@ -21632,7 +21646,7 @@
     {
       "title": "programs.openstackclient.package",
       "description": "The openstackclient package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/openstackclient.nix",
@@ -21786,7 +21800,7 @@
     {
       "title": "programs.papis.package",
       "description": "The papis package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/papis.nix",
@@ -22374,7 +22388,7 @@
     {
       "title": "programs.poetry.package",
       "description": "The poetry package to use. May be used to install custom poetry plugins.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/poetry.nix",
@@ -23438,7 +23452,7 @@
     {
       "title": "programs.rio.package",
       "description": "The rio package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rio.nix",
@@ -23480,7 +23494,7 @@
     {
       "title": "programs.ripgrep.package",
       "description": "The ripgrep package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep.nix",
@@ -23634,7 +23648,7 @@
     {
       "title": "programs.rofi.pass.package",
       "description": "The rofi-pass package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rofi-pass.nix",
@@ -23788,7 +23802,7 @@
     {
       "title": "programs.ruff.package",
       "description": "The ruff package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ruff.nix",
@@ -23829,8 +23843,8 @@
     },
     {
       "title": "programs.sagemath.package",
-      "description": "The SageMath package to use.",
-      "type": "package",
+      "description": "The sage package to use. The SageMath package to use.",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sagemath.nix",
@@ -23900,7 +23914,7 @@
     {
       "title": "programs.sapling.package",
       "description": "The sapling package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sapling.nix",
@@ -24404,7 +24418,7 @@
     {
       "title": "programs.sftpman.package",
       "description": "The sftpman package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sftpman.nix",
@@ -24796,7 +24810,7 @@
     {
       "title": "programs.sm64ex.package",
       "description": "The sm64ex package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sm64ex.nix",
@@ -24804,7 +24818,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation sm64ex-0-unstable-2024-07-04>",
+      "default": "pkgs.sm64ex",
       "example": null
     },
     {
@@ -24880,7 +24894,7 @@
     {
       "title": "programs.spotify-player.package",
       "description": "The spotify-player package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/spotify-player.nix",
@@ -25874,7 +25888,7 @@
     {
       "title": "programs.swaylock.package",
       "description": "The swaylock package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swaylock.nix",
@@ -26000,7 +26014,7 @@
     {
       "title": "programs.taskwarrior.package",
       "description": "The taskwarrior package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/taskwarrior.nix",
@@ -27862,7 +27876,7 @@
     {
       "title": "programs.tofi.package",
       "description": "The tofi package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tofi.nix",
@@ -28268,7 +28282,7 @@
     {
       "title": "programs.vifm.package",
       "description": "The vifm package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vifm.nix",
@@ -28408,7 +28422,7 @@
     {
       "title": "programs.vim-vint.package",
       "description": "The vim-vint package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vim-vint.nix",
@@ -28450,7 +28464,7 @@
     {
       "title": "programs.vinegar.package",
       "description": "The vinegar package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vinegar.nix",
@@ -29038,7 +29052,7 @@
     {
       "title": "programs.wlogout.package",
       "description": "The wlogout package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wlogout.nix",
@@ -29192,7 +29206,7 @@
     {
       "title": "programs.wofi.package",
       "description": "The wofi package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wofi.nix",
@@ -29290,7 +29304,7 @@
     {
       "title": "programs.xplr.package",
       "description": "The xplr package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/xplr.nix",
@@ -29346,7 +29360,7 @@
     {
       "title": "programs.yambar.package",
       "description": "The yambar package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
@@ -29444,7 +29458,7 @@
     {
       "title": "programs.yazi.package",
       "description": "The yazi package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yazi.nix",
@@ -29962,7 +29976,7 @@
     {
       "title": "programs.zk.package",
       "description": "The zk package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zk.nix",
@@ -32734,7 +32748,7 @@
     {
       "title": "services.clipse.package",
       "description": "The clipse package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipse.nix",
@@ -33056,7 +33070,7 @@
     {
       "title": "services.darkman.package",
       "description": "The darkman package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/darkman.nix",
@@ -34792,7 +34806,7 @@
     {
       "title": "services.hypridle.package",
       "description": "The hypridle package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hypridle.nix",
@@ -34848,7 +34862,7 @@
     {
       "title": "services.hyprpaper.package",
       "description": "The hyprpaper package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpaper.nix",
@@ -35705,7 +35719,7 @@
     {
       "title": "services.listenbrainz-mpd.package",
       "description": "The listenbrainz-mpd package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/listenbrainz-mpd.nix",
@@ -38617,7 +38631,7 @@
     {
       "title": "services.pueue.package",
       "description": "The pueue package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pueue.nix",
@@ -41543,7 +41557,7 @@
     {
       "title": "services.wob.package",
       "description": "The wob package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wob.nix",
@@ -41599,7 +41613,7 @@
     {
       "title": "services.wpaperd.package",
       "description": "The wpaperd package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wpaperd.nix",
@@ -47255,7 +47269,7 @@
     {
       "title": "xsession.windowManager.fluxbox.package",
       "description": "The fluxbox package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/fluxbox.nix",
@@ -47493,7 +47507,7 @@
     {
       "title": "xsession.windowManager.i3.package",
       "description": "The i3 package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/i3.nix",
