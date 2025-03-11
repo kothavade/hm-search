@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 10 Mar 2025 02:07:04 GMT",
+  "last_update": "Tue, 11 Mar 2025 02:32:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -19026,6 +19026,90 @@
       "example": "verbose = false;\nexperimental = false;\ndisable_tools = [\"node\"];\n\n"
     },
     {
+      "title": "programs.mods.enable",
+      "description": "Whether to enable mods.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mods.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.mods.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.mods.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.mods.package",
+      "description": "The mods package to install",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mods",
+      "example": null
+    },
+    {
+      "title": "programs.mods.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/mods/mods.yml.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
+          "text": "home-manager/modules/programs/mods.nix"
+        }
+      ],
+      "note": "See https://github.com/charmbracelet/mods/blob/main/config_template.yml for the full\nlist of options.",
+      "default": "{ }",
+      "example": "''\n  {\n    default-model = \"llama3.2\";\n    apis = {\n      ollama = {\n        base-url = \"http://localhost:11434/api\";\n        models = {\n          \"llama3.2\" = {\n            max-input-chars = 650000;\n          };\n        };\n      };\n    };\n  }\n''\n"
+    },
+    {
       "title": "programs.mpv.enable",
       "description": "Whether to enable mpv.",
       "type": "boolean",
@@ -37887,6 +37971,174 @@
       "example": null
     },
     {
+      "title": "services.podman.builds",
+      "description": "Defines Podman build quadlet configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.builds.<name>.authFile",
+      "description": "Path of the authentication file.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.builds.<name>.autoStart",
+      "description": "Whether to start the build on boot. Requires user lingering.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.builds.<name>.description",
+      "description": "The description of the build.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Service for build \\${name}\"",
+      "example": "\"My Build\""
+    },
+    {
+      "title": "services.podman.builds.<name>.environment",
+      "description": "Environment variables to set in the build.",
+      "type": "attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  VAR1 = \"0:100\";\n  VAR2 = true;\n  VAR3 = 5;\n}\n\n"
+    },
+    {
+      "title": "services.podman.builds.<name>.extraConfig",
+      "description": "INI sections and values to populate the Build Quadlet.",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))) or list of (null or boolean or signed integer or string or absolute path) or null or boolean or signed integer or string or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Build = {\n    Arch = \"aarch64\";\n  };\n  Service = {\n    TimeoutStartSec = 15;\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.builds.<name>.extraPodmanArgs",
+      "description": "Extra arguments to pass to the podman build command.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--retries 5\"\n]\n"
+    },
+    {
+      "title": "services.podman.builds.<name>.file",
+      "description": "Path to a Containerfile which contains instructions to build the image.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "`\"xdg.configFile.\"containerfiles/my-img/Containerfile\"`\nor\n`\"https://github.com/.../my-img/Containerfile\"`\n\n"
+    },
+    {
+      "title": "services.podman.builds.<name>.labels",
+      "description": "The labels to apply to the build.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  app = \"myapp\";\n  some-label = \"somelabel\";\n}\n"
+    },
+    {
+      "title": "services.podman.builds.<name>.tags",
+      "description": "Name associated with the build. First tag will always be “homemanager/<name>”.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "services.podman.builds.<name>.tlsVerify",
+      "description": "Require HTTPS and verification of certificates when contacting registries.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.builds.<name>.workingDirectory",
+      "description": "WorkingDirectory of the systemd unit file.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/builds.nix",
+          "text": "home-manager/modules/services/podman-linux/builds.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "services.podman.containers",
       "description": "Defines Podman container quadlet configurations.",
       "type": "attribute set of (submodule)",
@@ -38223,6 +38475,188 @@
       "example": "[\n  \"/tmp:/tmp\"\n  \"/var/run/test.secret:/etc/secret:ro\"\n]\n"
     },
     {
+      "title": "services.podman.images",
+      "description": "Defines Podman image quadlet configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.authFile",
+      "description": "Path of the authentication file used to connect to registry.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.autoStart",
+      "description": "Whether to pull the image on boot. Requires user lingering.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.certDir",
+      "description": "Path of certificates (*.{crt,cert,key}) used to connect to registry.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.decryptionKeyFile",
+      "description": "Path to key used for decrpytion of images.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.description",
+      "description": "The description of the image.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Service for image \\${name}\"",
+      "example": "\"My Image\""
+    },
+    {
+      "title": "services.podman.images.<name>.extraConfig",
+      "description": "INI sections and values to populate the Image Quadlet.",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))) or list of (null or boolean or signed integer or string or absolute path) or null or boolean or signed integer or string or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Image = {\n    ContainersConfModule = \"/etc/nvd.conf\";\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.images.<name>.extraPodmanArgs",
+      "description": "Extra arguments to pass to the podman image pull command.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--os=linux\"\n]\n"
+    },
+    {
+      "title": "services.podman.images.<name>.image",
+      "description": "Image to pull.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"quay.io/centos/centos:latest\""
+    },
+    {
+      "title": "services.podman.images.<name>.password",
+      "description": "Password used to connect to registry. (Will be visible in nix store)",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"P@ssw0rd\""
+    },
+    {
+      "title": "services.podman.images.<name>.tag",
+      "description": "FQIN of referenced Image when source is a file or directory archive.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"quay.io/centos/centos:latest\""
+    },
+    {
+      "title": "services.podman.images.<name>.tlsVerify",
+      "description": "Require HTTPS and verification of certificates when contacting registries.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.images.<name>.username",
+      "description": "Username used to connect to registry.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/images.nix",
+          "text": "home-manager/modules/services/podman-linux/images.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"bob\""
+    },
+    {
       "title": "services.podman.networks",
       "description": "Defines Podman network quadlet configurations.",
       "type": "attribute set of (submodule)",
@@ -38444,6 +38878,202 @@
       ],
       "note": null,
       "default": null,
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes",
+      "description": "Defines Podman volume quadlet configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes.<name>.autoStart",
+      "description": "Whether to create the volume on boot.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes.<name>.copy",
+      "description": "Copy content of the image located at the mountpoint of the volume on first run.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes.<name>.description",
+      "description": "The description of the volume.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Service for volume \\${name}\"",
+      "example": "\"My Volume\""
+    },
+    {
+      "title": "services.podman.volumes.<name>.device",
+      "description": "The path of a device which is mounted for the volume.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"tmpfs\""
+    },
+    {
+      "title": "services.podman.volumes.<name>.driver",
+      "description": "The volume driver to use.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"image\""
+    },
+    {
+      "title": "services.podman.volumes.<name>.extraConfig",
+      "description": "INI sections and values to populate the Volume Quadlet.",
+      "type": "attribute set of attribute set of ((attribute set of (null or boolean or signed integer or string or absolute path or list of (null or boolean or signed integer or string or absolute path))) or list of (null or boolean or signed integer or string or absolute path) or null or boolean or signed integer or string or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Volume = {\n    ContainerConfModule = \"/etc/nvd.conf\";\n  };\n}\n\n"
+    },
+    {
+      "title": "services.podman.volumes.<name>.extraPodmanArgs",
+      "description": "Extra arguments to pass to the podman volume create command.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--opt copy\"\n]\n"
+    },
+    {
+      "title": "services.podman.volumes.<name>.group",
+      "description": "The group ID owning the volume inside the container.",
+      "type": "null or signed integer or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes.<name>.image",
+      "description": "Specifies the image the volume is based on when Driver is set to the image.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"quay.io/centos/centos:latest\""
+    },
+    {
+      "title": "services.podman.volumes.<name>.labels",
+      "description": "The labels to apply to the volume.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  app = \"myapp\";\n  some-label = \"somelabel\";\n}\n"
+    },
+    {
+      "title": "services.podman.volumes.<name>.preserve",
+      "description": "Whether the volume should be preserved if it is removed from the configuration. Setting this to false will cause the volume to be deleted if the volume is removed from the configuration",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.podman.volumes.<name>.type",
+      "description": "Filesystem type of Device. (used as -t in mount commands)",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"tmpfs\""
+    },
+    {
+      "title": "services.podman.volumes.<name>.user",
+      "description": "The user ID owning the volume inside the container.",
+      "type": "null or signed integer or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux/volumes.nix",
+          "text": "home-manager/modules/services/podman-linux/volumes.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
       "example": null
     },
     {
