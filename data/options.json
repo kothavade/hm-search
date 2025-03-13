@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 12 Mar 2025 02:25:08 GMT",
+  "last_update": "Thu, 13 Mar 2025 02:33:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4341,7 +4341,7 @@
     },
     {
       "title": "home.pointerCursor",
-      "description": "Cursor configuration. Set to null to disable.",
+      "description": "Cursor configuration.",
       "type": "null or (submodule)",
       "declared_by": [
         {
@@ -4352,6 +4352,20 @@
       "note": "Top-level options declared under this submodule are backend independent\noptions. Options declared under namespaces such as x11\nare backend specific options. By default, only backend independent cursor\nconfigurations are generated. If you need configurations for specific\nbackends, you can toggle them via the enable option. For example,\nhome.pointerCursor.x11.enable\nwill enable x11 cursor configurations.",
       "default": "null",
       "example": null
+    },
+    {
+      "title": "home.pointerCursor.enable",
+      "description": "Whether to enable cursor config generation.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
+          "text": "home-manager/modules/config/home-cursor.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "home.pointerCursor.package",
@@ -4366,6 +4380,20 @@
       "note": null,
       "default": null,
       "example": "pkgs.vanilla-dmz"
+    },
+    {
+      "title": "home.pointerCursor.dotIcons.enable",
+      "description": "Whether to enable .icons config generation for home.pointerCursor .",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
+          "text": "home-manager/modules/config/home-cursor.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
     },
     {
       "title": "home.pointerCursor.gtk.enable",
@@ -26000,7 +26028,7 @@
     {
       "title": "programs.swaylock.settings",
       "description": "Default arguments to swaylock. An empty set disables configuration generation.",
-      "type": "attribute set of (boolean or floating point number or signed integer or string)",
+      "type": "attribute set of (boolean or floating point number or signed integer or absolute path or string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swaylock.nix",
@@ -39803,6 +39831,20 @@
       "note": null,
       "default": null,
       "example": "\"\\${pkgs.i3lock}/bin/i3lock -n -c 000000\""
+    },
+    {
+      "title": "services.screen-locker.lockCmdEnv",
+      "description": "Environment variables to source a with the locker command (lockCmd).",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/screen-locker.nix",
+          "text": "home-manager/modules/services/screen-locker.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"XSECURELOCK_PAM_SERVICE=xsecurelock\"\n]\n"
     },
     {
       "title": "services.screen-locker.xautolock.enable",
