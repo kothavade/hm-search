@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 13 Mar 2025 02:33:49 GMT",
+  "last_update": "Fri, 14 Mar 2025 02:24:55 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -30730,6 +30730,20 @@
       "example": null
     },
     {
+      "title": "programs.zsh.initContent",
+      "description": "Content to be added to .zshrc. To specify the order, use lib.mkOrder.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "{\n  _type = \"order\";\n  content = ''\n    echo \"Hello, initContent!\"\n  '';\n  priority = 1000;\n}\n"
+    },
+    {
       "title": "programs.zsh.initExtra",
       "description": "Extra commands that should be added to .zshrc.",
       "type": "strings concatenated with “\\n”",
@@ -35925,6 +35939,48 @@
       "note": null,
       "default": "pkgs.nix",
       "example": "pkgs.nixVersions.unstable"
+    },
+    {
+      "title": "services.macos-remap-keys.enable",
+      "description": "Whether to enable macOS key remapping service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/macos-remap-keys",
+          "text": "home-manager/modules/services/macos-remap-keys"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.macos-remap-keys.keyboard",
+      "description": "Mapping of keyboard keys to remap",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/macos-remap-keys",
+          "text": "home-manager/modules/services/macos-remap-keys"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Capslock = \"Escape\";\n  SquareBracketOpen = \"SquareBracketClose\";\n}\n"
+    },
+    {
+      "title": "services.macos-remap-keys.keypad",
+      "description": "Mapping of keypad keys to remap",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/macos-remap-keys",
+          "text": "home-manager/modules/services/macos-remap-keys"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Enter = \"Equal\";\n  Plus = \"Minus\";\n}\n"
     },
     {
       "title": "services.mako.enable",
