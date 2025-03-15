@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 14 Mar 2025 02:24:55 GMT",
+  "last_update": "Sat, 15 Mar 2025 02:23:08 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -36513,6 +36513,20 @@
       "note": null,
       "default": "pkgs.megasync",
       "example": null
+    },
+    {
+      "title": "services.megasync.forceWayland",
+      "description": "Force Megasync to run on wayland",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/megasync.nix",
+          "text": "home-manager/modules/services/megasync.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "services.mopidy.enable",
