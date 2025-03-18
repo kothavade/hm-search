@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 17 Mar 2025 02:36:08 GMT",
+  "last_update": "Tue, 18 Mar 2025 02:35:24 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3372,6 +3372,132 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters",
+      "description": "List of message filters to add to this Thunderbird account configuration.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    name = \"Mark as Read on Archive\";\n    enabled = true;\n    type = \"128\";\n    action = \"Mark read\";\n    condition = \"ALL\";\n  }\n]\n\n"
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.enabled",
+      "description": "Whether this filter is currently active.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.action",
+      "description": "Action to perform on matched messages.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.actionValue",
+      "description": "Argument passed to the filter action, e.g. a folder path.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.condition",
+      "description": "Condition to match messages against.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.extraConfig",
+      "description": "Extra settings to apply to the filter",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.name",
+      "description": "Name for the filter.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.text",
+      "description": "The raw text of the filter. Note that this will override all other options.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.thunderbird.messageFilters.*.type",
+      "description": "Type for this filter.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
     },
     {
       "title": "accounts.email.accounts.<name>.thunderbird.perIdentitySettings",
@@ -17794,6 +17920,20 @@
       "example": null
     },
     {
+      "title": "programs.kubecolor.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubecolor.nix",
+          "text": "home-manager/modules/programs/kubecolor.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
       "title": "programs.kubecolor.package",
       "description": "The kubecolor package to use.",
       "type": "package",
@@ -30741,7 +30881,7 @@
       ],
       "note": null,
       "default": "\"\"",
-      "example": "{\n  _type = \"order\";\n  content = ''\n    echo \"Hello, initContent!\"\n  '';\n  priority = 1000;\n}\n"
+      "example": "lib.mkOrder 1000 '''\n  echo \"Hello zsh initContent!\"\n''';\n\n"
     },
     {
       "title": "programs.zsh.initExtra",
