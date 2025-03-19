@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 18 Mar 2025 02:35:24 GMT",
+  "last_update": "Wed, 19 Mar 2025 02:34:27 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -40699,6 +40699,34 @@
       "note": null,
       "default": "null",
       "example": "1.0"
+    },
+    {
+      "title": "services.swww.enable",
+      "description": "Whether to enable swww, a Solution to your Wayland Wallpaper Woes.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swww.nix",
+          "text": "home-manager/modules/services/swww.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.swww.package",
+      "description": "The swww package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swww.nix",
+          "text": "home-manager/modules/services/swww.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.swww",
+      "example": null
     },
     {
       "title": "services.sxhkd.enable",
