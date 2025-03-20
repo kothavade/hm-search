@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 19 Mar 2025 02:34:27 GMT",
+  "last_update": "Thu, 20 Mar 2025 02:32:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10963,7 +10963,49 @@
     },
     {
       "title": "programs.firefox.profiles.<name>.bookmarks",
-      "description": "Preloaded bookmarks. Note, this may silently overwrite any previously existing bookmarks!",
+      "description": "Declarative bookmarks.",
+      "type": "(submodule) or (list of anything) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.bookmarks.configFile",
+      "description": "Configuration file to define custom bookmarks.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.bookmarks.force",
+      "description": "Whether to force override existing custom bookmarks.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
+          "text": "home-manager/modules/programs/firefox.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.bookmarks.settings",
+      "description": "Custom bookmarks.",
       "type": "(list of ((bookmark submodule) or (directory submodule))) or (attribute set of ((bookmark submodule) or (directory submodule))) convertible to it",
       "declared_by": [
         {
@@ -11253,7 +11295,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.firefox.profiles.<name>.search.engines",
@@ -11267,7 +11309,7 @@
       ],
       "note": "See SearchEngine.jsm\nin Firefox’s source for available options. We maintain a\nmapping to let you specify all options in the referenced link\nwithout underscores, but it may fall out of date with future\noptions.",
       "default": "{ }",
-      "example": "{\n  \"Nix Packages\" = {\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  \"NixOS Wiki\" = {\n    urls = [{ template = \"https://wiki.nixos.org/index.php?search={searchTerms}\"; }];\n    iconUpdateURL = \"https://wiki.nixos.org/favicon.png\";\n    updateInterval = 24 * 60 * 60 * 1000; # every day\n    definedAliases = [ \"@nw\" ];\n  };\n\n  \"Bing\".metaData.hidden = true;\n  \"Google\".metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
+      "example": "{\n  nix-packages = {\n    name = \"Nix Packages\";\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  nixos-wiki = {\n    name = \"NixOS Wiki\";\n    urls = [{ template = \"https://wiki.nixos.org/w/index.php?search={searchTerms}\"; }];\n    iconMapObj.\"16\" = \"https://wiki.nixos.org/favicon.ico\";\n    definedAliases = [ \"@nw\" ];\n  };\n\n  bing.metaData.hidden = true;\n  google.metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.search.force",
@@ -11295,7 +11337,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"DuckDuckGo\"\n  \"Google\"\n]\n"
+      "example": "[\n  \"ddg\"\n  \"google\"\n]\n"
     },
     {
       "title": "programs.firefox.profiles.<name>.search.privateDefault",
@@ -11309,7 +11351,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.firefox.profiles.<name>.settings",
@@ -11677,7 +11719,49 @@
     },
     {
       "title": "programs.floorp.profiles.<name>.bookmarks",
-      "description": "Preloaded bookmarks. Note, this may silently overwrite any previously existing bookmarks!",
+      "description": "Declarative bookmarks.",
+      "type": "(submodule) or (list of anything) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.bookmarks.configFile",
+      "description": "Configuration file to define custom bookmarks.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.bookmarks.force",
+      "description": "Whether to force override existing custom bookmarks.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.bookmarks.settings",
+      "description": "Custom bookmarks.",
       "type": "(list of ((bookmark submodule) or (directory submodule))) or (attribute set of ((bookmark submodule) or (directory submodule))) convertible to it",
       "declared_by": [
         {
@@ -11967,7 +12051,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.floorp.profiles.<name>.search.engines",
@@ -11981,7 +12065,7 @@
       ],
       "note": "See SearchEngine.jsm\nin Floorp’s source for available options. We maintain a\nmapping to let you specify all options in the referenced link\nwithout underscores, but it may fall out of date with future\noptions.",
       "default": "{ }",
-      "example": "{\n  \"Nix Packages\" = {\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  \"NixOS Wiki\" = {\n    urls = [{ template = \"https://wiki.nixos.org/index.php?search={searchTerms}\"; }];\n    iconUpdateURL = \"https://wiki.nixos.org/favicon.png\";\n    updateInterval = 24 * 60 * 60 * 1000; # every day\n    definedAliases = [ \"@nw\" ];\n  };\n\n  \"Bing\".metaData.hidden = true;\n  \"Google\".metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
+      "example": "{\n  nix-packages = {\n    name = \"Nix Packages\";\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  nixos-wiki = {\n    name = \"NixOS Wiki\";\n    urls = [{ template = \"https://wiki.nixos.org/w/index.php?search={searchTerms}\"; }];\n    iconMapObj.\"16\" = \"https://wiki.nixos.org/favicon.ico\";\n    definedAliases = [ \"@nw\" ];\n  };\n\n  bing.metaData.hidden = true;\n  google.metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
     },
     {
       "title": "programs.floorp.profiles.<name>.search.force",
@@ -12009,7 +12093,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"DuckDuckGo\"\n  \"Google\"\n]\n"
+      "example": "[\n  \"ddg\"\n  \"google\"\n]\n"
     },
     {
       "title": "programs.floorp.profiles.<name>.search.privateDefault",
@@ -12023,7 +12107,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.floorp.profiles.<name>.settings",
@@ -23632,6 +23716,90 @@
       "example": "pkgs.pinentry-gnome3"
     },
     {
+      "title": "programs.rclone.enable",
+      "description": "Whether to enable rclone.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.rclone.package",
+      "description": "The rclone package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.rclone",
+      "example": null
+    },
+    {
+      "title": "programs.rclone.remotes",
+      "description": "An attribute set of remote configurations. Each remote consists of regular configuration options and optional secrets.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": "See https://rclone.org/docs/ for more information on configuring specific\nremotes.",
+      "default": "{ }",
+      "example": "{\n  b2 = {\n    config = {\n      type = \"b2\";\n      hard_delete = true;\n    };\n    secrets = {\n      # using sops\n      account = config.sops.secrets.b2-acc-id.path;\n      # using agenix\n      key = config.age.secrets.b2-key.path;\n    };\n  };\n\n  server.config = {\n    type = \"sftp\";\n    host = \"server\";\n    user = \"backup\";\n    key_file = \"${home.homeDirectory}/.ssh/id_ed25519\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.rclone.remotes.<name>.config",
+      "description": "Regular configuration options as described in rclone’s documentation https://rclone.org/docs/. When specifying options follow the formatting\nprocess outlined here https://rclone.org/docs/#config-config-file, namley:",
+      "type": "attribute set of (null or boolean or signed integer or floating point number or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": "Remove the leading double-dash (–) from the rclone option nameReplace hyphens (-) with underscores (_)Convert to lowercaseUse the resulting string as your configuration key",
+      "default": "{ }",
+      "example": "{\n  type = \"mega\"; # Required - specifies the remote type\n  user = \"you@example.com\";\n  hard_delete = true;\n}\n"
+    },
+    {
+      "title": "programs.rclone.remotes.<name>.secrets",
+      "description": "Sensitive configuration values such as passwords, API keys, and tokens. These must be provided as file paths to the secrets, which will be read at activation\ntime.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": "Note: If using secret management solutions like agenix or sops-nix with\nhome-manager, you need to ensure their services are activated before switching\nto this home-manager generation. Consider setting\nsystemd.user.startServices to \"sd-switch\" for automatic service\nstartup.",
+      "default": "{ }",
+      "example": "{\n  password = \"/run/secrets/password\";\n  api_key = config.age.secrets.api-key.path;\n}\n"
+    },
+    {
+      "title": "programs.rclone.writeAfter",
+      "description": "Controls when the rclone configuration is written during Home Manager activation. You should not need to change this unless you have very specific activation order\nrequirements.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"reloadSystemd\"",
+      "example": null
+    },
+    {
       "title": "programs.readline.enable",
       "description": "Whether to enable readline.",
       "type": "boolean",
@@ -27048,6 +27216,48 @@
       "example": null
     },
     {
+      "title": "programs.tex-fmt.enable",
+      "description": "Whether to enable tex-fmt.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tex-fmt.nix",
+          "text": "home-manager/modules/programs/tex-fmt.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.tex-fmt.package",
+      "description": "The tex-fmt package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tex-fmt.nix",
+          "text": "home-manager/modules/programs/tex-fmt.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tex-fmt",
+      "example": null
+    },
+    {
+      "title": "programs.tex-fmt.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/tex-fmt/tex-fmt.toml on Linux or\n$HOME/Library/Application Support/tex-fmt/tex-fmt.toml on Darwin.\nSee https://github.com/WGUNDERWOOD/tex-fmt and\nhttps://github.com/WGUNDERWOOD/tex-fmt/blob/master/tex-fmt.toml\nfor more information.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tex-fmt.nix",
+          "text": "home-manager/modules/programs/tex-fmt.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  wrap = true;\n  tabsize = 2;\n  tabchar = \"space\";\n  lists = [];\n}\n\n"
+    },
+    {
       "title": "programs.texlive.enable",
       "description": "Whether to enable TeX Live.",
       "type": "boolean",
@@ -27367,7 +27577,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.thunderbird.profiles.<name>.search.engines",
@@ -27381,7 +27591,7 @@
       ],
       "note": "See SearchEngine.jsm\nin Thunderbird’s source for available options. We maintain a\nmapping to let you specify all options in the referenced link\nwithout underscores, but it may fall out of date with future\noptions.",
       "default": "{ }",
-      "example": "{\n  \"Nix Packages\" = {\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  \"NixOS Wiki\" = {\n    urls = [{ template = \"https://wiki.nixos.org/index.php?search={searchTerms}\"; }];\n    iconUpdateURL = \"https://wiki.nixos.org/favicon.png\";\n    updateInterval = 24 * 60 * 60 * 1000; # every day\n    definedAliases = [ \"@nw\" ];\n  };\n\n  \"Bing\".metaData.hidden = true;\n  \"Google\".metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
+      "example": "{\n  nix-packages = {\n    name = \"Nix Packages\";\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  nixos-wiki = {\n    name = \"NixOS Wiki\";\n    urls = [{ template = \"https://wiki.nixos.org/w/index.php?search={searchTerms}\"; }];\n    iconMapObj.\"16\" = \"https://wiki.nixos.org/favicon.ico\";\n    definedAliases = [ \"@nw\" ];\n  };\n\n  bing.metaData.hidden = true;\n  google.metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.search.force",
@@ -27409,7 +27619,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"DuckDuckGo\"\n  \"Google\"\n]\n"
+      "example": "[\n  \"ddg\"\n  \"google\"\n]\n"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.search.privateDefault",
@@ -27423,7 +27633,7 @@
       ],
       "note": null,
       "default": "null",
-      "example": "\"DuckDuckGo\""
+      "example": "\"ddg\""
     },
     {
       "title": "programs.thunderbird.profiles.<name>.settings",
@@ -29216,6 +29426,48 @@
       "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
       "default": "config.wayland.systemd.target",
       "example": "\"sway-session.target\""
+    },
+    {
+      "title": "programs.waylogout.enable",
+      "description": "Whether or not to enable waylogout.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waylogout.nix",
+          "text": "home-manager/modules/programs/waylogout.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.waylogout.package",
+      "description": "The waylogout package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waylogout.nix",
+          "text": "home-manager/modules/programs/waylogout.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.waylogout",
+      "example": null
+    },
+    {
+      "title": "programs.waylogout.settings",
+      "description": "Default arguments to waylogout. An empty set disables configuration generation.",
+      "type": "attribute set of (boolean or floating point number or signed integer or absolute path or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waylogout.nix",
+          "text": "home-manager/modules/programs/waylogout.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  color = \"808080\";\n  effect-blur = \"7x4\";\n  poweroff-command = \"systemctl poweroff\";\n  reboot-command = \"systemctl reboot\";\n  scaling = \"fit\";\n  screenshots = true;\n}\n"
     },
     {
       "title": "programs.wezterm.enable",
@@ -33682,6 +33934,20 @@
       "note": null,
       "default": "pkgs.easyeffects",
       "example": null
+    },
+    {
+      "title": "services.easyeffects.extraPresets",
+      "description": "List of presets to import to easyeffects. Presets are written to input and output folder in $XDG_CONFIG_HOME/easyeffects.\nTop level block (input/output) determines the folder the file is written to.",
+      "type": "null or (attribute set of EasyEffects input or output JSON preset)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/easyeffects.nix",
+          "text": "home-manager/modules/services/easyeffects.nix"
+        }
+      ],
+      "note": "See community presets at:\nhttps://github.com/wwmm/easyeffects/wiki/Community-Presets",
+      "default": "{ }",
+      "example": "{\n  my-preset = {\n    input = {\n      blocklist = [\n\n      ];\n      \"plugins_order\" = [\n        \"rnnoise#0\"\n      ];\n      \"rnnoise#0\" = {\n        bypass = false;\n        \"enable-vad\" = false;\n        \"input-gain\" = 0.0;\n        \"model-path\" = \"\";\n        \"output-gain\" = 0.0;\n        release = 20.0;\n        \"vad-thres\" = 50.0;\n        wet = 0.0;\n      };\n    };\n  };\n};\n\n"
     },
     {
       "title": "services.easyeffects.preset",
