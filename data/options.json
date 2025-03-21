@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 20 Mar 2025 02:32:59 GMT",
+  "last_update": "Fri, 21 Mar 2025 02:34:45 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18186,6 +18186,48 @@
       "example": "{\n  core = {\n    custom-titlebar = false;\n    color-theme = \"Custom\";\n    icon-theme = \"Material Icons\";\n  };\n  editor = {\n    font-family = \"FiraCode Nerd Bold Font, monospace\";\n    font-size = 22;\n    tab-width = 2;\n    cursor-surrounding-lines = 4;\n    render-whitespace = \"all\";\n    bracket-pair-colorization = true;\n    highlight-matching-brackets = true;\n  };\n  ui = {\n    font-size = 20;\n    open-editors-visible = false;\n  };\n  lapce-nix.lsp-path = \"$\\{pkgs.nil\\}/bin/nil\";\n}\n\n"
     },
     {
+      "title": "programs.lazydocker.enable",
+      "description": "Whether to enable lazydocker, a simple terminal UI for both docker and docker compose.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazydocker.nix",
+          "text": "home-manager/modules/programs/lazydocker.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.lazydocker.package",
+      "description": "The lazydocker package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazydocker.nix",
+          "text": "home-manager/modules/programs/lazydocker.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lazydocker",
+      "example": null
+    },
+    {
+      "title": "programs.lazydocker.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/lazydocker/config.yml\non Linux or on Darwin if xdg.enable is set, otherwise\n~/Library/Application Support/jesseduffield/lazydocker/config.yml.\nSee\nhttps://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md\nfor supported values.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazydocker.nix",
+          "text": "home-manager/modules/programs/lazydocker.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "{\n  gui.theme = {\n    activeBorderColor = [\"red\" \"bold\"];\n    inactiveBorderColor = [\"blue\"];\n  };\n  commandTemplates.dockerCompose = \"docker compose compose -f docker-compose.yml\";\n}\n\n"
+    },
+    {
       "title": "programs.lazygit.enable",
       "description": "Whether to enable lazygit, a simple terminal UI for git commands.",
       "type": "boolean",
@@ -21908,6 +21950,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.onlyoffice.enable",
+      "description": "Whether to enable onlyoffice.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onlyoffice.nix",
+          "text": "home-manager/modules/programs/onlyoffice.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.onlyoffice.package",
+      "description": "The onlyoffice-desktopeditors package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onlyoffice.nix",
+          "text": "home-manager/modules/programs/onlyoffice.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.onlyoffice-desktopeditors",
+      "example": null
+    },
+    {
+      "title": "programs.onlyoffice.settings",
+      "description": "Configuration settings for Onlyoffice.",
+      "type": "attribute set of (boolean or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onlyoffice.nix",
+          "text": "home-manager/modules/programs/onlyoffice.nix"
+        }
+      ],
+      "note": "All configurable options can be deduced by enabling them through the\nGUI and observing the changes in ~/.config/onlyoffice/DesktopEditors.conf.",
+      "default": "{ }",
+      "example": "''\n  UITheme = \"theme-contrast-dark\";\n  editorWindowMode = false;\n  forcedRtl = false;\n  maximized = true;\n  titlebar = \"custom\";\n''\n"
     },
     {
       "title": "programs.opam.enable",
@@ -36051,6 +36135,76 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.librespot.enable",
+      "description": "Whether to enable Librespot (Spotify Connect speaker daemon).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/librespot.nix",
+          "text": "home-manager/modules/services/librespot.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.librespot.package",
+      "description": "The librespot package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/librespot.nix",
+          "text": "home-manager/modules/services/librespot.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.librespot",
+      "example": null
+    },
+    {
+      "title": "services.librespot.settings",
+      "description": "Command-line arguments to pass to librespot.",
+      "type": "attribute set of (null or boolean or string or signed integer or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/librespot.nix",
+          "text": "home-manager/modules/services/librespot.nix"
+        }
+      ],
+      "note": "Boolean values render as a flag if true, and nothing if false.\nNull values are ignored.\nAll other values are rendered as options with an argument.",
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.librespot.settings.cache",
+      "description": "Path to a directory where files will be cached after downloading.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/librespot.nix",
+          "text": "home-manager/modules/services/librespot.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"$XDG_CACHE_HOME/librespot\"",
+      "example": null
+    },
+    {
+      "title": "services.librespot.settings.system-cache",
+      "description": "Path to a directory where system files (credentials, volume) will be cached.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/librespot.nix",
+          "text": "home-manager/modules/services/librespot.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"$XDG_STATE_HOME/librespot\"",
+      "example": null
     },
     {
       "title": "services.lieer.enable",
