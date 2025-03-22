@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 21 Mar 2025 02:34:45 GMT",
+  "last_update": "Sat, 22 Mar 2025 02:24:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10234,6 +10234,48 @@
       "example": null
     },
     {
+      "title": "programs.distrobox.enable",
+      "description": "Whether to enable distrobox.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/distrobox.nix",
+          "text": "home-manager/modules/programs/distrobox.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.distrobox.package",
+      "description": "The distrobox package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/distrobox.nix",
+          "text": "home-manager/modules/programs/distrobox.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.distrobox",
+      "example": null
+    },
+    {
+      "title": "programs.distrobox.containers",
+      "description": "A set of containers and all its respective configurations. Each option cat be either a bool, string or a list of strings. If passed a list, the option will be repeated for each element.\nSee common-debian in the example config. All the available options for the containers can be found\nin the distrobox-assemble documentation at https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a list of them for duplicate keys)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/distrobox.nix",
+          "text": "home-manager/modules/programs/distrobox.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    python-project = {\n      image = \"fedora:40\";\n      additional_packages = \"python3 git\";\n      init_hooks = \"pip3 install numpy pandas torch torchvision\";\n    };\n  \n    common-debian = {\n      image = \"debian:13\";\n      entry = true;\n      additional_packages = \"git\";\n      init_hooks = [\n        \"ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker\"\n        \"ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker-compose\"\n      ];\n    };\n  \n    office = {\n      clone = \"common-debian\";\n      additional_packages = \"libreoffice onlyoffice\";\n      entry = true;\n    };\n  \n    random-things = {\n      clone = \"common-debian\";\n      entry = false;\n    };\n  }\n''\n"
+    },
+    {
       "title": "programs.earthly.enable",
       "description": "Whether to enable earthly.",
       "type": "boolean",
@@ -15636,6 +15678,48 @@
       "note": null,
       "default": "\"plain\"",
       "example": "\"gruvbox-dark\""
+    },
+    {
+      "title": "programs.iamb.enable",
+      "description": "Whether to enable iamb.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/iamb.nix",
+          "text": "home-manager/modules/programs/iamb.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.iamb.package",
+      "description": "The iamb package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/iamb.nix",
+          "text": "home-manager/modules/programs/iamb.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.iamb",
+      "example": null
+    },
+    {
+      "title": "programs.iamb.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/iamb/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/iamb.nix",
+          "text": "home-manager/modules/programs/iamb.nix"
+        }
+      ],
+      "note": "See https://iamb.chat/configure.html for the full list\nof options.",
+      "default": "{ }",
+      "example": "{\n  default_profile = \"personal\";\n  settings = {\n    notifications.enabled = true;\n    image_preview.protocol = {\n      type = \"kitty\";\n      size = {\n        height = 10;\n        width = 66;\n      };\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.imv.enable",
@@ -35532,6 +35616,34 @@
       "example": "{\n  ipc = \"on\";\n  splash = false;\n  splash_offset = 2.0;\n\n  preload =\n    [ \"/share/wallpapers/buttons.png\" \"/share/wallpapers/cat_pacman.png\" ];\n\n  wallpaper = [\n    \"DP-3,/share/wallpapers/buttons.png\"\n    \"DP-1,/share/wallpapers/cat_pacman.png\"\n  ];\n}\n\n"
     },
     {
+      "title": "services.hyprpolkitagent.enable",
+      "description": "Whether to enable Hyprland Policykit Agent.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpolkitagent.nix",
+          "text": "home-manager/modules/services/hyprpolkitagent.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.hyprpolkitagent.package",
+      "description": "The hyprpolkitagent package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprpolkitagent.nix",
+          "text": "home-manager/modules/services/hyprpolkitagent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprpolkitagent",
+      "example": null
+    },
+    {
       "title": "services.imapnotify.enable",
       "description": "Whether to enable imapnotify.",
       "type": "boolean",
@@ -36499,6 +36611,34 @@
       "note": null,
       "default": "pkgs.nix",
       "example": "pkgs.nixVersions.unstable"
+    },
+    {
+      "title": "services.lxqt-policykit-agent.enable",
+      "description": "Whether to enable LXQT Policykit Agent.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/lxqt-policykit-agent.nix",
+          "text": "home-manager/modules/services/lxqt-policykit-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.lxqt-policykit-agent.package",
+      "description": "The lxqt-policykit package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/lxqt-policykit-agent.nix",
+          "text": "home-manager/modules/services/lxqt-policykit-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lxqt.lxqt-policykit",
+      "example": null
     },
     {
       "title": "services.macos-remap-keys.enable",
@@ -39732,6 +39872,34 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.polkit-gnome.enable",
+      "description": "Whether to enable GNOME Policykit Agent.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/polkit-gnome.nix",
+          "text": "home-manager/modules/services/polkit-gnome.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.polkit-gnome.package",
+      "description": "The polkit_gnome package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/polkit-gnome.nix",
+          "text": "home-manager/modules/services/polkit-gnome.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.polkit_gnome",
       "example": null
     },
     {
