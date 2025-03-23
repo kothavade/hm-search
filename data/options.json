@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 22 Mar 2025 02:24:59 GMT",
+  "last_update": "Sun, 23 Mar 2025 02:40:02 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -35684,6 +35684,76 @@
       "note": "Note, this does not apply to the Darwin launchd service.",
       "default": "[ ]",
       "example": null
+    },
+    {
+      "title": "services.jankyborders.enable",
+      "description": "Whether to enable jankyborders.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jankyborders.nix",
+          "text": "home-manager/modules/services/jankyborders.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.jankyborders.package",
+      "description": "The jankyborders package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jankyborders.nix",
+          "text": "home-manager/modules/services/jankyborders.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.jankyborders",
+      "example": null
+    },
+    {
+      "title": "services.jankyborders.errorLogFile",
+      "description": "Absolute path to log all stderr output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jankyborders.nix",
+          "text": "home-manager/modules/services/jankyborders.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/jankyborders/err.log",
+      "example": "\"/Users/khaneliman/Library/Logs/jankyborders.log\""
+    },
+    {
+      "title": "services.jankyborders.outLogFile",
+      "description": "Absolute path to log all stdout output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jankyborders.nix",
+          "text": "home-manager/modules/services/jankyborders.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/jankyborders/out.log",
+      "example": "\"/Users/khaneliman/Library/Logs/jankyborders.log\""
+    },
+    {
+      "title": "services.jankyborders.settings",
+      "description": "Configuration settings to passed to borders in $XDG_CONFIG_HOME/borders/bordersc. See\nhttps://github.com/FelixKratz/JankyBorders\nfor the documentation.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jankyborders.nix",
+          "text": "home-manager/modules/services/jankyborders.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "        {\n          style=round;\n\t        width=6.0;\n\t        hidpi=\"off\";\n\t        active_color=\"0xffe2e2e3\";\n\t        inactive_color=\"0xff414550\";\n        }\n\n"
     },
     {
       "title": "services.kanshi.enable",
