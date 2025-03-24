@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 23 Mar 2025 02:40:02 GMT",
+  "last_update": "Mon, 24 Mar 2025 02:39:41 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11006,7 +11006,7 @@
     {
       "title": "programs.firefox.profiles.<name>.bookmarks",
       "description": "Declarative bookmarks.",
-      "type": "(submodule) or (list of anything) convertible to it",
+      "type": "(submodule) or ((list of ((bookmark submodule) or (directory submodule))) or (attribute set of ((bookmark submodule) or (directory submodule))) convertible to it) convertible to it",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
@@ -11762,7 +11762,7 @@
     {
       "title": "programs.floorp.profiles.<name>.bookmarks",
       "description": "Declarative bookmarks.",
-      "type": "(submodule) or (list of anything) convertible to it",
+      "type": "(submodule) or ((list of ((bookmark submodule) or (directory submodule))) or (attribute set of ((bookmark submodule) or (directory submodule))) convertible to it) convertible to it",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
@@ -23928,7 +23928,7 @@
     {
       "title": "programs.rclone.remotes.<name>.config",
       "description": "Regular configuration options as described in rclone’s documentation https://rclone.org/docs/. When specifying options follow the formatting\nprocess outlined here https://rclone.org/docs/#config-config-file, namley:",
-      "type": "attribute set of (null or boolean or signed integer or floating point number or string)",
+      "type": "An attribute set containing a remote type and options.",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
@@ -29920,7 +29920,7 @@
     {
       "title": "programs.wofi.style",
       "description": "CSS style for wofi to use as a stylesheet. See wofi(7).",
-      "type": "null or string",
+      "type": "null or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wofi.nix",
@@ -33822,6 +33822,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  lat = 52.3;\n  lng = 4.8;\n  usegeoclue = true;\n}\n\n"
+    },
+    {
+      "title": "services.davmail.enable",
+      "description": "Whether to enable DavMail, an MS Exchange gateway…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/davmail.nix",
+          "text": "home-manager/modules/services/davmail.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.davmail.imitateOutlook",
+      "description": "Whether DavMail pretends to be Outlook.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/davmail.nix",
+          "text": "home-manager/modules/services/davmail.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.davmail.settings",
+      "description": "Davmail configuration. Refer to http://davmail.sourceforge.net/serversetup.html\nand http://davmail.sourceforge.net/advanced.html\nfor details on supported values.",
+      "type": "attribute set of (string, package, bool, int or float)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/davmail.nix",
+          "text": "home-manager/modules/services/davmail.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"davmail.allowRemote\" = true;\n  \"davmail.bindAddress\" = \"10.0.1.2\";\n  \"davmail.caldavAutoSchedule\" = false;\n  \"davmail.folderSizeLimit\" = 10;\n  \"davmail.imapPort\" = 55555;\n  \"davmail.smtpSaveInSent\" = true;\n  \"davmail.url\" = \"https://outlook.office365.com/EWS/Exchange.asmx\";\n  \"log4j.logger.rootLogger\" = \"DEBUG\";\n}\n"
     },
     {
       "title": "services.devilspie2.enable",
@@ -40895,6 +40937,76 @@
       "note": null,
       "default": "8080",
       "example": "8081"
+    },
+    {
+      "title": "services.skhd.enable",
+      "description": "Whether to enable skhd.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/skhd.nix",
+          "text": "home-manager/modules/services/skhd.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.skhd.package",
+      "description": "The skhd package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/skhd.nix",
+          "text": "home-manager/modules/services/skhd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.skhd",
+      "example": null
+    },
+    {
+      "title": "services.skhd.config",
+      "description": "Contents of skhd’s configuration file. If empty (the default), the configuration file won’t be managed.",
+      "type": "null or absolute path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/skhd.nix",
+          "text": "home-manager/modules/services/skhd.nix"
+        }
+      ],
+      "note": "See documentation\nand example.",
+      "default": "null",
+      "example": "''\n  # open terminal, blazingly fast compared to iTerm/Hyper\n  cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~\n  \n  # open qutebrowser\n  cmd + shift - return : ~/Scripts/qtb.sh\n  \n  # open mpv\n  cmd - m : open -na /Applications/mpv.app $(pbpaste)\n''\n"
+    },
+    {
+      "title": "services.skhd.errorLogFile",
+      "description": "Absolute path to log all stderr output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/skhd.nix",
+          "text": "home-manager/modules/services/skhd.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/skhd/err.log",
+      "example": "\"/Users/khaneliman/Library/Logs/skhd.log\""
+    },
+    {
+      "title": "services.skhd.outLogFile",
+      "description": "Absolute path to log all stdout output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/skhd.nix",
+          "text": "home-manager/modules/services/skhd.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/skhd/out.log",
+      "example": "\"/Users/khaneliman/Library/Logs/skhd.log\""
     },
     {
       "title": "services.snixembed.enable",
