@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 24 Mar 2025 02:39:41 GMT",
+  "last_update": "Tue, 25 Mar 2025 02:36:01 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13120,6 +13120,20 @@
     {
       "title": "programs.git.difftastic.enable",
       "description": "Enable the difftastic syntax highlighter. See https://github.com/Wilfred/difftastic.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git.difftastic.enableAsDifftool",
+      "description": "Enable the difftastic syntax highlighter as a git difftool. See https://github.com/Wilfred/difftastic.",
       "type": "boolean",
       "declared_by": [
         {
@@ -30563,7 +30577,7 @@
     },
     {
       "title": "programs.zellij.enable",
-      "description": "Whether to enable zellij.",
+      "description": "Whether to enable Zellij.",
       "type": "boolean",
       "declared_by": [
         {
@@ -30587,7 +30601,7 @@
       ],
       "note": null,
       "default": "home.shell.enableBashIntegration",
-      "example": "false"
+      "example": "true"
     },
     {
       "title": "programs.zellij.enableFishIntegration",
@@ -30601,7 +30615,7 @@
       ],
       "note": null,
       "default": "home.shell.enableFishIntegration",
-      "example": "false"
+      "example": "true"
     },
     {
       "title": "programs.zellij.enableZshIntegration",
@@ -30615,11 +30629,11 @@
       ],
       "note": null,
       "default": "home.shell.enableZshIntegration",
-      "example": "false"
+      "example": "true"
     },
     {
       "title": "programs.zellij.package",
-      "description": "The zellij package to install.",
+      "description": "The zellij package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -30629,6 +30643,34 @@
       ],
       "note": null,
       "default": "pkgs.zellij",
+      "example": null
+    },
+    {
+      "title": "programs.zellij.attachExistingSession",
+      "description": "Whether to attach to the default session after being autostarted if a Zellij session already exists.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
+          "text": "home-manager/modules/programs/zellij.nix"
+        }
+      ],
+      "note": "Variable is checked in auto-start script. Requires shell integration to be enabled to have effect.",
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.zellij.exitShellOnExit",
+      "description": "Whether to exit the shell when Zellij exits after being autostarted.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
+          "text": "home-manager/modules/programs/zellij.nix"
+        }
+      ],
+      "note": "Variable is checked in auto-start script. Requires shell integration to be enabled to have effect.",
+      "default": "false",
       "example": null
     },
     {
