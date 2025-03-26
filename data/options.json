@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 25 Mar 2025 02:36:01 GMT",
+  "last_update": "Wed, 26 Mar 2025 02:35:01 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10019,7 +10019,7 @@
           "text": "home-manager/modules/programs/direnv.nix"
         }
       ],
-      "note": "Note, enabling the direnv module will always active its functionality\nfor Fish since the direnv package automatically gets loaded in Fish.\nIf this is not the case try adding",
+      "note": "Note, enabling the direnv module will always activate its functionality\nfor Fish since the direnv package automatically gets loaded in Fish.\nIf this is not the case try adding",
       "default": "home.shell.enableFishIntegration",
       "example": "false"
     },
@@ -10263,7 +10263,7 @@
     },
     {
       "title": "programs.distrobox.containers",
-      "description": "A set of containers and all its respective configurations. Each option cat be either a bool, string or a list of strings. If passed a list, the option will be repeated for each element.\nSee common-debian in the example config. All the available options for the containers can be found\nin the distrobox-assemble documentation at https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md.",
+      "description": "A set of containers and all its respective configurations. Each option can be either a bool, string or a list of strings. If passed a list, the option will be repeated for each element.\nSee common-debian in the example config. All the available options for the containers can be found\nin the distrobox-assemble documentation at https://github.com/89luca89/distrobox/blob/main/docs/usage/distrobox-assemble.md.",
       "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a list of them for duplicate keys)",
       "declared_by": [
         {
@@ -14770,6 +14770,20 @@
       "example": null
     },
     {
+      "title": "programs.helix.extraConfig",
+      "description": "Extra lines to be appended to the config file. Use this if you would like to maintain order for helix settings (eg. for minor modes)",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/helix.nix",
+          "text": "home-manager/modules/programs/helix.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "[keys.normal.g] # Reverse Alphabetical Order\nG = \"goto_file_end\"\ng = \"goto_file_start\"\n\n"
+    },
+    {
       "title": "programs.helix.extraPackages",
       "description": "Extra packages available to hx.",
       "type": "list of package",
@@ -19261,6 +19275,34 @@
       ],
       "note": null,
       "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.mergiraf.enable",
+      "description": "Whether to enable mergiraf.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mergiraf.nix",
+          "text": "home-manager/modules/programs/mergiraf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mergiraf.package",
+      "description": "The mergiraf package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mergiraf.nix",
+          "text": "home-manager/modules/programs/mergiraf.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mergiraf",
       "example": null
     },
     {
@@ -24134,6 +24176,188 @@
       "note": "See https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file\nfor an example configuration.",
       "default": "[ ]",
       "example": "[\n  \"--max-columns-preview\"\n  \"--colors=line:style:bold\"\n]\n"
+    },
+    {
+      "title": "programs.ripgrep-all.enable",
+      "description": "Whether to enable ripgrep-all (rga).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.ripgrep-all.package",
+      "description": "The ripgrep-all package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ripgrep-all",
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters",
+      "description": "Custom adapters that invoke external preprocessing scripts. See <link xlink:href=“https://github.com/phiresky/ripgrep-all/wiki#custom-adapters”/>.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.args",
+      "description": "The output path hint; the placeholders are the same as for rga’s args",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.binary",
+      "description": "The path of the binary to run",
+      "type": "absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.description",
+      "description": "A description of this adapter; shown in rga’s help",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.disabled_by_default",
+      "description": "If true, the adapter will be disabled by default",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.extensions",
+      "description": "The file extensions this adapter supports",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "[\n  \"pdf\"\n]\n"
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.match_only_by_mime",
+      "description": "if --rga-accurate, only match by mime types, ignore extensions completely",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.mimetypes",
+      "description": "If not null and --rga-accurate is enabled, mime type matching is used instead of file name matching",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"application/pdf\"\n]\n"
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.name",
+      "description": "The unique identifier and name of this adapter; must only include a-z, 0-9, _",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.output_path_hint",
+      "description": "Setting this is useful if the output format is not plain text (.txt) but instead some other format that should be passed to another adapter",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"$\\${input_virtual_path}.txt.asciipagebreaks\""
+    },
+    {
+      "title": "programs.ripgrep-all.custom_adapters.*.version",
+      "description": "The version identifier used to key cache entries; change if the configuration or program changes",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ripgrep-all.nix",
+          "text": "home-manager/modules/programs/ripgrep-all.nix"
+        }
+      ],
+      "note": null,
+      "default": "1",
+      "example": null
     },
     {
       "title": "programs.rofi.enable",
@@ -33880,6 +34104,20 @@
       "example": "true"
     },
     {
+      "title": "services.davmail.package",
+      "description": "The davmail package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/davmail.nix",
+          "text": "home-manager/modules/services/davmail.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.davmail",
+      "example": null
+    },
+    {
       "title": "services.davmail.imitateOutlook",
       "description": "Whether DavMail pretends to be Outlook.",
       "type": "boolean",
@@ -39484,7 +39722,7 @@
     },
     {
       "title": "services.podman.images.<name>.decryptionKeyFile",
-      "description": "Path to key used for decrpytion of images.",
+      "description": "Path to key used for decryption of images.",
       "type": "null or absolute path",
       "declared_by": [
         {
