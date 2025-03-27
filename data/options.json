@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 26 Mar 2025 02:35:01 GMT",
+  "last_update": "Thu, 27 Mar 2025 02:35:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -38081,6 +38081,174 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.mpdscribble.enable",
+      "description": "Whether to enable mpdscribble, an MPD client which submits info about tracks being played to Last.fm (formerly AudioScrobbler)\n.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.mpdscribble.package",
+      "description": "The mpdscribble package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mpdscribble",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.endpoints",
+      "description": "Endpoints to scrobble to. If the endpoint is one of “jamendo”, “last.fm”, “libre.fm”, “listenbrainz” the url is set automatically.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"last.fm\" = {\n    passwordFile = \"/run/secrets/lastfm_password\";\n    username = \"foo\";\n  };\n}\n"
+    },
+    {
+      "title": "services.mpdscribble.endpoints.<name>.passwordFile",
+      "description": "File containing the password, either as MD5SUM or cleartext.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.endpoints.<name>.url",
+      "description": "The url endpoint where the scrobble API is listening.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.endpoints.<name>.username",
+      "description": "Username for the scrobble service.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.host",
+      "description": "Host for the mpdscribble daemon to search for a mpd daemon on.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.journalInterval",
+      "description": "How often should mpdscribble save the journal file? [seconds]",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "600",
+      "example": "60"
+    },
+    {
+      "title": "services.mpdscribble.passwordFile",
+      "description": "File containing the password for the mpd daemon.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.port",
+      "description": "Port for the mpdscribble daemon to search for a mpd daemon on.",
+      "type": "16 bit unsigned integer; between 0 and 65535 (both inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.services.mpd.network.port",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.proxy",
+      "description": "HTTP proxy URL.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.mpdscribble.verbose",
+      "description": "Log level for the mpdscribble daemon.",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpdscribble.nix",
+          "text": "home-manager/modules/services/mpdscribble.nix"
+        }
+      ],
+      "note": null,
+      "default": "1",
+      "example": null
     },
     {
       "title": "services.mpris-proxy.enable",
