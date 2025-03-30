@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 29 Mar 2025 02:33:20 GMT",
+  "last_update": "Sun, 30 Mar 2025 02:42:53 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7057,7 +7057,7 @@
     },
     {
       "title": "programs.alacritty.package",
-      "description": "The Alacritty package to install.",
+      "description": "The alacritty package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -10347,7 +10347,7 @@
     },
     {
       "title": "programs.eclipse.package",
-      "description": "The Eclipse package to install.",
+      "description": "The eclipse package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -10515,7 +10515,7 @@
     },
     {
       "title": "programs.eww.package",
-      "description": "The eww package to install.",
+      "description": "The eww package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -10525,7 +10525,7 @@
       ],
       "note": null,
       "default": "pkgs.eww",
-      "example": "pkgs.eww"
+      "example": null
     },
     {
       "title": "programs.eww.configDir",
@@ -11453,7 +11453,7 @@
     },
     {
       "title": "programs.fish.package",
-      "description": "The fish package to install. May be used to change the version.",
+      "description": "The fish package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -12209,7 +12209,7 @@
     },
     {
       "title": "programs.foot.package",
-      "description": "The foot package to install",
+      "description": "The foot package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -12909,7 +12909,7 @@
     },
     {
       "title": "programs.git.package",
-      "description": "Git package to install. Use pkgs.gitAndTools.gitFull to gain access to git send-email for instance.",
+      "description": "The git package to use. Use pkgs.gitFull to gain access to git send-email for instance.",
       "type": "package",
       "declared_by": [
         {
@@ -12919,7 +12919,7 @@
       ],
       "note": null,
       "default": "pkgs.git",
-      "example": null
+      "example": "pkgs.gitFull"
     },
     {
       "title": "programs.git.aliases",
@@ -15821,7 +15821,7 @@
     },
     {
       "title": "programs.ion.package",
-      "description": "The ion package to install. May be used to change the version.",
+      "description": "The ion package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -16101,7 +16101,7 @@
     },
     {
       "title": "programs.java.package",
-      "description": "Java package to install. Typical values are pkgs.jdk or pkgs.jre.",
+      "description": "The java package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -16110,8 +16110,8 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.jdk\"",
-      "example": null
+      "default": "pkgs.jdk",
+      "example": "pkgs.jre"
     },
     {
       "title": "programs.jetbrains-remote.enable",
@@ -17459,7 +17459,7 @@
     },
     {
       "title": "programs.keychain.package",
-      "description": "Keychain package to install.",
+      "description": "The keychain package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -17781,7 +17781,7 @@
     },
     {
       "title": "programs.kitty.package",
-      "description": "Kitty package to install.",
+      "description": "The kitty package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -18887,7 +18887,7 @@
     },
     {
       "title": "programs.mangohud.package",
-      "description": "The Mangohud package to install.",
+      "description": "The mangohud package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19181,7 +19181,7 @@
     },
     {
       "title": "programs.mercurial.package",
-      "description": "Mercurial package to install.",
+      "description": "The mercurial package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19517,7 +19517,7 @@
     },
     {
       "title": "programs.mods.package",
-      "description": "The mods package to install",
+      "description": "The mods package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -21827,7 +21827,7 @@
     },
     {
       "title": "programs.obs-studio.package",
-      "description": "OBS Studio package to install.",
+      "description": "The obs-studio package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -22191,7 +22191,7 @@
     },
     {
       "title": "programs.opam.package",
-      "description": "Opam package to install.",
+      "description": "The opam package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -23101,7 +23101,7 @@
     },
     {
       "title": "programs.pqiv.package",
-      "description": "The pqiv package to install.",
+      "description": "The pqiv package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -23395,7 +23395,7 @@
     },
     {
       "title": "programs.qutebrowser.package",
-      "description": "Qutebrowser package to install.",
+      "description": "The qutebrowser package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -25242,6 +25242,118 @@
       "example": "[\n  \"gopass\"\n  \"show\"\n  \"irc/guest\"\n]\n"
     },
     {
+      "title": "programs.sesh.enable",
+      "description": "Whether to enable the sesh terminal session manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sesh.enableAlias",
+      "description": "Whether to enable a shell alias s to quickly launch sessions.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.enableTmuxIntegration",
+      "description": "Enable Tmux integration with sesh.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.package",
+      "description": "The sesh package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sesh",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.fzfPackage",
+      "description": "The fzf package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.fzf",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.settings",
+      "description": "Configuration for sesh, written to ~/.config/sesh/sesh.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": "See the sesh documentation for available options.",
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.tmuxKey",
+      "description": "Keybinding for invoking sesh in Tmux.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"s\"",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.zoxidePackage",
+      "description": "The zoxide package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.zoxide",
+      "example": null
+    },
+    {
       "title": "programs.sftpman.enable",
       "description": "Whether to enable sftpman, an application that handles sshfs/sftp file systems mounting.",
       "type": "boolean",
@@ -26685,7 +26797,7 @@
     },
     {
       "title": "programs.swayimg.package",
-      "description": "The swayimg package to install",
+      "description": "The swayimg package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -27021,7 +27133,7 @@
     },
     {
       "title": "programs.terminator.package",
-      "description": "terminator package to install.",
+      "description": "The terminator package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -27030,8 +27142,8 @@
         }
       ],
       "note": null,
-      "default": "<derivation terminator-2.1.4>",
-      "example": "pkgs.terminator"
+      "default": "pkgs.terminator",
+      "example": null
     },
     {
       "title": "programs.terminator.config",
@@ -28183,7 +28295,7 @@
     },
     {
       "title": "programs.tint2.package",
-      "description": "Tint2 package to install.",
+      "description": "The tint2 package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -28225,7 +28337,7 @@
     },
     {
       "title": "programs.tiny.package",
-      "description": "The tiny package to install.",
+      "description": "The tiny package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -28267,7 +28379,7 @@
     },
     {
       "title": "programs.tmate.package",
-      "description": "The tmate package to install.",
+      "description": "The tmate package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -28277,7 +28389,7 @@
       ],
       "note": null,
       "default": "pkgs.tmate",
-      "example": "pkgs.tmate"
+      "example": null
     },
     {
       "title": "programs.tmate.dsaFingerprint",
@@ -28365,7 +28477,7 @@
     },
     {
       "title": "programs.tmux.package",
-      "description": "The tmux package to install",
+      "description": "The tmux package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -28375,7 +28487,7 @@
       ],
       "note": null,
       "default": "pkgs.tmux",
-      "example": "pkgs.tmux"
+      "example": null
     },
     {
       "title": "programs.tmux.aggressiveResize",
@@ -28869,7 +28981,7 @@
     },
     {
       "title": "programs.urxvt.package",
-      "description": "rxvt-unicode package to install.",
+      "description": "The rxvt-unicode package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -29919,7 +30031,7 @@
     },
     {
       "title": "programs.wezterm.package",
-      "description": "The Wezterm package to install.",
+      "description": "The wezterm package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -31025,7 +31137,7 @@
     },
     {
       "title": "programs.zoxide.package",
-      "description": "Zoxide package to install.",
+      "description": "The zoxide package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -32660,6 +32772,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  gco = \"git checkout\";\n  l = \"less\";\n}\n"
+    },
+    {
+      "title": "programs.zsh.zsh-abbr.globalAbbreviations",
+      "description": "Similar to programs.zsh.zsh-abbr.abbreviations, but are expanded anywhere on a line.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/zsh-abbr.nix",
+          "text": "home-manager/modules/programs/zsh/zsh-abbr.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  G = \"| grep\";\n  L = \"| less -R\";\n}\n"
     },
     {
       "title": "qt.enable",
@@ -36978,7 +37104,7 @@
     },
     {
       "title": "services.lorri.package",
-      "description": "Which lorri package to install.",
+      "description": "The lorri package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -40478,7 +40604,7 @@
     },
     {
       "title": "services.polybar.package",
-      "description": "Polybar package to install.",
+      "description": "The polybar package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41654,7 +41780,7 @@
     },
     {
       "title": "services.swayidle.package",
-      "description": "Swayidle package to install.",
+      "description": "The swayidle package to use.",
       "type": "package",
       "declared_by": [
         {
