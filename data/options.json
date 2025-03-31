@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 30 Mar 2025 02:42:53 GMT",
+  "last_update": "Mon, 31 Mar 2025 02:42:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -14686,6 +14686,20 @@
       "example": "false"
     },
     {
+      "title": "programs.granted.package",
+      "description": "The granted package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/granted.nix",
+          "text": "home-manager/modules/programs/granted.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.granted",
+      "example": null
+    },
+    {
       "title": "programs.havoc.enable",
       "description": "Whether to enable Havoc terminal.",
       "type": "boolean",
@@ -20872,6 +20886,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.newsboat.package",
+      "description": "The newsboat package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/newsboat.nix",
+          "text": "home-manager/modules/programs/newsboat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.newsboat",
+      "example": null
     },
     {
       "title": "programs.newsboat.autoReload",
@@ -47699,6 +47727,20 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  \"${pkgs.evolution}/share/applications/org.gnome.Evolution.desktop\"\n]\n\n"
+    },
+    {
+      "title": "xdg.autostart.readOnly",
+      "description": "Make XDG_CONFIG_HOME/autostart a symlink to a readonly directory so that programs cannot install arbitrary autostart services.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-autostart.nix",
+          "text": "home-manager/modules/misc/xdg-autostart.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "xdg.cacheFile",
