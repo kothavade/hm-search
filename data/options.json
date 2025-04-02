@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 01 Apr 2025 02:49:03 GMT",
+  "last_update": "Wed, 02 Apr 2025 02:37:57 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7084,6 +7084,20 @@
       "example": "{\n  window.dimensions = {\n    lines = 3;\n    columns = 200;\n  };\n  keyboard.bindings = [\n    {\n      key = \"K\";\n      mods = \"Control\";\n      chars = \"\\\\u000c\";\n    }\n  ];\n}\n\n"
     },
     {
+      "title": "programs.alacritty.theme",
+      "description": "A theme from the alacritty-theme\nrepository to import in the configuration.\nSee https://github.com/alacritty/alacritty-theme/tree/master/themes\nfor a list of available themes.\nIf you would like to import your own theme, use\nprograms.alacritty.settings.general.import or\nprograms.alacritty.settings.colors directly.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alacritty.nix",
+          "text": "home-manager/modules/programs/alacritty.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"solarized_dark\""
+    },
+    {
       "title": "programs.alot.enable",
       "description": "Whether to enable the Alot mail user agent. Alot uses the Notmuch email system and will therefore be automatically\nenabled for each email account that is managed by Notmuch.",
       "type": "boolean",
@@ -9214,7 +9228,7 @@
     {
       "title": "programs.broot.settings",
       "description": "Verbatim config entries",
-      "type": "TOML value",
+      "type": "JSON value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/broot.nix",
@@ -26810,6 +26824,90 @@
       "example": "{\n  add_newline = false;\n  format = lib.concatStrings [\n    \"$line_break\"\n    \"$package\"\n    \"$line_break\"\n    \"$character\"\n  ];\n  scan_timeout = 10;\n  character = {\n    success_symbol = \"➜\";\n    error_symbol = \"➜\";\n  };\n}\n\n"
     },
     {
+      "title": "programs.streamlink.enable",
+      "description": "Whether to enable streamlink.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.streamlink.package",
+      "description": "The streamlink package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.streamlink",
+      "example": null
+    },
+    {
+      "title": "programs.streamlink.plugins",
+      "description": "Streamlink plugins.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": "If a source is set, the custom plugin will be linked to the data directory.",
+      "default": "{ }",
+      "example": "{\n  custom_plugin = {\n    src = ./custom_plugin.py;\n    settings = {\n      quiet = true;\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.streamlink.plugins.<name>.settings",
+      "description": "Configuration for the specific plugin, written to $XDG_CONFIG_HOME/streamlink/config.<name> (linux) or\nLibrary/Application Support/streamlink/config.<name> (darwin).",
+      "type": "attribute set of (boolean or signed integer or floating point number or string or list of (signed integer or floating point number or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  quiet = true;\n}\n\n"
+    },
+    {
+      "title": "programs.streamlink.plugins.<name>.src",
+      "description": "Source of the custom plugin. The value should be a path to the plugin file, or the text of the plugin code. Will be linked to\n$XDG_DATA_HOME/streamlink/plugins/<name>.py (linux) or\nLibrary/Application Support/streamlink/plugins/<name>.py (darwin).",
+      "type": "null or absolute path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "./custom_plugin.py"
+    },
+    {
+      "title": "programs.streamlink.settings",
+      "description": "Global configuration options for streamlink. It will be written to $XDG_CONFIG_HOME/streamlink/config (linux) or\nLibrary/Application Support/streamlink/config (darwin).",
+      "type": "attribute set of (boolean or signed integer or floating point number or string or list of (signed integer or floating point number or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/streamlink.nix",
+          "text": "home-manager/modules/programs/streamlink.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  player = \"${pkgs.mpv}/bin/mpv\";\n  player-args = \"--cache 2048\";\n  player-no-close = true;\n}\n\n"
+    },
+    {
       "title": "programs.swayimg.enable",
       "description": "Whether to enable swayimg.",
       "type": "boolean",
@@ -35880,6 +35978,76 @@
       "note": null,
       "default": "\"F10\"",
       "example": null
+    },
+    {
+      "title": "services.home-manager.autoExpire.enable",
+      "description": "Whether to enable the Home Manager expire service that periodically expire your old Home Manager generations.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/home-manager-auto-expire.nix",
+          "text": "home-manager/modules/services/home-manager-auto-expire.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.home-manager.autoExpire.frequency",
+      "description": "The interval at which the Home Manager auto expire is run.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/home-manager-auto-expire.nix",
+          "text": "home-manager/modules/services/home-manager-auto-expire.nix"
+        }
+      ],
+      "note": "This value is passed to the systemd timer configuration\nas the OnCalendar option.",
+      "default": "\"monthly\"",
+      "example": "\"weekly\""
+    },
+    {
+      "title": "services.home-manager.autoExpire.store.cleanup",
+      "description": "Whether to enable to cleanup Nix store when the Home Manager expire service runs.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/home-manager-auto-expire.nix",
+          "text": "home-manager/modules/services/home-manager-auto-expire.nix"
+        }
+      ],
+      "note": "It will use nix-collect-garbage to cleanup the store,\nremoving all unreachable store objects from the current user\n(i.e.: not only the expired Home Manager generations).",
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.home-manager.autoExpire.store.options",
+      "description": "Options given to nix-collection-garbage when the service runs.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/home-manager-auto-expire.nix",
+          "text": "home-manager/modules/services/home-manager-auto-expire.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "\"--delete-older-than 30d\""
+    },
+    {
+      "title": "services.home-manager.autoExpire.timestamp",
+      "description": "Remove generations older than TIMESTAMP where TIMESTAMP is interpreted as in the -d argument of the date tool.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/home-manager-auto-expire.nix",
+          "text": "home-manager/modules/services/home-manager-auto-expire.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"-30 days\"",
+      "example": "\"-7 days\""
     },
     {
       "title": "services.home-manager.autoUpgrade.enable",
