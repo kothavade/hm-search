@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 02 Apr 2025 02:37:57 GMT",
+  "last_update": "Thu, 03 Apr 2025 02:36:34 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16377,7 +16377,7 @@
       ],
       "note": "See the Colors section\nof the jq manual.",
       "default": "",
-      "example": "{\n  null    = \"1;30\";\n  false   = \"0;31\";\n  true    = \"0;32\";\n  numbers = \"0;36\";\n  strings = \"0;33\";\n  arrays  = \"1;35\";\n  objects = \"1;37\";\n}\n\n"
+      "example": "{\n  null       = \"1;30\";\n  false      = \"0;31\";\n  true       = \"0;32\";\n  numbers    = \"0;36\";\n  strings    = \"0;33\";\n  arrays     = \"1;35\";\n  objects    = \"1;37\";\n  objectKeys = \"1;34\";\n}\n\n"
     },
     {
       "title": "programs.jqp.enable",
@@ -22622,6 +22622,20 @@
       "note": null,
       "default": "pkgs.pay-respects",
       "example": null
+    },
+    {
+      "title": "programs.pay-respects.options",
+      "description": "List of options to pass to pay-respects <shell>.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pay-respects.nix",
+          "text": "home-manager/modules/programs/pay-respects.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"--alias\"\n  \"f\"\n]\n"
     },
     {
       "title": "programs.pazi.enable",
