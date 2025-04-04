@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 03 Apr 2025 02:36:34 GMT",
+  "last_update": "Fri, 04 Apr 2025 02:36:10 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -6552,6 +6552,20 @@
       "example": "true"
     },
     {
+      "title": "programs.abook.package",
+      "description": "The abook package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/abook.nix",
+          "text": "home-manager/modules/programs/abook.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.abook",
+      "example": null
+    },
+    {
       "title": "programs.abook.extraConfig",
       "description": "Extra lines added to $HOME/.config/abook/abookrc. Available configuration options are described in the abook repository:\nhttps://sourceforge.net/p/abook/git/ci/master/tree/sample.abookrc.",
       "type": "strings concatenated with “\\n”",
@@ -7028,6 +7042,20 @@
       "example": "true"
     },
     {
+      "title": "programs.afew.package",
+      "description": "The afew package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/afew.nix",
+          "text": "home-manager/modules/programs/afew.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.afew",
+      "example": null
+    },
+    {
       "title": "programs.afew.extraConfig",
       "description": "Extra lines added to afew configuration file. Available configuration options are described in the afew manual:\nhttps://afew.readthedocs.io/en/latest/configuration.html.",
       "type": "strings concatenated with “\\n”",
@@ -7058,7 +7086,7 @@
     {
       "title": "programs.alacritty.package",
       "description": "The alacritty package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alacritty.nix",
@@ -7350,6 +7378,20 @@
       "example": "true"
     },
     {
+      "title": "programs.aria2.package",
+      "description": "The aria2 package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aria2.nix",
+          "text": "home-manager/modules/programs/aria2.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.aria2",
+      "example": null
+    },
+    {
       "title": "programs.aria2.extraConfig",
       "description": "Extra lines added to aria2.conf file.",
       "type": "strings concatenated with “\\n”",
@@ -7390,6 +7432,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.astroid.package",
+      "description": "The astroid package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
+          "text": "home-manager/modules/programs/astroid.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.astroid",
+      "example": null
     },
     {
       "title": "programs.astroid.externalEditor",
@@ -7505,7 +7561,7 @@
     },
     {
       "title": "programs.atuin.package",
-      "description": "The package to use for atuin.",
+      "description": "The atuin package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -7630,6 +7686,20 @@
       "example": "false"
     },
     {
+      "title": "programs.autojump.package",
+      "description": "The autojump package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autojump.nix",
+          "text": "home-manager/modules/programs/autojump.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.autojump",
+      "example": null
+    },
+    {
       "title": "programs.autorandr.enable",
       "description": "Whether to enable Autorandr.",
       "type": "boolean",
@@ -7642,6 +7712,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.autorandr.package",
+      "description": "The autorandr package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/autorandr.nix",
+          "text": "home-manager/modules/programs/autorandr.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.autorandr",
+      "example": null
     },
     {
       "title": "programs.autorandr.hooks",
@@ -8037,8 +8121,8 @@
     },
     {
       "title": "programs.awscli.package",
-      "description": "Package providing aws.",
-      "type": "package",
+      "description": "The aws package to use.",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/awscli.nix",
@@ -8356,6 +8440,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.bashmount.package",
+      "description": "The bashmount package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bashmount.nix",
+          "text": "home-manager/modules/programs/bashmount.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bashmount",
+      "example": null
     },
     {
       "title": "programs.bashmount.extraConfig",
@@ -8961,8 +9059,8 @@
     },
     {
       "title": "programs.bottom.package",
-      "description": "Package providing bottom.",
-      "type": "package",
+      "description": "The bottom package to use.",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bottom.nix",
@@ -9213,7 +9311,7 @@
     },
     {
       "title": "programs.broot.package",
-      "description": "Package providing broot",
+      "description": "The broot package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -9758,6 +9856,20 @@
       "example": "true"
     },
     {
+      "title": "programs.cmus.package",
+      "description": "The cmus package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/cmus.nix",
+          "text": "home-manager/modules/programs/cmus.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.cmus",
+      "example": null
+    },
+    {
       "title": "programs.cmus.extraConfig",
       "description": "Extra configuration to add to cmus rc.",
       "type": "strings concatenated with “\\n”",
@@ -9966,6 +10078,20 @@
       "note": null,
       "default": "home.shell.enableZshIntegration",
       "example": "false"
+    },
+    {
+      "title": "programs.dircolors.package",
+      "description": "The dircolors package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/dircolors.nix",
+          "text": "home-manager/modules/programs/dircolors.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.coreutils",
+      "example": null
     },
     {
       "title": "programs.dircolors.extraConfig",
@@ -10417,7 +10543,7 @@
     },
     {
       "title": "programs.emacs.package",
-      "description": "The Emacs package to use.",
+      "description": "The emacs package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -12405,7 +12531,7 @@
     },
     {
       "title": "programs.fzf.package",
-      "description": "Package providing the fzf tool.",
+      "description": "The fzf package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -12615,7 +12741,7 @@
     },
     {
       "title": "programs.gh.package",
-      "description": "Package providing gh.",
+      "description": "The gh package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -13693,7 +13819,7 @@
     },
     {
       "title": "programs.gitui.package",
-      "description": "The package to use.",
+      "description": "The gitui package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -13702,7 +13828,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.gitui\"",
+      "default": "pkgs.gitui",
       "example": null
     },
     {
@@ -14281,7 +14407,7 @@
     },
     {
       "title": "programs.go.package",
-      "description": "The Go package to use.",
+      "description": "The go package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -14421,7 +14547,7 @@
     },
     {
       "title": "programs.gpg.package",
-      "description": "The Gnupg package to use (also used by the gpg-agent service).",
+      "description": "The gnupg package to use. Also used by the gpg-agent service.",
       "type": "package",
       "declared_by": [
         {
@@ -14771,7 +14897,7 @@
     },
     {
       "title": "programs.helix.package",
-      "description": "The package to use for helix.",
+      "description": "The helix package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -14894,6 +15020,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.hexchat.package",
+      "description": "The hexchat package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hexchat.nix",
+          "text": "home-manager/modules/programs/hexchat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hexchat",
+      "example": null
     },
     {
       "title": "programs.hexchat.channels",
@@ -15331,7 +15471,7 @@
     },
     {
       "title": "programs.htop.package",
-      "description": "Package containing the htop program.",
+      "description": "The htop package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -15499,7 +15639,7 @@
     },
     {
       "title": "programs.i3blocks.package",
-      "description": "Package providing i3blocks.",
+      "description": "The i3blocks package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -15653,7 +15793,7 @@
     },
     {
       "title": "programs.i3status-rust.package",
-      "description": "Package providing i3status-rust",
+      "description": "The i3status-rust package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -16269,7 +16409,7 @@
     },
     {
       "title": "programs.joshuto.package",
-      "description": "The package to use for joshuto.",
+      "description": "The joshuto package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -16353,7 +16493,7 @@
     },
     {
       "title": "programs.jq.package",
-      "description": "jq package to use.",
+      "description": "The jq package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -17766,6 +17906,20 @@
       "example": "true"
     },
     {
+      "title": "programs.khard.package",
+      "description": "The khard package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khard.nix",
+          "text": "home-manager/modules/programs/khard.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.khard",
+      "example": null
+    },
+    {
       "title": "programs.khard.settings",
       "description": "Khard settings. See https://khard.readthedocs.io/en/latest/#configuration\nfor more information.",
       "type": "attribute set of attribute set of (boolean or string or list of string)",
@@ -18480,6 +18634,20 @@
       "example": "true"
     },
     {
+      "title": "programs.less.package",
+      "description": "The less package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/less.nix",
+          "text": "home-manager/modules/programs/less.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.less",
+      "example": null
+    },
+    {
       "title": "programs.less.keys",
       "description": "Extra configuration for less written to $XDG_CONFIG_HOME/lesskey.",
       "type": "strings concatenated with “\\n”",
@@ -18537,7 +18705,7 @@
     },
     {
       "title": "programs.lf.package",
-      "description": "lf package to use.",
+      "description": "The lf package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -18719,7 +18887,7 @@
     },
     {
       "title": "programs.lieer.package",
-      "description": "lieer package to use.",
+      "description": "The lieer package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -18728,7 +18896,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.lieer\"",
+      "default": "pkgs.lieer",
       "example": null
     },
     {
@@ -19013,7 +19181,7 @@
     },
     {
       "title": "programs.mbsync.package",
-      "description": "The package to use for the mbsync binary.",
+      "description": "The isync package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19023,7 +19191,7 @@
       ],
       "note": null,
       "default": "pkgs.isync",
-      "example": "pkgs.isync"
+      "example": null
     },
     {
       "title": "programs.mbsync.extraConfig",
@@ -19124,6 +19292,20 @@
       "example": "false"
     },
     {
+      "title": "programs.mcfly.package",
+      "description": "The mcfly package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mcfly.nix",
+          "text": "home-manager/modules/programs/mcfly.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mcfly",
+      "example": null
+    },
+    {
       "title": "programs.mcfly.fuzzySearchFactor",
       "description": "Whether to enable fuzzy searching. 0 is off; higher numbers weight toward shorter matches.\nValues in the 2-5 range get good results so far.",
       "type": "unsigned integer, meaning >=0",
@@ -19177,6 +19359,20 @@
       ],
       "note": null,
       "default": "\"emacs\"",
+      "example": null
+    },
+    {
+      "title": "programs.mcfly.mcflyFzfPackage",
+      "description": "The mcfly-fzf package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mcfly.nix",
+          "text": "home-manager/modules/programs/mcfly.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mcfly-fzf",
       "example": null
     },
     {
@@ -19587,7 +19783,7 @@
     },
     {
       "title": "programs.mpv.package",
-      "description": "Package providing mpv.",
+      "description": "The mpv package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19596,7 +19792,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation mpv-with-scripts-0.40.0>",
+      "default": "pkgs.mpv",
       "example": "pkgs.mpv-unwrapped.wrapper { mpv = pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }; youtubeSupport = true; }"
     },
     {
@@ -19867,7 +20063,7 @@
     },
     {
       "title": "programs.mujmap.package",
-      "description": "mujmap package to use.",
+      "description": "The mujmap package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19876,7 +20072,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.mujmap\"",
+      "default": "pkgs.mujmap",
       "example": null
     },
     {
@@ -19937,7 +20133,7 @@
     },
     {
       "title": "programs.navi.package",
-      "description": "The package to use for the navi binary.",
+      "description": "The navi package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -19979,7 +20175,7 @@
     },
     {
       "title": "programs.ncmpcpp.package",
-      "description": "Package providing the ncmpcpp command.",
+      "description": "The ncmpcpp package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -20077,7 +20273,7 @@
     },
     {
       "title": "programs.ncspot.package",
-      "description": "The package to use for ncspot.",
+      "description": "The ncspot package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -20116,6 +20312,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.ne.package",
+      "description": "The ne package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ne.nix",
+          "text": "home-manager/modules/programs/ne.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ne",
+      "example": null
     },
     {
       "title": "programs.ne.automaticPreferences",
@@ -20581,7 +20791,7 @@
     },
     {
       "title": "programs.neovim.package",
-      "description": "The package to use for the neovim binary.",
+      "description": "The neovim package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -20609,7 +20819,7 @@
     },
     {
       "title": "programs.neovim.coc.package",
-      "description": "The package to use for the CoC plugin.",
+      "description": "The coc-nvim package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -21253,7 +21463,7 @@
     },
     {
       "title": "programs.nix-index.package",
-      "description": "Package providing the nix-index tool.",
+      "description": "The nix-index package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -21351,7 +21561,7 @@
     },
     {
       "title": "programs.nnn.package",
-      "description": "Package containing the nnn program.",
+      "description": "The nnn package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -21361,7 +21571,7 @@
       ],
       "note": null,
       "default": "pkgs.nnn",
-      "example": "pkgs.nnn.override ({ withNerdIcons = true; });"
+      "example": "pkgs.nnn.override { withNerdIcons = true; }"
     },
     {
       "title": "programs.nnn.bookmarks",
@@ -21446,6 +21656,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.noti.package",
+      "description": "The noti package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/noti.nix",
+          "text": "home-manager/modules/programs/noti.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.noti",
+      "example": null
     },
     {
       "title": "programs.noti.settings",
@@ -21911,7 +22135,7 @@
     },
     {
       "title": "programs.octant.package",
-      "description": "The Octant package to use.",
+      "description": "The octant package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -22523,7 +22747,7 @@
       ],
       "note": null,
       "default": "pkgs.pass",
-      "example": "pkgs.pass.withExtensions (exts: [ exts.pass-otp ])\n\n"
+      "example": "pkgs.pass.withExtensions (exts: [ exts.pass-otp ])"
     },
     {
       "title": "programs.password-store.settings",
@@ -22694,6 +22918,20 @@
       "example": "false"
     },
     {
+      "title": "programs.pazi.package",
+      "description": "The pazi package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pazi.nix",
+          "text": "home-manager/modules/programs/pazi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pazi",
+      "example": null
+    },
+    {
       "title": "programs.pet.enable",
       "description": "Whether to enable pet.",
       "type": "boolean",
@@ -22708,9 +22946,23 @@
       "example": "true"
     },
     {
+      "title": "programs.pet.package",
+      "description": "The pet package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pet.nix",
+          "text": "home-manager/modules/programs/pet.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pet",
+      "example": null
+    },
+    {
       "title": "programs.pet.selectcmdPackage",
-      "description": "The package needed for the settings.selectcmd.",
-      "type": "package",
+      "description": "The fzf package to use. The package needed for the settings.selectcmd.",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pet.nix",
@@ -22821,7 +23073,7 @@
     },
     {
       "title": "programs.pidgin.package",
-      "description": "The Pidgin package to use.",
+      "description": "The pidgin package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -22860,6 +23112,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.pistol.package",
+      "description": "The pistol package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pistol.nix",
+          "text": "home-manager/modules/programs/pistol.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pistol",
+      "example": null
     },
     {
       "title": "programs.pistol.associations",
@@ -23213,7 +23479,7 @@
     },
     {
       "title": "programs.pubs.package",
-      "description": "The package to use for the pubs script.",
+      "description": "The pubs package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -23297,7 +23563,7 @@
     },
     {
       "title": "programs.pyenv.package",
-      "description": "The package to use for pyenv.",
+      "description": "The pyenv package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -23380,6 +23646,20 @@
       "example": "true"
     },
     {
+      "title": "programs.pywal.package",
+      "description": "The pywal package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pywal.nix",
+          "text": "home-manager/modules/programs/pywal.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pywal",
+      "example": null
+    },
+    {
       "title": "programs.qcal.enable",
       "description": "Whether to enable qcal, a CLI calendar application.",
       "type": "boolean",
@@ -23392,6 +23672,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.qcal.package",
+      "description": "The qcal package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/qcal.nix",
+          "text": "home-manager/modules/programs/qcal.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.qcal",
+      "example": null
     },
     {
       "title": "programs.qcal.defaultNumDays",
@@ -23899,7 +24193,7 @@
     },
     {
       "title": "programs.rbw.package",
-      "description": "Package providing the rbw tool and its rbw-agent daemon.",
+      "description": "The rbw package to use. Package providing the rbw tool and its rbw-agent daemon.",
       "type": "package",
       "declared_by": [
         {
@@ -24431,7 +24725,7 @@
     },
     {
       "title": "programs.rofi.package",
-      "description": "Package providing the rofi binary.",
+      "description": "The rofi package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -24440,8 +24734,8 @@
         }
       ],
       "note": null,
-      "default": "<derivation rofi-1.7.8>",
-      "example": "pkgs.rofi.override { plugins = [ pkgs.rofi-emoji ]; };\n\n"
+      "default": "pkgs.rofi",
+      "example": "pkgs.rofi.override { plugins = [ pkgs.rofi-emoji ]; }"
     },
     {
       "title": "programs.rofi.configPath",
@@ -24666,6 +24960,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.rtorrent.package",
+      "description": "The rtorrent package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rtorrent.nix",
+          "text": "home-manager/modules/programs/rtorrent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.rtorrent",
+      "example": null
     },
     {
       "title": "programs.rtorrent.extraConfig",
@@ -24893,7 +25201,7 @@
     },
     {
       "title": "programs.sbt.package",
-      "description": "The package with sbt to be installed.",
+      "description": "The sbt package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -25145,7 +25453,7 @@
     },
     {
       "title": "programs.scmpuff.package",
-      "description": "Package providing the scmpuff tool.",
+      "description": "The scmpuff package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -25593,7 +25901,7 @@
     },
     {
       "title": "programs.sioyek.package",
-      "description": "Package providing the sioyek binary",
+      "description": "The sioyek package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -25691,7 +25999,7 @@
     },
     {
       "title": "programs.skim.package",
-      "description": "Package providing the skim tool.",
+      "description": "The skim package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -25982,6 +26290,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.sqls.package",
+      "description": "The sqls package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sqls.nix",
+          "text": "home-manager/modules/programs/sqls.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sqls",
+      "example": null
     },
     {
       "title": "programs.sqls.settings",
@@ -26811,7 +27133,7 @@
     },
     {
       "title": "programs.starship.package",
-      "description": "The package to use for the starship binary.",
+      "description": "The starship package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -27021,7 +27343,7 @@
     },
     {
       "title": "programs.swayr.package",
-      "description": "swayr package to use.",
+      "description": "The swayr package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -27202,6 +27524,20 @@
       "example": "false"
     },
     {
+      "title": "programs.tealdeer.package",
+      "description": "The tealdeer package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tealdeer.nix",
+          "text": "home-manager/modules/programs/tealdeer.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tealdeer",
+      "example": null
+    },
+    {
       "title": "programs.tealdeer.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/tealdeer/config.toml on Linux or\n$HOME/Library/Application Support/tealdeer/config.toml on Darwin.\nSee https://tealdeer-rs.github.io/tealdeer/config.html for more information.",
       "type": "null or (TOML value)",
@@ -27326,6 +27662,20 @@
       "note": null,
       "default": "true",
       "example": "true"
+    },
+    {
+      "title": "programs.termite.package",
+      "description": "The termite package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/termite.nix",
+          "text": "home-manager/modules/programs/termite.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.termite",
+      "example": null
     },
     {
       "title": "programs.termite.allowBold",
@@ -28085,7 +28435,7 @@
     },
     {
       "title": "programs.thunderbird.package",
-      "description": "The Thunderbird package to use.",
+      "description": "The thunderbird package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -28966,6 +29316,20 @@
       "example": "true"
     },
     {
+      "title": "programs.todoman.package",
+      "description": "The todoman package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/todoman.nix",
+          "text": "home-manager/modules/programs/todoman.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.todoman",
+      "example": null
+    },
+    {
       "title": "programs.todoman.extraConfig",
       "description": "Text for configuration of todoman. The syntax is Python.",
       "type": "strings concatenated with “\\n”",
@@ -29051,7 +29415,7 @@
     },
     {
       "title": "programs.topgrade.package",
-      "description": "The package to use for the topgrade binary.",
+      "description": "The topgrade package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -29090,6 +29454,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.translate-shell.package",
+      "description": "The translate-shell package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/translate-shell.nix",
+          "text": "home-manager/modules/programs/translate-shell.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.translate-shell",
+      "example": null
     },
     {
       "title": "programs.translate-shell.settings",
@@ -29373,7 +29751,7 @@
     },
     {
       "title": "programs.vdirsyncer.package",
-      "description": "vdirsyncer package to use.",
+      "description": "The vdirsyncer package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -29382,7 +29760,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.vdirsyncer\"",
+      "default": "pkgs.vdirsyncer",
       "example": null
     },
     {
@@ -29653,7 +30031,7 @@
     },
     {
       "title": "programs.vscode.package",
-      "description": "Version of Visual Studio Code to install.",
+      "description": "The vscode package to use. Version of Visual Studio Code to install.",
       "type": "package",
       "declared_by": [
         {
@@ -29961,7 +30339,7 @@
     },
     {
       "title": "programs.watson.package",
-      "description": "Package providing the watson.",
+      "description": "The watson package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -30437,7 +30815,7 @@
     },
     {
       "title": "programs.xmobar.package",
-      "description": "Package providing the xmobar binary.",
+      "description": "The xmobar package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -30759,7 +31137,7 @@
     },
     {
       "title": "programs.yt-dlp.package",
-      "description": "Package providing the yt-dlp tool.",
+      "description": "The yt-dlp package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -30870,6 +31248,20 @@
       "example": "false"
     },
     {
+      "title": "programs.z-lua.package",
+      "description": "The z-lua package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/z-lua.nix",
+          "text": "home-manager/modules/programs/z-lua.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.z-lua",
+      "example": null
+    },
+    {
       "title": "programs.z-lua.options",
       "description": "List of options to pass to z.lua.",
       "type": "list of string",
@@ -30899,7 +31291,7 @@
     },
     {
       "title": "programs.zathura.package",
-      "description": "The Zathura package to use",
+      "description": "The zathura package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -30908,7 +31300,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.zathura\"",
+      "default": "pkgs.zathura",
       "example": null
     },
     {
@@ -31376,7 +31768,7 @@
     {
       "title": "programs.zsh.antidote.package",
       "description": "The antidote package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/antidote.nix",
@@ -33069,7 +33461,7 @@
     },
     {
       "title": "services.activitywatch.watchers.<name>.package",
-      "description": "The derivation containing the watcher executable.",
+      "description": "The activitywatch package to use. The derivation containing the watcher executable.",
       "type": "package",
       "declared_by": [
         {
@@ -33078,8 +33470,8 @@
         }
       ],
       "note": null,
-      "default": null,
-      "example": "pkgs.activitywatch"
+      "default": "pkgs.activitywatch",
+      "example": null
     },
     {
       "title": "services.activitywatch.watchers.<name>.executable",
