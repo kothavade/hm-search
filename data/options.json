@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 04 Apr 2025 02:36:10 GMT",
+  "last_update": "Sat, 05 Apr 2025 02:33:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26192,6 +26192,244 @@
       "note": null,
       "default": "null",
       "example": "{\n  fullscreen = false;\n  window_x = 0;\n  window_y = 0;\n  window_w = 1920;\n  window_h = 1080;\n  vsync = 1;\n  texture_filtering = 1;\n  master_volume = 127;\n  music_volume = 127;\n  sfx_volume = 127;\n  env_volume = 127;\n  key_a = [ \"0026\" \"1000\" \"1103\" ];\n  key_b = [ \"0033\" \"1002\" \"1101\" ];\n  key_start = [ \"0039\" \"1006\" \"ffff\" ];\n  key_l = [ \"0034\" \"1007\" \"1104\" ];\n  key_r = [ \"0036\" \"100a\" \"1105\" ];\n  key_z = [ \"0025\" \"1009\" \"1102\" ];\n  key_cup = [ \"100b\" \"ffff\" \"ffff\" ];\n  key_cdown = [ \"100c\" \"ffff\" \"ffff\" ];\n  key_cleft = [ \"100d\" \"ffff\" \"ffff\" ];\n  key_cright = [ \"100e\" \"ffff\" \"ffff\" ];\n  key_stickup = [ \"0011\" \"ffff\" \"ffff\" ];\n  key_stickdown = [ \"001f\" \"ffff\" \"ffff\" ];\n  key_stickleft = [ \"001e\" \"ffff\" \"ffff\" ];\n  key_stickright = [ \"0020\" \"ffff\" \"ffff\" ];\n  stick_deadzone = 16;\n  rumble_strength = 10;\n  skip_intro = 1;\n};\n\n"
+    },
+    {
+      "title": "programs.smug.enable",
+      "description": "Whether to enable Smug session manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.smug.package",
+      "description": "The smug package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.smug",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects",
+      "description": "Attribute set with project configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.beforeStart",
+      "description": "Commands to execute before the tmux-session starts.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.env",
+      "description": "Environment Variables to set in session.",
+      "type": "null or (attribute set of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.root",
+      "description": "Root path in filesystem of the smug project. This is where tmux changes its directory to.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": "Application defaults to $HOME.",
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.stop",
+      "description": "Commands to execute after the tmux-session is destroyed.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows",
+      "description": "Windows to create in the project session",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.commands",
+      "description": "Commands to execute when window starts.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.layout",
+      "description": "Layout of window when opening panes.",
+      "type": "one of “main-horizontal”, “main-vertical”, “even-vertical”, “even-horizontal”, “tiled”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.manual",
+      "description": "Start window only manually, using the -w arg",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.name",
+      "description": "Name of the tmux window;",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.panes",
+      "description": "Panes to open in a window.",
+      "type": "null or (list of (submodule))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.panes.*.commands",
+      "description": "Commands to execute when pane starts.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.panes.*.root",
+      "description": "Root path of pane. This is relative to the path of the smug project.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.panes.*.type",
+      "description": "Type of pane.",
+      "type": "one of “horizontal”, “vertical”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.smug.projects.<name>.windows.*.root",
+      "description": "Root path of window. This is relative to the path of the smug project.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/smug.nix",
+          "text": "home-manager/modules/programs/smug.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
     },
     {
       "title": "programs.spotify-player.enable",
