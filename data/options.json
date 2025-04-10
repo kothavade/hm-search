@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 09 Apr 2025 02:38:52 GMT",
+  "last_update": "Thu, 10 Apr 2025 02:37:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26950,6 +26950,20 @@
       "example": null
     },
     {
+      "title": "programs.ssh.matchBlocks.<name>.identityAgent",
+      "description": "Specifies the location of the ssh identity agent.",
+      "type": "(list of string) or null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
       "title": "programs.ssh.matchBlocks.<name>.identityFile",
       "description": "Specifies files from which the user identity is read. Identities will be tried in the given order.",
       "type": "(list of string) or null or string",
@@ -28726,6 +28740,20 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.thunderbird.profiles.<name>.accountsOrder",
+      "description": "Custom ordering of accounts and local folders in Thunderbird’s folder pane. The accounts are specified\nby their name. For declarative accounts, it must be the name\nof their attribute in config.accounts.email.accounts (or\nconfig.programs.thunderbird.profiles.<name>.feedAccounts\nfor feed accounts). The local folders name can be found in\nthe mail.accountmanager.accounts Thunderbird preference,\nfor example with Settings > Config Editor (“account1” by\ndefault). Enabled accounts and local folders that aren’t\nlisted here appear in an arbitrary order after the ordered\naccounts.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "''\n  [\n    \"my-awesome-account\"\n    \"private\"\n    \"work\"\n    \"rss\"\n    /* Other accounts in arbitrary order */\n  ]\n''\n"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.extensions",
