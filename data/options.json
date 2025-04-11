@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 10 Apr 2025 02:37:32 GMT",
+  "last_update": "Fri, 11 Apr 2025 02:38:17 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9475,7 +9475,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  theme[main_bg]=\"#282a36\"\n  theme[main_fg]=\"#f8f8f2\"\n  theme[title]=\"#f8f8f2\"\n  theme[hi_fg]=\"#6272a4\"\n  theme[selected_bg]=\"#ff79c6\"\n  theme[selected_fg]=\"#f8f8f2\"\n  theme[inactive_fg]=\"#44475a\"\n  theme[graph_text]=\"#f8f8f2\"\n  theme[meter_bg]=\"#44475a\"\n  theme[proc_misc]=\"#bd93f9\"\n  theme[cpu_box]=\"#bd93f9\"\n  theme[mem_box]=\"#50fa7b\"\n  theme[net_box]=\"#ff5555\"\n  theme[proc_box]=\"#8be9fd\"\n  theme[div_line]=\"#44475a\"\n  theme[temp_start]=\"#bd93f9\"\n  theme[temp_mid]=\"#ff79c6\"\n  theme[temp_end]=\"#ff33a8\"\n  theme[cpu_start]=\"#bd93f9\"\n  theme[cpu_mid]=\"#8be9fd\"\n  theme[cpu_end]=\"#50fa7b\"\n  theme[free_start]=\"#ffa6d9\"\n  theme[free_mid]=\"#ff79c6\"\n  theme[free_end]=\"#ff33a8\"\n  theme[cached_start]=\"#b1f0fd\"\n  theme[cached_mid]=\"#8be9fd\"\n  theme[cached_end]=\"#26d7fd\"\n  theme[available_start]=\"#ffd4a6\"\n  theme[available_mid]=\"#ffb86c\"\n  theme[available_end]=\"#ff9c33\"\n  theme[used_start]=\"#96faaf\"\n  theme[used_mid]=\"#50fa7b\"\n  theme[used_end]=\"#0dfa49\"\n  theme[download_start]=\"#bd93f9\"\n  theme[download_mid]=\"#50fa7b\"\n  theme[download_end]=\"#8be9fd\"\n  theme[upload_start]=\"#8c42ab\"\n  theme[upload_mid]=\"#ff79c6\"\n  theme[upload_end]=\"#ff33a8\"\n  theme[process_start]=\"#50fa7b\"\n  theme[process_mid]=\"#59b690\"\n  theme[process_end]=\"#6272a4\"\n''\n"
+      "example": "{\n  my-theme = ''\n    theme[main_bg]=\"#282a36\"\n    theme[main_fg]=\"#f8f8f2\"\n    theme[title]=\"#f8f8f2\"\n    theme[hi_fg]=\"#6272a4\"\n    theme[selected_bg]=\"#ff79c6\"\n    theme[selected_fg]=\"#f8f8f2\"\n    theme[inactive_fg]=\"#44475a\"\n    theme[graph_text]=\"#f8f8f2\"\n    theme[meter_bg]=\"#44475a\"\n    theme[proc_misc]=\"#bd93f9\"\n    theme[cpu_box]=\"#bd93f9\"\n    theme[mem_box]=\"#50fa7b\"\n    theme[net_box]=\"#ff5555\"\n    theme[proc_box]=\"#8be9fd\"\n    theme[div_line]=\"#44475a\"\n    theme[temp_start]=\"#bd93f9\"\n    theme[temp_mid]=\"#ff79c6\"\n    theme[temp_end]=\"#ff33a8\"\n    theme[cpu_start]=\"#bd93f9\"\n    theme[cpu_mid]=\"#8be9fd\"\n    theme[cpu_end]=\"#50fa7b\"\n    theme[free_start]=\"#ffa6d9\"\n    theme[free_mid]=\"#ff79c6\"\n    theme[free_end]=\"#ff33a8\"\n    theme[cached_start]=\"#b1f0fd\"\n    theme[cached_mid]=\"#8be9fd\"\n    theme[cached_end]=\"#26d7fd\"\n    theme[available_start]=\"#ffd4a6\"\n    theme[available_mid]=\"#ffb86c\"\n    theme[available_end]=\"#ff9c33\"\n    theme[used_start]=\"#96faaf\"\n    theme[used_mid]=\"#50fa7b\"\n    theme[used_end]=\"#0dfa49\"\n    theme[download_start]=\"#bd93f9\"\n    theme[download_mid]=\"#50fa7b\"\n    theme[download_end]=\"#8be9fd\"\n    theme[upload_start]=\"#8c42ab\"\n    theme[upload_mid]=\"#ff79c6\"\n    theme[upload_end]=\"#ff33a8\"\n    theme[process_start]=\"#50fa7b\"\n    theme[process_mid]=\"#59b690\"\n    theme[process_end]=\"#6272a4\"\n  '';\n}\n"
     },
     {
       "title": "programs.bun.enable",
@@ -25687,6 +25687,20 @@
       ],
       "note": null,
       "default": "pkgs.fzf",
+      "example": null
+    },
+    {
+      "title": "programs.sesh.icons",
+      "description": "Display icons next to results (--icons argument).",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sesh.nix",
+          "text": "home-manager/modules/programs/sesh.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
       "example": null
     },
     {
