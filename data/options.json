@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 11 Apr 2025 02:38:17 GMT",
+  "last_update": "Sat, 12 Apr 2025 02:34:58 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -790,7 +790,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\".vcf\"",
       "example": null
     },
     {
@@ -818,7 +818,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "\"filesystem\"",
       "example": null
     },
     {
@@ -7361,6 +7361,342 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.enable",
+      "description": "Whether to enable anyrun.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.anyrun.package",
+      "description": "The anyrun package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.anyrun",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.closeOnClick",
+      "description": "Close window when a click outside the main box is received.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.height",
+      "description": "The minimum height of the runner, the runner will expand to fit all the entries.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": "This is a numeric option - pass either { absolute = int; }; or { fraction = float; };.\nwhen using absolute it sets the absolute value in pixels,\nwhen using fraction, it sets a fraction of the width or height of the full screen (depends on exclusive zones and the settings related to them) window",
+      "default": "",
+      "example": "''\n  { absolute = 200; };\n  or\n  { fraction = 0.4; };\n''\n"
+    },
+    {
+      "title": "programs.anyrun.config.height.absolute",
+      "description": "Absolute value in pixels.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.height.fraction",
+      "description": "Fraction of the screen.",
+      "type": "null or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.hideIcons",
+      "description": "Hide match and plugin info icons.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.hidePluginInfo",
+      "description": "Hide the plugin info panel.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.ignoreExclusiveZones",
+      "description": "Ignore exclusive zones, eg. Waybar.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.layer",
+      "description": "Layer shell layer (background, bottom, top or overlay).",
+      "type": "one of “background”, “bottom”, “top”, “overlay”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"overlay\"",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.maxEntries",
+      "description": "Limit amount of entries shown in total.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.plugins",
+      "description": "List of anyrun plugins to use. Can either be packages, absolute plugin paths, or strings.",
+      "type": "null or (list of (package or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.showResultsImmediately",
+      "description": "Show search results immediately when Anyrun starts.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.width",
+      "description": "The width of the runner.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": "This is a numeric option - pass either { absolute = int; }; or { fraction = float; };.\nwhen using absolute it sets the absolute value in pixels,\nwhen using fraction, it sets a fraction of the width or height of the full screen (depends on exclusive zones and the settings related to them) window",
+      "default": "",
+      "example": "''\n  { absolute = 200; };\n  or\n  { fraction = 0.4; };\n''\n"
+    },
+    {
+      "title": "programs.anyrun.config.width.absolute",
+      "description": "Absolute value in pixels.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.width.fraction",
+      "description": "Fraction of the screen.",
+      "type": "null or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.x",
+      "description": "The horizontal position, adjusted so that { relative = 0.5; } always centers the runner.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": "This is a numeric option - pass either { absolute = int; }; or { fraction = float; };.\nwhen using absolute it sets the absolute value in pixels,\nwhen using fraction, it sets a fraction of the width or height of the full screen (depends on exclusive zones and the settings related to them) window",
+      "default": "",
+      "example": "''\n  { absolute = 200; };\n  or\n  { fraction = 0.4; };\n''\n"
+    },
+    {
+      "title": "programs.anyrun.config.x.absolute",
+      "description": "Absolute value in pixels.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.x.fraction",
+      "description": "Fraction of the screen.",
+      "type": "null or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.y",
+      "description": "The vertical position, works the same as x.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": "This is a numeric option - pass either { absolute = int; }; or { fraction = float; };.\nwhen using absolute it sets the absolute value in pixels,\nwhen using fraction, it sets a fraction of the width or height of the full screen (depends on exclusive zones and the settings related to them) window",
+      "default": "",
+      "example": "''\n  { absolute = 200; };\n  or\n  { fraction = 0.4; };\n''\n"
+    },
+    {
+      "title": "programs.anyrun.config.y.absolute",
+      "description": "Absolute value in pixels.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.y.fraction",
+      "description": "Fraction of the screen.",
+      "type": "null or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.extraConfigFiles",
+      "description": "Extra files to put in ~/.config/anyrun, a wrapper over xdg.configFile.",
+      "type": "attribute set",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  programs.anyrun.extraConfigFiles.\"plugin-name.ron\".text = '''\n    Config(\n      some_option: true,\n    )\n  '''\n''\n"
+    },
+    {
+      "title": "programs.anyrun.extraCss",
+      "description": "Extra CSS lines to add to ~/.config/anyrun/style.css.",
+      "type": "null or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
       "example": null
     },
     {
@@ -30730,6 +31066,20 @@
       "example": "true"
     },
     {
+      "title": "programs.waybar.systemd.enableDebug",
+      "description": "Whether to enable debug logging.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waybar.nix",
+          "text": "home-manager/modules/programs/waybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
       "title": "programs.waybar.systemd.enableInspect",
       "description": "Inspect objects and find their CSS classes, experiment with live CSS styles, and lookup the current value of CSS properties.",
       "type": "boolean",
@@ -30746,7 +31096,7 @@
     {
       "title": "programs.waybar.systemd.target",
       "description": "The systemd target that will automatically start the Waybar service.",
-      "type": "null or string",
+      "type": "string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waybar.nix",
@@ -36986,6 +37336,90 @@
       "note": null,
       "default": "pkgs.hyprpolkitagent",
       "example": null
+    },
+    {
+      "title": "services.hyprsunset.enable",
+      "description": "Whether to enable Hyprsunset, Hyprland’s blue-light filter.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.hyprsunset.package",
+      "description": "The hyprsunset package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprsunset",
+      "example": null
+    },
+    {
+      "title": "services.hyprsunset.extraArgs",
+      "description": "Additional command-line arguments to pass to hyprsunset.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--identity\"\n]\n"
+    },
+    {
+      "title": "services.hyprsunset.transitions",
+      "description": "Set of transitions for different times of day (e.g., sunrise, sunset)",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  sunrise = {\n    calendar = \"*-*-* 06:00:00\";\n    requests = [\n      [ \"temperature\" \"6500\" ]\n      [ \"gamma 100\" ]\n    ];\n  };\n  sunset = {\n    calendar = \"*-*-* 19:00:00\";\n    requests = [\n      [ \"temperature\" \"3500\" ]\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "services.hyprsunset.transitions.<name>.calendar",
+      "description": "Systemd calendar expression for when to run this transition.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"*-*-* 06:00:00\""
+    },
+    {
+      "title": "services.hyprsunset.transitions.<name>.requests",
+      "description": "List of requests to pass to hyprctl hyprsunset for this transition. Each inner list represents a separate command.",
+      "type": "list of list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  [ \"temperature\" \"3500\" ]\n]\n\n"
     },
     {
       "title": "services.imapnotify.enable",
@@ -44478,6 +44912,62 @@
       ],
       "note": null,
       "default": "pkgs.volnoti",
+      "example": null
+    },
+    {
+      "title": "services.way-displays.enable",
+      "description": "Whether to enable way-displays.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
+          "text": "home-manager/modules/services/way-displays.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.way-displays.package",
+      "description": "The way-displays package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
+          "text": "home-manager/modules/services/way-displays.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.way-displays",
+      "example": null
+    },
+    {
+      "title": "services.way-displays.settings",
+      "description": "The way-displays configuration written to $XDG_CONFIG_HOME/way-displays/cfg.yml. See\nhttps://github.com/alex-courtis/way-displays/wiki/Configuration for a\ndescription of available options.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
+          "text": "home-manager/modules/services/way-displays.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  ORDER = [\n    \"DP-2\"\n    \"Monitor Maker ABC123\"\n    \"!^my_regex_here[0-9]+\"\n    \"'!.*$'\"\n  ];\n  SCALING = false;\n  MODE = [\n    {\n      NAME_DESC = \"HDMI-A-1\";\n      WIDTH = 1920;\n      HEIGHT = 1080;\n      HZ = 60;\n    }\n  ];\n  TRANSFORM = [\n    {\n      NAME_DESC = \"eDP-1\"\n      TRANSFORM = \"FLIPPED-90\";\n    }\n  ];\n};\n\n"
+    },
+    {
+      "title": "services.way-displays.systemdTarget",
+      "description": "Systemd target to bind to.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
+          "text": "home-manager/modules/services/way-displays.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.wayland.systemd.target",
       "example": null
     },
     {
