@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 13 Apr 2025 03:46:36 GMT",
+  "last_update": "Mon, 14 Apr 2025 02:43:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -12728,7 +12728,7 @@
     {
       "title": "programs.foot.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/foot/foot.ini. See https://codeberg.org/dnkl/foot/src/branch/master/foot.ini\nfor a list of available options.",
-      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string) or a list of them for duplicate keys)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foot.nix",
@@ -15346,7 +15346,7 @@
     {
       "title": "programs.helix.themes",
       "description": "Each theme is written to $XDG_CONFIG_HOME/helix/themes/theme-name.toml.\nWhere the name of each attribute is the theme-name (in the example “base16”).",
-      "type": "attribute set of (TOML value)",
+      "type": "attribute set of (TOML value or absolute path or strings concatenated with “\\n”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/helix.nix",
