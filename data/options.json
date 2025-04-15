@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 14 Apr 2025 02:43:04 GMT",
+  "last_update": "Tue, 15 Apr 2025 02:41:35 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27858,6 +27858,76 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  player = \"${pkgs.mpv}/bin/mpv\";\n  player-args = \"--cache 2048\";\n  player-no-close = true;\n}\n\n"
+    },
+    {
+      "title": "programs.superfile.enable",
+      "description": "Whether to enable superfile - Pretty fancy and modern terminal file manager.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix",
+          "text": "home-manager/modules/programs/superfile.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.superfile.package",
+      "description": "The superfile package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix",
+          "text": "home-manager/modules/programs/superfile.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.superfile",
+      "example": null
+    },
+    {
+      "title": "programs.superfile.hotkeys",
+      "description": "Hotkey configuration written to $XDG_CONFIG_HOME/superfile/hotkeys.toml (linux) or Library/Application Support/superfile/hotkeys.toml (darwin), See\nhttps://superfile.netlify.app/configure/custom-hotkeys/ for supported values.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix",
+          "text": "home-manager/modules/programs/superfile.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "confirm = [\n  \"enter\"\n  \"right\"\n  \"l\"\n];\n\n"
+    },
+    {
+      "title": "programs.superfile.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/superfile/config.toml (linux) or Library/Application Support/superfile/config.toml (darwin), See\nhttps://superfile.netlify.app/configure/superfile-config/ for supported values.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix",
+          "text": "home-manager/modules/programs/superfile.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "theme = \"catppuccin-frappe\";\ndefault_sort_type = 0;\ntransparent_background = false;\n\n"
+    },
+    {
+      "title": "programs.superfile.themes",
+      "description": "Theme files written to $XDG_CONFIG_HOME/superfile/theme/ (linux) or Library/Application Support/superfile/theme/ (darwin), See\nhttps://superfile.netlify.app/configure/custom-theme/ for supported values.",
+      "type": "attribute set of (TOML value or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/superfile.nix",
+          "text": "home-manager/modules/programs/superfile.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "myTheme = {\n  code_syntax_highlight = \"catppuccin-latte\";\n\n  file_panel_border = \"#101010\";\n  sidebar_border = \"#101011\";\n  footer_border = \"#101012\";\n\n  gradient_color = [\n    \"#101013\"\n    \"#101014\"\n  ];\n\n  # ...\n};\nmyOtherFavoriteTheme = {\n  code_syntax_highlight = \"catppuccin-mocha\";\n\n  file_panel_border = \"#505050\";\n  sidebar_border = \"#505051\";\n  footer_border = \"#505052\";\n\n  gradient_color = [\n    \"#505053\"\n    \"#505054\"\n  ];\n\n  # ...\n};\n\n"
     },
     {
       "title": "programs.swayimg.enable",
