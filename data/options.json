@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 16 Apr 2025 02:41:03 GMT",
+  "last_update": "Thu, 17 Apr 2025 02:39:54 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10052,6 +10052,48 @@
       "example": "{\n  ShowControls = true;\n  ColorProfiles = [\n    {\n      Name = \"Default\";\n      FgColors = [\n        \"#ffed333b\"\n        \"#ffffa348\"\n        \"#fff8e45c\"\n        \"#ff57e389\"\n        \"#ff62a0ea\"\n        \"#ffc061cb\"\n      ];\n      BgColors = [\n        \"#ff1e1e2e\"\n      ];\n      Theme = 1;\n    }\n  ];\n  ActiveProfile = 0;\n}\n\n"
     },
     {
+      "title": "programs.chawan.enable",
+      "description": "Whether to enable chawan, A TUI web browser.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chawan.nix",
+          "text": "home-manager/modules/programs/chawan.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.chawan.package",
+      "description": "The chawan package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chawan.nix",
+          "text": "home-manager/modules/programs/chawan.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.chawan",
+      "example": null
+    },
+    {
+      "title": "programs.chawan.settings",
+      "description": "Configuration options for chawan.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chawan.nix",
+          "text": "home-manager/modules/programs/chawan.nix"
+        }
+      ],
+      "note": "See cha-config(5)",
+      "default": "{ }",
+      "example": "{\n  buffer = {\n    images = true;\n    autofocus = true;\n  };\n  pager.\"C-k\" = \"() => pager.load('https://duckduckgo.com/?=')\";\n}\n\n"
+    },
+    {
       "title": "programs.chromium.enable",
       "description": "Whether to enable Chromium.",
       "type": "boolean",
@@ -11902,15 +11944,15 @@
     {
       "title": "programs.firefox.profiles.<name>.userChrome",
       "description": "Custom Firefox user chrome CSS.",
-      "type": "strings concatenated with “\\n” or absolute path",
+      "type": "null or strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
           "text": "home-manager/modules/programs/firefox.nix"
         }
       ],
-      "note": null,
-      "default": "\"\"",
+      "note": "This can be a path to a file or directory in the Nix store,\nor a derivation, or a verbatim multi-line string.",
+      "default": "null",
       "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
     },
     {
@@ -12658,15 +12700,15 @@
     {
       "title": "programs.floorp.profiles.<name>.userChrome",
       "description": "Custom Floorp user chrome CSS.",
-      "type": "strings concatenated with “\\n” or absolute path",
+      "type": "null or strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
           "text": "home-manager/modules/programs/floorp.nix"
         }
       ],
-      "note": null,
-      "default": "\"\"",
+      "note": "This can be a path to a file or directory in the Nix store,\nor a derivation, or a verbatim multi-line string.",
+      "default": "null",
       "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
     },
     {
@@ -37143,7 +37185,7 @@
     },
     {
       "title": "services.home-manager.autoExpire.store.options",
-      "description": "Options given to nix-collection-garbage when the service runs.",
+      "description": "Options given to nix-collect-garbage when the service runs.",
       "type": "string",
       "declared_by": [
         {
@@ -47358,6 +47400,160 @@
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
           "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.labwc.enable",
+      "description": "Whether to enable Labwc, a wayland window-stacking compositor.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.labwc.package",
+      "description": "The labwc package to use. Set to null to use Nixos labwc package.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.labwc",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.labwc.autostart",
+      "description": "Command to autostart when labwc start.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"wayvnc &\"\n  \"waybar &\"\n  \"swaybg -c '#113344' >/dev/null 2>&1 &\"\n]\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.environment",
+      "description": "Environment variable to add when labwc start.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"XDG_CURRENT_DESKTOP=labwc:wlroots\"\n  \"XKB_DEFAULT_LAYOUT=us\"\n]\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.extraConfig",
+      "description": "Extra lines appended to $XDG_CONFIG_HOME/labwc/rc.xml.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  <tablet mapToOutput=\"\" rotate=\"0\" mouseEmulation=\"no\">\n    <!-- Active area dimensions are in mm -->\n    <area top=\"0.0\" left=\"0.0\" width=\"0.0\" height=\"0.0\" />\n    <map button=\"Tip\" to=\"Left\" />\n    <map button=\"Stylus\" to=\"Right\" />\n    <map button=\"Stylus2\" to=\"Middle\" />\n  </tablet>\n''\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.menu",
+      "description": "Config to configure labwc menu",
+      "type": "list of (XML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    menuId = \"client-menu\";\n    label = \"Client Menu\";\n    icon = \"\";\n    items = [\n      {\n        label = \"Maximize\";\n        icon = \"\";\n        action = {\n          name = \"ToggleMaximize\";\n        };\n      }\n      {\n        label = \"Fullscreen\";\n        action = {\n          name = \"ToggleFullscreen\";\n        };\n      }\n      {\n        label = \"Always on Top\";\n        action = {\n          name = \"ToggleAlwaysOnTop\";\n        };\n      }\n      {\n        label = \"Alacritty\";\n        action = {\n          name = \"Execute\";\n          command = \"alacritty\";\n        };\n      }\n      {\n        label = \"Move Left\";\n        action = {\n          name = \"SendToDesktop\";\n          to = \"left\";\n        };\n      }\n      {\n        separator = { };\n      }\n      {\n        label = \"Workspace\";\n        menuId = \"workspace\";\n        icon = \"\";\n        items = [\n          {\n            label = \"Move Left\";\n            action = {\n              name = \"SendToDesktop\";\n              to = \"left\";\n            };\n          }\n        ];\n      }\n      {\n        separator = true;\n      }\n    ];\n  }\n];\n\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.rc",
+      "description": "Config to configure labwc options. Use “@attributes” for attributes.\nSee https://labwc.github.io/labwc-config.5.html for configuration.",
+      "type": "XML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  theme = {\n    name = \"nord\";\n    cornerRadius = 8;\n    font = {\n      \"@name\" = \"FiraCode\";\n      \"@size\" = \"11\";\n    };\n  };\n  keyboard = {\n    default = true;\n    keybind = [\n      # <keybind key=\"W-Return\"><action name=\"Execute\" command=\"foot\"/></keybind>\n      {\n        \"@key\" = \"W-Return\";\n        action = {\n          \"@name\" = \"Execute\";\n          \"@command\" = \"foot\";\n        };\n      }\n      # <keybind key=\"W-Esc\"><action name=\"Execute\" command=\"loot\"/></keybind>\n      {\n        \"@key\" = \"W-Esc\";\n        action = {\n          \"@name\" = \"Execute\";\n          \"@command\" = \"loot\";\n        };\n      }\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.systemd.enable",
+      "description": "Whether to enable labwc-session.target on labwc startup. This links to graphical-session.target.\nSome important environment variables will be imported to systemd\nand D-Bus user environment before reaching the target, including",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": "DISPLAYWAYLAND_DISPLAYXDG_CURRENT_DESKTOP",
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.labwc.systemd.extraCommands",
+      "description": "Extra commands to be run after D-Bus activation.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "wayland.windowManager.labwc.systemd.variables",
+      "description": "Environment variables to be imported in the systemd & D-Bus user environment.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"-all\"\n]\n"
+    },
+    {
+      "title": "wayland.windowManager.labwc.xwayland.enable",
+      "description": "Whether to enable XWayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
+          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
         }
       ],
       "note": null,
