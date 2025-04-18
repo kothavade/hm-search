@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 17 Apr 2025 02:39:54 GMT",
+  "last_update": "Fri, 18 Apr 2025 02:36:31 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7964,6 +7964,20 @@
       "note": "See https://atuin.sh/docs/config/ for the full list\nof options.",
       "default": "{ }",
       "example": "{\n  auto_sync = true;\n  sync_frequency = \"5m\";\n  sync_address = \"https://api.atuin.sh\";\n  search_mode = \"prefix\";\n}\n\n"
+    },
+    {
+      "title": "programs.atuin.themes",
+      "description": "See https://atuin.sh/guide/theming/ for the full list of options.",
+      "type": "attribute set of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/atuin.nix",
+          "text": "home-manager/modules/programs/atuin.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"my-theme\" = {\n    theme.name = \"My Theme\";\n    colors = {\n      Base = \"#000000\";\n      Title = \"#FFFFFF\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.autojump.enable",
