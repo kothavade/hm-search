@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 18 Apr 2025 02:36:31 GMT",
+  "last_update": "Sat, 19 Apr 2025 02:32:42 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -738,17 +738,17 @@
       "example": "true"
     },
     {
-      "title": "accounts.contact.accounts.<name>.khard.defaultCollection",
-      "description": "VCARD collection to be searched by khard.",
-      "type": "string",
+      "title": "accounts.contact.accounts.<name>.khard.addressbooks",
+      "description": "If provided, each item on this list will generate an entry on khard configuration file as a separate addressbook\n(vdir).",
+      "type": "(list of string) or string convertible to it",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khard.nix",
           "text": "home-manager/modules/programs/khard.nix"
         }
       ],
-      "note": null,
-      "default": "\"\"",
+      "note": "This is used for hardcoding sub-directories under the local\nstorage path\n(accounts.contact.accounts.<name>.local.path) for khard. The\ndefault value will set the aforementioned path as a single vdir.",
+      "default": "",
       "example": null
     },
     {
@@ -17946,6 +17946,48 @@
       "note": "Requires package to not be set to have effect.",
       "default": "[ ]",
       "example": "[ pkgs.kakounePlugins.kak-fzf ]"
+    },
+    {
+      "title": "programs.keepassxc.enable",
+      "description": "Whether to enable keepassxc.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/keepassxc.nix",
+          "text": "home-manager/modules/programs/keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.keepassxc.package",
+      "description": "The keepassxc package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/keepassxc.nix",
+          "text": "home-manager/modules/programs/keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.keepassxc",
+      "example": null
+    },
+    {
+      "title": "programs.keepassxc.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/keepassxc/keepassxc.ini.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/keepassxc.nix",
+          "text": "home-manager/modules/programs/keepassxc.nix"
+        }
+      ],
+      "note": "See https://github.com/keepassxreboot/keepassxc/blob/647272e9c5542297d3fcf6502e6173c96f12a9a0/src/core/Config.cpp#L49-L223\nfor the full list of options.",
+      "default": "{ }",
+      "example": "{\n  Browser.Enabled = true;\n\n  GUI = {\n    AdvancedSettings = true;\n    ApplicationTheme = \"dark\";\n    CompactMode = true;\n    HidePasswords = true;\n  };\n\n  SSHAgent.Enabled = true;\n}\n\n"
     },
     {
       "title": "programs.keychain.enable",
