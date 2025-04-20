@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 19 Apr 2025 02:32:42 GMT",
+  "last_update": "Sun, 20 Apr 2025 02:44:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16378,6 +16378,48 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.inori.enable",
+      "description": "Whether to enable inori.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/inori.nix",
+          "text": "home-manager/modules/programs/inori.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.inori.package",
+      "description": "The inori package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/inori.nix",
+          "text": "home-manager/modules/programs/inori.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.inori",
+      "example": null
+    },
+    {
+      "title": "programs.inori.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/inori/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/inori.nix",
+          "text": "home-manager/modules/programs/inori.nix"
+        }
+      ],
+      "note": "See https://github.com/eshrh/inori/blob/master/CONFIGURATION.md for available options.",
+      "default": "{ }",
+      "example": "{\n  seek_seconds = 10;\n  dvorak_keybindings = true;\n}\n\n"
     },
     {
       "title": "programs.ion.enable",
