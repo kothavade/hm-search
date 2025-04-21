@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 20 Apr 2025 02:44:14 GMT",
+  "last_update": "Mon, 21 Apr 2025 02:45:34 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7967,15 +7967,15 @@
     },
     {
       "title": "programs.atuin.themes",
-      "description": "See https://atuin.sh/guide/theming/ for the full list of options.",
-      "type": "attribute set of (TOML value)",
+      "description": "Each theme is written to $XDG_CONFIG_HOME/atuin/themes/theme-name.toml\nwhere the name of each attribute is the theme-name",
+      "type": "attribute set of (TOML value or absolute path or Concatenated string)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/atuin.nix",
           "text": "home-manager/modules/programs/atuin.nix"
         }
       ],
-      "note": null,
+      "note": "See https://atuin.sh/guide/theming/ for the full list\nof options.",
       "default": "{ }",
       "example": "{\n  \"my-theme\" = {\n    theme.name = \"My Theme\";\n    colors = {\n      Base = \"#000000\";\n      Title = \"#FFFFFF\";\n    };\n  };\n}\n\n"
     },
@@ -11239,6 +11239,20 @@
       ],
       "note": "Note, the support for Boolean values is deprecated.\nSetting this option to true corresponds to --icons=auto.",
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.eza.theme",
+      "description": "Written to $XDG_CONFIG_HOME/eza/theme.yml",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
+          "text": "home-manager/modules/programs/eza.nix"
+        }
+      ],
+      "note": "See https://github.com/eza-community/eza#custom-themes",
+      "default": "{ }",
       "example": null
     },
     {
@@ -18440,6 +18454,20 @@
     {
       "title": "programs.kitty.enable",
       "description": "Whether to enable Kitty terminal emulator.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kitty.nix",
+          "text": "home-manager/modules/programs/kitty.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.kitty.enableGitIntegration",
+      "description": "Whether to enable git integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -30576,6 +30604,48 @@
       "example": null
     },
     {
+      "title": "programs.uv.enable",
+      "description": "Whether to enable uv.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/uv.nix",
+          "text": "home-manager/modules/programs/uv.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.uv.package",
+      "description": "The uv package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/uv.nix",
+          "text": "home-manager/modules/programs/uv.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.uv",
+      "example": null
+    },
+    {
+      "title": "programs.uv.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/uv/uv.toml.\nSee https://docs.astral.sh/uv/configuration/files/\nand https://docs.astral.sh/uv/reference/settings/\nfor more information.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/uv.nix",
+          "text": "home-manager/modules/programs/uv.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  python-downloads = \"never\";\n  python-preference = \"only-system\";\n  pip.index-url = \"https://test.pypi.org/simple\";\n}\n\n"
+    },
+    {
       "title": "programs.vdirsyncer.enable",
       "description": "Whether to enable vdirsyncer.",
       "type": "boolean",
@@ -30616,6 +30686,90 @@
       "note": "For more information, see the\nvdirsyncer manual.",
       "default": "\"$XDG_DATA_HOME/vdirsyncer/status\"",
       "example": null
+    },
+    {
+      "title": "programs.vesktop.enable",
+      "description": "Whether to enable Vesktop, an alternate client for Discord with Vencord built-in.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.vesktop.package",
+      "description": "The vesktop package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.vesktop",
+      "example": null
+    },
+    {
+      "title": "programs.vesktop.settings",
+      "description": "Vesktop settings written to $XDG_CONFIG_HOME/vesktop/settings.json. See\nhttps://github.com/Vencord/Vesktop/blob/main/src/shared/settings.d.ts\nfor available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  appBadge = false;\n  arRPC = true;\n  checkUpdates = false;\n  customTitleBar = false;\n  disableMinSize = true;\n  minimizeToTray = false;\n  tray = false;\n  splashBackground = \"#000000\";\n  splashColor = \"#ffffff\";\n  splashTheming = true;\n  staticTitle = true;\n  hardwareAcceleration = true;\n  discordBranch = \"stable\";\n}\n\n"
+    },
+    {
+      "title": "programs.vesktop.vencord.settings",
+      "description": "Vencord settings written to $XDG_CONFIG_HOME/vesktop/settings/settings.json. See\nhttps://github.com/Vendicated/Vencord/blob/main/src/api/Settings.ts\nfor available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  autoUpdate = false;\n  autoUpdateNotification = false;\n  notifyAboutUpdates = false;\n  useQuickCss = true;\n  disableMinSize = true;\n  plugins = {\n    MessageLogger = {\n      enabled = true;\n      ignoreSelf = true;\n    };\n    FakeNitro.enabled = true;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.vesktop.vencord.theme",
+      "description": "The theme to use for Vencord",
+      "type": "null or strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.vesktop.vencord.useSystem",
+      "description": "Whether to enable Vencord package from Nixpkgs.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
+          "text": "home-manager/modules/programs/vesktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.vifm.enable",
@@ -31120,6 +31274,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  version = \"2.0.0\";\n  tasks = [\n    {\n      type = \"shell\";\n      label = \"Hello task\";\n      command = \"hello\";\n    }\n  ];\n}\n\n"
+    },
+    {
+      "title": "programs.wallust.enable",
+      "description": "Whether to enable Wallust color scheme generator.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wallust.nix",
+          "text": "home-manager/modules/programs/wallust.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.wallust.package",
+      "description": "The wallust package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wallust.nix",
+          "text": "home-manager/modules/programs/wallust.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wallust",
+      "example": null
+    },
+    {
+      "title": "programs.wallust.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/wallust/wallust.toml. See https://explosion-mental.codeberg.page/wallust/config/ for\ndocumentation.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wallust.nix",
+          "text": "home-manager/modules/programs/wallust.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  palette = \"softdark\";\n}\n\n"
     },
     {
       "title": "programs.watson.enable",
@@ -32268,6 +32464,20 @@
       "note": "For more information, consult the\n“Remote Server” section\nin the wiki.",
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.zed-editor.themes",
+      "description": "Each theme is written to $XDG_CONFIG_HOME/zed/themes/theme-name.json\nwhere the name of each attribute is the theme-name",
+      "type": "attribute set of (JSON value or absolute path or strings concatenated with “\\n”)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": "See https://zed.dev/docs/extensions/themes for the structure of a\nZed theme",
+      "default": "{ }",
+      "example": null
     },
     {
       "title": "programs.zed-editor.userKeymaps",
@@ -42773,6 +42983,342 @@
       "example": null
     },
     {
+      "title": "services.restic.enable",
+      "description": "Whether to enable restic.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.restic.backups",
+      "description": "Periodic backups to create with Restic.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  localbackup = {\n    exclude = [\n      \"/home/*/.cache\"\n    ];\n    initialize = true;\n    passwordFile = \"/etc/nixos/secrets/restic-password\";\n    paths = [\n      \"/home\"\n    ];\n    repository = \"/mnt/backup-hdd\";\n  };\n  remotebackup = {\n    extraOptions = [\n      \"sftp.command='ssh backup@host -i /etc/nixos/secrets/backup-private-key -s sftp'\"\n    ];\n    passwordFile = \"/etc/nixos/secrets/restic-password\";\n    paths = [\n      \"/home\"\n    ];\n    repository = \"sftp:backup@host:/backups/home\";\n    timerConfig = {\n      OnCalendar = \"00:05\";\n      RandomizedDelaySec = \"5h\";\n    };\n  };\n}\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.package",
+      "description": "The restic package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.restic",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.backupCleanupCommand",
+      "description": "A script that must run after finishing the backup process.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.backupPrepareCommand",
+      "description": "A script that must run before starting the backup process.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.checkOpts",
+      "description": "A list of options for ‘restic check’.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--with-cache\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.createWrapper",
+      "description": "Whether to generate and add a script to the system path, that has the same environment variables set as the systemd service. This can be used\nto e.g. mount snapshots or perform other opterations, without having to\nmanually specify most options.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.dynamicFilesFrom",
+      "description": "A script that produces a list of files to back up. The results of this command, along with the paths specified via paths,\nare given to the ‘–files-from’ option.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"find /home/alice/git -type d -name .git\""
+    },
+    {
+      "title": "services.restic.backups.<name>.environmentFile",
+      "description": "A file containing the credentials to access the repository, in the format of an EnvironmentFile as described by systemd.exec(5).\nSee https://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html\nfor the specific credentials you will need for your backend.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.exclude",
+      "description": "Patterns to exclude when backing up. See https://restic.readthedocs.io/en/stable/040_backup.html#excluding-files for\ndetails on syntax.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/var/cache\"\n  \"/home/*/.cache\"\n  \".git\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.extraBackupArgs",
+      "description": "Extra arguments passed to restic backup.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--cleanup-cache\"\n  \"--exclude-file=/etc/nixos/restic-ignore\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.extraOptions",
+      "description": "Extra extended options to be passed to the restic -o flag. See the restic documentation for more details.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"sftp.command='ssh backup@192.168.1.100 -i /home/user/.ssh/id_rsa -s sftp'\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.inhibitsSleep",
+      "description": "Prevents the system from sleeping while backing up. This uses systemd-inhibit to block system idling so you may need to enable polkitd with\nsecurity.polkit.enable.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.restic.backups.<name>.initialize",
+      "description": "Create the repository if it does not already exist.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.passwordFile",
+      "description": "A file containing the repository password.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"/etc/nixos/restic-password\""
+    },
+    {
+      "title": "services.restic.backups.<name>.paths",
+      "description": "Paths to back up, alongside those defined by the dynamicFilesFrom option. If left empty and dynamicFilesFrom is also not specified, no\nbackup command will be run. This can be used to create a prune-only job.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"/var/lib/postgresql\"\n  \"/home/user/backup\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.progressFps",
+      "description": "Controls the frequency of progress reporting.",
+      "type": "null or (nonnegative integer or floating point number, meaning >=0)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "0.1"
+    },
+    {
+      "title": "services.restic.backups.<name>.pruneOpts",
+      "description": "A list of policy options for ‘restic forget --prune’, to automatically prune old snapshots. See\nhttps://restic.readthedocs.io/en/latest/060_forget.html#removing-snapshots-according-to-a-policy\nfor a full list of options.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": "Note: The ‘forget’ command is run after the ‘backup’ command, so keep\nthat in mind when constructing the --keep-* options.",
+      "default": "[ ]",
+      "example": "[\n  \"--keep-daily 7\"\n  \"--keep-weekly 5\"\n  \"--keep-monthly 12\"\n  \"--keep-yearly 75\"\n]\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.rcloneOptions",
+      "description": "Options to pass to rclone to control its behavior. See https://rclone.org/docs/#options for available options. When specifying\noption names, strip the leading --. To set a flag such as\n--drive-use-trash, which does not take a value, set the value to the\nBoolean true.",
+      "type": "attribute set of (string or boolean)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  bwlimit = \"10M\";\n  drive-use-trash = true;\n}\n"
+    },
+    {
+      "title": "services.restic.backups.<name>.repository",
+      "description": "Repository to backup to. This should be in the form of a backend specification as detailed here\nhttps://restic.readthedocs.io/en/stable/030_preparing_a_new_repo.html.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": "If your using the rclone backend, you can configure your remotes with\nprograms.rclone.remotes then use them in your backend specification.",
+      "default": "null",
+      "example": "\"sftp:backup@192.168.1.100:/backups/‹name›\""
+    },
+    {
+      "title": "services.restic.backups.<name>.repositoryFile",
+      "description": "Path to a file containing the repository location to backup to. This should be in the same form as the repository option.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.runCheck",
+      "description": "Whether to run ‘restic check’ with the provided checkOpts options.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "lib.length config.checkOpts > 0 || lib.length config.pruneOpts > 0",
+      "example": "true"
+    },
+    {
+      "title": "services.restic.backups.<name>.ssh-package",
+      "description": "The openssh package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.openssh",
+      "example": null
+    },
+    {
+      "title": "services.restic.backups.<name>.timerConfig",
+      "description": "When to run the backup. See systemd.timer(5) for details. If null no timer is created and the backup will only run when explicitly started.",
+      "type": "null or (attribute set of (boolean or signed integer or string or absolute path or list of (boolean or signed integer or string or absolute path)))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/restic.nix",
+          "text": "home-manager/modules/services/restic.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "{\n  OnCalendar = \"00:05\";\n  Persistent = true;\n  RandomizedDelaySec = \"5h\";\n}\n"
+    },
+    {
       "title": "services.rsibreak.enable",
       "description": "Whether to enable rsibreak.",
       "type": "boolean",
@@ -42995,6 +43541,48 @@
       "note": null,
       "default": "4500",
       "example": null
+    },
+    {
+      "title": "services.shikane.enable",
+      "description": "Whether to enable shikane, A dynamic output configuration tool that automatically detects and configures connected outputs based on a set of profiles…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/shikane.nix",
+          "text": "home-manager/modules/services/shikane.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.shikane.package",
+      "description": "The shikane package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/shikane.nix",
+          "text": "home-manager/modules/services/shikane.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.shikane",
+      "example": null
+    },
+    {
+      "title": "services.shikane.settings",
+      "description": "Configuration written to <filename>$XDG_CONFIG_HOME/shikane/config.toml</filename>.\n</para><para>\nSee <link xlink:href=“https://gitlab.com/w0lff/shikane/-/blob/master/docs/shikane.5.man.md” />\nfor more information.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/shikane.nix",
+          "text": "home-manager/modules/services/shikane.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  profile = [\n    {\n      name = \"external-monitor-default\";\n      output = [\n        {\n          match = \"eDP-1\";\n          enable = true;\n        }\n        {\n          match = \"HDMI-A-1\";\n          enable = true;\n          position = {\n            x = 1920;\n            y = 0;\n          };\n        }\n      ];\n    }\n    {\n      name = \"builtin-monitor-only\";\n      output = [\n        {\n          match = \"eDP-1\";\n          enable = true;\n        }\n      ];\n    }\n  ];\n}\n\n"
     },
     {
       "title": "services.signaturepdf.enable",
