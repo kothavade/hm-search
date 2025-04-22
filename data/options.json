@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 21 Apr 2025 02:45:34 GMT",
+  "last_update": "Tue, 22 Apr 2025 02:39:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7968,7 +7968,7 @@
     {
       "title": "programs.atuin.themes",
       "description": "Each theme is written to $XDG_CONFIG_HOME/atuin/themes/theme-name.toml\nwhere the name of each attribute is the theme-name",
-      "type": "attribute set of (TOML value or absolute path or Concatenated string)",
+      "type": "attribute set of (TOML value or absolute path or strings concatenated with “\\n”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/atuin.nix",
@@ -10246,6 +10246,48 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
+      "title": "programs.clock-rs.enable",
+      "description": "Whether to enable clock-rs.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/clock-rs.nix",
+          "text": "home-manager/modules/programs/clock-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.clock-rs.package",
+      "description": "The clock-rs package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/clock-rs.nix",
+          "text": "home-manager/modules/programs/clock-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.clock-rs",
+      "example": null
+    },
+    {
+      "title": "programs.clock-rs.settings",
+      "description": "The configuration file to be used for clock-rs",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/clock-rs.nix",
+          "text": "home-manager/modules/programs/clock-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "general = {\n  color = \"magenta\";\n  interval = 250;\n  blink = true;\n  bold = true;\n};\n\nposition = {\n  horizontal = \"start\";\n  vertical = \"end\";\n};\n\ndate = {\n  fmt = \"%A, %B %d, %Y\";\n  use_12h = true;\n  utc = true;\n  hide_seconds = true;\n};\n\n"
     },
     {
       "title": "programs.cmus.enable",
@@ -21994,6 +22036,48 @@
       "example": null
     },
     {
+      "title": "programs.nix-init.enable",
+      "description": "Whether to enable nix-init.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-init.nix",
+          "text": "home-manager/modules/programs/nix-init.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.nix-init.package",
+      "description": "The nix-init package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-init.nix",
+          "text": "home-manager/modules/programs/nix-init.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.nix-init",
+      "example": null
+    },
+    {
+      "title": "programs.nix-init.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/nix-init/config.toml.\nSee https://github.com/nix-community/nix-init#configuration for the full list\nof options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-init.nix",
+          "text": "home-manager/modules/programs/nix-init.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  maintainers = [\n    \"figsoda\"\n  ];\n  nixpkgs = \"<nixpkgs>\";\n  commit = true;\n  access-tokens = {\n    github.com = \"ghp_blahblahblah...\";\n    gitlab.com = {\n      command = [\n        \"secret-tool\"\n        \"or\"\n        \"whatever\"\n        \"you\"\n        \"use\"\n      ];\n    };\n    gitlab.gnome.org = {\n      file = \"/path/to/api/token\";\n    };\n  };\n}\n\n"
+    },
+    {
       "title": "programs.nix-your-shell.enable",
       "description": "Whether to enable nix-your-shell, a wrapper for nix develop or nix-shell to retain the same shell inside the new environment.",
       "type": "boolean",
@@ -24418,7 +24502,7 @@
     {
       "title": "programs.ranger.package",
       "description": "The ranger package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ranger.nix",
@@ -28448,6 +28532,48 @@
       "example": "24"
     },
     {
+      "title": "programs.television.enable",
+      "description": "Whether to enable television.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.television.package",
+      "description": "The television package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.television",
+      "example": null
+    },
+    {
+      "title": "programs.television.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/television/config.toml. See https://github.com/alexpasmantier/television/blob/main/.config/config.toml\nfor the full list of options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  tick_rate = 50;\n  ui = {\n    use_nerd_font_icons = true;\n    ui_scale = 120;\n    show_preview_panel = false;\n  };\n  keybindings = {\n    quit = [ \"esc\" \"ctrl-c\" ];\n  };\n}\n\n"
+    },
+    {
       "title": "programs.terminator.enable",
       "description": "Whether to enable terminator, a tiling terminal emulator.",
       "type": "boolean",
@@ -30744,9 +30870,9 @@
       "example": "{\n  autoUpdate = false;\n  autoUpdateNotification = false;\n  notifyAboutUpdates = false;\n  useQuickCss = true;\n  disableMinSize = true;\n  plugins = {\n    MessageLogger = {\n      enabled = true;\n      ignoreSelf = true;\n    };\n    FakeNitro.enabled = true;\n  };\n}\n\n"
     },
     {
-      "title": "programs.vesktop.vencord.theme",
-      "description": "The theme to use for Vencord",
-      "type": "null or strings concatenated with “\\n” or absolute path",
+      "title": "programs.vesktop.vencord.themes",
+      "description": "Themes to add for Vencord, they can be enabled by setting programs.vesktop.vencord.settings.enabledThemes to [ \"THEME_NAME.css\" ]",
+      "type": "attribute set of (strings concatenated with “\\n” or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vesktop.nix",
@@ -30754,7 +30880,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "{ }",
       "example": null
     },
     {
