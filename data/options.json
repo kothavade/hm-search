@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 22 Apr 2025 02:39:49 GMT",
+  "last_update": "Wed, 23 Apr 2025 02:40:30 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4872,6 +4872,20 @@
       "example": "with pkgs; [ fcitx5-rime ]"
     },
     {
+      "title": "i18n.inputMethod.fcitx5.classicUiConfig",
+      "description": "Configuration to be written to $XDG_DATA_HOME/fcitx5/conf/classicui.conf",
+      "type": "absolute path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
       "title": "i18n.inputMethod.fcitx5.fcitx5-with-addons",
       "description": "The fcitx5 package to use.",
       "type": "package",
@@ -4884,6 +4898,62 @@
       "note": null,
       "default": "<derivation fcitx5-with-addons-5.1.12>",
       "example": "pkgs.kdePackages.fcitx5-with-addons"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.themes",
+      "description": "Themes to be written to $XDG_DATA_HOME/fcitx5/themes/${name}",
+      "type": "lazy attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "\"\""
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.themes.<name>.highlightImage",
+      "description": "Path to the SVG of the highlight.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.themes.<name>.panelImage",
+      "description": "Path to the SVG of the panel.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.themes.<name>.theme",
+      "description": "The theme.conf file of the theme.",
+      "type": "null or strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": "See https://fcitx-im.org/wiki/Fcitx_5_Theme#Background_images\nfor more information.",
+      "default": "null",
+      "example": null
     },
     {
       "title": "i18n.inputMethod.fcitx5.waylandFrontend",
@@ -12014,15 +12084,15 @@
     {
       "title": "programs.firefox.profiles.<name>.userChrome",
       "description": "Custom Firefox user chrome CSS.",
-      "type": "null or strings concatenated with “\\n” or absolute path",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
           "text": "home-manager/modules/programs/firefox.nix"
         }
       ],
-      "note": "This can be a path to a file or directory in the Nix store,\nor a derivation, or a verbatim multi-line string.",
-      "default": "null",
+      "note": null,
+      "default": "\"\"",
       "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
     },
     {
@@ -12770,15 +12840,15 @@
     {
       "title": "programs.floorp.profiles.<name>.userChrome",
       "description": "Custom Floorp user chrome CSS.",
-      "type": "null or strings concatenated with “\\n” or absolute path",
+      "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
           "text": "home-manager/modules/programs/floorp.nix"
         }
       ],
-      "note": "This can be a path to a file or directory in the Nix store,\nor a derivation, or a verbatim multi-line string.",
-      "default": "null",
+      "note": null,
+      "default": "\"\"",
       "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
     },
     {
@@ -33391,7 +33461,7 @@
     },
     {
       "title": "programs.zsh.initContent",
-      "description": "Content to be added to .zshrc. To specify the order, use lib.mkOrder.",
+      "description": "Content to be added to .zshrc.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -33399,51 +33469,9 @@
           "text": "home-manager/modules/programs/zsh.nix"
         }
       ],
-      "note": null,
+      "note": "To specify the order, use lib.mkOrder.",
       "default": "\"\"",
-      "example": "lib.mkOrder 1000 '''\n  echo \"Hello zsh initContent!\"\n''';\n\n"
-    },
-    {
-      "title": "programs.zsh.initExtra",
-      "description": "Extra commands that should be added to .zshrc.",
-      "type": "strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": null
-    },
-    {
-      "title": "programs.zsh.initExtraBeforeCompInit",
-      "description": "Extra commands that should be added to .zshrc before compinit.",
-      "type": "strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": null
-    },
-    {
-      "title": "programs.zsh.initExtraFirst",
-      "description": "Commands that should be added to top of .zshrc.",
-      "type": "strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": null
+      "example": "lib.mkOrder 1200 '''\n  echo \"Hello zsh initContent!\"\n''';\n\n"
     },
     {
       "title": "programs.zsh.localVariables",
@@ -38597,7 +38625,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-24.12.3>",
+      "default": "<derivation kdeconnect-kde-25.04.0>",
       "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
