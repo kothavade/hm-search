@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 23 Apr 2025 02:40:30 GMT",
+  "last_update": "Thu, 24 Apr 2025 02:42:12 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4844,8 +4844,22 @@
       "example": "pkgs.glibcLocales.override {\n  allLocales = false;\n  locales = [ \"en_US.UTF-8/UTF-8\" ];\n}\n\n"
     },
     {
+      "title": "i18n.inputMethod.enable",
+      "description": "Whether to enable an additional input method type.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/default.nix",
+          "text": "home-manager/modules/i18n/input-method/default.nix"
+        }
+      ],
+      "note": null,
+      "default": "true if the deprecated option enabled is set, false otherwise",
+      "example": "true"
+    },
+    {
       "title": "i18n.inputMethod.enabled",
-      "description": "Select the enabled input method. Input methods are software to input symbols that are not available on standard input devices.",
+      "description": "Deprecated - use type and enable = true instead",
       "type": "null or one of “fcitx”, “fcitx5”, “nabi”, “uim”, “hime”, “kime”",
       "declared_by": [
         {
@@ -4853,7 +4867,7 @@
           "text": "home-manager/modules/i18n/input-method/default.nix"
         }
       ],
-      "note": "Input methods are especially used to input Chinese, Japanese and\nKorean characters.",
+      "note": null,
       "default": "null",
       "example": "\"fcitx5\""
     },
@@ -4872,20 +4886,6 @@
       "example": "with pkgs; [ fcitx5-rime ]"
     },
     {
-      "title": "i18n.inputMethod.fcitx5.classicUiConfig",
-      "description": "Configuration to be written to $XDG_DATA_HOME/fcitx5/conf/classicui.conf",
-      "type": "absolute path or strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
-          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": null
-    },
-    {
       "title": "i18n.inputMethod.fcitx5.fcitx5-with-addons",
       "description": "The fcitx5 package to use.",
       "type": "package",
@@ -4898,6 +4898,118 @@
       "note": null,
       "default": "<derivation fcitx5-with-addons-5.1.12>",
       "example": "pkgs.kdePackages.fcitx5-with-addons"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.ignoreUserConfig",
+      "description": "Ignore the user configures. Warning: When this is enabled, the user config files are totally ignored and the user dict can’t be saved\nand loaded.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.quickPhrase",
+      "description": "Quick phrases.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  smile = \"（・∀・）\";\n  angry = \"(￣ー￣)\";\n}\n\n"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.quickPhraseFiles",
+      "description": "Quick phrase files.",
+      "type": "attribute set of absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  words = ./words.mb;\n  numbers = ./numbers.mb;\n}\n\n"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.settings.addons",
+      "description": "The addon configures in conf folder in ini format with global sections. Each item is written to the corresponding file.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  classicui.globalSection.Theme = \"example\";\n  pinyin.globalSection.EmojiEnabled = \"True\";\n}\n\n"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.settings.addons.<name>.globalSection",
+      "description": "global section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "type": "section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.settings.addons.<name>.sections",
+      "description": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.settings.globalOptions",
+      "description": "The global options in config file in ini format.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Behavior = {\n    ActiveByDefault = false;\n  };\n  Hotkey = {\n    EnumerateWithTriggerKeys = true;\n    EnumerateSkipFirst = false;\n    ModifierOnlyKeyTimeout = 250;\n  };\n}\n\n"
+    },
+    {
+      "title": "i18n.inputMethod.fcitx5.settings.inputMethod",
+      "description": "The input method configure in profile file in ini format.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
+          "text": "home-manager/modules/i18n/input-method/fcitx5.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  GroupOrder.\"0\" = \"Default\";\n  \"Groups/0\" = {\n    Name = \"Default\";\n    \"Default Layout\" = \"us\";\n    DefaultIM = \"pinyin\";\n  };\n  \"Groups/0/Items/0\".Name = \"keyboard-us\";\n  \"Groups/0/Items/1\".Name = \"pinyin\";\n}\n\n"
     },
     {
       "title": "i18n.inputMethod.fcitx5.themes",
@@ -4944,7 +5056,7 @@
     {
       "title": "i18n.inputMethod.fcitx5.themes.<name>.theme",
       "description": "The theme.conf file of the theme.",
-      "type": "null or strings concatenated with “\\n” or absolute path",
+      "type": "null or (attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))) or strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/fcitx5.nix",
@@ -4982,6 +5094,20 @@
       "note": null,
       "default": "\"\"",
       "example": "daemon:\n  modules: [Xim,Indicator]\nindicator:\n  icon_color: White\nengine:\n  hangul:\n    layout: dubeolsik\n\n"
+    },
+    {
+      "title": "i18n.inputMethod.type",
+      "description": "Select the enabled input method. Input methods are software to input symbols that are not available on standard input devices.",
+      "type": "null or one of “fcitx”, “fcitx5”, “nabi”, “uim”, “hime”, “kime”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/i18n/input-method/default.nix",
+          "text": "home-manager/modules/i18n/input-method/default.nix"
+        }
+      ],
+      "note": "Input methods are especially used to input Chinese, Japanese and\nKorean characters.",
+      "default": "The value of the deprecated option enabled, defaulting to null",
+      "example": "\"fcitx5\""
     },
     {
       "title": "i18n.inputMethod.uim.toolbar",
