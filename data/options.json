@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 25 Apr 2025 02:42:22 GMT",
+  "last_update": "Sat, 26 Apr 2025 02:35:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -29596,6 +29596,20 @@
       "example": null
     },
     {
+      "title": "programs.thefuck.alias",
+      "description": "Alias used to invoke thefuck.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thefuck.nix",
+          "text": "home-manager/modules/programs/thefuck.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"fuck\"",
+      "example": null
+    },
+    {
       "title": "programs.thunderbird.enable",
       "description": "Whether to enable Thunderbird.",
       "type": "boolean",
@@ -31958,7 +31972,7 @@
         }
       ],
       "note": null,
-      "default": "",
+      "default": "\"\"",
       "example": "-- Your lua code / config here\nlocal mylib = require 'mylib';\nreturn {\n  usemylib = mylib.do_fun();\n  font = wezterm.font(\"JetBrains Mono\"),\n  font_size = 16.0,\n  color_scheme = \"Tomorrow Night\",\n  hide_tab_bar_if_only_one_tab = true,\n  default_prog = { \"zsh\", \"--login\", \"-c\", \"tmux attach -t dev || tmux new -s dev\" },\n  keys = {\n    {key=\"n\", mods=\"SHIFT|CTRL\", action=\"ToggleFullScreen\"},\n  }\n}\n\n"
     },
     {
