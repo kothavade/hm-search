@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 26 Apr 2025 02:35:56 GMT",
+  "last_update": "Sun, 27 Apr 2025 02:45:11 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -23154,6 +23154,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.onedrive.enable",
+      "description": "Whether to enable onedrive.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix",
+          "text": "home-manager/modules/programs/onedrive.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.onedrive.package",
+      "description": "The onedrive package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix",
+          "text": "home-manager/modules/programs/onedrive.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.onedrive",
+      "example": null
+    },
+    {
+      "title": "programs.onedrive.settings",
+      "description": "Configuration settings for Onedrive. All available options can be found at https://github.com/abraunegg/onedrive/blob/master/config.",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onedrive.nix",
+          "text": "home-manager/modules/programs/onedrive.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    check_nomount = \"false\";\n    check_nosync = \"false\";\n    classify_as_big_delete = \"1000\";\n    cleanup_local_files = \"false\";\n    disable_notifications = \"false\";\n    no_remote_delete = \"false\";\n    rate_limit = \"0\";\n    resync = \"false\";\n    skip_dotfiles = \"false\";\n  }\n''\n"
     },
     {
       "title": "programs.onlyoffice.enable",
