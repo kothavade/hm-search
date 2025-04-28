@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 27 Apr 2025 02:45:11 GMT",
+  "last_update": "Mon, 28 Apr 2025 02:46:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11393,7 +11393,7 @@
       ],
       "note": null,
       "default": "home.shell.enableNushellIntegration",
-      "example": "false"
+      "example": "true"
     },
     {
       "title": "programs.eza.enableZshIntegration",
@@ -25550,6 +25550,48 @@
       "example": null
     },
     {
+      "title": "programs.rmpc.enable",
+      "description": "Whether to enable rmpc.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rmpc.nix",
+          "text": "home-manager/modules/programs/rmpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.rmpc.package",
+      "description": "The rmpc package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rmpc.nix",
+          "text": "home-manager/modules/programs/rmpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.rmpc",
+      "example": null
+    },
+    {
+      "title": "programs.rmpc.config",
+      "description": "Configuration settings for rmpc in the Rusty Object Notation format. All available options can be found in the official\ndocumentation at https://mierak.github.io/rmpc/next/configuration/.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rmpc.nix",
+          "text": "home-manager/modules/programs/rmpc.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  (\n      address: \"127.0.0.1:6600\",\n      password: None,\n      theme: None,\n      cache_dir: None,\n      on_song_change: None,\n      volume_step: 5,\n      max_fps: 30,\n      scrolloff: 0,\n      wrap_navigation: false,\n      enable_mouse: true,\n      enable_config_hot_reload: true,\n      status_update_interval_ms: 1000,\n      select_current_song_on_change: false,\n      browser_song_sort: [Disc, Track, Artist, Title],\n  )\n''\n"
+    },
+    {
       "title": "programs.rofi.enable",
       "description": "Whether to enable Rofi: A window switcher, application launcher and dmenu replacement.",
       "type": "boolean",
@@ -34652,7 +34694,7 @@
     {
       "title": "programs.zsh.zprof.enable",
       "description": "Enable zprof in your zshrc.",
-      "type": "unspecified value",
+      "type": "boolean",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
@@ -36652,6 +36694,20 @@
       "example": null
     },
     {
+      "title": "services.espanso.package-wayland",
+      "description": "The espanso-wayland package to use. Which espanso package to use when running under wayland.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/espanso.nix",
+          "text": "home-manager/modules/services/espanso.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.espanso-wayland",
+      "example": null
+    },
+    {
       "title": "services.espanso.configs",
       "description": "The Espanso configuration to use. See https://espanso.org/docs/configuration/basics/\nfor a description of available options.",
       "type": "YAML value",
@@ -36678,6 +36734,34 @@
       "note": null,
       "default": "",
       "example": "{\n  base = {\n    matches = [\n      {\n        trigger = \":now\";\n        replace = \"It's {{currentdate}} {{currenttime}}\";\n      }\n      {\n        trigger = \":hello\";\n        replace = \"line1\\nline2\";\n      }\n      {\n        regex = \":hi(?P<person>.*)\\\\.\";\n        replace = \"Hi {{person}}!\";\n      }\n    ];\n  };\n  global_vars = {\n    global_vars = [\n      {\n        name = \"currentdate\";\n        type = \"date\";\n        params = {format = \"%d/%m/%Y\";};\n      }\n      {\n        name = \"currenttime\";\n        type = \"date\";\n        params = {format = \"%R\";};\n      }\n    ];\n  };\n};\n\n"
+    },
+    {
+      "title": "services.espanso.waylandSupport",
+      "description": "Whether to enable wayland support on linux",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/espanso.nix",
+          "text": "home-manager/modules/services/espanso.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"`true` on linux\"",
+      "example": null
+    },
+    {
+      "title": "services.espanso.x11Support",
+      "description": "Whether to enable x11 support on linux",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/espanso.nix",
+          "text": "home-manager/modules/services/espanso.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"`true` on linux\"",
+      "example": null
     },
     {
       "title": "services.etesync-dav.enable",
