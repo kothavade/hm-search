@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 28 Apr 2025 02:46:04 GMT",
+  "last_update": "Tue, 29 Apr 2025 02:42:11 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13454,6 +13454,20 @@
       "example": "[ \"https://github.com\" \"https://github.example.com\" ]\n\n"
     },
     {
+      "title": "programs.gh.hosts",
+      "description": "Host-specific configuration written to $XDG_CONFIG_HOME/gh/hosts.yml.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gh.nix",
+          "text": "home-manager/modules/programs/gh.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"github.com\" = {\n    user = \"<your_username>\";\n  };\n}\n"
+    },
+    {
       "title": "programs.gh.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/gh/config.yml.",
       "type": "YAML value",
@@ -18690,6 +18704,48 @@
       "example": null
     },
     {
+      "title": "programs.kickoff.enable",
+      "description": "Whether to enable kickoff.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kickoff.nix",
+          "text": "home-manager/modules/programs/kickoff.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.kickoff.package",
+      "description": "The kickoff package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kickoff.nix",
+          "text": "home-manager/modules/programs/kickoff.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.kickoff",
+      "example": null
+    },
+    {
+      "title": "programs.kickoff.settings",
+      "description": "Configuration settings for kickoff. All the available options can be found here: https://github.com/j0ru/kickoff/blob/main/assets/default_config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kickoff.nix",
+          "text": "home-manager/modules/programs/kickoff.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  padding = 100;\n  font_size = 32;\n  search.show_hidden_files = false;\n  history.decrease_interval = 48;\n  \n  keybinding = {\n    paste = [ \"ctrl+v\" ];\n    execute = [ \"KP_Enter\" \"Return\" ];\n    complete = [ \"Tab\" ];\n  };\n''\n"
+    },
+    {
       "title": "programs.kitty.enable",
       "description": "Whether to enable Kitty terminal emulator.",
       "type": "boolean",
@@ -19712,8 +19768,8 @@
       "example": "true"
     },
     {
-      "title": "programs.lsd.enableAliases",
-      "description": "Whether to enable recommended lsd aliases.",
+      "title": "programs.lsd.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -19722,7 +19778,49 @@
         }
       ],
       "note": null,
-      "default": "false",
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.lsd.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
+          "text": "home-manager/modules/programs/lsd.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.lsd.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
+          "text": "home-manager/modules/programs/lsd.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.lsd.package",
+      "description": "The lsd package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
+          "text": "home-manager/modules/programs/lsd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lsd",
       "example": null
     },
     {
@@ -20662,6 +20760,62 @@
       "note": null,
       "default": "[ ]",
       "example": "[ pkgs.mpvScripts.mpris ]"
+    },
+    {
+      "title": "programs.mpvpaper.enable",
+      "description": "Whether to enable mpvpaper.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpvpaper.nix",
+          "text": "home-manager/modules/programs/mpvpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mpvpaper.package",
+      "description": "The mpvpaper package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpvpaper.nix",
+          "text": "home-manager/modules/programs/mpvpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mpvpaper",
+      "example": null
+    },
+    {
+      "title": "programs.mpvpaper.pauseList",
+      "description": "List of program names that will cause mpvpaper to pause. Programs must be separed by spaces or newlines.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpvpaper.nix",
+          "text": "home-manager/modules/programs/mpvpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  firefox\n  steam\n  obs\n''\n"
+    },
+    {
+      "title": "programs.mpvpaper.stopList",
+      "description": "List of program names that will cause mpvpaper to stop. Programs must be separed by spaces or newlines.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mpvpaper.nix",
+          "text": "home-manager/modules/programs/mpvpaper.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  firefox\n  steam\n  obs\n''\n"
     },
     {
       "title": "programs.mr.enable",
@@ -22108,7 +22262,7 @@
     {
       "title": "programs.nh.flake",
       "description": "The path that will be used for the FLAKE environment variable.",
-      "type": "null or (optionally newline-terminated) single-line string",
+      "type": "null or (optionally newline-terminated) single-line string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
