@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 29 Apr 2025 02:42:11 GMT",
+  "last_update": "Wed, 30 Apr 2025 02:41:57 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -24234,8 +24234,8 @@
       "example": "true"
     },
     {
-      "title": "programs.pls.enableAliases",
-      "description": "Whether to enable recommended pls aliases.",
+      "title": "programs.pls.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -24244,8 +24244,36 @@
         }
       ],
       "note": null,
-      "default": "false",
-      "example": "true"
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.pls.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pls.nix",
+          "text": "home-manager/modules/programs/pls.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.pls.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pls.nix",
+          "text": "home-manager/modules/programs/pls.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
     },
     {
       "title": "programs.pls.package",
@@ -37772,8 +37800,8 @@
       "example": null
     },
     {
-      "title": "services.gpg-agent.pinentryPackage",
-      "description": "Which pinentry interface to use. If not null, it sets pinentry-program in gpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-GNOME systems. You can fix it by\nadding the following to your configuration:",
+      "title": "services.gpg-agent.pinentry.package",
+      "description": "The pinentry-gnome3 package to use. Which pinentry interface to use. If not null, it sets pinentry-program in gpg-agent.conf. Beware that\npinentry-gnome3 may not work on non-GNOME systems. You can fix it by\nadding the following to your configuration:",
       "type": "null or package",
       "declared_by": [
         {
@@ -37783,7 +37811,21 @@
       ],
       "note": "home.packages = [ pkgs.gcr ];",
       "default": "null",
-      "example": "pkgs.pinentry-gnome3"
+      "example": null
+    },
+    {
+      "title": "services.gpg-agent.pinentry.program",
+      "description": "Which program to search for in the configured pinentry.package.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gpg-agent.nix",
+          "text": "home-manager/modules/services/gpg-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"wayprompt-pinentry\""
     },
     {
       "title": "services.gpg-agent.sshKeys",
