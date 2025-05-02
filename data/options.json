@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 01 May 2025 02:52:00 GMT",
+  "last_update": "Fri, 02 May 2025 02:42:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -37825,7 +37825,7 @@
       ],
       "note": null,
       "default": null,
-      "example": "\"wayprompt-pinentry\""
+      "example": "\"pinentry-wayprompt\""
     },
     {
       "title": "services.gpg-agent.sshKeys",
