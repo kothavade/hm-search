@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 02 May 2025 02:42:56 GMT",
+  "last_update": "Sat, 03 May 2025 02:39:06 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4058,6 +4058,20 @@
       "note": "If the script block produces any observable side effect, such\nas writing or deleting files, then it\nmust be placed after the special\nwriteBoundary script block. Prior to the\nwrite boundary one can place script blocks that verifies, but\ndoes not modify, the state of the system and exits if an\nunexpected state is found. For example, the\ncheckLinkTargets script block checks for\ncollisions between non-managed files and files defined in\nhome.file.",
       "default": "{ }",
       "example": "{\n  myActivationAction = lib.hm.dag.entryAfter [\"writeBoundary\"] ''\n    run ln -s $VERBOSE_ARG \\\n        ${builtins.toPath ./link-me-directly} $HOME\n  '';\n}\n\n"
+    },
+    {
+      "title": "home.extraDependencies",
+      "description": "A list of paths that should be included in the home closure but generally not visible.",
+      "type": "list of path in the Nix store",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
+          "text": "home-manager/modules/home-environment.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
     },
     {
       "title": "home.extraOutputsToInstall",
@@ -11170,6 +11184,62 @@
       "note": null,
       "default": "[ ]",
       "example": null
+    },
+    {
+      "title": "programs.element-desktop.enable",
+      "description": "Whether to enable element-desktop.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/element-desktop.nix",
+          "text": "home-manager/modules/programs/element-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.element-desktop.package",
+      "description": "The element-desktop package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/element-desktop.nix",
+          "text": "home-manager/modules/programs/element-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.element-desktop",
+      "example": null
+    },
+    {
+      "title": "programs.element-desktop.profiles",
+      "description": "Extra profiles for Element. Those can be accessed using the “–profile $NAME” flag. The same warning and options apply\nhere.",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/element-desktop.nix",
+          "text": "home-manager/modules/programs/element-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    work = {\n      default_server_config = {\n        \"m.homeserver\" = {\n            base_url = \"https://matrix-client.matrix.org\";\n            server_name = \"matrix.org\";\n        };\n        \"m.identity_server\" = {\n            base_url = \"https://vector.im\";\n        };\n      };\n    };\n    home = {\n      disable_custom_urls = false;\n      disable_guests = false;\n      disable_login_language_selector = false;\n      disable_3pid_login = false;\n    };\n    other = {\n      force_verification = false;\n      brand = \"Element\";\n      integrations_ui_url = \"https://scalar.vector.im/\";\n      integrations_rest_url = \"https://scalar.vector.im/api\";\n    };\n  }\n''\n"
+    },
+    {
+      "title": "programs.element-desktop.settings",
+      "description": "Configuration settings for Element’s default profiles. WARNING: Element doesn’t combine this config with the defaults,\nso make sure to configure most options. For details about this\nbehavior and available configuration options see:\nhttps://github.com/element-hq/element-web/blob/develop/docs/config.md",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/element-desktop.nix",
+          "text": "home-manager/modules/programs/element-desktop.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    default_server_config = {\n      \"m.homeserver\" = {\n          base_url = \"https://matrix-client.matrix.org\";\n          server_name = \"matrix.org\";\n      };\n      \"m.identity_server\" = {\n          base_url = \"https://vector.im\";\n      };\n    };\n    disable_custom_urls = false;\n    disable_guests = false;\n    disable_login_language_selector = false;\n    disable_3pid_login = false;\n    force_verification = false;\n    brand = \"Element\";\n    integrations_ui_url = \"https://scalar.vector.im/\";\n    integrations_rest_url = \"https://scalar.vector.im/api\";\n  }\n''\n"
     },
     {
       "title": "programs.emacs.enable",
@@ -31598,6 +31668,48 @@
       "example": "{\n  env = {\n    WINEFSYNC = \"1\";\n  };\n  studio = {\n    dxvk = false;\n    env = {\n      DXVK_HUD = \"0\";\n      MANGOHUD = \"1\";\n    };\n    fflags = {\n      DFIntTaskSchedulerTargetFps = 144;\n    };\n    renderer = \"Vulkan\";\n  };\n}\n"
     },
     {
+      "title": "programs.visidata.enable",
+      "description": "Whether to enable Visidata.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/visidata.nix",
+          "text": "home-manager/modules/programs/visidata.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.visidata.package",
+      "description": "The visidata package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/visidata.nix",
+          "text": "home-manager/modules/programs/visidata.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.visidata",
+      "example": null
+    },
+    {
+      "title": "programs.visidata.visidatarc",
+      "description": "Configuration settings and Python function declarations to be written to ~/.visidatarc. All available options\ncan be found here: https://www.visidata.org/docs/.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/visidata.nix",
+          "text": "home-manager/modules/programs/visidata.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  options.min_memory_mb=100  # stop processing without 100MB free\n  \n  bindkey('0', 'go-leftmost')   # alias '0' to go to first column, like vim\n  \n  def median(values):\n      L = sorted(values)\n      return L[len(L)//2]\n  \n  vd.aggregator('median', median)\n''\n"
+    },
+    {
       "title": "programs.vivaldi.nativeMessagingHosts",
       "description": "List of Vivaldi Browser native messaging hosts to install.",
       "type": "list of package",
@@ -35824,6 +35936,104 @@
       "note": null,
       "default": "null",
       "example": "5"
+    },
+    {
+      "title": "services.clipcat.enable",
+      "description": "Whether to enable clipcat.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.clipcat.enableSystemdUnit",
+      "description": "Enable clipcat’s Systemd Unit.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
+    },
+    {
+      "title": "services.clipcat.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "services.clipcat.package",
+      "description": "The clipcat package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.clipcat",
+      "example": null
+    },
+    {
+      "title": "services.clipcat.ctlSettings",
+      "description": "Configuration settings for clipcatctl. All available options can be found here: https://github.com/xrelkd/clipcat?tab=readme-ov-file#configuration.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    server_endpoint = \"/run/user/<user-id>/clipcat/grpc.sock\";\n    log = {\n      file_path = \"/path/to/log/file\";\n      emit_journald = true;\n      emit_stdout = false;\n      emit_stderr = false;\n      level = \"INFO\";\n    };\n  }\n''\n"
+    },
+    {
+      "title": "services.clipcat.daemonSettings",
+      "description": "Configuration settings for clipcatd. All available options can be found here: https://github.com/xrelkd/clipcat?tab=readme-ov-file#configuration.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "''\n  {\n    daemonize = true;\n    max_history = 50;\n    history_file_path = \"/home/<username>/.cache/clipcat/clipcatd-history\";\n    pid_file = \"/run/user/<user-id>/clipcatd.pid\";\n    primary_threshold_ms = 5000;\n    log = {\n      file_path = \"/path/to/log/file\";\n      emit_journald = true;\n      emit_stdout = false;\n      emit_stderr = false;\n      level = \"INFO\";\n    };\n  }\n''\n"
+    },
+    {
+      "title": "services.clipcat.menuSettings",
+      "description": "Configuration settings for clipcat-menu. All available options can be found here: https://github.com/xrelkd/clipcat?tab=readme-ov-file#configuration.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/clipcat.nix",
+          "text": "home-manager/modules/services/clipcat.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    server_endpoint = \"/run/user/<user-id>/clipcat/grpc.sock\";\n    finder = \"rofi\";\n    rofi = {\n      line_length = 100;\n      menu_length = 30;\n      menu_prompt = \"Clipcat\";\n      extra_arguments = [\n        \"-mesg\"\n        \"Please select a clip\"\n      ];\n    };\n    dmenu = {\n      line_length = 100;\n      menu_length = 30;\n      menu_prompt = \"Clipcat\";\n    };\n  }\n''\n"
     },
     {
       "title": "services.cliphist.enable",
