@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 03 May 2025 02:39:06 GMT",
+  "last_update": "Sun, 04 May 2025 02:51:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16366,6 +16366,48 @@
       "example": "true"
     },
     {
+      "title": "programs.i3bar-river.enable",
+      "description": "Whether to enable i3bar-river.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3bar-river.nix",
+          "text": "home-manager/modules/programs/i3bar-river.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.i3bar-river.package",
+      "description": "The i3bar-river package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3bar-river.nix",
+          "text": "home-manager/modules/programs/i3bar-river.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.i3bar-river",
+      "example": null
+    },
+    {
+      "title": "programs.i3bar-river.settings",
+      "description": "Configuration settings for i3bar-river. All available options can be found here: https://github.com/MaxVerevkin/i3bar-river?tab=readme-ov-file#configuration.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/i3bar-river.nix",
+          "text": "home-manager/modules/programs/i3bar-river.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  background = \"#282828ff\";\n  color = \"#ffffffff\";\n  font = \"monospace 10\";\n  height = 24;\n  margin_bottom = 0;\n  margin_left = 0;\n  margin_top = 0;\n  separator = \"#9a8a62ff\";\n  \"wm.river\" = {\n    max_tag = 0;\n  };\n}\n"
+    },
+    {
       "title": "programs.i3blocks.enable",
       "description": "Whether to enable i3blocks i3 status command scheduler.",
       "type": "boolean",
@@ -23378,6 +23420,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.onagre.enable",
+      "description": "Whether to enable onagre.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onagre.nix",
+          "text": "home-manager/modules/programs/onagre.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.onagre.package",
+      "description": "The onagre package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onagre.nix",
+          "text": "home-manager/modules/programs/onagre.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.onagre",
+      "example": null
+    },
+    {
+      "title": "programs.onagre.style",
+      "description": "Configuration file to be written to theme.scss for setting Onagre’s theme. The documentation can be found here:\nhttps://github.com/onagre-launcher/onagre/wiki/Theming",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onagre.nix",
+          "text": "home-manager/modules/programs/onagre.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  .onagre {\n    --exit-unfocused: false;\n    height: 250px;\n    width: 400px;\n    --font-family: \"Iosevka,Iosevka Nerd Font\";\n    font-size: 18px;\n    background: #151515;\n    color: #414141;\n    padding: 10px;\n  \n    .container {\n      .rows {\n        --height: fill-portion 6;\n        .row-selected {\n          color: #ffffff;\n          --spacing: 3px;\n        }\n      }\n  \n      .scrollable {\n        background: #151515;\n        width: 0;\n        .scroller {\n          width: 0;\n          color: #151515;\n        }\n      }\n    }\n  }\n''\n"
     },
     {
       "title": "programs.onedrive.enable",
@@ -32551,8 +32635,8 @@
     },
     {
       "title": "programs.wofi.style",
-      "description": "CSS style for wofi to use as a stylesheet. See wofi(7).",
-      "type": "null or strings concatenated with “\\n”",
+      "description": "CSS style for wofi to use as a stylesheet. See wofi(7)",
+      "type": "null or strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wofi.nix",
@@ -39778,7 +39862,7 @@
     },
     {
       "title": "services.mako.enable",
-      "description": "Whether to enable Mako, lightweight notification daemon for Wayland .",
+      "description": "Whether to enable mako.",
       "type": "boolean",
       "declared_by": [
         {
@@ -39805,9 +39889,9 @@
       "example": null
     },
     {
-      "title": "services.mako.actions",
-      "description": "Applications may request an action to be associated with activating a notification. Disabling this will cause mako to ignore these requests.",
-      "type": "null or boolean",
+      "title": "services.mako.criterias",
+      "description": "Criterias for mako’s config. All the details can be found in the CRITERIA section in the official documentation.",
+      "type": "attribute set of attribute set of string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
@@ -39815,13 +39899,13 @@
         }
       ],
       "note": null,
-      "default": "true",
-      "example": null
+      "default": "{ }",
+      "example": "{\n  \"actionable=true\" = {\n    anchor = \"top-left\";\n  };\n  \"app-name=Google\\\\ Chrome\" = {\n    max-visible = \"5\";\n  };\n  \"field1=value field2=value\" = {\n    text-alignment = \"left\";\n  };\n}\n"
     },
     {
-      "title": "services.mako.anchor",
-      "description": "Show notifications at the specified position on the output. Supported values are top-right, top-center, top-left, bottom-right,\nbottom-center, bottom-left, center-right, center-left and center.",
-      "type": "null or one of “top-right”, “top-center”, “top-left”, “bottom-right”, “bottom-center”, “bottom-left”, “center-right”, “center-left”, “center”",
+      "title": "services.mako.settings",
+      "description": "Configuration settings for mako. All available options can be found here: https://github.com/emersion/mako/blob/master/doc/mako.5.scd.",
+      "type": "attribute set of string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
@@ -39829,358 +39913,8 @@
         }
       ],
       "note": null,
-      "default": "\"top-right\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.backgroundColor",
-      "description": "Set popup background color to a specific color, represented in hex color code.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"#285577FF\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.borderColor",
-      "description": "Set popup border color to a specific color, represented in hex color code.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"#4C7899FF\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.borderRadius",
-      "description": "Set popup corner radius to the specified number of pixels.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "0",
-      "example": null
-    },
-    {
-      "title": "services.mako.borderSize",
-      "description": "Set popup border size to the specified number of pixels.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "1",
-      "example": null
-    },
-    {
-      "title": "services.mako.defaultTimeout",
-      "description": "Set the default timeout to timeout in milliseconds. To disable the timeout, set it to zero.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "0",
-      "example": null
-    },
-    {
-      "title": "services.mako.extraConfig",
-      "description": "Additional configuration.",
-      "type": "strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": "[urgency=low]\nborder-color=#b8bb26\n\n"
-    },
-    {
-      "title": "services.mako.font",
-      "description": "Font to use, in Pango format.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"monospace 10\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.format",
-      "description": "Set notification format string to format. See FORMAT SPECIFIERS for more information. To change this for grouped notifications, set it\nwithin a grouped criteria.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"<b>%s</b>\\\\n%b\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.groupBy",
-      "description": "A comma-separated list of criteria fields that will be compared to other visible notifications to determine if this one should form a\ngroup with them. All listed criteria must be exactly equal for two\nnotifications to group.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "services.mako.height",
-      "description": "Set maximum height of notification popups. Notifications whose text takes up less space are shrunk to fit.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "100",
-      "example": null
-    },
-    {
-      "title": "services.mako.iconPath",
-      "description": "Paths to search for icons when a notification specifies a name instead of a full path. Colon-delimited. This approximates the search\nalgorithm used by the XDG Icon Theme Specification, but does not\nsupport any of the theme metadata. Therefore, if you want to search\nparent themes, you’ll need to add them to the path manually.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": "The /usr/share/icons/hicolor and\n/usr/share/pixmaps directories are\nalways searched.",
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "services.mako.icons",
-      "description": "Whether or not to show icons in notifications.",
-      "type": "null or boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": null
-    },
-    {
-      "title": "services.mako.ignoreTimeout",
-      "description": "If set, mako will ignore the expire timeout sent by notifications and use the one provided by default-timeout instead.",
-      "type": "null or boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
-      "title": "services.mako.layer",
-      "description": "Arrange mako at the specified layer, relative to normal windows. Supported values are background, bottom, top, and overlay. Using\noverlay will cause notifications to be displayed above fullscreen\nwindows, though this may also occur at top depending on your\ncompositor.",
-      "type": "null or one of “background”, “bottom”, “top”, “overlay”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"top\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.margin",
-      "description": "Set margin of each edge specified in pixels. Specify single value to apply margin on all sides. Two comma-separated values will set\nvertical and horizontal edges separately. Four comma-separated will\ngive each edge a separate value.\nFor example: 10,20,5 will set top margin to 10, left and right to 20\nand bottom to five.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"10\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.markup",
-      "description": "If 1, enable Pango markup. If 0, disable Pango markup. If enabled, Pango markup will be interpreted in your format specifier and in the\nbody of notifications.",
-      "type": "null or boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "true",
-      "example": null
-    },
-    {
-      "title": "services.mako.maxHistory",
-      "description": "Set maximum number of expired notifications to keep in the history buffer. Set 0 to disable history.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "5",
-      "example": null
-    },
-    {
-      "title": "services.mako.maxIconSize",
-      "description": "Set maximum icon size to the specified number of pixels.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "64",
-      "example": null
-    },
-    {
-      "title": "services.mako.maxVisible",
-      "description": "Set maximum number of visible notifications. Set -1 to show all.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "5",
-      "example": null
-    },
-    {
-      "title": "services.mako.output",
-      "description": "Show notifications on the specified output. If empty, notifications will appear on the focused output. Requires the compositor to support\nthe Wayland protocol xdg-output-unstable-v1 version 2.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": null
-    },
-    {
-      "title": "services.mako.padding",
-      "description": "Set padding of each edge specified in pixels. Specify single value to apply margin on all sides. Two comma-separated values will set\nvertical and horizontal edges separately. Four comma-separated will\ngive each edge a separate value.\nFor example: 10,20,5 will set top margin to 10, left and right to 20\nand bottom to five.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"5\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.progressColor",
-      "description": "Set popup progress indicator color to a specific color, represented in hex color code. To draw the progress\nindicator on top of the background color, use the\nover attribute. To replace the background\ncolor, use the source attribute (this can\nbe useful when the notification is semi-transparent).",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"over #5588AAFF\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.sort",
-      "description": "Sorts incoming notifications by time and/or priority in ascending(+) or descending(-) order.",
-      "type": "null or one of “+time”, “-time”, “+priority”, “-priority”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"-time\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.textColor",
-      "description": "Set popup text color to a specific color, represented in hex color code.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"#FFFFFFFF\"",
-      "example": null
-    },
-    {
-      "title": "services.mako.width",
-      "description": "Set width of notification popups in specified number of pixels.",
-      "type": "null or signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "300",
-      "example": null
+      "default": "{ }",
+      "example": "''\n  {\n    actions = \"true\";\n    anchor = \"top-right\";\n    backgroundColor = \"#000000\";\n    borderColor = \"#FFFFFF\";\n    borderRadius = \"0\";\n    defaultTimeout = \"0\";\n    font = \"monospace 10\";\n    height = \"100\";\n    width = \"300\";\n    icons = \"true\";\n    ignoreTimeout = \"false\";\n    layer = \"top\";\n    margin = \"10\";\n    markup = \"true\";\n  }\n''\n"
     },
     {
       "title": "services.mbsync.enable",
