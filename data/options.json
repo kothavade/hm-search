@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 04 May 2025 02:51:23 GMT",
+  "last_update": "Mon, 05 May 2025 02:48:15 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -28798,6 +28798,48 @@
       "example": "myTheme = {\n  code_syntax_highlight = \"catppuccin-latte\";\n\n  file_panel_border = \"#101010\";\n  sidebar_border = \"#101011\";\n  footer_border = \"#101012\";\n\n  gradient_color = [\n    \"#101013\"\n    \"#101014\"\n  ];\n\n  # ...\n};\nmyOtherFavoriteTheme = {\n  code_syntax_highlight = \"catppuccin-mocha\";\n\n  file_panel_border = \"#505050\";\n  sidebar_border = \"#505051\";\n  footer_border = \"#505052\";\n\n  gradient_color = [\n    \"#505053\"\n    \"#505054\"\n  ];\n\n  # ...\n};\n\n"
     },
     {
+      "title": "programs.sway-easyfocus.enable",
+      "description": "Whether to enable sway-easyfocus.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sway-easyfocus.nix",
+          "text": "home-manager/modules/programs/sway-easyfocus.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sway-easyfocus.package",
+      "description": "The sway-easyfocus package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sway-easyfocus.nix",
+          "text": "home-manager/modules/programs/sway-easyfocus.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sway-easyfocus",
+      "example": null
+    },
+    {
+      "title": "programs.sway-easyfocus.settings",
+      "description": "Configuration settings for sway-easyfocus. All available options can be found here: https://github.com/edzdez/sway-easyfocus?tab=readme-ov-file#config-file.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sway-easyfocus.nix",
+          "text": "home-manager/modules/programs/sway-easyfocus.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  chars = \"fjghdkslaemuvitywoqpcbnxz\";\n  focused_background_color = \"285577\";\n  focused_background_opacity = 1.0;\n  focused_text_color = \"ffffff\";\n  font_family = \"monospace\";\n  font_size = \"medium\";\n  font_weight = \"bold\";\n  window_background_color = \"d1f21\";\n  window_background_opacity = 0.2;\n}\n"
+    },
+    {
       "title": "programs.swayimg.enable",
       "description": "Whether to enable swayimg.",
       "type": "boolean",
@@ -39889,9 +39931,9 @@
       "example": null
     },
     {
-      "title": "services.mako.criterias",
+      "title": "services.mako.criteria",
       "description": "Criterias for mako’s config. All the details can be found in the CRITERIA section in the official documentation.",
-      "type": "attribute set of attribute set of string",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
@@ -39905,7 +39947,7 @@
     {
       "title": "services.mako.settings",
       "description": "Configuration settings for mako. All available options can be found here: https://github.com/emersion/mako/blob/master/doc/mako.5.scd.",
-      "type": "attribute set of string",
+      "type": "attribute set of (INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
