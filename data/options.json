@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 06 May 2025 02:44:05 GMT",
+  "last_update": "Wed, 07 May 2025 02:45:38 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -29204,6 +29204,48 @@
       "example": "true"
     },
     {
+      "title": "programs.television.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.television.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.television.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
       "title": "programs.television.package",
       "description": "The television package to use.",
       "type": "null or package",
@@ -39956,7 +39998,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  {\n    actions = \"true\";\n    anchor = \"top-right\";\n    backgroundColor = \"#000000\";\n    borderColor = \"#FFFFFF\";\n    borderRadius = \"0\";\n    defaultTimeout = \"0\";\n    font = \"monospace 10\";\n    height = \"100\";\n    width = \"300\";\n    icons = \"true\";\n    ignoreTimeout = \"false\";\n    layer = \"top\";\n    margin = \"10\";\n    markup = \"true\";\n  }\n''\n"
+      "example": "''\n  {\n    actions = \"true\";\n    anchor = \"top-right\";\n    background-color = \"#000000\";\n    border-color = \"#FFFFFF\";\n    border-radius = \"0\";\n    default-timeout = \"0\";\n    font = \"monospace 10\";\n    height = \"100\";\n    width = \"300\";\n    icons = \"true\";\n    ignore-timeout = \"false\";\n    layer = \"top\";\n    margin = \"10\";\n    markup = \"true\";\n  }\n''\n"
     },
     {
       "title": "services.mbsync.enable",
