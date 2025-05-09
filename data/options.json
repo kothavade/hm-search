@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 08 May 2025 02:46:13 GMT",
+  "last_update": "Fri, 09 May 2025 02:45:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -14266,6 +14266,34 @@
       "example": null
     },
     {
+      "title": "programs.git.patdiff.enable",
+      "description": "Whether to enable the patdiff differ. See https://opensource.janestreet.com/patdiff/",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git.patdiff.package",
+      "description": "The patdiff package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git.nix",
+          "text": "home-manager/modules/programs/git.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.patdiff",
+      "example": null
+    },
+    {
       "title": "programs.git.riff.enable",
       "description": "Enable the <command>riff</command> diff highlighter. See <link xlink:href=“https://github.com/walles/riff” />.",
       "type": "boolean",
@@ -19976,6 +20004,174 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  date = \"relative\";\n  ignore-globs = [\n    \".git\"\n    \".hg\"\n  ];\n}\n"
+    },
+    {
+      "title": "programs.lutris.enable",
+      "description": "Whether to enable lutris…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.lutris.package",
+      "description": "The lutris package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "<derivation lutris-0.5.19>",
+      "example": null
+    },
+    {
+      "title": "programs.lutris.extraPackages",
+      "description": "List of packages to pass as extraPkgs to lutris. Please note runners are not detected properly this way, use a proper option for those.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "\"with pkgs; [mangohud winetricks gamescope gamemode umu-launcher]\""
+    },
+    {
+      "title": "programs.lutris.protonPackages",
+      "description": "List of proton packages to be added for lutris to use with umu-launcher.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "\"[ pkgs.proton-ge-bin ]\""
+    },
+    {
+      "title": "programs.lutris.runners",
+      "description": "Attribute set of Lutris runners along with their configurations. Each runner must be named exactly as lutris expects on lutris --list-runners.\nNote that runners added here won’t be configurable through Lutris using the GUI.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  runners = {\n    cemu.package = pkgs.cemu;\n    pcsx2.config = {\n      system.disable_screen_saver = true;\n      runner.executable_path = \"$\\{pkgs.pcsx2}/bin/pcsx2-qt\";\n    };\n  };\n''\n"
+    },
+    {
+      "title": "programs.lutris.runners.<name>.package",
+      "description": "The package to use for this runner, nix will try to find the executable for this package. A more specific path can be set by using settings.runner.executable_path instead.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"pkgs.cemu\""
+    },
+    {
+      "title": "programs.lutris.runners.<name>.settings",
+      "description": "Settings passed directly to lutris for this runner’s config at XDG_CONFIG/lutris/runners.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.lutris.runners.<name>.settings.runner",
+      "description": "Runner specific options. For references, you must look for the file of said runner on lutris’ source code.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.lutris.runners.<name>.settings.runner.executable_path",
+      "description": "Specific option to point to a runner executable directly, don’t set runner.package if you set this.",
+      "type": "string or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.lutris.runners.<name>.settings.system",
+      "description": "Lutris system options for this runner. Reference for system options:\nhttps://github.com/lutris/lutris/blob/master/lutris/sysoptions.py#L78",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.lutris.steamPackage",
+      "description": "This must be the same you use for your system, or two instances will conflict, for example, if you configure steam through the nixos module, a good value is “osConfig.programs.steam.package”",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"pkgs.steam or osConfig.programs.steam.package\""
+    },
+    {
+      "title": "programs.lutris.winePackages",
+      "description": "List of wine packages to be added for lutris to use.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
+          "text": "home-manager/modules/programs/lutris.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "\"[ pkgs.wineWow64Packages.full ]\""
     },
     {
       "title": "programs.man.enable",
@@ -25995,7 +26191,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  modi = \"drun,emoji,ssh\";\n  kb-primary-paste = \"Control+V,Shift+Insert\";\n  kb-secondary-paste = \"Control+v,Insert\";\n}\n\n"
+      "example": "{\n  kb-primary-paste = \"Control+V,Shift+Insert\";\n  kb-secondary-paste = \"Control+v,Insert\";\n}\n\n"
     },
     {
       "title": "programs.rofi.finalPackage",
@@ -26038,6 +26234,20 @@
       "note": null,
       "default": "\"center\"",
       "example": null
+    },
+    {
+      "title": "programs.rofi.modes",
+      "description": "Modes to enable. For custom modes see man 5 rofi-script.",
+      "type": "list of (string or (submodule))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rofi.nix",
+          "text": "home-manager/modules/programs/rofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"drun\"\n  \"emoji\"\n  \"ssh\"\n  {\n    name = \"whatnot\";\n    path = lib.getExe pkgs.rofi-whatnot;\n  }\n]\n\n"
     },
     {
       "title": "programs.rofi.pass.enable",
@@ -32436,6 +32646,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  color = \"808080\";\n  effect-blur = \"7x4\";\n  poweroff-command = \"systemctl poweroff\";\n  reboot-command = \"systemctl reboot\";\n  scaling = \"fit\";\n  screenshots = true;\n}\n"
+    },
+    {
+      "title": "programs.wayprompt.enable",
+      "description": "Whether to enable Wayprompt, a password-prompter for Wayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wayprompt.nix",
+          "text": "home-manager/modules/programs/wayprompt.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.wayprompt.package",
+      "description": "The wayprompt package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wayprompt.nix",
+          "text": "home-manager/modules/programs/wayprompt.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wayprompt",
+      "example": null
+    },
+    {
+      "title": "programs.wayprompt.settings",
+      "description": "Configuration for wayprompt written to $XDG_CONFIG_HOME/wayprompt/config.ini.\nSee wayprompt(5) for a list of available options.\nNote that colours can be either 6-hex-digit RGB or 8-hex-digit RGBA values.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wayprompt.nix",
+          "text": "home-manager/modules/programs/wayprompt.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  general = {\n    font-regular = \"sans:size=14\";\n    pin-square-amount = 32;\n  };\n  colours = {\n    background = \"0xffffffaa\";\n  };\n}\n\n"
     },
     {
       "title": "programs.wezterm.enable",
