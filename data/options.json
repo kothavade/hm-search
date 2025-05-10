@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 09 May 2025 02:45:37 GMT",
+  "last_update": "Sat, 10 May 2025 02:39:29 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11046,6 +11046,20 @@
       "example": "true"
     },
     {
+      "title": "programs.distrobox.enableSystemdUnit",
+      "description": "Whatever to enable a Systemd Unit that automatically rebuilds your containers when changes are detected.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/distrobox.nix",
+          "text": "home-manager/modules/programs/distrobox.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
+    },
+    {
       "title": "programs.distrobox.package",
       "description": "The distrobox package to use.",
       "type": "package",
@@ -20073,11 +20087,11 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  runners = {\n    cemu.package = pkgs.cemu;\n    pcsx2.config = {\n      system.disable_screen_saver = true;\n      runner.executable_path = \"$\\{pkgs.pcsx2}/bin/pcsx2-qt\";\n    };\n  };\n''\n"
+      "example": "''\n  runners = {\n    cemu.package = pkgs.cemu;\n    pcsx2.config = {\n      system.disable_screen_saver = true;\n      runner.runner_executable = \"$\\{pkgs.pcsx2}/bin/pcsx2-qt\";\n    };\n  };\n''\n"
     },
     {
       "title": "programs.lutris.runners.<name>.package",
-      "description": "The package to use for this runner, nix will try to find the executable for this package. A more specific path can be set by using settings.runner.executable_path instead.",
+      "description": "The package to use for this runner, nix will try to find the executable for this package. A more specific path can be set by using settings.runner.runner_executable instead.",
       "type": "null or package",
       "declared_by": [
         {
@@ -20118,7 +20132,7 @@
       "example": null
     },
     {
-      "title": "programs.lutris.runners.<name>.settings.runner.executable_path",
+      "title": "programs.lutris.runners.<name>.settings.runner.runner_executable",
       "description": "Specific option to point to a runner executable directly, don’t set runner.package if you set this.",
       "type": "string or absolute path",
       "declared_by": [
@@ -21990,7 +22004,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": "{\n  fork = false;\n  frame = \"full\";\n  idle = true;\n  maximized = false;\n  neovim-bin = \"/usr/bin/nvim\";\n  no-multigrid = false;\n  srgb = false;\n  tabs = true;\n  theme = \"auto\";\n  title-hidden = true;\n  vsync = true;\n  wsl = false;\n\n  font = {\n    normal = [];\n    size = 14.0;\n  };\n}\n\n"
     },
     {
@@ -23732,7 +23746,7 @@
     {
       "title": "programs.onlyoffice.settings",
       "description": "Configuration settings for Onlyoffice.",
-      "type": "attribute set of (boolean or string)",
+      "type": "attribute set of (atom (null, bool, int, float or string))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/onlyoffice.nix",
@@ -32492,6 +32506,76 @@
       "note": "See https://github.com/TailorDev/Watson/blob/master/docs/user-guide/configuration.md\nfor an example configuration.",
       "default": "{ }",
       "example": "{\n  backend = {\n    url = \"https://api.crick.fr\";\n    token = \"yourapitoken\";\n  };\n\n  options = {\n    stop_on_start = true;\n    stop_on_restart = false;\n    date_format = \"%Y.%m.%d\";\n    time_format = \"%H:%M:%S%z\";\n    week_start = \"monday\";\n    log_current = false;\n    pager = true;\n    report_current = false;\n    reverse_log = true;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.waveterm.enable",
+      "description": "Whether to enable waveterm.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waveterm.nix",
+          "text": "home-manager/modules/programs/waveterm.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.waveterm.package",
+      "description": "The waveterm package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waveterm.nix",
+          "text": "home-manager/modules/programs/waveterm.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.waveterm",
+      "example": null
+    },
+    {
+      "title": "programs.waveterm.bookmarks",
+      "description": "Bookmark definitions for WaveTerm. Details about the format and the options can be found here: https://docs.waveterm.dev/config#webbookmarks-configuration.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waveterm.nix",
+          "text": "home-manager/modules/programs/waveterm.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"bookmark@claude\" = {\n    title = \"Claude\";\n    url = \"https://claude.ai\";\n  };\n  \"bookmark@github\" = {\n    title = \"GitHub\";\n    url = \"https://github.com\";\n  };\n  \"bookmark@google\" = {\n    title = \"Google\";\n    url = \"https://www.google.com\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.waveterm.settings",
+      "description": "Configuration settings for WaveTerm. All available options can be found here: <\\https://docs.waveterm.dev/config#configuration-keys>.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waveterm.nix",
+          "text": "home-manager/modules/programs/waveterm.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"app:dismissarchitecturewarning\" = false;\n  \"autoupdate:enabled\" = false;\n  \"term:fontfamily\" = \"JuliaMono\";\n  \"term:fontsize\" = 12.0;\n  \"term:theme\" = \"my-custom-theme\";\n  \"term:transparency\" = 0.5;\n  \"window:bgcolor\" = \"#000000\";\n  \"window:blur\" = true;\n  \"window:opacity\" = 0.5;\n  \"window:reducedmotion\" = true;\n  \"window:showhelp\" = false;\n}\n"
+    },
+    {
+      "title": "programs.waveterm.themes",
+      "description": "User defined terminal themes. All the details about available options and format can be found here: https://docs.waveterm.dev/config#terminal-theming.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/waveterm.nix",
+          "text": "home-manager/modules/programs/waveterm.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  default-dark = {\n    background = \"#00000077\";\n    black = \"#757575\";\n    blue = \"#85aacb\";\n    brightBlack = \"#727272\";\n    brightBlue = \"#9ab6cb\";\n    brightCyan = \"#b7b8cb\";\n    brightGreen = \"#a3dd97\";\n    brightMagenta = \"#cc8ecb\";\n    brightRed = \"#cc9d97\";\n    brightWhite = \"#f0f0f0\";\n    brightYellow = \"#cbcaaa\";\n    cmdtext = \"#f0f0f0\";\n    cursorAccent = \"\";\n    cyan = \"#74a7cb\";\n    \"display:name\" = \"Default Dark\";\n    \"display:order\" = 1;\n    foreground = \"#c1c1c1\";\n    gray = \"#8b918a\";\n    green = \"#76c266\";\n    magenta = \"#cc72ca\";\n    red = \"#cc685c\";\n    selectionBackground = \"\";\n    white = \"#c1c1c1\";\n    yellow = \"#cbca9b\";\n  };\n}\n"
     },
     {
       "title": "programs.waybar.enable",
