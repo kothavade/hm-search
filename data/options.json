@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 10 May 2025 02:39:29 GMT",
+  "last_update": "Sun, 11 May 2025 02:49:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -29484,6 +29484,20 @@
       "example": null
     },
     {
+      "title": "programs.television.channels",
+      "description": "Each set of channels are written to $XDG_CONFIG_HOME/television/NAME-channels.toml",
+      "type": "attribute set of (TOML value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/television.nix",
+          "text": "home-manager/modules/programs/television.nix"
+        }
+      ],
+      "note": "See https://github.com/alexpasmantier/television/blob/main/docs/channels.md\nfor options",
+      "default": "{ }",
+      "example": "{\n  my-custom = {\n    cable_channel = [\n      {\n        name = \"git-log\";\n        source_command = \"git log --oneline --date=short --pretty=\\\"format:%h %s %an %cd\\\" \\\"$@\\\"\";\n        preview_command = \"git show -p --stat --pretty=fuller --color=always {0}\";\n      }\n      {\n        name = \"git-log\";\n        source_command = \"git log --oneline --date=short --pretty=\\\"format:%h %s %an %cd\\\" \\\"$@\\\"\";\n        preview_command = \"git show -p --stat --pretty=fuller --color=always {0}\";\n      }\n    ];\n  };\n}\n\n"
+    },
+    {
       "title": "programs.television.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/television/config.toml. See https://github.com/alexpasmantier/television/blob/main/.config/config.toml\nfor the full list of options.",
       "type": "TOML value",
@@ -32551,7 +32565,7 @@
     },
     {
       "title": "programs.waveterm.settings",
-      "description": "Configuration settings for WaveTerm. All available options can be found here: <\\https://docs.waveterm.dev/config#configuration-keys>.",
+      "description": "Configuration settings for WaveTerm. All available options can be found here: https://docs.waveterm.dev/config#configuration-keys.",
       "type": "JSON value",
       "declared_by": [
         {
@@ -35896,8 +35910,50 @@
       "example": "true"
     },
     {
+      "title": "services.autorandr.package",
+      "description": "The autorandr package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/autorandr.nix",
+          "text": "home-manager/modules/services/autorandr.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.autorandr",
+      "example": null
+    },
+    {
+      "title": "services.autorandr.extraOptions",
+      "description": "Extra options to pass to Autorandr.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/autorandr.nix",
+          "text": "home-manager/modules/services/autorandr.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--force\"\n]\n"
+    },
+    {
       "title": "services.autorandr.ignoreLid",
       "description": "Treat outputs as connected even if their lids are closed.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/autorandr.nix",
+          "text": "home-manager/modules/services/autorandr.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.autorandr.matchEdid",
+      "description": "Match displays based on edid instead of name.",
       "type": "boolean",
       "declared_by": [
         {
