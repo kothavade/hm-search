@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 11 May 2025 02:49:37 GMT",
+  "last_update": "Mon, 12 May 2025 02:49:22 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4140,6 +4140,20 @@
         }
       ],
       "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "home.file.<name>.ignorelinks",
+      "description": "When recursive is enabled, adds -ignorelinks flag to lndir",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/files.nix",
+          "text": "home-manager/modules/files.nix"
+        }
+      ],
+      "note": "It causes lndir to not treat symbolic links in the source directory specially.\nThe link created in the target directory will point back to the corresponding\n(symbolic link) file in the source directory. If the link is to a directory",
       "default": "false",
       "example": null
     },
@@ -8751,7 +8765,7 @@
     },
     {
       "title": "programs.bacon.settings",
-      "description": "Bacon configuration. For available settings see https://dystroy.org/bacon/#global-preferences.",
+      "description": "Bacon configuration written to either Library/Application Support/org.dystroy.bacon/prefs.toml (darwin) or $XDG_CONFIG_HOME/bacon/prefs.toml.\nFor available settings see https://dystroy.org/bacon/#global-preferences.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -15622,6 +15636,48 @@
       "note": null,
       "default": "pkgs.granted",
       "example": null
+    },
+    {
+      "title": "programs.halloy.enable",
+      "description": "Whether to enable halloy.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/halloy.nix",
+          "text": "home-manager/modules/programs/halloy.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.halloy.package",
+      "description": "The halloy package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/halloy.nix",
+          "text": "home-manager/modules/programs/halloy.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.halloy",
+      "example": null
+    },
+    {
+      "title": "programs.halloy.settings",
+      "description": "Configuration settings for halloy. All available options can be found here: https://halloy.chat/configuration/index.html.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/halloy.nix",
+          "text": "home-manager/modules/programs/halloy.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"buffer.channel.topic\" = {\n    enabled = true;\n  };\n  \"servers.liberachat\" = {\n    channels = [\n      \"#halloy\"\n    ];\n    nickname = \"halloy-user\";\n    server = \"irc.libera.chat\";\n  };\n}\n"
     },
     {
       "title": "programs.havoc.enable",
@@ -23098,6 +23154,48 @@
       "note": null,
       "default": "",
       "example": "[\n  \"trash\"\n  \"spam\"\n]\n"
+    },
+    {
+      "title": "programs.numbat.enable",
+      "description": "Whether to enable Numbat.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/numbat.nix",
+          "text": "home-manager/modules/programs/numbat.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.numbat.package",
+      "description": "The numbat package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/numbat.nix",
+          "text": "home-manager/modules/programs/numbat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.numbat",
+      "example": null
+    },
+    {
+      "title": "programs.numbat.settings",
+      "description": "Options to add to config.toml. See https://numbat.dev/doc/cli-customization.html#configuration for options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/numbat.nix",
+          "text": "home-manager/modules/programs/numbat.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  exchange-rates = {\n    fetching-policy = \"on-first-use\";\n  };\n  intro-banner = \"short\";\n  prompt = \"> \";\n}\n"
     },
     {
       "title": "programs.nushell.enable",
@@ -33852,6 +33950,20 @@
       "example": "{\n  theme = \"custom\";\n  themes.custom.fg = \"#ffffff\";\n}\n\n"
     },
     {
+      "title": "programs.zellij.themes",
+      "description": "Each them is written to $XDG_CONFIG_HOME/zellij/themes/NAME.kdl. See https://zellij.dev/documentation/themes.html for more information.",
+      "type": "attribute set of (YAML value or absolute path or strings concatenated with “\\n”)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
+          "text": "home-manager/modules/programs/zellij.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
       "title": "programs.zk.enable",
       "description": "Whether to enable zk.",
       "type": "boolean",
@@ -39857,7 +39969,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-25.04.0>",
+      "default": "<derivation kdeconnect-kde-25.04.1>",
       "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
@@ -51145,6 +51257,20 @@
       "example": null
     },
     {
+      "title": "xdg.cacheFile.<name>.ignorelinks",
+      "description": "When recursive is enabled, adds -ignorelinks flag to lndir",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "It causes lndir to not treat symbolic links in the source directory specially.\nThe link created in the target directory will point back to the corresponding\n(symbolic link) file in the source directory. If the link is to a directory",
+      "default": "false",
+      "example": null
+    },
+    {
       "title": "xdg.cacheFile.<name>.onChange",
       "description": "Shell commands to run when file has changed between generations. The script will be run\nafter the new files have been linked\ninto place.",
       "type": "strings concatenated with “\\n”",
@@ -51285,6 +51411,20 @@
       "example": null
     },
     {
+      "title": "xdg.configFile.<name>.ignorelinks",
+      "description": "When recursive is enabled, adds -ignorelinks flag to lndir",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "It causes lndir to not treat symbolic links in the source directory specially.\nThe link created in the target directory will point back to the corresponding\n(symbolic link) file in the source directory. If the link is to a directory",
+      "default": "false",
+      "example": null
+    },
+    {
       "title": "xdg.configFile.<name>.onChange",
       "description": "Shell commands to run when file has changed between generations. The script will be run\nafter the new files have been linked\ninto place.",
       "type": "strings concatenated with “\\n”",
@@ -51421,6 +51561,20 @@
         }
       ],
       "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "xdg.dataFile.<name>.ignorelinks",
+      "description": "When recursive is enabled, adds -ignorelinks flag to lndir",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "It causes lndir to not treat symbolic links in the source directory specially.\nThe link created in the target directory will point back to the corresponding\n(symbolic link) file in the source directory. If the link is to a directory",
       "default": "false",
       "example": null
     },
@@ -51981,6 +52135,20 @@
         }
       ],
       "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "xdg.stateFile.<name>.ignorelinks",
+      "description": "When recursive is enabled, adds -ignorelinks flag to lndir",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg.nix",
+          "text": "home-manager/modules/misc/xdg.nix"
+        }
+      ],
+      "note": "It causes lndir to not treat symbolic links in the source directory specially.\nThe link created in the target directory will point back to the corresponding\n(symbolic link) file in the source directory. If the link is to a directory",
       "default": "false",
       "example": null
     },
