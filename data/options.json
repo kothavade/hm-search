@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 12 May 2025 02:49:22 GMT",
+  "last_update": "Tue, 13 May 2025 02:47:21 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -15678,6 +15678,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  \"buffer.channel.topic\" = {\n    enabled = true;\n  };\n  \"servers.liberachat\" = {\n    channels = [\n      \"#halloy\"\n    ];\n    nickname = \"halloy-user\";\n    server = \"irc.libera.chat\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.halloy.themes",
+      "description": "Each theme is written to $XDG_CONFIG_HOME/halloy/themes/NAME.toml. See https://halloy.chat/configuration/themes/index.html for more information.",
+      "type": "attribute set of (TOML value or strings concatenated with “\\n” or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/halloy.nix",
+          "text": "home-manager/modules/programs/halloy.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  general = {\n    background = \"<string>\";\n    border = \"<string>\";\n    horizontal_rule = \"<string>\";\n    unread_indicator = \"<string>\";\n  };\n  text = {\n    error = \"<string>\";\n    primary = \"<string>\";\n    secondary = \"<string>\";\n    success = \"<string>\";\n    tertiary = \"<string>\";\n  };\n}\n"
     },
     {
       "title": "programs.havoc.enable",
@@ -32883,7 +32897,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  general = {\n    font-regular = \"sans:size=14\";\n    pin-square-amount = 32;\n  };\n  colours = {\n    background = \"0xffffffaa\";\n  };\n}\n\n"
+      "example": "{\n  general = {\n    font-regular = \"sans:size=14\";\n    pin-square-amount = 32;\n  };\n  colours = {\n    background = \"ffffffaa\";\n  };\n}\n\n"
     },
     {
       "title": "programs.wezterm.enable",
