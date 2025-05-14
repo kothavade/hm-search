@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 13 May 2025 02:47:21 GMT",
+  "last_update": "Wed, 14 May 2025 02:45:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13090,6 +13090,62 @@
       "example": "''\n  /* Hide scrollbar in FF Quantum */\n  *{scrollbar-width:none !important}\n''\n"
     },
     {
+      "title": "programs.foliate.enable",
+      "description": "Whether to enable Foliate.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foliate.nix",
+          "text": "home-manager/modules/programs/foliate.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.foliate.package",
+      "description": "The foliate package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foliate.nix",
+          "text": "home-manager/modules/programs/foliate.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.foliate",
+      "example": null
+    },
+    {
+      "title": "programs.foliate.settings",
+      "description": "Added to config.dconf.settings under com/github/johnfactotum/Foliate, the scheme is defined at\nhttps://github.com/johnfactotum/foliate/blob/gtk4/data/com.github.johnfactotum.Foliate.gschema.xml",
+      "type": "attribute set of ((GVariant value) or attribute set of (GVariant value))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foliate.nix",
+          "text": "home-manager/modules/programs/foliate.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  myTheme = {\n    color-scheme = 0;\n    library = {\n      view-mode = \"grid\";\n      show-covers = true;\n    };\n    \"viewer/view\" = {\n      theme = \"myTheme.json\";\n    };\n    \"viewer/font\" = {\n      monospace = \"Maple Mono\";\n      default-size = 12;\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.foliate.themes",
+      "description": "Each theme is written to $XDG_CONFIG_HOME/com.github.johnfactotum.Foliate/themes/NAME.json.\nSee https://github.com/johnfactotum/foliate/blob/gtk4/src/themes.js\nfor implementation of themes in Foliate.",
+      "type": "attribute set of (JSON value or string or absolute path)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/foliate.nix",
+          "text": "home-manager/modules/programs/foliate.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  label = \"My Theme\";\n  light = {\n    fg = \"#89b4fa\";\n    bg = \"#1e1e2e\";\n    link = \"#89b4fa\";\n  };\n  dark = { };\n}\n\n"
+    },
+    {
       "title": "programs.foot.enable",
       "description": "Whether to enable Foot terminal.",
       "type": "boolean",
@@ -14770,6 +14826,20 @@
       "example": "true"
     },
     {
+      "title": "programs.gnome-terminal.package",
+      "description": "The gnome-terminal package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gnome-terminal.nix",
+          "text": "home-manager/modules/programs/gnome-terminal.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gnome-terminal",
+      "example": null
+    },
+    {
       "title": "programs.gnome-terminal.profile",
       "description": "A set of Gnome Terminal profiles. Note, the name of a profile must be a UUID. You can generate one, for example, using uuidgen\n(from util-linux).",
       "type": "attribute set of (submodule)",
@@ -15667,7 +15737,7 @@
     },
     {
       "title": "programs.halloy.settings",
-      "description": "Configuration settings for halloy. All available options can be found here: https://halloy.chat/configuration/index.html.",
+      "description": "Configuration settings for halloy. All available options can be found here: https://halloy.chat/configuration/index.html. Note that\nhalloy requires at least one server to be configured, see example.",
       "type": "TOML value",
       "declared_by": [
         {
@@ -15691,7 +15761,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  general = {\n    background = \"<string>\";\n    border = \"<string>\";\n    horizontal_rule = \"<string>\";\n    unread_indicator = \"<string>\";\n  };\n  text = {\n    error = \"<string>\";\n    primary = \"<string>\";\n    secondary = \"<string>\";\n    success = \"<string>\";\n    tertiary = \"<string>\";\n  };\n}\n"
+      "example": "{\n  my-theme = {\n    general = {\n      background = \"<string>\";\n      border = \"<string>\";\n      horizontal_rule = \"<string>\";\n      unread_indicator = \"<string>\";\n    };\n    text = {\n      primary = \"<string>\";\n      secondary = \"<string>\";\n      tertiary = \"<string>\";\n      success = \"<string>\";\n      error = \"<string>\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.havoc.enable",
@@ -40491,23 +40561,9 @@
       "example": null
     },
     {
-      "title": "services.mako.criteria",
-      "description": "Criterias for mako’s config. All the details can be found in the CRITERIA section in the official documentation.",
-      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
-          "text": "home-manager/modules/services/mako.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  \"actionable=true\" = {\n    anchor = \"top-left\";\n  };\n  \"app-name=Google\\\\ Chrome\" = {\n    max-visible = \"5\";\n  };\n  \"field1=value field2=value\" = {\n    text-alignment = \"left\";\n  };\n}\n"
-    },
-    {
       "title": "services.mako.settings",
-      "description": "Configuration settings for mako. All available options can be found here: https://github.com/emersion/mako/blob/master/doc/mako.5.scd.",
-      "type": "attribute set of (INI atom (null, bool, int, float or string))",
+      "description": "Configuration settings for mako. Can include both global settings and sections. All available options can be found here:\nhttps://github.com/emersion/mako/blob/master/doc/mako.5.scd.",
+      "type": "attribute set of (INI atom (null, bool, int, float or string) or attribute set of (INI atom (null, bool, int, float or string)))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
@@ -40516,7 +40572,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  {\n    actions = \"true\";\n    anchor = \"top-right\";\n    background-color = \"#000000\";\n    border-color = \"#FFFFFF\";\n    border-radius = \"0\";\n    default-timeout = \"0\";\n    font = \"monospace 10\";\n    height = \"100\";\n    width = \"300\";\n    icons = \"true\";\n    ignore-timeout = \"false\";\n    layer = \"top\";\n    margin = \"10\";\n    markup = \"true\";\n  }\n''\n"
+      "example": "''\n  {\n    actions = true;\n    anchor = \"top-right\";\n    background-color = \"#000000\";\n    border-color = \"#FFFFFF\";\n    border-radius = 0;\n    default-timeout = 0;\n    font = \"monospace 10\";\n    height = 100;\n    width = 300;\n    icons = true;\n    ignore-timeout = false;\n    layer = \"top\";\n    margin = 10;\n    markup = true;\n  \n    # Section example\n    \"actionable=true\" = {\n      anchor = \"top-left\";\n    };\n  }\n''\n"
     },
     {
       "title": "services.mbsync.enable",
