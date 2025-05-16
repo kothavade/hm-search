@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 15 May 2025 02:45:04 GMT",
+  "last_update": "Fri, 16 May 2025 02:47:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3581,6 +3581,20 @@
       ],
       "note": null,
       "default": "\"Maildir\"",
+      "example": null
+    },
+    {
+      "title": "dbus.packages",
+      "description": "Packages whose D-Bus configuration files should be included in the configuration of the D-Bus session-wide message bus. Specifically,\nfiles in «pkg»/share/dbus-1/services will be included in the user’s\n$XDG_DATA_HOME/dbus-1/services directory.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/dbus.nix",
+          "text": "home-manager/modules/dbus.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
       "example": null
     },
     {
@@ -25914,6 +25928,62 @@
       "example": "{\n  type = \"mega\"; # Required - specifies the remote type\n  user = \"you@example.com\";\n  hard_delete = true;\n}\n"
     },
     {
+      "title": "programs.rclone.remotes.<name>.mounts",
+      "description": "An attribute set mapping remote file paths to their corresponding mount point configurations.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": "For each entry, to perform the equivalent of\nrclone mount remote:path/to/files /path/to/local/mount — as described in the\nrclone documentation https://rclone.org/commands/rclone_mount/ — we create\na key-value pair like this:\n\"path/to/files/on/remote\" = { ... }.",
+      "default": "{ }",
+      "example": "{\n  \"path/to/files\" = {\n    enable = true;\n    mountPoint = \"/home/alice/rclone-mount\";\n    options = {\n      dir-cache-time = \"5000h\";\n      poll-interval = \"10s\";\n      umask = \"002\";\n      user-agent = \"Laptop\";\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.rclone.remotes.<name>.mounts.<name>.enable",
+      "description": "Whether to enable this mount.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.rclone.remotes.<name>.mounts.<name>.mountPoint",
+      "description": "A local file path specifying the location of the mount point.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"/home/alice/my-remote\""
+    },
+    {
+      "title": "programs.rclone.remotes.<name>.mounts.<name>.options",
+      "description": "An attribute set of option values passed to rclone mount. To set a boolean option, assign it true or false. See\nhttps://nixos.org/manual/nixpkgs/stable/#function-library-lib.cli.toGNUCommandLineShell\nfor more details on the format.",
+      "type": "attribute set of (null or boolean or signed integer or floating point number or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
+          "text": "home-manager/modules/programs/rclone.nix"
+        }
+      ],
+      "note": "Some caching options are set by default, namely vfs-cache-mode = \"full\"\nand cache-dir. These can be overridden if desired.",
+      "default": "{ }",
+      "example": null
+    },
+    {
       "title": "programs.rclone.remotes.<name>.secrets",
       "description": "Sensitive configuration values such as passwords, API keys, and tokens. These must be provided as file paths to the secrets, which will be read at activation\ntime.",
       "type": "attribute set of string",
@@ -32467,8 +32537,8 @@
     },
     {
       "title": "programs.vscode.profiles.<name>.keybindings",
-      "description": "Keybindings written to Visual Studio Code’s keybindings.json.",
-      "type": "list of (submodule)",
+      "description": "Keybindings written to Visual Studio Code’s keybindings.json.\nThis can be a JSON object or a path to a custom JSON file.",
+      "type": "absolute path or list of (submodule)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
@@ -32478,62 +32548,6 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  {\n    key = \"ctrl+c\";\n    command = \"editor.action.clipboardCopyAction\";\n    when = \"textInputFocus\";\n  }\n]\n\n"
-    },
-    {
-      "title": "programs.vscode.profiles.<name>.keybindings.*.args",
-      "description": "Optional arguments for a command.",
-      "type": "null or JSON value",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "{\n  direction = \"up\";\n}\n"
-    },
-    {
-      "title": "programs.vscode.profiles.<name>.keybindings.*.command",
-      "description": "The VS Code command to execute.",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": null,
-      "example": "\"editor.action.clipboardCopyAction\""
-    },
-    {
-      "title": "programs.vscode.profiles.<name>.keybindings.*.key",
-      "description": "The key or key-combination to bind.",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": null,
-      "example": "\"ctrl+c\""
-    },
-    {
-      "title": "programs.vscode.profiles.<name>.keybindings.*.when",
-      "description": "Optional context filter.",
-      "type": "null or string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
-        }
-      ],
-      "note": null,
-      "default": "null",
-      "example": "\"textInputFocus\""
     },
     {
       "title": "programs.vscode.profiles.<name>.languageSnippets",
@@ -32551,8 +32565,8 @@
     },
     {
       "title": "programs.vscode.profiles.<name>.userSettings",
-      "description": "Configuration written to Visual Studio Code’s settings.json.",
-      "type": "JSON value",
+      "description": "Configuration written to Visual Studio Code’s settings.json.\nThis can be a JSON object or a path to a custom JSON file.",
+      "type": "absolute path or JSON value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
@@ -32565,8 +32579,8 @@
     },
     {
       "title": "programs.vscode.profiles.<name>.userTasks",
-      "description": "Configuration written to Visual Studio Code’s tasks.json.",
-      "type": "JSON value",
+      "description": "Configuration written to Visual Studio Code’s tasks.json.\nThis can be a JSON object or a path to a custom JSON file.",
+      "type": "absolute path or JSON value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
@@ -36451,7 +36465,7 @@
           "text": "home-manager/modules/services/borgmatic.nix"
         }
       ],
-      "note": null,
+      "note": "On Darwin it must be one of: hourly, daily, weekly, monthly, semiannually, annually, which are implemented as defined in systemd.time(7).",
       "default": "\"hourly\"",
       "example": null
     },
