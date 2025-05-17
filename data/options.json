@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 16 May 2025 02:47:25 GMT",
+  "last_update": "Sat, 17 May 2025 02:42:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -24612,6 +24612,48 @@
       "example": "[\"git\" \"nixpkgs\"]"
     },
     {
+      "title": "programs.pgcli.enable",
+      "description": "Whether to enable pgcli.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pgcli.nix",
+          "text": "home-manager/modules/programs/pgcli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.pgcli.package",
+      "description": "The pgcli package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pgcli.nix",
+          "text": "home-manager/modules/programs/pgcli.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pgcli",
+      "example": null
+    },
+    {
+      "title": "programs.pgcli.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/pgcli/config.\nSee https://www.pgcli.com/config\nfor more information.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pgcli.nix",
+          "text": "home-manager/modules/programs/pgcli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  main = {\n    smart_completion = true;\n    vi = true;\n  };\n\n  \"named queries\".simple = \"select * from abc where a is not Null\";\n}\n\n"
+    },
+    {
       "title": "programs.pidgin.enable",
       "description": "Whether to enable Pidgin messaging client.",
       "type": "boolean",
@@ -25044,6 +25086,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  options = {\n    lazy-load = true;\n    hide-info-box = true;\n    background-pattern = \"black\";\n    thumbnail-size = \"256x256\";\n    command-1 = \"thunar\";\n  };\n};\n\n"
+    },
+    {
+      "title": "programs.ptyxis.enable",
+      "description": "Whether to enable ptyxis.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ptyxis.nix",
+          "text": "home-manager/modules/programs/ptyxis.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.ptyxis.package",
+      "description": "The ptyxis package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ptyxis.nix",
+          "text": "home-manager/modules/programs/ptyxis.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ptyxis",
+      "example": null
+    },
+    {
+      "title": "programs.ptyxis.palettes",
+      "description": "Written to $XDG_CONFIG_HOME/org.gnome.Prompt/palettes/NAME.palette. See https://gitlab.gnome.org/chergert/ptyxis/-/tree/main/data/palettes\nfor more information.",
+      "type": "attribute set of ((attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))) or absolute path or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ptyxis.nix",
+          "text": "home-manager/modules/programs/ptyxis.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  myPalette = {\n    Palette.Name = \"My awesome theme\";\n    Light = {\n      Foreground=\"#E2E2E3\";\n      Background=\"#2C2E34\";\n      Color0=\"#2C2E34\";\n      Color1=\"#FC5D7C\";\n      Color2=\"#9ED072\";\n      Color3=\"#E7C664\";\n      Color4=\"#F39660\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.pubs.enable",
