@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 20 May 2025 02:47:40 GMT",
+  "last_update": "Wed, 21 May 2025 02:47:24 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3862,6 +3862,20 @@
       "note": null,
       "default": "\"\"",
       "example": "\"gtk-can-change-accels = 1\""
+    },
+    {
+      "title": "gtk.gtk2.force",
+      "description": "Whether to enable GTK 2 config force overwrite without creating a backup.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
+          "text": "home-manager/modules/misc/gtk.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "gtk.gtk3.bookmarks",
@@ -25506,6 +25520,20 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.qutebrowser.perDomainSettings",
+      "description": "Options to set, as in settings but per domain. Refer to settings for details.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/qutebrowser.nix",
+          "text": "home-manager/modules/programs/qutebrowser.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"zoom.us\" = {\n    content = {\n      autoplay = true;\n      media.audio_capture = true;\n      media.video_capture = true;\n    };\n  };\n  \"github.com\".colors.webpage.darkmode.enabled = false;\n};\n\n"
     },
     {
       "title": "programs.qutebrowser.quickmarks",
