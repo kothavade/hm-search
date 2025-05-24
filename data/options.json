@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 23 May 2025 02:46:49 GMT",
+  "last_update": "Sat, 24 May 2025 02:41:11 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -20212,7 +20212,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation lutris-0.5.19>",
+      "default": "pkgs.lutris",
       "example": null
     },
     {
@@ -32285,7 +32285,7 @@
     },
     {
       "title": "programs.vim.packageConfigurable",
-      "description": "Vim package to customize",
+      "description": "The vim-full package to use. Vim package to customize",
       "type": "package",
       "declared_by": [
         {
@@ -36471,7 +36471,7 @@
     },
     {
       "title": "services.betterlockscreen.package",
-      "description": "Package providing betterlockscreen.",
+      "description": "The betterlockscreen package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -37045,7 +37045,7 @@
     },
     {
       "title": "services.clipmenu.package",
-      "description": "clipmenu derivation to use.",
+      "description": "The clipmenu package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -37054,7 +37054,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.clipmenu\"",
+      "default": "pkgs.clipmenu",
       "example": null
     },
     {
@@ -37591,7 +37591,7 @@
     },
     {
       "title": "services.dunst.package",
-      "description": "Package providing dunst.",
+      "description": "The dunst package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -37731,7 +37731,7 @@
     },
     {
       "title": "services.dwm-status.package",
-      "description": "Which dwm-status package to use.",
+      "description": "The dwm-status package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -37741,7 +37741,7 @@
       ],
       "note": null,
       "default": "pkgs.dwm-status",
-      "example": "\"pkgs.dwm-status.override { enableAlsaUtils = false; }\""
+      "example": "pkgs.dwm-status.override { enableAlsaUtils = false; }"
     },
     {
       "title": "services.dwm-status.extraConfig",
@@ -37955,7 +37955,7 @@
     },
     {
       "title": "services.espanso.package",
-      "description": "Which espanso package to use",
+      "description": "The espanso package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -38053,7 +38053,7 @@
     },
     {
       "title": "services.etesync-dav.package",
-      "description": "The etesync-dav derivation to use.",
+      "description": "The etesync-dav package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -38062,7 +38062,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.etesync-dav\"",
+      "default": "pkgs.etesync-dav",
       "example": null
     },
     {
@@ -38109,7 +38109,7 @@
     },
     {
       "title": "services.flameshot.package",
-      "description": "Package providing flameshot.",
+      "description": "The flameshot package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -38207,7 +38207,7 @@
     },
     {
       "title": "services.fnott.package",
-      "description": "Package providing fnott.",
+      "description": "The fnott package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -38277,7 +38277,7 @@
     },
     {
       "title": "services.fusuma.package",
-      "description": "Package providing fusuma.",
+      "description": "The fusuma package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -38529,7 +38529,7 @@
     },
     {
       "title": "services.git-sync.package",
-      "description": "Package containing the git-sync program.",
+      "description": "The git-sync package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -39014,7 +39014,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.gromit-mpx\"",
+      "default": "pkgs.gromit-mpx",
       "example": null
     },
     {
@@ -39565,7 +39565,7 @@
     },
     {
       "title": "services.imapnotify.package",
-      "description": "The imapnotify package to use",
+      "description": "The goimapnotify package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -39677,7 +39677,7 @@
     },
     {
       "title": "services.kanshi.package",
-      "description": "kanshi derivation to use.",
+      "description": "The kanshi package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -40170,7 +40170,7 @@
     },
     {
       "title": "services.kdeconnect.package",
-      "description": "The KDE connect package to use",
+      "description": "The kdeconnect-kde package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -40179,7 +40179,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation kdeconnect-kde-25.04.1>",
+      "default": "pkgs.kdePackages.kdeconnect-kde",
       "example": "pkgs.plasma5Packages.kdeconnect-kde"
     },
     {
@@ -40716,7 +40716,7 @@
     },
     {
       "title": "services.mbsync.package",
-      "description": "The package to use for the mbsync binary.",
+      "description": "The isync package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -40726,7 +40726,7 @@
       ],
       "note": null,
       "default": "pkgs.isync",
-      "example": "pkgs.isync"
+      "example": null
     },
     {
       "title": "services.mbsync.configFile",
@@ -40912,7 +40912,7 @@
     },
     {
       "title": "services.mpd.package",
-      "description": "The MPD package to run.",
+      "description": "The mpd package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -40921,7 +40921,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.mpd\"",
+      "default": "pkgs.mpd",
       "example": null
     },
     {
@@ -41066,7 +41066,7 @@
     },
     {
       "title": "services.mpd-discord-rpc.package",
-      "description": "mpd-discord-rpc package to use.",
+      "description": "The mpd-discord-rpc package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41206,7 +41206,7 @@
     },
     {
       "title": "services.mpdris2.package",
-      "description": "The mpDris2 package to use.",
+      "description": "The mpdris2 package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41654,7 +41654,7 @@
     },
     {
       "title": "services.nextcloud-client.package",
-      "description": "The package to use for the nextcloud client binary.",
+      "description": "The nextcloud-client package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41696,7 +41696,7 @@
     },
     {
       "title": "services.notify-osd.package",
-      "description": "Package containing the notify-osd program.",
+      "description": "The notify-osd package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41920,7 +41920,7 @@
     },
     {
       "title": "services.pantalaimon.package",
-      "description": "Package providing the pantalaimon executable to use.",
+      "description": "The pantalaimon package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -41962,7 +41962,7 @@
     },
     {
       "title": "services.parcellite.package",
-      "description": "Parcellite derivation to use.",
+      "description": "The parcellite package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -42130,7 +42130,7 @@
     },
     {
       "title": "services.picom.package",
-      "description": "Picom derivation to use.",
+      "description": "The picom package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -42140,7 +42140,7 @@
       ],
       "note": null,
       "default": "pkgs.picom",
-      "example": "pkgs.picom"
+      "example": null
     },
     {
       "title": "services.picom.activeOpacity",
@@ -42452,7 +42452,7 @@
     },
     {
       "title": "services.plex-mpv-shim.package",
-      "description": "The package to use for the Plex mpv shim.",
+      "description": "The plex-mpv-shim package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -43922,7 +43922,7 @@
     },
     {
       "title": "services.pulseeffects.package",
-      "description": "Pulseeffects package to use.",
+      "description": "The pulseeffects-legacy package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -44034,7 +44034,7 @@
     },
     {
       "title": "services.recoll.package",
-      "description": "Package providing the recoll binary.",
+      "description": "The recoll package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -44776,7 +44776,7 @@
     },
     {
       "title": "services.screen-locker.xautolock.package",
-      "description": "Package providing the xautolock binary.",
+      "description": "The xautolock package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -44785,7 +44785,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation xautolock-2.2-7-ga23dd5c>",
+      "default": "pkgs.xautolock",
       "example": null
     },
     {
@@ -44818,7 +44818,7 @@
     },
     {
       "title": "services.screen-locker.xss-lock.package",
-      "description": "Package providing the xss-lock binary.",
+      "description": "The xss-lock package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -44827,7 +44827,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation xss-lock-unstable-2018-05-31>",
+      "default": "pkgs.xss-lock",
       "example": null
     },
     {
@@ -44944,7 +44944,7 @@
     },
     {
       "title": "services.signaturepdf.package",
-      "description": "signaturepdf derivation to use.",
+      "description": "The signaturepdf package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -44953,7 +44953,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.signaturepdf\"",
+      "default": "pkgs.signaturepdf",
       "example": null
     },
     {
@@ -45168,7 +45168,7 @@
     },
     {
       "title": "services.stalonetray.package",
-      "description": "The package to use for the Stalonetray binary.",
+      "description": "The stalonetray package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -45178,7 +45178,7 @@
       ],
       "note": null,
       "default": "pkgs.stalonetray",
-      "example": "pkgs.stalonetray"
+      "example": null
     },
     {
       "title": "services.stalonetray.config",
@@ -45224,7 +45224,7 @@
     },
     {
       "title": "services.status-notifier-watcher.package",
-      "description": "The package to use for the status notifier watcher binary.",
+      "description": "The status-notifier-item package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -45234,7 +45234,7 @@
       ],
       "note": null,
       "default": "pkgs.haskellPackages.status-notifier-item",
-      "example": "pkgs.haskellPackages.status-notifier-item"
+      "example": null
     },
     {
       "title": "services.swayidle.enable",
@@ -45560,7 +45560,7 @@
     },
     {
       "title": "services.sxhkd.package",
-      "description": "Package containing the sxhkd executable.",
+      "description": "The sxhkd package to use. containing the sxhkd executable",
       "type": "package",
       "declared_by": [
         {
@@ -45569,7 +45569,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.sxhkd\"",
+      "default": "pkgs.sxhkd",
       "example": null
     },
     {
@@ -46106,7 +46106,7 @@
     },
     {
       "title": "services.taffybar.package",
-      "description": "The package to use for the Taffybar binary.",
+      "description": "The taffybar package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -46116,7 +46116,7 @@
       ],
       "note": null,
       "default": "pkgs.taffybar",
-      "example": "pkgs.taffybar"
+      "example": null
     },
     {
       "title": "services.tahoe-lafs.enable",
@@ -46232,7 +46232,7 @@
     },
     {
       "title": "services.trayer.package",
-      "description": "The package to use for the trayer binary.",
+      "description": "The trayer package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -46242,7 +46242,7 @@
       ],
       "note": null,
       "default": "pkgs.trayer",
-      "example": "pkgs.trayer"
+      "example": null
     },
     {
       "title": "services.trayer.settings",
@@ -46456,7 +46456,7 @@
     },
     {
       "title": "services.twmn.text.font.package",
-      "description": "Notification text’s font package. If null then the font is assumed to already be available in your profile.",
+      "description": "The font package to use. Package providing the font to use for the notification text. This package is only used if font.package is not null.",
       "type": "null or package",
       "declared_by": [
         {
@@ -46820,7 +46820,7 @@
     },
     {
       "title": "services.unclutter.package",
-      "description": "unclutter derivation to use.",
+      "description": "The unclutter-xfixes package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -46974,7 +46974,7 @@
     },
     {
       "title": "services.vdirsyncer.package",
-      "description": "The package to use for the vdirsyncer binary.",
+      "description": "The vdirsyncer package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -46983,8 +46983,8 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.vdirsyncer\"",
-      "example": "pkgs.vdirsyncer"
+      "default": "pkgs.vdirsyncer",
+      "example": null
     },
     {
       "title": "services.vdirsyncer.configFile",
@@ -47044,7 +47044,7 @@
     },
     {
       "title": "services.volnoti.package",
-      "description": "Package containing the volnoti program.",
+      "description": "The volnoti package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47128,7 +47128,7 @@
     },
     {
       "title": "services.wlsunset.package",
-      "description": "wlsunset derivation to use.",
+      "description": "The wlsunset package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47137,7 +47137,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.wlsunset\"",
+      "default": "pkgs.wlsunset",
       "example": null
     },
     {
@@ -47282,7 +47282,7 @@
     },
     {
       "title": "services.wluma.package",
-      "description": "Package providing wluma.",
+      "description": "The wluma package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47492,7 +47492,7 @@
     },
     {
       "title": "services.xembed-sni-proxy.package",
-      "description": "Package containing the xembedsniproxy program.",
+      "description": "The plasma-workspace package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47520,7 +47520,7 @@
     },
     {
       "title": "services.xidlehook.package",
-      "description": "The package to use for xidlehook.",
+      "description": "The xidlehook package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47529,7 +47529,7 @@
         }
       ],
       "note": null,
-      "default": "\"pkgs.xidlehook\"",
+      "default": "pkgs.xidlehook",
       "example": null
     },
     {
@@ -47674,7 +47674,7 @@
     },
     {
       "title": "services.xscreensaver.package",
-      "description": "Which xscreensaver package to use.",
+      "description": "The xscreensaver package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -47716,7 +47716,7 @@
     },
     {
       "title": "services.xsettingsd.package",
-      "description": "Package containing the xsettingsd program.",
+      "description": "The xsettingsd package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -51309,7 +51309,7 @@
         }
       ],
       "note": null,
-      "default": "pkgs.wf-shell",
+      "default": "pkgs.wayfirePlugins.wf-shell",
       "example": null
     },
     {
@@ -52126,7 +52126,7 @@
     },
     {
       "title": "xdg.mime.desktopFileUtilsPackage",
-      "description": "The package to use when running update-desktop-database.",
+      "description": "The desktop-file-utils package to use. Used when running update-desktop-database.",
       "type": "package",
       "declared_by": [
         {
@@ -52140,7 +52140,7 @@
     },
     {
       "title": "xdg.mime.sharedMimeInfoPackage",
-      "description": "The package to use when running update-mime-database.",
+      "description": "The shared-mime-info package to use. Used when running update-mime-database.",
       "type": "package",
       "declared_by": [
         {
@@ -52840,7 +52840,7 @@
     },
     {
       "title": "xsession.windowManager.awesome.package",
-      "description": "Package to use for running the Awesome WM.",
+      "description": "The awesome package to use. to use for running the Awesome WM",
       "type": "package",
       "declared_by": [
         {
@@ -53414,7 +53414,7 @@
     },
     {
       "title": "xsession.windowManager.herbstluftwm.package",
-      "description": "Package providing the herbstluftwm and herbstclient commands.",
+      "description": "The herbstluftwm package to use.",
       "type": "package",
       "declared_by": [
         {
@@ -54702,7 +54702,7 @@
     },
     {
       "title": "xsession.windowManager.spectrwm.package",
-      "description": "Package providing the spectrwm command.",
+      "description": "The spectrwm package to use. providing the spectrwm command",
       "type": "package",
       "declared_by": [
         {
