@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 24 May 2025 02:41:11 GMT",
+  "last_update": "Sun, 25 May 2025 02:54:54 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -23604,6 +23604,538 @@
       "example": "[ pkgs.obs-studio-plugins.wlrobs ]"
     },
     {
+      "title": "programs.obsidian.enable",
+      "description": "Whether to enable obsidian.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.obsidian.package",
+      "description": "The obsidian package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.obsidian",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.app",
+      "description": "Settings to write to app.json.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": "Vault-specific settings take priority and will override these, if set.",
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.appearance",
+      "description": "Settings to write to appearance.json.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": "Vault-specific settings take priority and will override these, if set.",
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.communityPlugins",
+      "description": "Community plugins to install and activate. \n      Vault-specific settings take priority and will override these, if set.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.corePlugins",
+      "description": "Core plugins to activate.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": "Vault-specific settings take priority and will override these, if set.",
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.cssSnippets",
+      "description": "CSS snippets to install. \n      Vault-specific settings take priority and will override these, if set.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.extraFiles",
+      "description": "Extra files to link to the vault directory. \n      Vault-specific settings take priority and will override these, if set.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.hotkeys",
+      "description": "Hotkeys to configure. \n      Vault-specific settings take priority and will override these, if set.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.defaultSettings.themes",
+      "description": "Themes to install. \n      Vault-specific settings take priority and will override these, if set.",
+      "type": "raw value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults",
+      "description": "List of vaults to create.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.enable",
+      "description": "Whether this vault should be generated.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.app",
+      "description": "Settings to write to app.json.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.appearance",
+      "description": "Settings to write to appearance.json.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.communityPlugins",
+      "description": "Community plugins to install and activate.",
+      "type": "list of ((submodule) or package convertible to it)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.communityPlugins.*.enable",
+      "description": "Whether to enable the plugin.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.communityPlugins.*.pkg",
+      "description": "The plugin package.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.communityPlugins.*.settings",
+      "description": "Settings to include in the plugin’s data.json.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.corePlugins",
+      "description": "Core plugins to activate.",
+      "type": "list of ((submodule) or (one of “audio-recorder”, “backlink”, “bookmarks”, “canvas”, “command-palette”, “daily-notes”, “editor-status”, “file-explorer”, “file-recovery”, “global-search”, “graph”, “markdown-importer”, “note-composer”, “outgoing-link”, “outline”, “page-preview”, “properties”, “publish”, “random-note”, “slash-command”, “slides”, “switcher”, “sync”, “tag-pane”, “templates”, “word-count”, “workspaces”, “zk-prefixer”) convertible to it)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.corePlugins.*.enable",
+      "description": "Whether to enable the plugin.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.corePlugins.*.name",
+      "description": "The plugin.",
+      "type": "one of “audio-recorder”, “backlink”, “bookmarks”, “canvas”, “command-palette”, “daily-notes”, “editor-status”, “file-explorer”, “file-recovery”, “global-search”, “graph”, “markdown-importer”, “note-composer”, “outgoing-link”, “outline”, “page-preview”, “properties”, “publish”, “random-note”, “slash-command”, “slides”, “switcher”, “sync”, “tag-pane”, “templates”, “word-count”, “workspaces”, “zk-prefixer”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.corePlugins.*.settings",
+      "description": "Plugin settings to include.",
+      "type": "attribute set of anything",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.cssSnippets",
+      "description": "CSS snippets to install.",
+      "type": "list of ((submodule) or absolute path convertible to it)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.cssSnippets.*.enable",
+      "description": "Whether to enable the snippet.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.cssSnippets.*.name",
+      "description": "Name of the snippet.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "lib.strings.removeSuffix \".css\" (builtins.baseNameOf source)",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.cssSnippets.*.source",
+      "description": "Path of the source file.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.cssSnippets.*.text",
+      "description": "Text of the file.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.extraFiles",
+      "description": "Extra files to link to the vault directory.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.extraFiles.<name>.source",
+      "description": "Path of the source file or directory.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.extraFiles.<name>.target",
+      "description": "Path to target relative to the vault’s directory.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "name",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.extraFiles.<name>.text",
+      "description": "Text of the file.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.hotkeys",
+      "description": "Hotkeys to configure.",
+      "type": "attribute set of list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.hotkeys.<name>.*.key",
+      "description": "The hotkey.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.hotkeys.<name>.*.modifiers",
+      "description": "The hotkey modifiers.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.themes",
+      "description": "Themes to install.",
+      "type": "list of ((submodule) or package convertible to it)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.themes.*.enable",
+      "description": "Whether to set the theme as active.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.settings.themes.*.pkg",
+      "description": "The theme package.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.obsidian.vaults.<name>.target",
+      "description": "Path to target vault relative to the user’s HOME.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/obsidian.nix",
+          "text": "home-manager/modules/programs/obsidian.nix"
+        }
+      ],
+      "note": null,
+      "default": "name",
+      "example": null
+    },
+    {
       "title": "programs.octant.enable",
       "description": "Whether to enable octant.",
       "type": "boolean",
@@ -27760,6 +28292,174 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  \"background_color\" = \"1.0 1.0 1.0\";\n  \"text_highlight_color\" = \"1.0 0.0 0.0\";\n}\n\n"
+    },
+    {
+      "title": "programs.sketchybar.enable",
+      "description": "Whether to enable sketchybar.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sketchybar.package",
+      "description": "The sketchybar package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sketchybar",
+      "example": null
+    },
+    {
+      "title": "programs.sketchybar.config",
+      "description": "The sketchybar configuration. Can be specified as:",
+      "type": "null or strings concatenated with “\\n” or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": "A string containing the configuration content directlyAn attribute set with ‘source’ pointing to a directory containing\nthe full configuration, and optionally ‘recursive = true’ to\nrecursively copy all filesAn attribute set with ‘text’ containing inline configuration",
+      "default": "null",
+      "example": "# String example - inline configuration\n''\n# Define colors\nexport COLOR_BLACK=\"0xff181926\"\nexport COLOR_WHITE=\"0xffcad3f5\"\n\n# Configure bar\nsketchybar --bar height=32 \\\n                position=top \\\n                padding_left=10 \\\n                padding_right=10 \\\n                color=$COLOR_BLACK\n\n# Configure default values\nsketchybar --default icon.font=\"SF Pro:Bold:14.0\" \\\n                    icon.color=$COLOR_WHITE \\\n                    label.font=\"SF Pro:Bold:14.0\" \\\n                    label.color=$COLOR_WHITE\n\n# Add items to the bar\nsketchybar --add item clock right \\\n          --set clock script=\"date '+%H:%M'\" \\\n                      update_freq=10\n\n# Update the bar\nsketchybar --update\n''\n\n# Or directory example - for complex configurations\n# {\n#   source = ./path/to/sketchybar-config;\n#   recursive = true;\n# }\n\n"
+    },
+    {
+      "title": "programs.sketchybar.configType",
+      "description": "The type of configuration to generate.",
+      "type": "one of “bash”, “lua”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": "Set to “bash” to use the standard bash configuration.\nSet to “lua” to use the Lua configuration via SbarLua.",
+      "default": "\"bash\"",
+      "example": null
+    },
+    {
+      "title": "programs.sketchybar.extraLuaPackages",
+      "description": "The extra Lua packages required for your plugins to work. This option accepts a function that takes a Lua package set as an argument,\nand selects the required Lua packages from this package set.\nSee the example for more info.",
+      "type": "function that evaluates to a(n) list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "ps: [ ]",
+      "example": "luaPkgs: with luaPkgs; [ luautf8 ]"
+    },
+    {
+      "title": "programs.sketchybar.extraPackages",
+      "description": "Extra packages to add to PATH for the sketchybar service.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ pkgs.jq ]"
+    },
+    {
+      "title": "programs.sketchybar.includeSystemPath",
+      "description": "Whether to include common system PATH in the wrapper. This allows sketchybar to access system binaries.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
+      "title": "programs.sketchybar.luaPackage",
+      "description": "The lua5_4 package to use. Lua interpreter to use when configType is lua.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lua5_4",
+      "example": null
+    },
+    {
+      "title": "programs.sketchybar.sbarLuaPackage",
+      "description": "The sbarlua package to use. Required when using a lua configuration.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sbarlua",
+      "example": null
+    },
+    {
+      "title": "programs.sketchybar.service.enable",
+      "description": "Whether to enable sketchybar service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.sketchybar.service.errorLogFile",
+      "description": "Absolute path to log all stderr output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/sketchybar/sketchybar.err.log",
+      "example": "\"/Users/khaneliman/Library/Logs/sketchybar.log\""
+    },
+    {
+      "title": "programs.sketchybar.service.outLogFile",
+      "description": "Absolute path to log all stdout output.",
+      "type": "null or absolute path or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sketchybar.nix",
+          "text": "home-manager/modules/programs/sketchybar.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.home.homeDirectory}/Library/Logs/sketchybar/sketchybar.out.log",
+      "example": "\"/Users/khaneliman/Library/Logs/sketchybar.log\""
     },
     {
       "title": "programs.skim.enable",
@@ -47106,6 +47806,104 @@
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
           "text": "home-manager/modules/services/way-displays.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.wayland.systemd.target",
+      "example": null
+    },
+    {
+      "title": "services.wayvnc.enable",
+      "description": "Whether to enable wayvnc VNC server.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.wayvnc.package",
+      "description": "The wayvnc package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.wayvnc",
+      "example": null
+    },
+    {
+      "title": "services.wayvnc.autoStart",
+      "description": "Whether to enable autostarting of wayvnc.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.wayvnc.settings",
+      "description": "See CONFIGURATION section in wayvnc(1).",
+      "type": "attribute set of (atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  address = \"0.0.0.0\";\n  port = 5901;\n}\n"
+    },
+    {
+      "title": "services.wayvnc.settings.address",
+      "description": "The address to which the server shall bind, e.g. 0.0.0.0 or localhost.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"0.0.0.0\""
+    },
+    {
+      "title": "services.wayvnc.settings.port",
+      "description": "The port to which the server shall bind.",
+      "type": "16 bit unsigned integer; between 0 and 65535 (both inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "5901"
+    },
+    {
+      "title": "services.wayvnc.systemdTarget",
+      "description": "Systemd target to bind to.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/wayvnc.nix",
+          "text": "home-manager/modules/services/wayvnc.nix"
         }
       ],
       "note": null,
