@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 27 May 2025 02:46:19 GMT",
+  "last_update": "Wed, 28 May 2025 02:48:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4608,7 +4608,7 @@
     {
       "title": "home.pointerCursor.hyprcursor.size",
       "description": "The cursor size for hyprcursor.",
-      "type": "null or signed integer",
+      "type": "signed integer",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/config/home-cursor.nix",
@@ -4616,7 +4616,7 @@
         }
       ],
       "note": null,
-      "default": "null",
+      "default": "\"config.home.pointerCursor.size\"",
       "example": "32"
     },
     {
@@ -40374,6 +40374,76 @@
       "note": null,
       "default": "{ }",
       "example": "        {\n          style=round;\n\t        width=6.0;\n\t        hidpi=\"off\";\n\t        active_color=\"0xffe2e2e3\";\n\t        inactive_color=\"0xff414550\";\n        }\n\n"
+    },
+    {
+      "title": "services.jellyfin-mpv-shim.enable",
+      "description": "Whether to enable Jellyfin mpv shim.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jellyfin-mpv-shim.nix",
+          "text": "home-manager/modules/services/jellyfin-mpv-shim.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.jellyfin-mpv-shim.package",
+      "description": "The jellyfin-mpv-shim package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jellyfin-mpv-shim.nix",
+          "text": "home-manager/modules/services/jellyfin-mpv-shim.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.jellyfin-mpv-shim",
+      "example": null
+    },
+    {
+      "title": "services.jellyfin-mpv-shim.mpvBindings",
+      "description": "mpv input bindings to use for jellyfin-mpv-shim. If null, jellyfin-mpv-shim will use its default input configuration.",
+      "type": "null or (attribute set of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jellyfin-mpv-shim.nix",
+          "text": "home-manager/modules/services/jellyfin-mpv-shim.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n          WHEEL_UP = \"seek 10\";\n          WHEEL_DOWN = \"seek -10\";\n        }\n"
+    },
+    {
+      "title": "services.jellyfin-mpv-shim.mpvConfig",
+      "description": "mpv configuration options to use for jellyfin-mpv-shim. If null, jellyfin-mpv-shim will use its default mpv configuration.",
+      "type": "null or (attribute set of (string or signed integer or boolean or floating point number))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jellyfin-mpv-shim.nix",
+          "text": "home-manager/modules/services/jellyfin-mpv-shim.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n          profile = \"gpu-hq\";\n          force-window = true;\n        }\n"
+    },
+    {
+      "title": "services.jellyfin-mpv-shim.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/jellyfin-mpv-shim/conf.json. See\nhttps://github.com/jellyfin/jellyfin-mpv-shim#configuration\nfor the configuration documentation.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/jellyfin-mpv-shim.nix",
+          "text": "home-manager/modules/services/jellyfin-mpv-shim.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  allow_transcode_to_h265 = false;\n  always_transcode = false;\n  audio_output = \"hdmi\";\n  auto_play = true;\n  fullscreen = true;\n  player_name = \"mpv-shim\";\n}\n\n"
     },
     {
       "title": "services.kanshi.enable",
