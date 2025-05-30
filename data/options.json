@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 29 May 2025 02:48:37 GMT",
+  "last_update": "Fri, 30 May 2025 02:46:41 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1235,6 +1235,10 @@
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
           "text": "home-manager/modules/programs/msmtp.nix"
+        },
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
         },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
@@ -2560,6 +2564,48 @@
       "note": null,
       "default": "\"Verbatim\"",
       "example": "\"Maildir++\""
+    },
+    {
+      "title": "accounts.email.accounts.<name>.meli.enable",
+      "description": "Whether to enable the meli mail client for this account. Requires SMTP settings…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "accounts.email.accounts.<name>.meli.mailboxAliases",
+      "description": "Folder display name",
+      "type": "attribute set of (attribute set)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  INBOX = {\n    alias = \"📥 Inbox\";\n  };\n  Sent = {\n    alias = \"📤 Sent\";\n  };\n}\n"
+    },
+    {
+      "title": "accounts.email.accounts.<name>.meli.mailboxes",
+      "description": "Mailboxes to show in meli",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"INBOX\"\n  \"Sent\"\n  \"Trash\"\n  \"Drafts\"\n]\n"
     },
     {
       "title": "accounts.email.accounts.<name>.msmtp.enable",
@@ -10376,7 +10422,7 @@
     {
       "title": "programs.chromium.package",
       "description": "The Chromium package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/chromium.nix",
@@ -12388,6 +12434,118 @@
       "note": null,
       "default": "pkgs.fish",
       "example": null
+    },
+    {
+      "title": "programs.fish.binds",
+      "description": "Manage key bindings",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"alt-s\".command = \"fish_commandline_prepend sudo\";\n  \"alt-shift-b\".command = \"fish_commandline_append bat\";\n}\n\n"
+    },
+    {
+      "title": "programs.fish.binds.<name>.enable",
+      "description": "Whether to enable enable the bind.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "programs.fish.binds.<name>.command",
+      "description": "command that will be execute",
+      "type": "string or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.fish.binds.<name>.erase",
+      "description": "Whether to enable remove bind.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.fish.binds.<name>.mode",
+      "description": "Specify the bind mode that the bind is used in",
+      "type": "null or one of “default”, “insert”, “paste”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.fish.binds.<name>.operate",
+      "description": "Operate on preset bindings or user bindings",
+      "type": "null or one of “preset”, “user”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.fish.binds.<name>.setsMode",
+      "description": "Change current mode after bind is executed",
+      "type": "null or one of “default”, “insert”, “paste”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.fish.binds.<name>.silent",
+      "description": "Whether to enable Operate silently.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
+          "text": "home-manager/modules/programs/fish.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.fish.functions",
@@ -19378,7 +19536,7 @@
     {
       "title": "programs.kodi.settings",
       "description": "Configuration to write to the advancedsettings.xml file in kodis userdata directory. Settings specified here will be\nimmutable from inside kodi and be hidden from the GUI settings dialog.",
-      "type": "null or attribute sets of strings",
+      "type": "null or attribute sets or lists of strings",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kodi.nix",
@@ -19951,7 +20109,7 @@
     },
     {
       "title": "programs.librewolf.enable",
-      "description": "Whether to enable LibreWolf. LibreWolf is a privacy enhanced Firefox fork. See programs.librewolf for more configuration options.",
+      "description": "Whether to enable LibreWolf. LibreWolf is a privacy enhanced Firefox fork.",
       "type": "boolean",
       "declared_by": [
         {
@@ -19962,6 +20120,48 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.librewolf.enableGnomeExtensions",
+      "description": "Whether to enable the GNOME Shell native host connector. Note, you also need to set the NixOS option\nservices.gnome.gnome-browser-connector.enable to\ntrue.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.package",
+      "description": "The LibreWolf package to use. If state version ≥ 19.09 then this should be a wrapped LibreWolf package. For earlier state\nversions it should be an unwrapped LibreWolf package.\nSet to null to disable installing LibreWolf.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.librewolf",
+      "example": "pkgs.librewolf.override {\n  # See nixpkgs' firefox/wrapper.nix to check which options you can use\n  nativeMessagingHosts = [\n    # Gnome shell native connector\n    pkgs.gnome-browser-connector\n    # Tridactyl native connector\n    pkgs.tridactyl-native\n  ];\n}\n\n"
+    },
+    {
+      "title": "programs.librewolf.finalPackage",
+      "description": "Resulting LibreWolf package.",
+      "type": "null or package (read only)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
     },
     {
       "title": "programs.librewolf.languagePacks",
@@ -19978,6 +20178,20 @@
       "example": "[\n  \"en-GB\"\n  \"de\"\n]\n"
     },
     {
+      "title": "programs.librewolf.nativeMessagingHosts",
+      "description": "Additional packages containing native messaging hosts that should be made available to LibreWolf extensions.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
+    },
+    {
       "title": "programs.librewolf.pkcs11Modules",
       "description": "Additional packages to be loaded as PKCS #11 modules in Firefox.",
       "type": "list of package",
@@ -19990,6 +20204,454 @@
       "note": null,
       "default": "[ ]",
       "example": null
+    },
+    {
+      "title": "programs.librewolf.policies",
+      "description": "See list of policies.",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n}\n"
+    },
+    {
+      "title": "programs.librewolf.profiles",
+      "description": "Attribute set of LibreWolf profiles.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.bookmarks.configFile",
+      "description": "Configuration file to define custom bookmarks.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.bookmarks.force",
+      "description": "Whether to force override existing custom bookmarks.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.bookmarks.settings",
+      "description": "Custom bookmarks.",
+      "type": "(list of ((bookmark submodule) or (directory submodule))) or (attribute set of ((bookmark submodule) or (directory submodule))) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    name = \"wikipedia\";\n    tags = [ \"wiki\" ];\n    keyword = \"wiki\";\n    url = \"https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go\";\n  }\n  {\n    name = \"kernel.org\";\n    url = \"https://www.kernel.org\";\n  }\n  {\n    name = \"Nix sites\";\n    toolbar = true;\n    bookmarks = [\n      {\n        name = \"homepage\";\n        url = \"https://nixos.org/\";\n      }\n      {\n        name = \"wiki\";\n        tags = [ \"wiki\" \"nix\" ];\n        url = \"https://wiki.nixos.org/\";\n      }\n    ];\n  }\n]\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containers",
+      "description": "Attribute set of container configurations. See Multi-Account\nContainers\nfor more information.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  dangerous = {\n    color = \"red\";\n    icon = \"fruit\";\n    id = 2;\n  };\n  shopping = {\n    color = \"blue\";\n    icon = \"cart\";\n    id = 1;\n  };\n}\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containers.<name>.color",
+      "description": "Container color.",
+      "type": "one of “blue”, “turquoise”, “green”, “yellow”, “orange”, “red”, “pink”, “purple”, “toolbar”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"pink\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containers.<name>.icon",
+      "description": "Container icon.",
+      "type": "one of “briefcase”, “cart”, “circle”, “dollar”, “fence”, “fingerprint”, “gift”, “vacation”, “food”, “fruit”, “pet”, “tree”, “chill”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"fruit\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containers.<name>.id",
+      "description": "Container ID. This should be set to a unique number per container in this profile.",
+      "type": "unsigned integer, meaning >=0",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "0",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containers.<name>.name",
+      "description": "Container name, e.g., shopping.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.containersForce",
+      "description": "Whether to force replace the existing containers configuration. This is recommended since LibreWolf will replace the symlink on\nevery launch, but note that you’ll lose any existing configuration\nby enabling this.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions",
+      "description": "Submodule for installing and configuring extensions.",
+      "type": "(submodule) or (list of package) convertible to it",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  packages = with pkgs.nur.repos.rycee.firefox-addons; [\n    ublock-origin\n  ];\n  settings.\"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions.packages",
+      "description": "List of ‹name› add-on packages to install for this profile. Some pre-packaged add-ons are accessible from the Nix User Repository.\nOnce you have NUR installed run",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": "$ nix-env -f '<nixpkgs>' -qaP -A nur.repos.rycee.firefox-addons",
+      "default": "[ ]",
+      "example": "with pkgs.nur.repos.rycee.firefox-addons; [\n  privacy-badger\n]\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions.force",
+      "description": "Whether to override all previous firefox settings.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": "This is required when using settings.",
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions.settings",
+      "description": "Attribute set of options for each extension. The keys of the attribute set consist of the ID of the extension\nor its UUID wrapped in curly braces.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  # Example with uBlock origin's extensionID\n  \"uBlock0@raymondhill.net\".settings = {\n    selectedFilterLists = [\n      \"ublock-filters\"\n      \"ublock-badware\"\n      \"ublock-privacy\"\n      \"ublock-unbreak\"\n      \"ublock-quick-fixes\"\n    ];\n  };\n\n  # Example with Stylus' UUID-form extensionID\n  \"{7a7a4a92-a2a0-41d1-9fd7-1e92480d612d}\".settings = {\n    dbInChromeStorage = true; # required for Stylus\n  }\n}\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions.settings.<name>.force",
+      "description": "Forcibly override any existing configuration for this extension.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extensions.settings.<name>.settings",
+      "description": "Json formatted options for the specified extensionID",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.extraConfig",
+      "description": "Extra preferences to add to user.js.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.id",
+      "description": "Profile ID. This should be set to a unique number per profile.",
+      "type": "unsigned integer, meaning >=0",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "0",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.isDefault",
+      "description": "Whether this is a default profile.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"true if profile ID is 0\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.name",
+      "description": "Profile name.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.path",
+      "description": "Profile path.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.preConfig",
+      "description": "Extra preferences to add to user.js, before programs.firefox.profiles.<name>.settings.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": "Use programs.firefox.profiles.<name>.extraConfig, unless\nyou want to overwrite in\nprograms.firefox.profiles.<name>.settings, then use this\noption.",
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search",
+      "description": "Declarative search engine configuration.",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.default",
+      "description": "The default search engine used in the address bar and search bar.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"ddg\""
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.engines",
+      "description": "Attribute set of search engine configurations. Engines that only have metaData specified will be treated as builtin\nto LibreWolf.",
+      "type": "attribute set of attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": "See SearchEngine.jsm\nin LibreWolf’s source for available options. We maintain a\nmapping to let you specify all options in the referenced link\nwithout underscores, but it may fall out of date with future\noptions.",
+      "default": "{ }",
+      "example": "{\n  nix-packages = {\n    name = \"Nix Packages\";\n    urls = [{\n      template = \"https://search.nixos.org/packages\";\n      params = [\n        { name = \"type\"; value = \"packages\"; }\n        { name = \"query\"; value = \"{searchTerms}\"; }\n      ];\n    }];\n\n    icon = \"${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg\";\n    definedAliases = [ \"@np\" ];\n  };\n\n  nixos-wiki = {\n    name = \"NixOS Wiki\";\n    urls = [{ template = \"https://wiki.nixos.org/w/index.php?search={searchTerms}\"; }];\n    iconMapObj.\"16\" = \"https://wiki.nixos.org/favicon.ico\";\n    definedAliases = [ \"@nw\" ];\n  };\n\n  bing.metaData.hidden = true;\n  google.metaData.alias = \"@g\"; # builtin engines only support specifying one additional alias\n}\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.force",
+      "description": "Whether to force replace the existing search configuration. This is recommended since LibreWolf will\nreplace the symlink for the search configuration on every\nlaunch, but note that you’ll lose any existing configuration\nby enabling this.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.order",
+      "description": "The order the search engines are listed in. Any engines that aren’t included in this list will be listed after these in an\nunspecified order.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"ddg\"\n  \"google\"\n]\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.privateDefault",
+      "description": "The default search engine used in the Private Browsing.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"ddg\""
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.settings",
+      "description": "Attribute set of LibreWolf preferences.",
+      "type": "attribute set of (LibreWolf preference (int, bool, string, and also attrs, list, float as a JSON string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": "LibreWolf only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
+      "default": "{ }",
+      "example": "{\n  \"browser.startup.homepage\" = \"https://nixos.org\";\n  \"browser.search.region\" = \"GB\";\n  \"browser.search.isUS\" = false;\n  \"distribution.searchplugins.defaultLocale\" = \"en-GB\";\n  \"general.useragent.locale\" = \"en-GB\";\n  \"browser.bookmarks.showMobileBookmarks\" = true;\n  \"browser.newtabpage.pinned\" = [{\n    title = \"NixOS\";\n    url = \"https://nixos.org\";\n  }];\n}\n\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.userChrome",
+      "description": "Custom LibreWolf user chrome CSS.",
+      "type": "strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  /* Hide tab bar in FF Quantum */\n  @-moz-document url(chrome://browser/content/browser.xul), url(chrome://browser/content/browser.xhtml) {\n    #TabsToolbar {\n      visibility: collapse !important;\n      margin-bottom: 21px !important;\n    }\n  \n    #sidebar-box[sidebarcommand=\"treestyletab_piro_sakura_ne_jp-sidebar-action\"] #sidebar-header {\n      visibility: collapse !important;\n    }\n  }\n''\n"
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.userContent",
+      "description": "Custom LibreWolf user content CSS.",
+      "type": "strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  /* Hide scrollbar in FF Quantum */\n  *{scrollbar-width:none !important}\n''\n"
     },
     {
       "title": "programs.librewolf.settings",
@@ -20732,6 +21394,132 @@
       "note": "Note, if your McFly database is currently in ~/.mcfly,\nthen this option has no effect.\nMove the database to $XDG_DATA_DIR/mcfly/history.db and\nremove ~/.mcfly to make the settings take effect. See\nhttps://github.com/cantino/mcfly#database-location.",
       "default": "{ }",
       "example": "{\n  colors = {\n    menubar = {\n      bg = \"black\";\n      fg = \"red\";\n    };\n    darkmode = {\n      prompt = \"cyan\";\n      timing = \"yellow\";\n      results_selection_fg = \"cyan\";\n      results_selection_bg = \"black\";\n      results_selection_hl = \"red\";\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.meli.enable",
+      "description": "Whether to enable meli email client.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.meli.package",
+      "description": "meli package to use",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "<derivation meli-0.8.12>",
+      "example": null
+    },
+    {
+      "title": "programs.meli.settings",
+      "description": "Meli Configuration",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.meli.settings.shortcuts",
+      "description": "Shortcut Settings",
+      "type": "submodule",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.meli.settings.shortcuts.composing",
+      "description": "composing shortcut configuration",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  edit = \"m\";\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
+    },
+    {
+      "title": "programs.meli.settings.shortcuts.contact-list",
+      "description": "contact-list shortcut configuration",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  create_contact = \"c\";\n  edit_contact = \"m\";\n}\n"
+    },
+    {
+      "title": "programs.meli.settings.shortcuts.general",
+      "description": "general shortcut configuration",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  next_page = \"C-d\";\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
+    },
+    {
+      "title": "programs.meli.settings.shortcuts.listing",
+      "description": "general shortcut configuration",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  new_mail = \"t\";\n  set_seen = \"s\";\n}\n"
+    },
+    {
+      "title": "programs.meli.settings.shortcuts.pager",
+      "description": "general shortcut configuration",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
     },
     {
       "title": "programs.mercurial.enable",
@@ -34242,6 +35030,34 @@
       "note": null,
       "default": "{ }",
       "example": "bar = {\n  location = \"top\";\n  height = 26;\n  background = \"00000066\";\n\n  right = [\n    {\n      clock.content = [\n        {\n          string.text = \"{time}\";\n        }\n      ];\n    }\n  ];\n};\n\n"
+    },
+    {
+      "title": "programs.yambar.systemd.enable",
+      "description": "Whether to enable yambar systemd integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
+          "text": "home-manager/modules/programs/yambar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.yambar.systemd.target",
+      "description": "The systemd target that will automatically start the yambar service.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
+          "text": "home-manager/modules/programs/yambar.nix"
+        }
+      ],
+      "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
+      "default": "\"graphical-session.target\"",
+      "example": "\"sway-session.target\""
     },
     {
       "title": "programs.yazi.enable",
