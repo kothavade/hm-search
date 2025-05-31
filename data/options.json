@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 30 May 2025 02:46:41 GMT",
+  "last_update": "Sat, 31 May 2025 02:43:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16606,6 +16606,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  color_scheme = 6;\n  cpu_count_from_one = 0;\n  delay = 15;\n  fields = with config.lib.htop.fields; [\n    PID\n    USER\n    PRIORITY\n    NICE\n    M_SIZE\n    M_RESIDENT\n    M_SHARE\n    STATE\n    PERCENT_CPU\n    PERCENT_MEM\n    TIME\n    COMM\n  ];\n  highlight_base_name = 1;\n  highlight_megabytes = 1;\n  highlight_threads = 1;\n} // (with config.lib.htop; leftMeters [\n  (bar \"AllCPUs2\")\n  (bar \"Memory\")\n  (bar \"Swap\")\n  (text \"Zram\")\n]) // (with config.lib.htop; rightMeters [\n  (text \"Tasks\")\n  (text \"LoadAverage\")\n  (text \"Uptime\")\n  (text \"Systemd\")\n]);\n\n"
+    },
+    {
+      "title": "programs.hwatch.enable",
+      "description": "Whether to enable hwatch, a modern alternative to the watch command .",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hwatch.nix",
+          "text": "home-manager/modules/programs/hwatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.hwatch.package",
+      "description": "The hwatch package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hwatch.nix",
+          "text": "home-manager/modules/programs/hwatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hwatch",
+      "example": null
+    },
+    {
+      "title": "programs.hwatch.extraArgs",
+      "description": "Extra command-line arguments to pass to hwatch. These will be used to populate the HWATCH environment variable.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hwatch.nix",
+          "text": "home-manager/modules/programs/hwatch.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"--exec\"\n  \"--precise\"\n]\n"
     },
     {
       "title": "programs.hyfetch.enable",
@@ -35183,7 +35225,7 @@
       ],
       "note": "See https://yazi-rs.github.io/docs/configuration/keymap\nfor the full list of options.",
       "default": "{ }",
-      "example": "{\n  input.prepend_keymap = [\n    { run = \"close\"; on = [ \"<C-q>\" ]; }\n    { run = \"close --submit\"; on = [ \"<Enter>\" ]; }\n    { run = \"escape\"; on = [ \"<Esc>\" ]; }\n    { run = \"backspace\"; on = [ \"<Backspace>\" ]; }\n  ];\n  manager.prepend_keymap = [\n    { run = \"escape\"; on = [ \"<Esc>\" ]; }\n    { run = \"quit\"; on = [ \"q\" ]; }\n    { run = \"close\"; on = [ \"<C-q>\" ]; }\n  ];\n}\n\n"
+      "example": "{\n  input.prepend_keymap = [\n    { run = \"close\"; on = [ \"<C-q>\" ]; }\n    { run = \"close --submit\"; on = [ \"<Enter>\" ]; }\n    { run = \"escape\"; on = [ \"<Esc>\" ]; }\n    { run = \"backspace\"; on = [ \"<Backspace>\" ]; }\n  ];\n  mgr.prepend_keymap = [\n    { run = \"escape\"; on = [ \"<Esc>\" ]; }\n    { run = \"quit\"; on = [ \"q\" ]; }\n    { run = \"close\"; on = [ \"<C-q>\" ]; }\n  ];\n}\n\n"
     },
     {
       "title": "programs.yazi.plugins",
@@ -35211,7 +35253,7 @@
       ],
       "note": "See https://yazi-rs.github.io/docs/configuration/yazi\nfor the full list of options.",
       "default": "{ }",
-      "example": "{\n  log = {\n    enabled = false;\n  };\n  manager = {\n    show_hidden = false;\n    sort_by = \"mtime\";\n    sort_dir_first = true;\n    sort_reverse = true;\n  };\n}\n\n"
+      "example": "{\n  log = {\n    enabled = false;\n  };\n  mgr = {\n    show_hidden = false;\n    sort_by = \"mtime\";\n    sort_dir_first = true;\n    sort_reverse = true;\n  };\n}\n\n"
     },
     {
       "title": "programs.yazi.shellWrapperName",
@@ -41939,7 +41981,7 @@
     {
       "title": "services.linux-wallpaperengine.assetsPath",
       "description": "Path to the assets directory.",
-      "type": "absolute path",
+      "type": "null or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/linux-wallpaperengine.nix",
@@ -41947,7 +41989,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "null",
       "example": null
     },
     {
