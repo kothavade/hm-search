@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 01 Jun 2025 03:06:54 GMT",
+  "last_update": "Mon, 02 Jun 2025 02:55:11 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -42327,6 +42327,20 @@
       "note": null,
       "default": "pkgs.mako",
       "example": null
+    },
+    {
+      "title": "services.mako.extraConfig",
+      "description": "Additional configuration lines to inject directly into the generated config file.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mako.nix",
+          "text": "home-manager/modules/services/mako.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "[urgency=low]\nborder-color=#b8bb26\n\n"
     },
     {
       "title": "services.mako.settings",
