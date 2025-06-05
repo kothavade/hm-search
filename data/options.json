@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 04 Jun 2025 02:51:01 GMT",
+  "last_update": "Thu, 05 Jun 2025 02:50:37 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7366,6 +7366,48 @@
       "note": null,
       "default": "",
       "example": "''\n  [SpamFilter]\n  \n  [Filter.0]\n  query = from:pointyheaded@boss.com\n  tags = -new;+boss\n  message = Message from above\n  \n  [InboxFilter]\n''\n"
+    },
+    {
+      "title": "programs.aichat.enable",
+      "description": "Whether to enable aichat, an All-in-one LLM CLI tool.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aichat.nix",
+          "text": "home-manager/modules/programs/aichat.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.aichat.package",
+      "description": "The aichat package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aichat.nix",
+          "text": "home-manager/modules/programs/aichat.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.aichat",
+      "example": null
+    },
+    {
+      "title": "programs.aichat.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/aichat/config.yaml\non Linux or on Darwin if xdg.enable is set, otherwise\n~/Library/Application Support/aichat/config.yaml.\nSee\nhttps://github.com/sigoden/aichat/blob/main/config.example.yaml\nfor supported values.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aichat.nix",
+          "text": "home-manager/modules/programs/aichat.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  model = \"Ollama:mistral-small:latest\";\n  clients = [\n    {\n      type = \"openai-compatible\";\n      name = \"Ollama\";\n      api_base = \"http://localhost:11434/v1\";\n      models = [\n        {\n          name = \"llama3.2:latest\";\n        }\n      ];\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.alacritty.enable",
@@ -26788,7 +26830,7 @@
     {
       "title": "programs.qutebrowser.package",
       "description": "The qutebrowser package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/qutebrowser.nix",
