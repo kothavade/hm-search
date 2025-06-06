@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 05 Jun 2025 02:50:37 GMT",
+  "last_update": "Fri, 06 Jun 2025 02:49:48 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7407,7 +7407,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  model = \"Ollama:mistral-small:latest\";\n  clients = [\n    {\n      type = \"openai-compatible\";\n      name = \"Ollama\";\n      api_base = \"http://localhost:11434/v1\";\n      models = [\n        {\n          name = \"llama3.2:latest\";\n        }\n      ];\n    }\n  ];\n}\n\n"
+      "example": "{\n  model = \"ollama:mistral-small3.1:latest\";\n  clients = [\n    {\n      type = \"openai-compatible\";\n      name = \"ollama\";\n      api_base = \"http://localhost:11434/v1\";\n      models = [\n        {\n          name = \"mistral-small3.1:latest\";\n          supports_function_calling = true;\n          supports_vision = true;\n        }\n      ];\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.alacritty.enable",
@@ -36597,11 +36597,25 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  {\n    # will source zsh-autosuggestions.plugin.zsh\n    name = \"zsh-autosuggestions\";\n    src = pkgs.fetchFromGitHub {\n      owner = \"zsh-users\";\n      repo = \"zsh-autosuggestions\";\n      rev = \"v0.4.0\";\n      sha256 = \"0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc\";\n    };\n  }\n  {\n    name = \"enhancd\";\n    file = \"init.sh\";\n    src = pkgs.fetchFromGitHub {\n      owner = \"b4b4r07\";\n      repo = \"enhancd\";\n      rev = \"v2.2.1\";\n      sha256 = \"0iqa9j09fwm6nj5rpip87x3hnvbbz9w9ajgm6wkrd5fls8fn8i5g\";\n    };\n  }\n]\n\n"
+      "example": "[\n  {\n    name = \"enhancd\";\n    file = \"init.sh\";\n    src = pkgs.fetchFromGitHub {\n      owner = \"b4b4r07\";\n      repo = \"enhancd\";\n      rev = \"v2.2.1\";\n      sha256 = \"0iqa9j09fwm6nj5rpip87x3hnvbbz9w9ajgm6wkrd5fls8fn8i5g\";\n    };\n  }\n{\n  name = \"wd\";\n  src = pkgs.zsh-wd;\n  file = \"share/wd/wd.plugin.zsh\";\n  completions = [ \"share/zsh/site-functions\" ];\n}\n]\n\n"
+    },
+    {
+      "title": "programs.zsh.plugins.*.completions",
+      "description": "Paths of additional functions to add to fpath.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
+          "text": "home-manager/modules/programs/zsh.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": null
     },
     {
       "title": "programs.zsh.plugins.*.file",
-      "description": "The plugin script to source.",
+      "description": "The plugin script to source. Required if the script name does not match name.plugin.zsh\nusing the plugin name from the plugin src.",
       "type": "string",
       "declared_by": [
         {
@@ -36623,7 +36637,7 @@
           "text": "home-manager/modules/programs/zsh.nix"
         }
       ],
-      "note": "Don’t forget to add file\nif the script name does not follow convention.",
+      "note": null,
       "default": null,
       "example": null
     },
@@ -42271,6 +42285,62 @@
       "note": null,
       "default": "pkgs.nix",
       "example": "pkgs.nixVersions.unstable"
+    },
+    {
+      "title": "services.ludusavi.enable",
+      "description": "Whether to enable Ludusavi game backup tool.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.ludusavi.backupNotification",
+      "description": "Send a notification message after a successful backup.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "services.ludusavi.configFile",
+      "description": "Path to a Ludusavi config.yaml. Mutually exclusive with the settings option. See https://github.com/mtkennerly/ludusavi/blob/master/docs/help/configuration-file.md for available options.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.ludusavi.settings",
+      "description": "Ludusavi configuration as an attribute set. See https://github.com/mtkennerly/ludusavi#configuration-file\nfor available options.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "{\n  backup = {\n    path = \"~/.local/state/backups/ludusavi\";\n  };\n  language = \"en-US\";\n  restore = {\n    path = \"~/.local/state/backups/ludusavi\";\n  };\n  roots = [\n    {\n      path = \"~/.local/share/Steam\";\n      store = \"steam\";\n    }\n  ];\n  theme = \"light\";\n}\n"
     },
     {
       "title": "services.lxqt-policykit-agent.enable",
