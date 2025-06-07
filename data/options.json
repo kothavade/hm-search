@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 06 Jun 2025 02:49:48 GMT",
+  "last_update": "Sat, 07 Jun 2025 02:47:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10445,7 +10445,7 @@
       ],
       "note": "See cha-config(5)",
       "default": "{ }",
-      "example": "{\n  buffer = {\n    images = true;\n    autofocus = true;\n  };\n  pager.\"C-k\" = \"() => pager.load('https://duckduckgo.com/?=')\";\n}\n\n"
+      "example": "{\n  buffer = {\n    images = true;\n    autofocus = true;\n  };\n  page.\"C-k\" = \"() => pager.load('ddg:')\";\n}\n\n"
     },
     {
       "title": "programs.chromium.enable",
@@ -12489,11 +12489,11 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  \"alt-s\".command = \"fish_commandline_prepend sudo\";\n  \"alt-shift-b\".command = \"fish_commandline_append bat\";\n}\n\n"
+      "example": "{\n  \"alt-shift-b\".command = \"fish_commandline_append bat\";\n  \"alt-s\".erase = true;\n  \"alt-s\".operate = \"preset\";\n}\n\n"
     },
     {
       "title": "programs.fish.binds.<name>.enable",
-      "description": "Whether to enable enable the bind.",
+      "description": "Whether to enable enable the bind. Set false if you want to ignore the bind.",
       "type": "boolean",
       "declared_by": [
         {
@@ -12508,7 +12508,7 @@
     {
       "title": "programs.fish.binds.<name>.command",
       "description": "command that will be execute",
-      "type": "string or list of string",
+      "type": "string or list of string (optional when erase is set to true)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/fish.nix",
@@ -12516,7 +12516,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "null",
       "example": null
     },
     {
@@ -35566,7 +35566,7 @@
     {
       "title": "programs.zed-editor.package",
       "description": "The zed-editor package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
@@ -35644,7 +35644,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "[ ]",
       "example": "[\n  {\n    context = \"Workspace\";\n    bindings = {\n      ctrl-shift-t = \"workspace::NewTerminal\";\n    };\n  };\n]\n\n"
     },
     {
