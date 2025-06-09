@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 08 Jun 2025 02:58:36 GMT",
+  "last_update": "Mon, 09 Jun 2025 02:57:02 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -19940,6 +19940,48 @@
       "example": "{\n  gui.theme = {\n    lightTheme = true;\n    activeBorderColor = [ \"blue\" \"bold\" ];\n    inactiveBorderColor = [ \"black\" ];\n    selectedLineBgColor = [ \"default\" ];\n  };\n}\n\n"
     },
     {
+      "title": "programs.lazysql.enable",
+      "description": "Whether to enable lazysql.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazysql.nix",
+          "text": "home-manager/modules/programs/lazysql.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.lazysql.package",
+      "description": "The lazysql package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazysql.nix",
+          "text": "home-manager/modules/programs/lazysql.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.lazysql",
+      "example": null
+    },
+    {
+      "title": "programs.lazysql.settings",
+      "description": "Configuration settings for lazysql.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazysql.nix",
+          "text": "home-manager/modules/programs/lazysql.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{ }"
+    },
+    {
       "title": "programs.ledger.enable",
       "description": "Whether to enable ledger, a double-entry accounting system.",
       "type": "boolean",
@@ -24432,6 +24474,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  g = \"git\";\n  ll = \"ls -l\";\n}\n"
+    },
+    {
+      "title": "programs.nyxt.enable",
+      "description": "Whether to enable Nyxt.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nyxt.nix",
+          "text": "home-manager/modules/programs/nyxt.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.nyxt.package",
+      "description": "The nyxt package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nyxt.nix",
+          "text": "home-manager/modules/programs/nyxt.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.nyxt",
+      "example": null
+    },
+    {
+      "title": "programs.nyxt.config",
+      "description": "Configuration file for Nyxt, written in the Common Lisp programming language.",
+      "type": "strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nyxt.nix",
+          "text": "home-manager/modules/programs/nyxt.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  (in-package #:nyxt-user)\n  \n  (defvar *my-search-engines*\n    (list\n     (make-instance 'search-engine\n                    :name \"Google\"\n                    :shortcut \"goo\"\n                    #+nyxt-4 :control-url #+nyxt-3 :search-url\n                    \"https://duckduckgo.com/?q=~a\")\n     (make-instance 'search-engine\n                    :name \"MDN\"\n                    :shortcut \"mdn\"\n                    #+nyxt-4 :control-url #+nyxt-3 :search-url\n                    \"https://developer.mozilla.org/en-US/search?q=~a\")))\n  \n  (define-configuration browser\n    ((restore-session-on-startup-p nil)\n     (default-new-buffer-url (quri:uri \"https://github.com/atlas-engineer/nyxt\"))\n     (external-editor-program (if (member :flatpak *features*)\n                                  \"flatpak-spawn --host emacsclient -r\"\n                                  \"emacsclient -r\"))\n     #+nyxt-4\n     (search-engine-suggestions-p nil)\n     #+nyxt-4\n     (search-engines (append %slot-default% *my-search-engines*))\n     ;; Sets the font for the Nyxt UI (not for webpages).\n     (theme (make-instance 'theme:theme\n                           :font-family \"Iosevka\"\n                           :monospace-font-family \"Iosevka\"))\n     ;; Whether code sent to the socket gets executed.  You must understand the\n     ;; risks before enabling this: a privileged user with access to your system\n     ;; can then take control of the browser and execute arbitrary code under your\n     ;; user profile.\n     ;; (remote-execution-p t)\n     ))\n''\n"
     },
     {
       "title": "programs.obs-studio.enable",
@@ -41010,6 +41094,20 @@
       "example": "{\n  general = {\n    after_sleep_cmd = \"hyprctl dispatch dpms on\";\n    ignore_dbus_inhibit = false;\n    lock_cmd = \"hyprlock\";\n  };\n\n  listener = [\n    {\n      timeout = 900;\n      on-timeout = \"hyprlock\";\n    }\n    {\n      timeout = 1200;\n      on-timeout = \"hyprctl dispatch dpms off\";\n      on-resume = \"hyprctl dispatch dpms on\";\n    }\n  ];\n}\n\n"
     },
     {
+      "title": "services.hypridle.systemdTarget",
+      "description": "Systemd target to bind to.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hypridle.nix",
+          "text": "home-manager/modules/services/hypridle.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.wayland.systemd.target",
+      "example": "\"hyprland-session.target\""
+    },
+    {
       "title": "services.hyprpaper.enable",
       "description": "Whether to enable Hyprpaper, Hyprland’s wallpaper daemon.",
       "type": "boolean",
@@ -42301,6 +42399,20 @@
       "example": "true"
     },
     {
+      "title": "services.ludusavi.package",
+      "description": "The ludusavi package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ludusavi",
+      "example": null
+    },
+    {
       "title": "services.ludusavi.backupNotification",
       "description": "Send a notification message after a successful backup.",
       "type": "boolean",
@@ -42327,6 +42439,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "services.ludusavi.frequency",
+      "description": "How often to run ludusavi. This value is passed to the systemd timer configuration as the onCalendar option.  See\nsystemd.time(7)\nfor more information about the format.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
+          "text": "home-manager/modules/services/ludusavi.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"daily\"",
+      "example": "\"*-*-* 8:00:00\""
     },
     {
       "title": "services.ludusavi.settings",
