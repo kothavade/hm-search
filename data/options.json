@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 09 Jun 2025 02:57:02 GMT",
+  "last_update": "Tue, 10 Jun 2025 02:53:02 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -21354,6 +21354,104 @@
       "example": "{\n  inboxes = {\n    account1 = [ \"Inbox\" ];\n    account2 = [ \"Inbox\" ];\n  };\n}\n\n"
     },
     {
+      "title": "programs.mc.enable",
+      "description": "Whether to enable Midnight Commander.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mc.package",
+      "description": "The mc package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mc",
+      "example": null
+    },
+    {
+      "title": "programs.mc.extensionSettings",
+      "description": "Settings for mc/mc.ext.ini file. This setting completely replaces the default /etc/mc/mc.ext.ini.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": "Midnight Commander does not merge this file with the system default,\nso you should copy the original if you want to preserve default behavior and add your changes there.",
+      "default": "{ }",
+      "example": "{\n  EPUB = {\n    Open = \"fbreader %f &\";\n    Shell = \".epub\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.mc.fileHighlightSettings",
+      "description": "Settings for mc/filehighlight.ini file. This setting completely replaces the default /etc/mc/filehighlight.ini.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": "Midnight Commander does not merge this file with the system default, so you should copy the original if you want to preserve default behavior\nand add your changes there.",
+      "default": "{ }",
+      "example": "{\n  lua = {\n    extensions = \"lua;luac\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.mc.keymapSettings",
+      "description": "Settings for mc/mc.keymap file.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": "Any missing settings will fall back to the system default.",
+      "default": "{ }",
+      "example": "{\n  panel = {\n    Up = \"up;ctrl-k\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.mc.panelsSettings",
+      "description": "Settings for mc/panels file.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": "Any missing settings will fall back to the system default.",
+      "default": "{ }",
+      "example": "{\n  Dirs = {\n    current_is_left = false;\n    other_dir = \"/home\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.mc.settings",
+      "description": "Settings for mc/ini file.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mc.nix",
+          "text": "home-manager/modules/programs/mc.nix"
+        }
+      ],
+      "note": "Any missing settings will fall back to the system default.",
+      "default": "{ }",
+      "example": "{\n  Panels = {\n    show_dot_files = false;\n  };\n}\n"
+    },
+    {
       "title": "programs.mcfly.enable",
       "description": "Whether to enable mcfly.",
       "type": "boolean",
@@ -25718,12 +25816,12 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": null
     },
     {
       "title": "programs.papis.libraries.<name>.isDefault",
-      "description": "Whether this is a default library. There must be exactly one default library.",
+      "description": "Whether this is a default library.",
       "type": "boolean",
       "declared_by": [
         {
@@ -25731,7 +25829,7 @@
           "text": "home-manager/modules/programs/papis.nix"
         }
       ],
-      "note": null,
+      "note": "For papis to function without explicit library selection\n(i.e. without -l <library> or --pick-lib flags) there\nmust be a default library defined.",
       "default": "false",
       "example": "true"
     },
