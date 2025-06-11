@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 10 Jun 2025 02:53:02 GMT",
+  "last_update": "Wed, 11 Jun 2025 02:51:51 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -10684,6 +10684,62 @@
       "note": null,
       "default": "\"\"",
       "example": "\"gruvbox\""
+    },
+    {
+      "title": "programs.codex.enable",
+      "description": "Whether to enable Lightweight coding agent that runs in your terminal.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
+          "text": "home-manager/modules/programs/codex.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.codex.package",
+      "description": "The codex package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
+          "text": "home-manager/modules/programs/codex.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.codex",
+      "example": null
+    },
+    {
+      "title": "programs.codex.custom-instructions",
+      "description": "Define custom guidance for the agents; this value is written to {file}~/.codex/AGENTS.md",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
+          "text": "home-manager/modules/programs/codex.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  - Always respond with emojis\n  - Only use git commands when explicitly requested\n''\n\n"
+    },
+    {
+      "title": "programs.codex.settings",
+      "description": "Configuration written to ~/.codex/config.yaml. See https://github.com/openai/codex#configuration-guide for supported values.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
+          "text": "home-manager/modules/programs/codex.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  model = \"gemma3:latest\";\n  provider = \"ollama\";\n  providers = {\n    ollama = {\n      name = \"Ollama\";\n      baseURL = \"http://localhost:11434/v1\";\n      envKey = \"OLLAMA_API_KEY\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.command-not-found.enable",
@@ -23816,6 +23872,62 @@
       "note": "For now, it is recommended to run nheko and sign-in before filling in\nthe configuration settings in this module, as nheko writes the access\ntoken to $XDG_CONFIG_HOME/nheko/nheko.conf the\nfirst time we sign in, and we need that data into these settings for the\ncorrect functionality of the application.",
       "default": "{ }",
       "example": "{\n  general.disableCertificateValidation = false;\n  auth = {\n    accessToken = \"SECRET\";\n    deviceId = \"MY_DEVICE\";\n    homeServer = \"https://matrix-client.matrix.org:443\";\n    userId = \"@@user:matrix.org\";\n  };\n  settings.scaleFactor = 1.0;\n  sidebar.width = 416;\n  user = {\n    alertOnNotification = true;\n    animateImagesOnHover = false;\n    \"sidebar\\\\roomListWidth\" = 308;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.niriswitcher.enable",
+      "description": "Whether to enable niriswitcher, an application switcher for niri.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix",
+          "text": "home-manager/modules/programs/niriswitcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.niriswitcher.package",
+      "description": "The niriswitcher package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix",
+          "text": "home-manager/modules/programs/niriswitcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.niriswitcher",
+      "example": null
+    },
+    {
+      "title": "programs.niriswitcher.settings",
+      "description": "niriswitcher configuration. For available settings see https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#options.",
+      "type": "null or TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix",
+          "text": "home-manager/modules/programs/niriswitcher.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n  keys = {\n    modifier = \"Super\";\n    switch = {\n      next = \"Tab\";\n      prev = \"Shift+Tab\";\n    };\n  };\n  center_on_focus = true;\n  appearance = {\n    system_theme = \"dark\";\n    icon_size = 64;\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.niriswitcher.style",
+      "description": "CSS style of the switcher. https://github.com/isaksamsten/niriswitcher/?tab=readme-ov-file#themes\nfor the documentation.",
+      "type": "null or absolute path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/niriswitcher.nix",
+          "text": "home-manager/modules/programs/niriswitcher.nix"
+        }
+      ],
+      "note": "If the value is set to a path literal, then the path will be used as the CSS file.",
+      "default": "null",
+      "example": "''\n  .application-name {\n    opacity: 1;\n    color: rgba(255, 255, 255, 0.6);\n  }\n  .application.selected .application-name {\n    color: rgba(255, 255, 255, 1);\n  }\n''\n"
     },
     {
       "title": "programs.nix-index.enable",
