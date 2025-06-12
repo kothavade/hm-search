@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 11 Jun 2025 02:51:51 GMT",
+  "last_update": "Thu, 12 Jun 2025 02:50:47 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -21701,6 +21701,20 @@
       ],
       "note": null,
       "default": "<derivation meli-0.8.12>",
+      "example": null
+    },
+    {
+      "title": "programs.meli.includes",
+      "description": "Paths of the various meli configuration files to include.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
+          "text": "home-manager/modules/programs/meli.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
       "example": null
     },
     {
