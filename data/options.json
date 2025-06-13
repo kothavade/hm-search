@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 12 Jun 2025 02:50:47 GMT",
+  "last_update": "Fri, 13 Jun 2025 02:52:00 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8094,6 +8094,76 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  listen-port = 60000;\n  dht-listen-port = 60000;\n  seed-ratio = 1.0;\n  max-upload-limit = \"50K\";\n  ftp-pasv = true;\n}\n\n"
+    },
+    {
+      "title": "programs.ashell.enable",
+      "description": "Whether to enable ashell, a ready to go wayland status bar for hyprland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
+          "text": "home-manager/modules/programs/ashell.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.ashell.package",
+      "description": "The ashell package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
+          "text": "home-manager/modules/programs/ashell.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ashell",
+      "example": null
+    },
+    {
+      "title": "programs.ashell.settings",
+      "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell.yml. For available settings see https://github.com/MalpenZibo/ashell/tree/0.4.1?tab=readme-ov-file#configuration.",
+      "type": "YAML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
+          "text": "home-manager/modules/programs/ashell.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  modules = {\n    center = [\n      \"Window Title\"\n    ];\n    left = [\n      \"Workspaces\"\n    ];\n    right = [\n      \"SystemInfo\"\n      [\n        \"Clock\"\n        \"Privacy\"\n        \"Settings\"\n      ]\n    ];\n  };\n  workspaces = {\n    visibilityMode = \"MonitorSpecific\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.ashell.systemd.enable",
+      "description": "Whether to enable ashell systemd service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
+          "text": "home-manager/modules/programs/ashell.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.ashell.systemd.target",
+      "description": "The systemd target that will automatically start ashell.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
+          "text": "home-manager/modules/programs/ashell.nix"
+        }
+      ],
+      "note": "If you set this to a WM-specific target, make sure that systemd integration for that WM is enabled (e.g. wayland.windowManager.hyprland.systemd.enable). This is typically true by default.",
+      "default": "config.wayland.systemd.target",
+      "example": "\"hyprland-session.target\""
     },
     {
       "title": "programs.astroid.enable",
@@ -43925,6 +43995,20 @@
       "example": "true"
     },
     {
+      "title": "services.opensnitch-ui.package",
+      "description": "The opensnitch-ui package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/opensnitch-ui.nix",
+          "text": "home-manager/modules/services/opensnitch-ui.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.opensnitch-ui",
+      "example": null
+    },
+    {
       "title": "services.osmscout-server.enable",
       "description": "Whether to enable OSM Scout Server.",
       "type": "boolean",
@@ -51228,7 +51312,7 @@
           "text": "home-manager/modules/targets/darwin/user-defaults/opts-allhosts.nix"
         }
       ],
-      "note": "0 = Show the date\n1 = Don’t show\n2 = Don’t show",
+      "note": "0 = When Space Allows\n1 = Always\n2 = Never",
       "default": "null",
       "example": null
     },
