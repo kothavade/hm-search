@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 13 Jun 2025 02:52:00 GMT",
+  "last_update": "Sat, 14 Jun 2025 02:46:08 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8125,7 +8125,7 @@
     },
     {
       "title": "programs.ashell.settings",
-      "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell.yml. For available settings see https://github.com/MalpenZibo/ashell/tree/0.4.1?tab=readme-ov-file#configuration.",
+      "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell.yml. For available settings see\nhttps://github.com/MalpenZibo/ashell/tree/0.4.1?tab=readme-ov-file#configuration.",
       "type": "YAML value",
       "declared_by": [
         {
@@ -8161,7 +8161,7 @@
           "text": "home-manager/modules/programs/ashell.nix"
         }
       ],
-      "note": "If you set this to a WM-specific target, make sure that systemd integration for that WM is enabled (e.g. wayland.windowManager.hyprland.systemd.enable). This is typically true by default.",
+      "note": "If you set this to a WM-specific target, make sure that systemd\nintegration for that WM is enabled (for example,\nwayland.windowManager.hyprland.systemd.enable). This is\ntypically true by default.",
       "default": "config.wayland.systemd.target",
       "example": "\"hyprland-session.target\""
     },
@@ -21799,91 +21799,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": null
-    },
-    {
-      "title": "programs.meli.settings.shortcuts",
-      "description": "Shortcut Settings",
-      "type": "submodule",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": null
-    },
-    {
-      "title": "programs.meli.settings.shortcuts.composing",
-      "description": "composing shortcut configuration",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  edit = \"m\";\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
-    },
-    {
-      "title": "programs.meli.settings.shortcuts.contact-list",
-      "description": "contact-list shortcut configuration",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  create_contact = \"c\";\n  edit_contact = \"m\";\n}\n"
-    },
-    {
-      "title": "programs.meli.settings.shortcuts.general",
-      "description": "general shortcut configuration",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  next_page = \"C-d\";\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
-    },
-    {
-      "title": "programs.meli.settings.shortcuts.listing",
-      "description": "general shortcut configuration",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  new_mail = \"t\";\n  set_seen = \"s\";\n}\n"
-    },
-    {
-      "title": "programs.meli.settings.shortcuts.pager",
-      "description": "general shortcut configuration",
-      "type": "attribute set of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
-          "text": "home-manager/modules/programs/meli.nix"
-        }
-      ],
-      "note": null,
-      "default": "{ }",
-      "example": "{\n  scroll_down = \"n\";\n  scroll_up = \"e\";\n}\n"
+      "example": "{\nshortcuts = {\ncontact-list = {\n            create_contact = \"c\";\n            edit_contact = \"m\";\n          };\ngeneral = {\n  edit = \"m\";\n  scroll_up = \"e\";\n  scroll_down = \"n\";\n};\ncomposing = {\n  edit = \"m\";\n  scroll_up = \"e\";\n  scroll_down = \"n\";\n};\nlisting = {\n  new_mail = \"t\";\n  set_seen = \"s\";\n};\npager = {\n            scroll_up = \"e\";\n            scroll_down = \"n\";\n};\n\n}\n}\n"
     },
     {
       "title": "programs.mercurial.enable",
