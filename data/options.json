@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 14 Jun 2025 02:46:08 GMT",
+  "last_update": "Sun, 15 Jun 2025 02:59:28 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7398,7 +7398,7 @@
     {
       "title": "programs.aichat.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/aichat/config.yaml\non Linux or on Darwin if xdg.enable is set, otherwise\n~/Library/Application Support/aichat/config.yaml.\nSee\nhttps://github.com/sigoden/aichat/blob/main/config.example.yaml\nfor supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aichat.nix",
@@ -8126,7 +8126,7 @@
     {
       "title": "programs.ashell.settings",
       "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell.yml. For available settings see\nhttps://github.com/MalpenZibo/ashell/tree/0.4.1?tab=readme-ov-file#configuration.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
@@ -8371,7 +8371,7 @@
           "text": "home-manager/modules/programs/atuin.nix"
         }
       ],
-      "note": "See https://atuin.sh/docs/config/ for the full list\nof options.",
+      "note": "See https://docs.atuin.sh/configuration/config/ for the full list\nof options.",
       "default": "{ }",
       "example": "{\n  auto_sync = true;\n  sync_frequency = \"5m\";\n  sync_address = \"https://api.atuin.sh\";\n  search_mode = \"prefix\";\n}\n\n"
     },
@@ -8385,7 +8385,7 @@
           "text": "home-manager/modules/programs/atuin.nix"
         }
       ],
-      "note": "See https://atuin.sh/guide/theming/ for the full list\nof options.",
+      "note": "See https://docs.atuin.sh/guide/theming/ for the full list\nof options.",
       "default": "{ }",
       "example": "{\n  \"my-theme\" = {\n    theme.name = \"My Theme\";\n    colors = {\n      Base = \"#000000\";\n      Title = \"#FFFFFF\";\n    };\n  };\n}\n\n"
     },
@@ -9400,7 +9400,7 @@
     {
       "title": "programs.beets.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/beets/config.yaml",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/beets.nix",
@@ -9540,7 +9540,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.consistency.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9554,7 +9554,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.hooks.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9582,7 +9582,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.location.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9638,7 +9638,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.output.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9652,7 +9652,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.retention.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9792,7 +9792,7 @@
     {
       "title": "programs.borgmatic.backups.<name>.storage.extraConfig",
       "description": "Extra settings.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/borgmatic.nix",
@@ -9876,7 +9876,7 @@
     {
       "title": "programs.boxxy.rules",
       "description": "List of boxxy rules",
-      "type": "list of (YAML value)",
+      "type": "list of (YAML 1.1 value)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/boxxy.nix",
@@ -10800,7 +10800,7 @@
     {
       "title": "programs.codex.settings",
       "description": "Configuration written to ~/.codex/config.yaml. See https://github.com/openai/codex#configuration-guide for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
@@ -11374,7 +11374,7 @@
     {
       "title": "programs.earthly.settings",
       "description": "Configuration written to ~/.earthly/config.yml file. See https://docs.earthly.dev/docs/earthly-config for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/earthly.nix",
@@ -11822,7 +11822,7 @@
     {
       "title": "programs.eza.theme",
       "description": "Written to $XDG_CONFIG_HOME/eza/theme.yml",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/eza.nix",
@@ -13964,7 +13964,7 @@
     {
       "title": "programs.gh.hosts",
       "description": "Host-specific configuration written to $XDG_CONFIG_HOME/gh/hosts.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gh.nix",
@@ -13978,7 +13978,7 @@
     {
       "title": "programs.gh.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/gh/config.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gh.nix",
@@ -14062,7 +14062,7 @@
     {
       "title": "programs.gh-dash.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/gh-dash/config.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gh-dash.nix",
@@ -17954,7 +17954,7 @@
     {
       "title": "programs.jqp.settings",
       "description": "Jqp configuration",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jqp.nix",
@@ -18052,7 +18052,7 @@
     {
       "title": "programs.k9s.aliases",
       "description": "Aliases written to $XDG_CONFIG_HOME/k9s/aliases.yaml (linux) or Library/Application Support/k9s/aliases.yaml (darwin). See\nhttps://k9scli.io/topics/aliases/ for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -18066,7 +18066,7 @@
     {
       "title": "programs.k9s.hotkey",
       "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkeys.yaml (linux) or Library/Application Support/k9s/hotkeys.yaml (darwin). See\nhttps://k9scli.io/topics/hotkeys/ for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -18080,7 +18080,7 @@
     {
       "title": "programs.k9s.plugin",
       "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugins.yaml (linux) or Library/Application Support/k9s/plugins.yaml (darwin). See\nhttps://k9scli.io/topics/plugins/ for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -18094,7 +18094,7 @@
     {
       "title": "programs.k9s.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/k9s/config.yaml (linux) or Library/Application Support/k9s/config.yaml (darwin), See\nhttps://k9scli.io/topics/config/ for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -18108,7 +18108,7 @@
     {
       "title": "programs.k9s.skins",
       "description": "Skin files written to $XDG_CONFIG_HOME/k9s/skins/ (linux) or Library/Application Support/k9s/skins/ (darwin). See\nhttps://k9scli.io/topics/skins/ for supported values.",
-      "type": "attribute set of (YAML value or absolute path)",
+      "type": "attribute set of (YAML 1.1 value or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -18122,7 +18122,7 @@
     {
       "title": "programs.k9s.views",
       "description": "Resource column views written to $XDG_CONFIG_HOME/k9s/views.yaml (linux)\nor Library/Application Support/k9s/views.yaml (darwin).\nSee https://k9scli.io/topics/columns/ for supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/k9s.nix",
@@ -19830,7 +19830,7 @@
     {
       "title": "programs.kubecolor.settings",
       "description": "Configuration written to ~/.kube/color.yaml (Linux) or Library/Application Support/kube/color.yaml (Darwin).\nSee https://kubecolor.github.io/reference/config/ for supported\nvalues.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubecolor.nix",
@@ -20012,7 +20012,7 @@
     {
       "title": "programs.lazydocker.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/lazydocker/config.yml\non Linux or on Darwin if xdg.enable is set, otherwise\n~/Library/Application Support/jesseduffield/lazydocker/config.yml.\nSee\nhttps://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md\nfor supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazydocker.nix",
@@ -20054,7 +20054,7 @@
     {
       "title": "programs.lazygit.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/lazygit/config.yml\non Linux or on Darwin if xdg.enable is set, otherwise\n~/Library/Application Support/lazygit/config.yml.\nSee\nhttps://github.com/jesseduffield/lazygit/blob/master/docs/Config.md\nfor supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lazygit.nix",
@@ -21062,7 +21062,7 @@
     {
       "title": "programs.lsd.colors",
       "description": "Configuration written to $XDG_CONFIG_HOME/lsd/colors.yaml. See https://github.com/lsd-rs/lsd/tree/v1.0.0#color-theme-file-content for\nsupported colors.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
@@ -21076,7 +21076,7 @@
     {
       "title": "programs.lsd.icons",
       "description": "Configuration written to $XDG_CONFIG_HOME/lsd/icons.yaml. See https://github.com/lsd-rs/lsd?tab=readme-ov-file#icon-theme-file-content for\ndetails.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
@@ -21090,7 +21090,7 @@
     {
       "title": "programs.lsd.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/lsd/config.yaml. See\nhttps://github.com/Peltoche/lsd#config-file-content\nfor supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lsd.nix",
@@ -21202,7 +21202,7 @@
     {
       "title": "programs.lutris.runners.<name>.settings.runner",
       "description": "Runner specific options. For references, you must look for the file of said runner on lutris’ source code.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
@@ -21230,7 +21230,7 @@
     {
       "title": "programs.lutris.runners.<name>.settings.system",
       "description": "Lutris system options for this runner. Reference for system options:\nhttps://github.com/lutris/lutris/blob/master/lutris/sysoptions.py#L78",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lutris.nix",
@@ -22168,7 +22168,7 @@
     {
       "title": "programs.mods.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/mods/mods.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mods.nix",
@@ -22616,7 +22616,7 @@
     {
       "title": "programs.navi.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/navi/config.yaml on Linux or\n$HOME/Library/Application Support/navi/config.yaml\non Darwin. See\nhttps://github.com/denisidoro/navi/blob/master/docs/config_file.md\nfor more information.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/navi.nix",
@@ -25766,7 +25766,7 @@
     {
       "title": "programs.openstackclient.clouds",
       "description": "Configuration needed to connect to one or more clouds.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/openstackclient.nix",
@@ -25780,7 +25780,7 @@
     {
       "title": "programs.openstackclient.publicClouds",
       "description": "Public information about clouds.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/openstackclient.nix",
@@ -26522,7 +26522,7 @@
     {
       "title": "programs.piston-cli.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/piston-cli/config.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/piston-cli.nix",
@@ -30232,7 +30232,7 @@
     {
       "title": "programs.sqls.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/sqls/config.yml. See\nhttps://github.com/lighttiger2505/sqls#db-configuration\nfor supported values.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sqls.nix",
@@ -31296,7 +31296,7 @@
     {
       "title": "programs.sway-easyfocus.settings",
       "description": "Configuration settings for sway-easyfocus. All available options can be found here: https://github.com/edzdez/sway-easyfocus?tab=readme-ov-file#config-file.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sway-easyfocus.nix",
@@ -33032,7 +33032,7 @@
     {
       "title": "programs.tiny.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/tiny/config.yml. See\nhttps://github.com/osa1/tiny/blob/master/crates/tiny/config.yml\nfor the default configuration.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tiny.nix",
@@ -34264,7 +34264,7 @@
     {
       "title": "programs.vim-vint.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/.vintrc.yaml",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vim-vint.nix",
@@ -35398,7 +35398,7 @@
     {
       "title": "programs.yambar.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/yambar/config.yml. See yambar(5) for options.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yambar.nix",
@@ -36056,7 +36056,7 @@
     {
       "title": "programs.zellij.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/zellij/config.kdl.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
@@ -36070,7 +36070,7 @@
     {
       "title": "programs.zellij.themes",
       "description": "Each them is written to $XDG_CONFIG_HOME/zellij/themes/NAME.kdl. See https://zellij.dev/documentation/themes.html for more information.",
-      "type": "attribute set of (YAML value or absolute path or strings concatenated with “\\n”)",
+      "type": "attribute set of (YAML 1.1 value or absolute path or strings concatenated with “\\n”)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
@@ -39374,7 +39374,7 @@
     {
       "title": "services.darkman.settings",
       "description": "Settings for the darkman command. See https://darkman.whynothugo.nl/#CONFIGURATION for details.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/darkman.nix",
@@ -39906,7 +39906,7 @@
     {
       "title": "services.espanso.configs",
       "description": "The Espanso configuration to use. See https://espanso.org/docs/configuration/basics/\nfor a description of available options.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/espanso.nix",
@@ -39920,7 +39920,7 @@
     {
       "title": "services.espanso.matches",
       "description": "The Espanso matches to use. See https://espanso.org/docs/matches/basics/\nfor a description of available options.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/espanso.nix",
@@ -40228,7 +40228,7 @@
     {
       "title": "services.fusuma.settings",
       "description": "YAML config that will override the default fusuma configuration.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/fusuma.nix",
@@ -40564,7 +40564,7 @@
     {
       "title": "services.glance.settings",
       "description": "Configuration written to a yaml file that is read by glance. See https://github.com/glanceapp/glance/blob/main/docs/configuration.md\nfor more.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/glance.nix",
@@ -42667,7 +42667,7 @@
     {
       "title": "services.ludusavi.settings",
       "description": "Ludusavi configuration as an attribute set. See https://github.com/mtkennerly/ludusavi#configuration-file\nfor available options.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ludusavi.nix",
@@ -46013,7 +46013,7 @@
     {
       "title": "services.pueue.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/pueue/pueue.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pueue.nix",
@@ -48897,7 +48897,7 @@
     {
       "title": "services.udiskie.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/udiskie/config.yml.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/udiskie.nix",
@@ -49205,7 +49205,7 @@
     {
       "title": "services.way-displays.settings",
       "description": "The way-displays configuration written to $XDG_CONFIG_HOME/way-displays/cfg.yml. See\nhttps://github.com/alex-courtis/way-displays/wiki/Configuration for a\ndescription of available options.",
-      "type": "YAML value",
+      "type": "YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
