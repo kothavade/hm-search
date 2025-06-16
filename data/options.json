@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 15 Jun 2025 02:59:28 GMT",
+  "last_update": "Mon, 16 Jun 2025 02:56:14 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -20,6 +20,10 @@
       "description": "List of calendars.",
       "type": "attribute set of (submodule)",
       "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/qcal.nix",
           "text": "home-manager/modules/programs/qcal.nix"
@@ -325,6 +329,62 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "accounts.calendar.accounts.<name>.thunderbird.enable",
+      "description": "Whether to enable the Thunderbird mail client for this account.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "accounts.calendar.accounts.<name>.thunderbird.color",
+      "description": "Display color of the calendar in hex",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "\"#dc8add\""
+    },
+    {
+      "title": "accounts.calendar.accounts.<name>.thunderbird.profiles",
+      "description": "List of Thunderbird profiles for which this account should be enabled. If this list is empty (the default), this account will\nbe enabled for all declared profiles.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ \"profile1\" \"profile2\" ]\n\n"
+    },
+    {
+      "title": "accounts.calendar.accounts.<name>.thunderbird.readOnly",
+      "description": "Mark calendar as read only",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
       "example": null
     },
     {
@@ -18932,6 +18992,20 @@
       "example": null
     },
     {
+      "title": "programs.kakoune.finalPackage",
+      "description": "Resulting customized kakoune package.",
+      "type": "null or package (read only)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kakoune.nix",
+          "text": "home-manager/modules/programs/kakoune.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
       "title": "programs.kakoune.plugins",
       "description": "List of kakoune plugins to install. To get a list of supported plugins run:\nnix-env -f '<nixpkgs>' -qaP -A kakounePlugins.",
       "type": "list of package",
@@ -22742,7 +22816,7 @@
     {
       "title": "programs.ncspot.package",
       "description": "The ncspot package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ncspot.nix",
@@ -32664,6 +32738,20 @@
       "note": null,
       "default": "[ ]",
       "example": "''\n  [\n    \"my-awesome-account\"\n    \"private\"\n    \"work\"\n    \"rss\"\n    /* Other accounts in arbitrary order */\n  ]\n''\n"
+    },
+    {
+      "title": "programs.thunderbird.profiles.<name>.calendarAccountsOrder",
+      "description": "Custom ordering of calendar accounts. The accounts are specified by their name. For declarative accounts, it must be the name\nof their attribute in config.accounts.calendar.accounts.\nEnabled accounts that aren’t listed here appear in an arbitrary\norder after the ordered accounts.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "''\n  [\n    \"my-awesome-account\"\n    \"private\"\n    \"work\"\n    \"holidays\"\n    /* Other accounts in arbitrary order */\n  ]\n''\n"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.extensions",
@@ -49205,14 +49293,14 @@
     {
       "title": "services.way-displays.settings",
       "description": "The way-displays configuration written to $XDG_CONFIG_HOME/way-displays/cfg.yml. See\nhttps://github.com/alex-courtis/way-displays/wiki/Configuration for a\ndescription of available options.",
-      "type": "YAML 1.1 value",
+      "type": "null or YAML 1.1 value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/way-displays.nix",
           "text": "home-manager/modules/services/way-displays.nix"
         }
       ],
-      "note": null,
+      "note": "When null a configuration file is not generated,\nwhich allows way-displays to write its own configuration.",
       "default": "{ }",
       "example": "{\n  ORDER = [\n    \"DP-2\"\n    \"Monitor Maker ABC123\"\n    \"!^my_regex_here[0-9]+\"\n    \"'!.*$'\"\n  ];\n  SCALING = false;\n  MODE = [\n    {\n      NAME_DESC = \"HDMI-A-1\";\n      WIDTH = 1920;\n      HEIGHT = 1080;\n      HZ = 60;\n    }\n  ];\n  TRANSFORM = [\n    {\n      NAME_DESC = \"eDP-1\"\n      TRANSFORM = \"FLIPPED-90\";\n    }\n  ];\n};\n\n"
     },
