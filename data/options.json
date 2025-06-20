@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 19 Jun 2025 02:52:21 GMT",
+  "last_update": "Fri, 20 Jun 2025 02:51:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16977,7 +16977,7 @@
     },
     {
       "title": "programs.hyprlock.settings",
-      "description": "Hyprlock configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be quoted. See\nhttps://wiki.hyprland.org/Hypr-Ecosystem/hyprlock/ for more examples.",
+      "description": "Hyprlock configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be quoted. See\nhttps://wiki.hypr.land/Hypr-Ecosystem/hyprlock/ for more examples.",
       "type": "Hyprlock configuration value",
       "declared_by": [
         {
@@ -41379,7 +41379,7 @@
     },
     {
       "title": "services.hypridle.settings",
-      "description": "Hypridle configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hyprland.org/Hypr-Ecosystem/hypridle/ for more examples.",
+      "description": "Hypridle configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hypr.land/Hypr-Ecosystem/hypridle/ for more examples.",
       "type": "Hypridle configuration value",
       "declared_by": [
         {
@@ -41449,7 +41449,7 @@
     },
     {
       "title": "services.hyprpaper.settings",
-      "description": "hyprpaper configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hyprland.org/Hypr-Ecosystem/hyprpaper/ for more examples.",
+      "description": "hyprpaper configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hypr.land/Hypr-Ecosystem/hyprpaper/ for more examples.",
       "type": "Hyprpaper configuration value",
       "declared_by": [
         {
@@ -51644,7 +51644,7 @@
     },
     {
       "title": "wayland.windowManager.hyprland.settings",
-      "description": "Hyprland configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hyprland.org for more examples.",
+      "description": "Hyprland configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hypr.land for more examples.",
       "type": "Hyprland configuration value",
       "declared_by": [
         {
