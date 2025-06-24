@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 23 Jun 2025 03:01:11 GMT",
+  "last_update": "Tue, 24 Jun 2025 02:53:16 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1265,24 +1265,20 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
-        },
-        {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
           "text": "home-manager/modules/programs/thunderbird.nix"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mujmap.nix",
@@ -1293,16 +1289,16 @@
           "text": "home-manager/modules/programs/mu.nix"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/meli.nix",
           "text": "home-manager/modules/programs/meli.nix"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/lieer.nix",
@@ -1313,20 +1309,24 @@
           "text": "home-manager/modules/programs/himalaya.nix"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         },
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
+        },
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         },
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -1357,8 +1357,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1371,8 +1371,8 @@
       "type": "attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1385,8 +1385,8 @@
       "type": "attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1399,8 +1399,8 @@
       "type": "attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1413,8 +1413,8 @@
       "type": "null or one of “oauthbearer”, “xoauth2”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1427,8 +1427,8 @@
       "type": "null or (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1441,8 +1441,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1455,8 +1455,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1469,8 +1469,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1483,8 +1483,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1497,8 +1497,8 @@
       "type": "null or one of “none”, “plain”, “login”, “oauthbearer”, “xoauth2”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1511,8 +1511,8 @@
       "type": "null or (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1525,8 +1525,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1539,8 +1539,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1553,8 +1553,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1567,8 +1567,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -1595,8 +1595,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -1609,8 +1609,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -1623,8 +1623,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -1637,8 +1637,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -1651,8 +1651,8 @@
       "type": "attribute set of anything",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -1665,8 +1665,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -1763,8 +1763,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         }
       ],
       "note": null,
@@ -1777,8 +1777,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         }
       ],
       "note": null,
@@ -1791,8 +1791,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         }
       ],
       "note": null,
@@ -1805,8 +1805,8 @@
       "type": "non-empty (list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         }
       ],
       "note": null,
@@ -1819,8 +1819,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail.nix",
-          "text": "home-manager/modules/programs/getmail.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/getmail",
+          "text": "home-manager/modules/programs/getmail"
         }
       ],
       "note": null,
@@ -2015,8 +2015,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2029,8 +2029,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2043,8 +2043,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2057,8 +2057,8 @@
       "type": "JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2071,8 +2071,8 @@
       "type": "string or attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2085,8 +2085,8 @@
       "type": "string or attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -2365,8 +2365,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2379,8 +2379,8 @@
       "type": "one of “none”, “maildir”, “imap”, “both”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2393,8 +2393,8 @@
       "type": "one of “none”, “maildir”, “imap”, “both”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2407,8 +2407,8 @@
       "type": "attribute set of (string or signed integer or boolean or list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2421,8 +2421,8 @@
       "type": "attribute set of (string or signed integer or boolean or list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2435,8 +2435,8 @@
       "type": "attribute set of (string or signed integer or boolean or list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2449,8 +2449,8 @@
       "type": "attribute set of (string or signed integer or boolean or list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2463,8 +2463,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2477,8 +2477,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": "This option allows you to specify a group, and subsequently channels that\nwill allow you to sync your mail into an arbitrary hierarchy.",
@@ -2491,8 +2491,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": "Using these channels and then grouping them together allows for you to\ndefine the maildir hierarchy as you see fit.",
@@ -2505,8 +2505,8 @@
       "type": "attribute set of (string or signed integer or boolean or list of string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2519,8 +2519,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": "If this is left as the default, then mbsync will default to the pattern\nINBOX.",
@@ -2533,8 +2533,8 @@
       "type": "string (read only)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": "In addition, you can manually sync just this channel by specifying this\nname to mbsync on the command line.",
@@ -2547,8 +2547,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": "If this is left as the default, then mbsync will default to the pattern\nINBOX.",
@@ -2561,8 +2561,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2575,8 +2575,8 @@
       "type": "string (read only)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2589,8 +2589,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2603,8 +2603,8 @@
       "type": "one of “none”, “maildir”, “imap”, “both”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2617,8 +2617,8 @@
       "type": "one of “Verbatim”, “Maildir++”, “Legacy”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -2673,8 +2673,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": "If enabled then it is possible to use the\n--account command line\noption to send a message for a given account using the\nmsmtp or msmtpq tool.\nFor example, msmtp --account=private would\nsend using the account defined in\naccounts.email.accounts.private. If the\n--account option is not\ngiven then the primary account will be used.",
@@ -2687,8 +2687,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": null,
@@ -2701,8 +2701,8 @@
       "type": "null or string matching the pattern ([[:alnum:]]{2}:)+[[:alnum:]]{2}",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": null,
@@ -2995,8 +2995,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3009,8 +3009,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3023,8 +3023,8 @@
       "type": "list of (string or (submodule))",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3037,8 +3037,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3051,8 +3051,8 @@
       "type": "one of “maildir”, “imap”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3065,8 +3065,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3079,8 +3079,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3093,8 +3093,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -3107,8 +3107,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3121,8 +3121,8 @@
       "type": "list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -3135,8 +3135,8 @@
       "type": "null or signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch-virtual-mailbox.nix",
-          "text": "home-manager/modules/programs/notmuch-virtual-mailbox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch/virtual-mailbox.nix",
+          "text": "home-manager/modules/programs/notmuch/virtual-mailbox.nix"
         }
       ],
       "note": null,
@@ -3149,8 +3149,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch-virtual-mailbox.nix",
-          "text": "home-manager/modules/programs/notmuch-virtual-mailbox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch/virtual-mailbox.nix",
+          "text": "home-manager/modules/programs/notmuch/virtual-mailbox.nix"
         }
       ],
       "note": null,
@@ -3163,8 +3163,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch-virtual-mailbox.nix",
-          "text": "home-manager/modules/programs/notmuch-virtual-mailbox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch/virtual-mailbox.nix",
+          "text": "home-manager/modules/programs/notmuch/virtual-mailbox.nix"
         }
       ],
       "note": null,
@@ -3177,8 +3177,8 @@
       "type": "null or one of “threads”, “messages”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch-virtual-mailbox.nix",
-          "text": "home-manager/modules/programs/notmuch-virtual-mailbox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch/virtual-mailbox.nix",
+          "text": "home-manager/modules/programs/notmuch/virtual-mailbox.nix"
         }
       ],
       "note": null,
@@ -3191,8 +3191,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -3205,8 +3205,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -3219,8 +3219,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -3233,8 +3233,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -3247,8 +3247,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -6943,8 +6943,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -6957,8 +6957,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": null,
@@ -6971,8 +6971,8 @@
       "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": "See aerc-config(5).",
@@ -6985,8 +6985,8 @@
       "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": "See aerc-config(5).",
@@ -6999,8 +6999,8 @@
       "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": "See aerc-config(5).",
@@ -7013,8 +7013,8 @@
       "type": "attribute set of ((attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)) or strings concatenated with “\\n”)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": "See aerc-stylesets(7).",
@@ -7027,8 +7027,8 @@
       "type": "attribute set of strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc.nix",
-          "text": "home-manager/modules/programs/aerc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
+          "text": "home-manager/modules/programs/aerc"
         }
       ],
       "note": "See aerc-templates(7).",
@@ -7061,6 +7061,34 @@
       ],
       "note": null,
       "default": "pkgs.aerospace",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.launchd.enable",
+      "description": "Configure the launchd agent to manage the AeroSpace process.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": "The first time this is enabled, macOS will prompt you to allow this background\nitem in System Settings.",
+      "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.aerospace.launchd.keepAlive",
+      "description": "Whether the launchd service should be kept alive.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
+          "text": "home-manager/modules/programs/aerospace.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
       "example": null
     },
     {
@@ -7120,22 +7148,8 @@
       "example": null
     },
     {
-      "title": "programs.aerospace.userSettings.after-login-command",
-      "description": "You can use it to add commands that run after login to macOS user session. ‘start-at-login’ needs to be ‘true’ for ‘after-login-command’ to work.",
-      "type": "list of string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
-          "text": "home-manager/modules/programs/aerospace.nix"
-        }
-      ],
-      "note": null,
-      "default": "[ ]",
-      "example": null
-    },
-    {
       "title": "programs.aerospace.userSettings.after-startup-command",
-      "description": "You can use it to add commands that run after AeroSpace startup. ‘after-startup-command’ is run after ‘after-login-command’",
+      "description": "A list of AeroSpace commands to execute immediately after the AeroSpace application starts. These commands are written to your aerospace.toml config file and are run after the after-login-command sequence.",
       "type": "list of string",
       "declared_by": [
         {
@@ -7143,9 +7157,9 @@
           "text": "home-manager/modules/programs/aerospace.nix"
         }
       ],
-      "note": null,
+      "note": "A list of all available commands can be found at https://nikitabobko.github.io/AeroSpace/commands.",
       "default": "[ ]",
-      "example": "[\n  \"layout tiles\"\n]\n"
+      "example": "[\n  \"exec-and-forget open -n /System/Applications/Utilities/Terminal.app\"\n  \"layout tiles accordion\"\n]\n"
     },
     {
       "title": "programs.aerospace.userSettings.default-root-container-layout",
@@ -7358,20 +7372,6 @@
       "example": "[\n  \"move-node-to-workspace m\"\n  \"resize-node\"\n]\n"
     },
     {
-      "title": "programs.aerospace.userSettings.start-at-login",
-      "description": "Start AeroSpace at login.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
-          "text": "home-manager/modules/programs/aerospace.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
       "title": "programs.aerospace.userSettings.workspace-to-monitor-force-assignment",
       "description": "Map workspaces to specific monitors. Left-hand side is the workspace name, and right-hand side is the monitor pattern.",
       "type": "null or (attribute set of (signed integer or string or list of string))",
@@ -7531,8 +7531,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7545,8 +7545,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7559,8 +7559,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7573,8 +7573,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7587,8 +7587,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7601,8 +7601,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7615,8 +7615,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7629,8 +7629,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7643,8 +7643,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7657,8 +7657,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7671,8 +7671,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7685,8 +7685,8 @@
       "type": "attribute set of (string or signed integer or boolean or floating point number)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7699,8 +7699,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7713,8 +7713,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7727,8 +7727,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7741,8 +7741,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -7755,8 +7755,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot.nix",
-          "text": "home-manager/modules/programs/alot.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/alot",
+          "text": "home-manager/modules/programs/alot"
         }
       ],
       "note": null,
@@ -8231,8 +8231,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -8245,8 +8245,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -8259,8 +8259,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": "%1file name%2server name%3socket ID",
@@ -8273,8 +8273,8 @@
       "type": "JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -8287,8 +8287,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid.nix",
-          "text": "home-manager/modules/programs/astroid.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/astroid",
+          "text": "home-manager/modules/programs/astroid"
         }
       ],
       "note": null,
@@ -10877,8 +10877,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/command-not-found/command-not-found.nix",
-          "text": "home-manager/modules/programs/command-not-found/command-not-found.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/command-not-found",
+          "text": "home-manager/modules/programs/command-not-found"
         }
       ],
       "note": null,
@@ -10891,8 +10891,8 @@
       "type": "absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/command-not-found/command-not-found.nix",
-          "text": "home-manager/modules/programs/command-not-found/command-not-found.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/command-not-found",
+          "text": "home-manager/modules/programs/command-not-found"
         }
       ],
       "note": null,
@@ -12081,8 +12081,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12095,8 +12095,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12109,8 +12109,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12123,8 +12123,8 @@
       "type": "null or package (read only)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12137,8 +12137,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12151,8 +12151,8 @@
       "type": "list of package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12165,8 +12165,8 @@
       "type": "list of package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12179,8 +12179,8 @@
       "type": "attribute set of (JSON value)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12193,8 +12193,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12207,8 +12207,8 @@
       "type": "(submodule) or ((list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it) convertible to it",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12221,8 +12221,8 @@
       "type": "null or absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12235,8 +12235,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12249,8 +12249,8 @@
       "type": "(list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12263,8 +12263,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12277,8 +12277,8 @@
       "type": "one of “blue”, “turquoise”, “green”, “yellow”, “orange”, “red”, “pink”, “purple”, “toolbar”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12291,8 +12291,8 @@
       "type": "one of “briefcase”, “cart”, “circle”, “dollar”, “fence”, “fingerprint”, “gift”, “vacation”, “food”, “fruit”, “pet”, “tree”, “chill”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12305,8 +12305,8 @@
       "type": "unsigned integer, meaning >=0",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12319,8 +12319,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12333,8 +12333,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12347,8 +12347,8 @@
       "type": "(submodule) or (list of package) convertible to it",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12361,8 +12361,8 @@
       "type": "list of package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": "$ nix-env -f '<nixpkgs>' -qaP -A nur.repos.rycee.firefox-addons",
@@ -12375,8 +12375,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": "This is required when using settings.",
@@ -12389,8 +12389,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12403,8 +12403,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12417,8 +12417,8 @@
       "type": "attribute set of (JSON value)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12431,8 +12431,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12445,8 +12445,8 @@
       "type": "unsigned integer, meaning >=0",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12459,8 +12459,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12473,8 +12473,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12487,8 +12487,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12501,8 +12501,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": "Use programs.firefox.profiles.<name>.extraConfig, unless\nyou want to overwrite in\nprograms.firefox.profiles.<name>.settings, then use this\noption.",
@@ -12515,8 +12515,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12529,8 +12529,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12543,8 +12543,8 @@
       "type": "attribute set of attribute set of (JSON value)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": "See SearchEngine.jsm\nin Firefox’s source for available options. We maintain a\nmapping to let you specify all options in the referenced link\nwithout underscores, but it may fall out of date with future\noptions.",
@@ -12557,8 +12557,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12571,8 +12571,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12585,8 +12585,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12599,8 +12599,8 @@
       "type": "attribute set of (Firefox preference (int, bool, string, and also attrs, list, float as a JSON string))",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": "Firefox only supports int, bool, and string types for\npreferences, but home-manager will automatically\nconvert all other JSON-compatible values into strings.",
@@ -12613,8 +12613,8 @@
       "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -12627,8 +12627,8 @@
       "type": "strings concatenated with “\\n” or absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox.nix",
-          "text": "home-manager/modules/programs/firefox.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
         }
       ],
       "note": null,
@@ -17004,6 +17004,76 @@
       "example": "true"
     },
     {
+      "title": "programs.hyprpanel.enable",
+      "description": "Whether to enable HyprPanel.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprpanel",
+          "text": "home-manager/modules/programs/hyprpanel"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.hyprpanel.package",
+      "description": "The hyprpanel package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprpanel",
+          "text": "home-manager/modules/programs/hyprpanel"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprpanel",
+      "example": null
+    },
+    {
+      "title": "programs.hyprpanel.dontAssertNotificationDaemons",
+      "description": "Whether to check for other notification daemons.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprpanel",
+          "text": "home-manager/modules/programs/hyprpanel"
+        }
+      ],
+      "note": "You might want to set this to false, because hyprpanel’s notification\ndaemon is buggy and you may prefer something else.",
+      "default": "true",
+      "example": "false"
+    },
+    {
+      "title": "programs.hyprpanel.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/hyprpanel/config.json.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprpanel",
+          "text": "home-manager/modules/programs/hyprpanel"
+        }
+      ],
+      "note": "See https://hyprpanel.com/configuration/settings.html#home-manager-module\nfor the full list of options.",
+      "default": "{ }",
+      "example": "bar.battery.label = true;\nbar.bluetooth.label = false;\nbar.clock.format = \"%H:%M:%S\";\nbar.layouts = {\n  \"*\" = {\n    left = [\n      \"dashboard\"\n      \"workspaces\"\n      \"media\"\n    ];\n    middle = [ \"windowtitle\" ];\n    right = [\n      \"volume\"\n      \"network\"\n      \"bluetooth\"\n      \"notifications\"\n    ];\n  };\n};\n\n"
+    },
+    {
+      "title": "programs.hyprpanel.systemd.enable",
+      "description": "Whether to enable HyprPanel systemd integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprpanel",
+          "text": "home-manager/modules/programs/hyprpanel"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "programs.i3bar-river.enable",
       "description": "Whether to enable i3bar-river.",
       "type": "boolean",
@@ -18121,10 +18191,10 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "alias = {\n  # Use pp as an alias for Pod\n  pp = \"v1/pods\";\n};\n\n"
+      "example": "{\n  # Use pp as an alias for Pod\n  pp = \"v1/pods\";\n}\n\n"
     },
     {
-      "title": "programs.k9s.hotkey",
+      "title": "programs.k9s.hotKeys",
       "description": "Hotkeys written to $XDG_CONFIG_HOME/k9s/hotkeys.yaml (linux) or Library/Application Support/k9s/hotkeys.yaml (darwin). See\nhttps://k9scli.io/topics/hotkeys/ for supported values.",
       "type": "YAML 1.1 value",
       "declared_by": [
@@ -18135,10 +18205,10 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "hotkey = {\n  # Make sure this is camel case\n  hotKey = {\n    shift-0 = {\n      shortCut = \"Shift-0\";\n      description = \"Viewing pods\";\n      command = \"pods\";\n    };\n  };\n};\n\n"
+      "example": "{\n  shift-0 = {\n    shortCut = \"Shift-0\";\n    description = \"Viewing pods\";\n    command = \"pods\";\n  };\n}\n\n"
     },
     {
-      "title": "programs.k9s.plugin",
+      "title": "programs.k9s.plugins",
       "description": "Plugins written to $XDG_CONFIG_HOME/k9s/plugins.yaml (linux) or Library/Application Support/k9s/plugins.yaml (darwin). See\nhttps://k9scli.io/topics/plugins/ for supported values.",
       "type": "YAML 1.1 value",
       "declared_by": [
@@ -18149,7 +18219,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "plugin = {\n  # Defines a plugin to provide a `ctrl-l` shortcut to\n  # tail the logs while in pod view.\n  fred = {\n    shortCut = \"Ctrl-L\";\n    description = \"Pod logs\";\n    scopes = [ \"po\" ];\n    command = \"kubectl\";\n    background = false;\n    args = [\n      \"logs\"\n      \"-f\"\n      \"$NAME\"\n      \"-n\"\n      \"$NAMESPACE\"\n      \"--context\"\n      \"$CLUSTER\"\n    ];\n  };\n};\n\n"
+      "example": "{\n  # Defines a plugin to provide a `ctrl-l` shortcut to\n  # tail the logs while in pod view.\n  fred = {\n    shortCut = \"Ctrl-L\";\n    description = \"Pod logs\";\n    scopes = [ \"po\" ];\n    command = \"kubectl\";\n    background = false;\n    args = [\n      \"logs\"\n      \"-f\"\n      \"$NAME\"\n      \"-n\"\n      \"$NAMESPACE\"\n      \"--context\"\n      \"$CLUSTER\"\n    ];\n  };\n}\n\n"
     },
     {
       "title": "programs.k9s.settings",
@@ -18191,7 +18261,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "k9s = {\n  views = {\n    \"v1/pods\" = {\n      columns = [\n        \"AGE\"\n        \"NAMESPACE\"\n        \"NAME\"\n        \"IP\"\n        \"NODE\"\n        \"STATUS\"\n        \"READY\"\n      ];\n    };\n  };\n};\n\n"
+      "example": "{\n  \"v1/pods\" = {\n    columns = [\n      \"AGE\"\n      \"NAMESPACE\"\n      \"NAME\"\n      \"IP\"\n      \"NODE\"\n      \"STATUS\"\n      \"READY\"\n    ];\n  };\n}\n\n"
     },
     {
       "title": "programs.kakoune.enable",
@@ -19221,8 +19291,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19235,8 +19305,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19249,8 +19319,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19263,8 +19333,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": "Format strings are for Python strftime, similarly to\nstrftime(3).",
@@ -19277,8 +19347,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": "Format strings are for Python strftime, similarly to\nstrftime(3).",
@@ -19291,8 +19361,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19305,8 +19375,8 @@
       "type": "integer between 0 and 6 (both inclusive)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19319,8 +19389,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19333,8 +19403,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": "Format strings are for Python strftime, similarly to\nstrftime(3).",
@@ -19347,8 +19417,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": "Format strings are for Python strftime, similarly to\nstrftime(3).",
@@ -19361,8 +19431,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": "Format strings are for Python strftime, similarly to\nstrftime(3).",
@@ -19375,8 +19445,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19389,8 +19459,8 @@
       "type": "one of “off”, “left”, “right”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -19403,8 +19473,8 @@
       "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal.nix",
-          "text": "home-manager/modules/programs/khal.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khal",
+          "text": "home-manager/modules/programs/khal"
         }
       ],
       "note": null,
@@ -21503,8 +21573,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -21517,8 +21587,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -21531,8 +21601,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -21545,8 +21615,8 @@
       "type": "attribute set of attribute set of list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync.nix",
-          "text": "home-manager/modules/programs/mbsync.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mbsync",
+          "text": "home-manager/modules/programs/mbsync"
         }
       ],
       "note": null,
@@ -22497,8 +22567,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": null,
@@ -22511,8 +22581,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": null,
@@ -22525,8 +22595,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": null,
@@ -22539,8 +22609,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp.nix",
-          "text": "home-manager/modules/programs/msmtp.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
+          "text": "home-manager/modules/programs/msmtp"
         }
       ],
       "note": "Note, if running msmtp fails with the error message “account default\nwas already defined” then you probably have an account command here.\nAccount commands should be placed in\naccounts.email.accounts.<name>.msmtp.extraConfig.",
@@ -22945,8 +23015,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -22959,8 +23029,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -22973,8 +23043,8 @@
       "type": "list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -22987,8 +23057,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23001,8 +23071,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": "If you want to bind ‘\\Cp’ for example, which would be Ctrl + ‘p’, you need to escape twice: ‘\\Cp’!",
@@ -23015,8 +23085,8 @@
       "type": "one of “alias”, “attach”, “browser”, “compose”, “editor”, “generic”, “index”, “mix”, “pager”, “pgp”, “postpone”, “query”, “smime” or list of (one of “alias”, “attach”, “browser”, “compose”, “editor”, “generic”, “index”, “mix”, “pager”, “pgp”, “postpone”, “query”, “smime”)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23029,8 +23099,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23043,8 +23113,8 @@
       "type": "null or signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23057,8 +23127,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23071,8 +23141,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23085,8 +23155,8 @@
       "type": "list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23099,8 +23169,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23113,8 +23183,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": "If you want to bind ‘\\Cp’ for example, which would be Ctrl + ‘p’, you need to escape twice: ‘\\Cp’!",
@@ -23127,8 +23197,8 @@
       "type": "one of “alias”, “attach”, “browser”, “compose”, “editor”, “generic”, “index”, “mix”, “pager”, “pgp”, “postpone”, “query”, “smime” or list of (one of “alias”, “attach”, “browser”, “compose”, “editor”, “generic”, “index”, “mix”, “pager”, “pgp”, “postpone”, “query”, “smime”)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23141,8 +23211,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23155,8 +23225,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23169,8 +23239,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23183,8 +23253,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23197,8 +23267,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23211,8 +23281,8 @@
       "type": "signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23225,8 +23295,8 @@
       "type": "one of “date”, “date-received”, “from”, “mailbox-order”, “score”, “size”, “spam”, “subject”, “threads”, “to”, “reverse-date”, “reverse-date-received”, “reverse-from”, “reverse-mailbox-order”, “reverse-score”, “reverse-size”, “reverse-spam”, “reverse-subject”, “reverse-threads”, “reverse-to”, “last-date”, “last-date-received”, “last-from”, “last-mailbox-order”, “last-score”, “last-size”, “last-spam”, “last-subject”, “last-threads”, “last-to”, “reverse-last-date”, “reverse-last-date-received”, “reverse-last-from”, “reverse-last-mailbox-order”, “reverse-last-score”, “reverse-last-size”, “reverse-last-spam”, “reverse-last-subject”, “reverse-last-threads”, “reverse-last-to”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23239,8 +23309,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -23253,8 +23323,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": "See http://www.mutt.org/doc/manual/#mailboxes for more information.",
@@ -23267,8 +23337,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt.nix",
-          "text": "home-manager/modules/programs/neomutt.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/neomutt",
+          "text": "home-manager/modules/programs/neomutt"
         }
       ],
       "note": null,
@@ -24331,8 +24401,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24345,8 +24415,8 @@
       "type": "attribute set of attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24359,8 +24429,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24373,8 +24443,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24387,8 +24457,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24401,8 +24471,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24415,8 +24485,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24429,8 +24499,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24443,8 +24513,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -24457,8 +24527,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch.nix",
-          "text": "home-manager/modules/programs/notmuch.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/notmuch",
+          "text": "home-manager/modules/programs/notmuch"
         }
       ],
       "note": null,
@@ -25423,8 +25493,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -25437,8 +25507,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -25451,8 +25521,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -25465,8 +25535,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -25479,8 +25549,8 @@
       "type": "attribute set of (string or signed integer or boolean)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -25493,8 +25563,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap.nix",
-          "text": "home-manager/modules/programs/offlineimap.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/offlineimap",
+          "text": "home-manager/modules/programs/offlineimap"
         }
       ],
       "note": null,
@@ -34061,8 +34131,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer.nix",
-          "text": "home-manager/modules/programs/vdirsyncer.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer",
+          "text": "home-manager/modules/programs/vdirsyncer"
         }
       ],
       "note": null,
@@ -34075,8 +34145,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer.nix",
-          "text": "home-manager/modules/programs/vdirsyncer.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer",
+          "text": "home-manager/modules/programs/vdirsyncer"
         }
       ],
       "note": null,
@@ -34089,8 +34159,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer.nix",
-          "text": "home-manager/modules/programs/vdirsyncer.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer",
+          "text": "home-manager/modules/programs/vdirsyncer"
         }
       ],
       "note": "For more information, see the\nvdirsyncer manual.",
@@ -34467,8 +34537,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34481,8 +34551,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34537,8 +34607,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34551,8 +34621,8 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34565,8 +34635,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34579,8 +34649,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34593,8 +34663,8 @@
       "type": "list of package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34607,8 +34677,8 @@
       "type": "JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34621,8 +34691,8 @@
       "type": "absolute path or list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34635,8 +34705,8 @@
       "type": "JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34649,8 +34719,8 @@
       "type": "absolute path or JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -34663,8 +34733,8 @@
       "type": "absolute path or JSON value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode.nix",
-          "text": "home-manager/modules/programs/vscode.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
         }
       ],
       "note": null,
@@ -36315,8 +36385,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36329,8 +36399,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": "environment.pathsToLink = [ \"/share/zsh\" ];",
@@ -36357,8 +36427,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36427,8 +36497,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36441,8 +36511,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36455,8 +36525,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36469,8 +36539,8 @@
       "type": "list of (one of “history”, “completion”, “match_prev_cmd”)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": "history: Chooses the most recent match from history.completion: Chooses a suggestion based on what tab-completion would suggest. (requires zpty module)match_prev_cmd: Like history, but chooses the most recent match whose preceding history item matches\nthe most recently executed command. Note that this strategy won’t work as expected with ZSH options that\ndon’t preserve the history order such as HIST_IGNORE_ALL_DUPS or HIST_EXPIRE_DUPS_FIRST.",
@@ -36483,8 +36553,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36497,8 +36567,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36511,8 +36581,8 @@
       "type": "null or one of “emacs”, “vicmd”, “viins”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36525,8 +36595,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36539,8 +36609,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36553,8 +36623,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36567,8 +36637,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36581,8 +36651,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": "This file will still be periodically re-written to trim it when the\nnumber of lines grows 20% beyond the value specified by\nprograms.zsh.history.save.",
@@ -36595,8 +36665,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36609,8 +36679,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36623,8 +36693,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36637,8 +36707,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36651,8 +36721,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36665,8 +36735,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36679,8 +36749,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36693,8 +36763,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36707,8 +36777,8 @@
       "type": "signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36721,8 +36791,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36735,8 +36805,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36749,8 +36819,8 @@
       "type": "signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36763,8 +36833,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36777,8 +36847,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36791,8 +36861,8 @@
       "type": "(list of string) or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36805,8 +36875,8 @@
       "type": "(list of string) or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36819,8 +36889,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": "To specify the order, use lib.mkOrder.",
@@ -36833,8 +36903,8 @@
       "type": "attribute set",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36847,8 +36917,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36861,8 +36931,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36875,8 +36945,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36889,8 +36959,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36903,8 +36973,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36917,8 +36987,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36931,8 +37001,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36945,8 +37015,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36959,8 +37029,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36973,8 +37043,8 @@
       "type": "list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -36987,8 +37057,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37001,8 +37071,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37015,8 +37085,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37029,8 +37099,8 @@
       "type": "absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": "Will be added to fpath and PATH.",
@@ -37631,8 +37701,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37645,8 +37715,8 @@
       "type": "attribute set",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37659,8 +37729,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37673,8 +37743,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37687,8 +37757,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37701,8 +37771,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37715,8 +37785,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37729,8 +37799,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37743,8 +37813,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37757,8 +37827,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -37841,8 +37911,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh.nix",
-          "text": "home-manager/modules/programs/zsh.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
         }
       ],
       "note": null,
@@ -41579,8 +41649,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -41593,8 +41663,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": null,
@@ -41607,8 +41677,8 @@
       "type": "list of package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify.nix",
-          "text": "home-manager/modules/services/imapnotify.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/imapnotify",
+          "text": "home-manager/modules/services/imapnotify"
         }
       ],
       "note": "Note, this does not apply to the Darwin launchd service.",
@@ -51517,6 +51587,286 @@
       "example": null
     },
     {
+      "title": "vdirsyncer.enable",
+      "description": "Whether to enable synchronization using vdirsyncer.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "vdirsyncer.auth",
+      "description": "Authentication settings. The default is basic.",
+      "type": "null or one of “basic”, “digest”, “guess”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.authCert",
+      "description": "Either a path to a certificate with a client certificate and the key or a list of paths to the files with them.",
+      "type": "null or string or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.clientIdCommand",
+      "description": "A command that prints the OAuth credentials to standard output.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": "See\nhttps://vdirsyncer.pimutils.org/en/stable/config.html#google\nfor more information.",
+      "default": "null",
+      "example": "[\n  \"pass\"\n  \"client_id\"\n]\n"
+    },
+    {
+      "title": "vdirsyncer.clientSecretCommand",
+      "description": "A command that prints the OAuth credentials to standard output.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": "See\nhttps://vdirsyncer.pimutils.org/en/stable/config.html#google\nfor more information.",
+      "default": "null",
+      "example": "[\n  \"pass\"\n  \"client_secret\"\n]\n"
+    },
+    {
+      "title": "vdirsyncer.collections",
+      "description": "The collections to synchronize between the storages.",
+      "type": "null or (list of (string or list of string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.conflictResolution",
+      "description": "What to do in case of a conflict between the storages. Either remote wins or\nlocal wins or\na list that contains a command to run. By default, an error\nmessage is printed.",
+      "type": "null or one of “remote wins”, “local wins” or list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.itemTypes",
+      "description": "Kinds of items to show. The default is to show everything. This depends on particular features of the server, the results\nare not validated.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.metadata",
+      "description": "Metadata keys that should be synchronized when vdirsyncer metasync is executed.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"color\"\n  \"displayname\"\n]\n"
+    },
+    {
+      "title": "vdirsyncer.partialSync",
+      "description": "What should happen if synchronization in one direction is impossible due to one storage being read-only.\nDefaults to revert.",
+      "type": "null or one of “revert”, “error”, “ignore”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": "See\nhttps://vdirsyncer.pimutils.org/en/stable/config.html#pair-section\nfor more information.",
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.postHook",
+      "description": "Command to call for each item creation and modification. The command will be called with the path of the new/updated\nfile.",
+      "type": "null or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.timeRange",
+      "description": "A time range to synchronize. start and end can be any Python expression that returns a datetime.datetime\nobject.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "{\n  end = \"datetime.now() + timedelta(days=365)\";\n  start = \"datetime.now() - timedelta(days=365)\";\n}\n"
+    },
+    {
+      "title": "vdirsyncer.timeRange.end",
+      "description": "End of time range to show.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.timeRange.start",
+      "description": "Start of time range to show.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.tokenFile",
+      "description": "A file path where access tokens are stored.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.urlCommand",
+      "description": "A command that prints the URL of the storage.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-url.sh\"\n]\n"
+    },
+    {
+      "title": "vdirsyncer.userAgent",
+      "description": "The user agent to report to the server. Defaults to vdirsyncer.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "vdirsyncer.userNameCommand",
+      "description": "A command that prints the user name to standard output.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "[\n  \"~/get-username.sh\"\n]\n"
+    },
+    {
+      "title": "vdirsyncer.verify",
+      "description": "Null or path to certificate to verify SSL against",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"/path/to/cert.pem\""
+    },
+    {
+      "title": "vdirsyncer.verifyFingerprint",
+      "description": "Optional. SHA1 or MD5 fingerprint of the expected server certificate.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vdirsyncer/accounts.nix",
+          "text": "home-manager/modules/programs/vdirsyncer/accounts.nix"
+        }
+      ],
+      "note": "See\nhttps://vdirsyncer.pimutils.org/en/stable/ssl-tutorial.html#ssl-tutorial\nfor more information.",
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "wayland.systemd.target",
       "description": "The systemd target that will automatically start the graphical Wayland services. This option is a generalization of individual systemd.target or systemdTarget,\nand affect all Wayland services by default.",
       "type": "string",
@@ -51746,8 +52096,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51760,8 +52110,8 @@
       "type": "null or package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51774,8 +52124,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51788,8 +52138,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51802,8 +52152,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51816,13 +52166,13 @@
       "type": "list of (XML value)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  {\n    menuId = \"client-menu\";\n    label = \"Client Menu\";\n    icon = \"\";\n    items = [\n      {\n        label = \"Maximize\";\n        icon = \"\";\n        action = {\n          name = \"ToggleMaximize\";\n        };\n      }\n      {\n        label = \"Fullscreen\";\n        action = {\n          name = \"ToggleFullscreen\";\n        };\n      }\n      {\n        label = \"Always on Top\";\n        action = {\n          name = \"ToggleAlwaysOnTop\";\n        };\n      }\n      {\n        label = \"Alacritty\";\n        action = {\n          name = \"Execute\";\n          command = \"alacritty\";\n        };\n      }\n      {\n        label = \"Move Left\";\n        action = {\n          name = \"SendToDesktop\";\n          to = \"left\";\n        };\n      }\n      {\n        separator = { };\n      }\n      {\n        label = \"Workspace\";\n        menuId = \"workspace\";\n        icon = \"\";\n        items = [\n          {\n            label = \"Move Left\";\n            action = {\n              name = \"SendToDesktop\";\n              to = \"left\";\n            };\n          }\n        ];\n      }\n      {\n        separator = true;\n      }\n    ];\n  }\n];\n\n"
+      "example": "[\n  {\n    label = \"pipemenu\";\n    menuId = \"menu\";\n    execute = \"/home/user/nix/scripts/pipe.sh\";\n  }\n  {\n    menuId = \"client-menu\";\n    label = \"Client Menu\";\n    icon = \"\";\n    items = [\n      {\n        label = \"Maximize\";\n        icon = \"\";\n        action = {\n          name = \"ToggleMaximize\";\n        };\n      }\n      {\n        label = \"Fullscreen\";\n        action = {\n          name = \"ToggleFullscreen\";\n        };\n      }\n      {\n        label = \"Alacritty\";\n        action = {\n          name = \"Execute\";\n          command = \"alacritty\";\n        };\n      }\n      {\n        label = \"Move Left\";\n        action = {\n          name = \"SendToDesktop\";\n          to = \"left\";\n        };\n      }\n      {\n        separator = { };\n      }\n      {\n        label = \"Workspace\";\n        menuId = \"workspace\";\n        icon = \"\";\n        items = [\n          {\n            label = \"Move Left\";\n            action = {\n              name = \"SendToDesktop\";\n              to = \"left\";\n            };\n          }\n        ];\n      }\n      {\n        separator = true;\n      }\n    ];\n  }\n];\n\n"
     },
     {
       "title": "wayland.windowManager.labwc.rc",
@@ -51830,8 +52180,8 @@
       "type": "XML value",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51844,8 +52194,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": "DISPLAYWAYLAND_DISPLAYXDG_CURRENT_DESKTOP",
@@ -51858,8 +52208,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51872,8 +52222,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -51886,8 +52236,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc/labwc.nix",
-          "text": "home-manager/modules/services/window-managers/labwc/labwc.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/labwc",
+          "text": "home-manager/modules/services/window-managers/labwc"
         }
       ],
       "note": null,
@@ -55246,8 +55596,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55260,8 +55610,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55274,8 +55624,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": "If set to false, desktops will only be configured the first time the config is run.\nThis is useful if you want to dynamically add desktops and you don’t want them to be destroyed if you\nre-run bspwmrc.",
@@ -55288,8 +55638,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55302,8 +55652,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55316,8 +55666,8 @@
       "type": "attribute set of list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55330,8 +55680,8 @@
       "type": "attribute set of (attribute set of (boolean or signed integer or floating point number or string))",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55344,8 +55694,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55358,8 +55708,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55372,8 +55722,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55386,8 +55736,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55400,8 +55750,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55414,8 +55764,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55428,8 +55778,8 @@
       "type": "null or one of “below”, “normal”, “above”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55442,8 +55792,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55456,8 +55806,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55470,8 +55820,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55484,8 +55834,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55498,8 +55848,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55512,8 +55862,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55526,8 +55876,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55540,8 +55890,8 @@
       "type": "null or one of “north”, “west”, “south”, “east”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55554,8 +55904,8 @@
       "type": "null or floating point number",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55568,8 +55918,8 @@
       "type": "null or one of “tiled”, “pseudo_tiled”, “floating”, “fullscreen”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55582,8 +55932,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55596,8 +55946,8 @@
       "type": "attribute set of (boolean or signed integer or floating point number or string or list of (boolean or signed integer or floating point number or string))",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
@@ -55610,8 +55960,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm/default.nix",
-          "text": "home-manager/modules/services/window-managers/bspwm/default.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/bspwm",
+          "text": "home-manager/modules/services/window-managers/bspwm"
         }
       ],
       "note": null,
