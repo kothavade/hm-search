@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 26 Jun 2025 02:52:32 GMT",
+  "last_update": "Fri, 27 Jun 2025 02:53:35 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -42960,7 +42960,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  {\n    actions = true;\n    anchor = \"top-right\";\n    background-color = \"#000000\";\n    border-color = \"#FFFFFF\";\n    border-radius = 0;\n    default-timeout = 0;\n    font = \"monospace 10\";\n    height = 100;\n    width = 300;\n    icons = true;\n    ignore-timeout = false;\n    layer = \"top\";\n    margin = 10;\n    markup = true;\n  \n    # Section example\n    \"actionable=true\" = {\n      anchor = \"top-left\";\n    };\n  }\n''\n"
+      "example": "{\n  \"actionable=true\" = {\n    anchor = \"top-left\";\n  };\n  actions = true;\n  anchor = \"top-right\";\n  background-color = \"#000000\";\n  border-color = \"#FFFFFF\";\n  border-radius = 0;\n  default-timeout = 0;\n  font = \"monospace 10\";\n  height = 100;\n  icons = true;\n  ignore-timeout = false;\n  layer = \"top\";\n  margin = 10;\n  markup = true;\n  width = 300;\n}\n"
     },
     {
       "title": "services.mbsync.enable",
