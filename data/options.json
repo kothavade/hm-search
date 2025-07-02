@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 01 Jul 2025 03:05:33 GMT",
+  "last_update": "Wed, 02 Jul 2025 02:53:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9208,7 +9208,7 @@
     {
       "title": "programs.bash.sessionVariables",
       "description": "Environment variables that will be set for the Bash session.",
-      "type": "lazy attribute set of (string or signed integer)",
+      "type": "lazy attribute set of (string or signed integer or absolute path)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/bash.nix",
