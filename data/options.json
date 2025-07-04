@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 03 Jul 2025 02:54:59 GMT",
+  "last_update": "Fri, 04 Jul 2025 02:53:05 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -45746,6 +45746,20 @@
       ],
       "note": null,
       "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.podman.settings.mounts",
+      "description": "mounts.conf configuration",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/podman-linux",
+          "text": "home-manager/modules/services/podman-linux"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
       "example": null
     },
     {
