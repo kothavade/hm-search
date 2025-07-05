@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 04 Jul 2025 02:53:05 GMT",
+  "last_update": "Sat, 05 Jul 2025 02:47:39 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1382,7 +1382,7 @@
     {
       "title": "accounts.email.accounts.<name>.aerc.extraBinds",
       "description": "Extra bindings specific to this account, added to $HOME/.config/aerc/binds.conf.\nSee aerc-binds(5).",
-      "type": "attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
+      "type": "attribute set of (strings concatenated with “\\n” or attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
@@ -1396,7 +1396,7 @@
     {
       "title": "accounts.email.accounts.<name>.aerc.extraConfig",
       "description": "Config specific to this account, added to $HOME/.config/aerc/aerc.conf. Aerc only supports per-account UI configuration.\nFor other sections of $HOME/.config/aerc/aerc.conf,\nuse programs.aerc.extraConfig.\nSee aerc-config(5).",
-      "type": "attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
+      "type": "attribute set of (strings concatenated with “\\n” or attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
@@ -6968,7 +6968,7 @@
     {
       "title": "programs.aerc.extraAccounts",
       "description": "Extra lines added to $HOME/.config/aerc/accounts.conf.",
-      "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
+      "type": "strings concatenated with “\\n” or attribute set of (strings concatenated with “\\n” or attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
@@ -6982,7 +6982,7 @@
     {
       "title": "programs.aerc.extraBinds",
       "description": "Extra lines added to $HOME/.config/aerc/binds.conf. Global keybindings can be set in the global section.",
-      "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
+      "type": "strings concatenated with “\\n” or attribute set of (strings concatenated with “\\n” or attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
@@ -6996,7 +6996,7 @@
     {
       "title": "programs.aerc.extraConfig",
       "description": "Extra lines added to $HOME/.config/aerc/aerc.conf.",
-      "type": "strings concatenated with “\\n” or attribute set of attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma)",
+      "type": "strings concatenated with “\\n” or attribute set of (strings concatenated with “\\n” or attribute set of (values (null, bool, int, string, or float) or a list of values, that will be joined with a comma))",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerc",
