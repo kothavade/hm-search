@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 05 Jul 2025 02:47:39 GMT",
+  "last_update": "Sun, 06 Jul 2025 03:01:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7764,6 +7764,384 @@
       "example": null
     },
     {
+      "title": "programs.anki.enable",
+      "description": "Whether to enable Anki.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.package",
+      "description": "The anki package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.anki",
+      "example": null
+    },
+    {
+      "title": "programs.anki.addons",
+      "description": "List of Anki add-on packages to install.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  # When the add-on is already available in nixpkgs\n  pkgs.ankiAddons.anki-connect\n\n  # When the add-on is not available in nixpkgs\n  (pkgs.anki-utils.buildAnkiAddon (finalAttrs: {\n    pname = \"recolor\";\n    version = \"3.1\";\n    src = pkgs.fetchFromGitHub {\n      owner = \"AnKing-VIP\";\n      repo = \"AnkiRecolor\";\n      rev = finalAttrs.version;\n      sparseCheckout = [ \"src/addon\" ];\n      hash = \"sha256-28DJq2l9DP8O6OsbNQCZ0pm4S6CQ3Yz0Vfvlj+iQw8Y=\";\n    };\n    sourceRoot = \"${finalAttrs.src.name}/src/addon\";\n  }))\n\n  # When the add-on needs to be configured\n  pkgs.ankiAddons.passfail2.withConfig {\n    config = {\n      again_button_name = \"not quite\";\n      good_button_name = \"excellent\";\n    };\n    user_files = ./dir-to-be-merged-into-addon-user-files-dir;\n  };\n]\n\n"
+    },
+    {
+      "title": "programs.anki.answerKeys",
+      "description": "Overrides for choosing what keyboard shortcut activates each answer button. The Anki default will be used for ones without an\noverride defined.",
+      "type": "list of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  {\n    ease = 1;\n    key = \"left\";\n  }\n  {\n    ease = 2;\n    key = \"up\";\n  }\n  {\n    ease = 3;\n    key = \"right\";\n  }\n  {\n    ease = 4;\n    key = \"down\";\n  }\n]\n"
+    },
+    {
+      "title": "programs.anki.answerKeys.*.ease",
+      "description": "Number associated with an answer button.",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": "By default, 1 = Again, 2 = Hard, 3 = Good, and 4 = Easy.",
+      "default": null,
+      "example": "3"
+    },
+    {
+      "title": "programs.anki.answerKeys.*.key",
+      "description": "Keyboard shortcut for this answer button. The shortcut should be in the string format used by https://doc.qt.io/qt-6/qkeysequence.html.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"3\""
+    },
+    {
+      "title": "programs.anki.hideBottomBar",
+      "description": "Hide bottom bar during review.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.hideBottomBarMode",
+      "description": "When to hide the bottom bar when hideBottomBar is enabled.",
+      "type": "null or one of “fullscreen”, “always”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"fullscreen\""
+    },
+    {
+      "title": "programs.anki.hideTopBar",
+      "description": "Hide top bar during review.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.hideTopBarMode",
+      "description": "When to hide the top bar when hideTopBar is enabled.",
+      "type": "null or one of “fullscreen”, “always”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"fullscreen\""
+    },
+    {
+      "title": "programs.anki.language",
+      "description": "Display language. Should be an underscore separated language tag. See https://github.com/ankitects/anki/blob/main/pylib/anki/lang.py for\nsupported tags.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"en_US\""
+    },
+    {
+      "title": "programs.anki.legacyImportExport",
+      "description": "Use legacy (pre 2.1.55) import/export handling code.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anki.minimalistMode",
+      "description": "Minimalist user interface mode.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.reduceMotion",
+      "description": "Disable various animations and transitions of the user interface.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.spacebarRatesCard",
+      "description": "Spacebar (or enter) also answers card.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.style",
+      "description": "Widgets style.",
+      "type": "null or one of “anki”, “native”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"native\""
+    },
+    {
+      "title": "programs.anki.sync.autoSync",
+      "description": "Automatically sync on profile open/close.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.sync.autoSyncMediaMinutes",
+      "description": "Automatically sync media every X minutes. Set this to 0 to disable periodic media syncing.",
+      "type": "null or (unsigned integer, meaning >=0)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "15"
+    },
+    {
+      "title": "programs.anki.sync.networkTimeout",
+      "description": "Network timeout in seconds.",
+      "type": "null or (unsigned integer, meaning >=0)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "60"
+    },
+    {
+      "title": "programs.anki.sync.passwordFile",
+      "description": "Path to a file containing the sync account password.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anki.sync.syncMedia",
+      "description": "Synchronize audio and images too.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
+      "title": "programs.anki.sync.url",
+      "description": "Custom sync server URL. See https://docs.ankiweb.net/sync-server.html.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"http://example.com/anki-sync/\""
+    },
+    {
+      "title": "programs.anki.sync.username",
+      "description": "Sync account username.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"lovelearning@email.com\""
+    },
+    {
+      "title": "programs.anki.sync.usernameFile",
+      "description": "Path to a file containing the sync account username.",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.anki.theme",
+      "description": "Theme to use.",
+      "type": "null or one of “followSystem”, “light”, “dark”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"dark\""
+    },
+    {
+      "title": "programs.anki.uiScale",
+      "description": "User interface scale.",
+      "type": "null or integer or floating point number between 0.0 and 1.0 (both inclusive)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "1.0"
+    },
+    {
+      "title": "programs.anki.videoDriver",
+      "description": "Video driver to use.",
+      "type": "null or one of “opengl”, “angle”, “software”, “metal”, “vulkan”, “d3d11”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
+          "text": "home-manager/modules/programs/anki"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"opengl\""
+    },
+    {
       "title": "programs.anyrun.enable",
       "description": "Whether to enable anyrun.",
       "type": "boolean",
@@ -8185,8 +8563,8 @@
     },
     {
       "title": "programs.ashell.settings",
-      "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell.yml. For available settings see\nhttps://github.com/MalpenZibo/ashell/tree/0.4.1?tab=readme-ov-file#configuration.",
-      "type": "YAML 1.1 value",
+      "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell/config.toml (0.5.0+) or $XDG_CONFIG_HOME/ashell/config.yaml (<0.5.0).\nFor available settings see\nhttps://github.com/MalpenZibo/ashell?tab=readme-ov-file#configuration.",
+      "type": "TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
@@ -19986,6 +20364,104 @@
       "example": "kubectl = lib.getExe pkgs.kubectl\npreset = \"dark\";\npaging = \"auto\";\n\n"
     },
     {
+      "title": "programs.kubeswitch.enable",
+      "description": "Whether to enable the kubectx for operators.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.kubeswitch.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.kubeswitch.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.kubeswitch.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.kubeswitch.package",
+      "description": "The kubeswitch package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.kubeswitch",
+      "example": null
+    },
+    {
+      "title": "programs.kubeswitch.commandName",
+      "description": "The name of the command to use",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"kswitch\"",
+      "example": null
+    },
+    {
+      "title": "programs.kubeswitch.settings",
+      "description": "Configuration written to ~/.kube/switch-config.yaml.",
+      "type": "YAML 1.1 value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/kubeswitch.nix",
+          "text": "home-manager/modules/programs/kubeswitch.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  kind = \"SwitchConfig\";\n  kubeconfigName = \"*.myconfig\";\n  kubeconfigStores = [\n    {\n      kind = \"filesystem\";\n      kubeconfigName = \"*.myconfig\";\n      paths = [\n        \"~/.kube/my-other-kubeconfigs/\"\n      ];\n    }\n  ];\n  version = \"v1alpha1\";\n}\n"
+    },
+    {
       "title": "programs.lapce.enable",
       "description": "Whether to enable lapce.",
       "type": "boolean",
@@ -22590,22 +23066,8 @@
       "example": null
     },
     {
-      "title": "programs.msmtp.extraAccounts",
-      "description": "Extra configuration lines to add to the end of ~/.msmtprc. See https://marlam.de/msmtp/msmtprc.txt for examples.",
-      "type": "strings concatenated with “\\n”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/msmtp",
-          "text": "home-manager/modules/programs/msmtp"
-        }
-      ],
-      "note": null,
-      "default": "\"\"",
-      "example": null
-    },
-    {
-      "title": "programs.msmtp.extraConfig",
-      "description": "Extra configuration lines to add to ~/.msmtprc. See https://marlam.de/msmtp/msmtprc.txt for examples.",
+      "title": "programs.msmtp.configContent",
+      "description": "Content added to msmtp config. See https://marlam.de/msmtp/msmtprc.txt for examples.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -22615,7 +23077,7 @@
       ],
       "note": "Note, if running msmtp fails with the error message “account default\nwas already defined” then you probably have an account command here.\nAccount commands should be placed in\naccounts.email.accounts.<name>.msmtp.extraConfig.",
       "default": "\"\"",
-      "example": null
+      "example": "lib.mkOrder 1200 '''\n  set syslog\n''';\n\n"
     },
     {
       "title": "programs.mu.enable",
@@ -24564,6 +25026,20 @@
       "example": null
     },
     {
+      "title": "programs.numbat.initFile",
+      "description": "User initialization file (init.nbt) contents. May be specified inline or as a path to a source file.",
+      "type": "null or strings concatenated with “\\n” or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/numbat.nix",
+          "text": "home-manager/modules/programs/numbat.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "''\n  unit kohm: ElectricResistance = kV/A\n''\n"
+    },
+    {
       "title": "programs.numbat.settings",
       "description": "Options to add to config.toml. See https://numbat.dev/doc/cli-customization.html#configuration for options.",
       "type": "TOML value",
@@ -25878,6 +26354,48 @@
       "note": null,
       "default": "pkgs.opam",
       "example": null
+    },
+    {
+      "title": "programs.opencode.enable",
+      "description": "Whether to enable opencode.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/opencode.nix",
+          "text": "home-manager/modules/programs/opencode.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.opencode.package",
+      "description": "The opencode package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/opencode.nix",
+          "text": "home-manager/modules/programs/opencode.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.opencode",
+      "example": null
+    },
+    {
+      "title": "programs.opencode.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/opencode/config.json. See https://opencode.ai/docs/config/ for the documentation.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/opencode.nix",
+          "text": "home-manager/modules/programs/opencode.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  theme = \"opencode\";\n  model = \"anthropic/claude-sonnet-4-20250514\";\n  autoshare = false;\n  autoupdate = true;\n}\n\n"
     },
     {
       "title": "programs.openstackclient.enable",
