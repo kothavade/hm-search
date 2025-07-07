@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 06 Jul 2025 03:01:32 GMT",
+  "last_update": "Mon, 07 Jul 2025 02:59:43 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11237,7 +11237,7 @@
     },
     {
       "title": "programs.codex.settings",
-      "description": "Configuration written to ~/.codex/config.yaml. See https://github.com/openai/codex#configuration-guide for supported values.",
+      "description": "Configuration written to ~/.codex/config.toml (0.2.0+) or ~/.codex/config.yaml (<0.2.0). See https://github.com/openai/codex/blob/main/codex-rs/config.md for supported values.",
       "type": "YAML 1.1 value",
       "declared_by": [
         {
@@ -11247,7 +11247,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  model = \"gemma3:latest\";\n  provider = \"ollama\";\n  providers = {\n    ollama = {\n      name = \"Ollama\";\n      baseURL = \"http://localhost:11434/v1\";\n      envKey = \"OLLAMA_API_KEY\";\n    };\n  };\n}\n\n"
+      "example": "{\n  model = \"gemma3:latest\";\n  model_provider = \"ollama\";\n  model_providers = {\n    ollama = {\n      name = \"Ollama\";\n      baseURL = \"http://localhost:11434/v1\";\n      envKey = \"OLLAMA_API_KEY\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.command-not-found.enable",
@@ -12511,7 +12511,7 @@
     },
     {
       "title": "programs.firefox.languagePacks",
-      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have.",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Firefox you have. If\nthe version string of your Firefox derivative diverts from the upstream\nversion, try setting the release option.",
       "type": "list of string",
       "declared_by": [
         {
@@ -12563,7 +12563,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n}\n"
+      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n  ExtensionSettings = {\n    \"uBlock0@raymondhill.net\" = {\n      default_area = \"menupanel\";\n      install_url = \"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi\";\n      installation_mode = \"force_installed\";\n      private_browsing = true;\n    };\n  };\n}\n"
     },
     {
       "title": "programs.firefox.profiles",
@@ -13379,7 +13379,7 @@
     },
     {
       "title": "programs.floorp.languagePacks",
-      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Floorp you have.",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of Floorp you have. If\nthe version string of your Firefox derivative diverts from the upstream\nversion, try setting the release option.",
       "type": "list of string",
       "declared_by": [
         {
@@ -13431,7 +13431,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n}\n"
+      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n  ExtensionSettings = {\n    \"uBlock0@raymondhill.net\" = {\n      default_area = \"menupanel\";\n      install_url = \"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi\";\n      installation_mode = \"force_installed\";\n      private_browsing = true;\n    };\n  };\n}\n"
     },
     {
       "title": "programs.floorp.profiles",
@@ -21037,7 +21037,7 @@
     },
     {
       "title": "programs.librewolf.languagePacks",
-      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of LibreWolf you have.",
+      "description": "The language packs to install. Available language codes can be found on the releases page:\nhttps://releases.mozilla.org/pub/firefox/releases/${version}/linux-x86_64/xpi/,\nreplacing ${version} with the version of LibreWolf you have. If\nthe version string of your Firefox derivative diverts from the upstream\nversion, try setting the release option.",
       "type": "list of string",
       "declared_by": [
         {
@@ -21089,12 +21089,26 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n}\n"
+      "example": "{\n  BlockAboutConfig = true;\n  DefaultDownloadDirectory = \"\\${home}/Downloads\";\n  ExtensionSettings = {\n    \"uBlock0@raymondhill.net\" = {\n      default_area = \"menupanel\";\n      install_url = \"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi\";\n      installation_mode = \"force_installed\";\n      private_browsing = true;\n    };\n  };\n}\n"
     },
     {
       "title": "programs.librewolf.profiles",
       "description": "Attribute set of LibreWolf profiles.",
       "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.bookmarks",
+      "description": "Declarative bookmarks.",
+      "type": "(submodule) or ((list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it) convertible to it",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
@@ -54011,7 +54025,7 @@
     {
       "title": "wayland.windowManager.sway.config.modifier",
       "description": "Modifier key that is used for all default keybindings.",
-      "type": "one of “Shift”, “Control”, “Mod1”, “Mod2”, “Mod3”, “Mod4”, “Mod5”",
+      "type": "one of “Shift”, “Control”, “Mod1”, “Mod2”, “Mod3”, “Mod4”, “Mod5” or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/sway.nix",
@@ -57749,7 +57763,7 @@
     {
       "title": "xsession.windowManager.i3.config.modifier",
       "description": "Modifier key that is used for all default keybindings.",
-      "type": "one of “Shift”, “Control”, “Mod1”, “Mod2”, “Mod3”, “Mod4”, “Mod5”",
+      "type": "one of “Shift”, “Control”, “Mod1”, “Mod2”, “Mod3”, “Mod4”, “Mod5” or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/i3-sway/i3.nix",
