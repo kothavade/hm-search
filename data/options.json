@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 08 Jul 2025 02:54:37 GMT",
+  "last_update": "Wed, 09 Jul 2025 02:56:24 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11238,7 +11238,7 @@
     {
       "title": "programs.codex.settings",
       "description": "Configuration written to ~/.codex/config.toml (0.2.0+) or ~/.codex/config.yaml (<0.2.0). See https://github.com/openai/codex/blob/main/codex-rs/config.md for supported values.",
-      "type": "YAML 1.1 value",
+      "type": "TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
@@ -13012,6 +13012,202 @@
       "note": null,
       "default": "\"\"",
       "example": "''\n  /* Hide scrollbar in FF Quantum */\n  *{scrollbar-width:none !important}\n''\n"
+    },
+    {
+      "title": "programs.firefoxpwa.enable",
+      "description": "Whether to enable Progressive Web Apps for Firefox.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.firefoxpwa.package",
+      "description": "The firefoxpwa package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.firefoxpwa",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles",
+      "description": "Attribute set of profile options. The keys of that attribute set consist of ULIDs. A ULID is made of 16 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"0123456789ABCDEFGHJKMNPQRSTVWXYZ\".sites.\"ZYXWVTSRQPNMKJHGFEDCBA9876543210\" = {\n    name = \"MDN Web Docs\";\n    url = \"https://developer.mozilla.org/\";\n    manifestUrl = \"https://developer.mozilla.org/manifest.f42880861b394dd4dc9b.json\";\n    desktopEntry.icon = pkgs.fetchurl {\n      url = \"https://developer.mozilla.org/favicon-192x192.png\";\n      sha256 = \"0p8zgf2ba48l2pq1gjcffwzmd9kfmj9qc0v7zpwf2qd54fndifxr\";\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.name",
+      "description": "Name of the profile.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.settings",
+      "description": "Settings for this profile. See https://github.com/filips123/PWAsForFirefox/blob/cb4fc76873cc51129d9290754768e6a340c521b2/native/src/components/profile.rs#L13-L34\nfor a list of available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites",
+      "description": "Attribute set of site options for this profile. The keys of that attribute set consist of ULIDs. A ULID is made of 16 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.\nSite ULIDs must be unique across profiles.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.desktopEntry.enable",
+      "description": "Whether to enable the desktop entry for this site.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"true if host platform is Linux\"",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.desktopEntry.categories",
+      "description": "Categories in which the entry should be shown in a menu.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.desktopEntry.icon",
+      "description": "Icon to display in file manager, menus, etc.",
+      "type": "null or string or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.fetchurl {\n  url = \"https://developer.mozilla.org/favicon-192x192.png\";\n  sha256 = \"0p8zgf2ba48l2pq1gjcffwzmd9kfmj9qc0v7zpwf2qd54fndifxr\";\n}\n\n"
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.manifestUrl",
+      "description": "URL of the site’s web app manifest.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"https://developer.mozilla.org/manifest.f42880861b394dd4dc9b.json\""
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.name",
+      "description": "Name of the site.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"‹name›\"",
+      "example": "\"MDN Web Docs\""
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.settings",
+      "description": "Settings for this site. See https://github.com/filips123/PWAsForFirefox/blob/cb4fc76873cc51129d9290754768e6a340c521b2/native/src/components/site.rs#L98-L115\nfor a list of available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  config = {\n    manifest_url = \"https://developer.mozilla.org/manifest.f42880861b394dd4dc9b.json\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.firefoxpwa.profiles.<name>.sites.<name>.url",
+      "description": "Start URL of the site.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"https://developer.mozilla.org/\""
+    },
+    {
+      "title": "programs.firefoxpwa.settings",
+      "description": "Settings to be written to the configuration file. See https://github.com/filips123/PWAsForFirefox/blob/cb4fc76873cc51129d9290754768e6a340c521b2/native/src/storage.rs#L61-L77\nfor a list of available options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefoxpwa.nix",
+          "text": "home-manager/modules/programs/firefoxpwa.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
     },
     {
       "title": "programs.fish.enable",
@@ -34446,6 +34642,90 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  hl = \"en\";\n  tl = [\n    \"es\"\n    \"fr\"\n  ];\n  verbose = true;\n}\n"
+    },
+    {
+      "title": "programs.tray-tui.enable",
+      "description": "Whether to enable tray-tui.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tray-tui.nix",
+          "text": "home-manager/modules/programs/tray-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.tray-tui.package",
+      "description": "The tray-tui package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tray-tui.nix",
+          "text": "home-manager/modules/programs/tray-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tray-tui",
+      "example": null
+    },
+    {
+      "title": "programs.tray-tui.settings",
+      "description": "Configuration settings for tray-tui. All the available options can be found here: https://github.com/Levizor/tray-tui/blob/main/config_example.toml",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tray-tui.nix",
+          "text": "home-manager/modules/programs/tray-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  columns = 3;\n  key_map = {\n    down = \"focus_down\";\n    h = \"focus_left\";\n    j = \"focus_up\";\n    k = \"focus_down\";\n    l = \"focus_right\";\n    left = \"focus_left\";\n    right = \"focus_right\";\n    up = \"focus_up\";\n  };\n  sorting = false;\n}\n"
+    },
+    {
+      "title": "programs.twitch-tui.enable",
+      "description": "Whether to enable twitch-tui.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/twitch-tui.nix",
+          "text": "home-manager/modules/programs/twitch-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.twitch-tui.package",
+      "description": "The twitch-tui package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/twitch-tui.nix",
+          "text": "home-manager/modules/programs/twitch-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.twitch-tui",
+      "example": null
+    },
+    {
+      "title": "programs.twitch-tui.settings",
+      "description": "Configuration settings for twitch-tui. All the available options can be found here: https://github.com/Xithrius/twitch-tui/blob/main/default-config.toml",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/twitch-tui.nix",
+          "text": "home-manager/modules/programs/twitch-tui.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  terminal = {\n    delay = 30;\n    first_state = \"dashboard\";\n    log_file = \"\";\n    log_level = \"info\";\n    maximum_messages = 500;\n  };\n  twitch = {\n    channel = \"\";\n    server = \"wss://eventsub.wss.twitch.tv/ws\";\n    token = \"\";\n    username = \"\";\n  };\n}\n"
     },
     {
       "title": "programs.urxvt.enable",
