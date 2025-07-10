@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 09 Jul 2025 02:56:24 GMT",
+  "last_update": "Thu, 10 Jul 2025 02:56:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -36256,7 +36256,7 @@
     {
       "title": "programs.wlogout.style",
       "description": "CSS style of the bar.",
-      "type": "null or absolute path or string",
+      "type": "null or absolute path or strings concatenated with “\\n”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/wlogout.nix",
