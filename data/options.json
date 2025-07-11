@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 10 Jul 2025 02:56:20 GMT",
+  "last_update": "Fri, 11 Jul 2025 03:00:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11782,6 +11782,48 @@
       "example": "''\n  {\n    python-project = {\n      image = \"fedora:40\";\n      additional_packages = \"python3 git\";\n      init_hooks = \"pip3 install numpy pandas torch torchvision\";\n    };\n  \n    common-debian = {\n      image = \"debian:13\";\n      entry = true;\n      additional_packages = \"git\";\n      init_hooks = [\n        \"ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker\"\n        \"ln -sf /usr/bin/distrobox-host-exec /usr/local/bin/docker-compose\"\n      ];\n    };\n  \n    office = {\n      clone = \"common-debian\";\n      additional_packages = \"libreoffice onlyoffice\";\n      entry = true;\n    };\n  \n    random-things = {\n      clone = \"common-debian\";\n      entry = false;\n    };\n  }\n''\n"
     },
     {
+      "title": "programs.docker-cli.enable",
+      "description": "Whether to enable management of docker client config.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/docker-cli.nix",
+          "text": "home-manager/modules/programs/docker-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.docker-cli.configPath",
+      "description": "Relative path to the user’s home directory where the Docker CLI settings should be stored.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/docker-cli.nix",
+          "text": "home-manager/modules/programs/docker-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "\".docker/config.json\"",
+      "example": null
+    },
+    {
+      "title": "programs.docker-cli.settings",
+      "description": "Available configuration options for the Docker CLI see: <https://docs.docker.com/reference/cli/docker/#docker-cli-configuration-file-configjson-properties",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/docker-cli.nix",
+          "text": "home-manager/modules/programs/docker-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    \"proxies\" = {\n      \"default\" = {\n        \"httpProxy\" = \"http://proxy.example.org:3128\";\n        \"httpsProxy\" = \"http://proxy.example.org:3128\";\n        \"noProxy\" = \"localhost\";\n      };\n    };\n''\n"
+    },
+    {
       "title": "programs.earthly.enable",
       "description": "Whether to enable earthly.",
       "type": "boolean",
@@ -12790,8 +12832,22 @@
       "example": "true"
     },
     {
+      "title": "programs.firefox.profiles.<name>.extensions.settings.<name>.permissions",
+      "description": "Allowed permissions for this extension. See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions\nfor a list of relevant permissions.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/firefox",
+          "text": "home-manager/modules/programs/firefox"
+        }
+      ],
+      "note": null,
+      "default": "\"Any permissions\"",
+      "example": "[\n  \"activeTab\"\n]\n"
+    },
+    {
       "title": "programs.firefox.profiles.<name>.extensions.settings.<name>.settings",
-      "description": "Json formatted options for the specified extensionID",
+      "description": "Json formatted options for this extension.",
       "type": "attribute set of (JSON value)",
       "declared_by": [
         {
@@ -12800,7 +12856,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": null
     },
     {
@@ -13854,8 +13910,22 @@
       "example": "true"
     },
     {
+      "title": "programs.floorp.profiles.<name>.extensions.settings.<name>.permissions",
+      "description": "Allowed permissions for this extension. See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions\nfor a list of relevant permissions.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/floorp.nix",
+          "text": "home-manager/modules/programs/floorp.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Any permissions\"",
+      "example": "[\n  \"activeTab\"\n]\n"
+    },
+    {
       "title": "programs.floorp.profiles.<name>.extensions.settings.<name>.settings",
-      "description": "Json formatted options for the specified extensionID",
+      "description": "Json formatted options for this extension.",
       "type": "attribute set of (JSON value)",
       "declared_by": [
         {
@@ -13864,7 +13934,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": null
     },
     {
@@ -21512,8 +21582,22 @@
       "example": "true"
     },
     {
+      "title": "programs.librewolf.profiles.<name>.extensions.settings.<name>.permissions",
+      "description": "Allowed permissions for this extension. See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions\nfor a list of relevant permissions.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/librewolf.nix",
+          "text": "home-manager/modules/programs/librewolf.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"Any permissions\"",
+      "example": "[\n  \"activeTab\"\n]\n"
+    },
+    {
       "title": "programs.librewolf.profiles.<name>.extensions.settings.<name>.settings",
-      "description": "Json formatted options for the specified extensionID",
+      "description": "Json formatted options for this extension.",
       "type": "attribute set of (JSON value)",
       "declared_by": [
         {
@@ -21522,7 +21606,7 @@
         }
       ],
       "note": null,
-      "default": null,
+      "default": "{ }",
       "example": null
     },
     {
@@ -42453,6 +42537,104 @@
       ],
       "note": null,
       "default": "pkgs.hyprpolkitagent",
+      "example": null
+    },
+    {
+      "title": "services.hyprshell.enable",
+      "description": "Whether to enable hyprshell.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.hyprshell.package",
+      "description": "The hyprshell package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprshell",
+      "example": null
+    },
+    {
+      "title": "services.hyprshell.settings",
+      "description": "Configuration settings for hyprshell. All the avaiblable options can be found here: https://github.com/H3rmt/hyprshell/blob/hyprshell-release/CONFIGURE.md#config-options",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.hyprshell.style",
+      "description": "CSS file for customizing hyprshell. All the available options can be found here: https://github.com/H3rmt/hyprshell/blob/hyprshell-release/CONFIGURE.md#css",
+      "type": "absolute path or strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": null
+    },
+    {
+      "title": "services.hyprshell.systemd.enable",
+      "description": "Whether to enable the hyprshell Systemd service.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "services.hyprshell.systemd.args",
+      "description": "Arguments to pass to the hyprshell service",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "\"-vv\""
+    },
+    {
+      "title": "services.hyprshell.systemd.target",
+      "description": "The Systemd target that will start the hyprshell service",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprshell.nix",
+          "text": "home-manager/modules/services/hyprshell.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"graphical-session.target\"",
       "example": null
     },
     {
