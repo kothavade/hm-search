@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 11 Jul 2025 03:00:25 GMT",
+  "last_update": "Sat, 12 Jul 2025 02:59:12 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3817,7 +3817,7 @@
     },
     {
       "title": "gtk.enable",
-      "description": "Whether to enable GTK 2/3 configuration.",
+      "description": "Whether to enable GTK theming and configuration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -3831,7 +3831,7 @@
     },
     {
       "title": "gtk.cursorTheme",
-      "description": "The cursor theme to use.",
+      "description": "Default cursor theme for all GTK versions.",
       "type": "null or (submodule)",
       "declared_by": [
         {
@@ -3845,7 +3845,7 @@
     },
     {
       "title": "gtk.cursorTheme.package",
-      "description": "Package providing the cursor theme. This package will be installed to your profile. If null then the theme\nis assumed to already be available in your profile.",
+      "description": "Package providing the cursor theme. This package will be installed to your profile. If null then the cursor theme\nis assumed to already be available in your profile.",
       "type": "null or package",
       "declared_by": [
         {
@@ -3887,7 +3887,7 @@
     },
     {
       "title": "gtk.font",
-      "description": "The font to use in GTK+ 2/3 applications.",
+      "description": "Default font for all GTK versions.",
       "type": "null or (submodule)",
       "declared_by": [
         {
@@ -3942,13 +3942,27 @@
       "example": "\"8\""
     },
     {
+      "title": "gtk.gtk2.enable",
+      "description": "Whether to enable GTK 2 configuration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "gtk.gtk2.configLocation",
-      "description": "The location to put the GTK configuration file.",
+      "description": "The location of the GTK 2 configuration file.",
       "type": "absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
         }
       ],
       "note": null,
@@ -3956,13 +3970,69 @@
       "example": "\"${config.xdg.configHome}/gtk-2.0/gtkrc\""
     },
     {
+      "title": "gtk.gtk2.cursorTheme",
+      "description": "Cursor theme for GTK 2 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.cursorTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk2.cursorTheme.package",
+      "description": "Package providing the cursor theme. This package will be installed to your profile. If null then the cursor theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.vanilla-dmz"
+    },
+    {
+      "title": "gtk.gtk2.cursorTheme.name",
+      "description": "The name of the cursor theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Vanilla-DMZ\""
+    },
+    {
+      "title": "gtk.gtk2.cursorTheme.size",
+      "description": "The size of the cursor.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "16"
+    },
+    {
       "title": "gtk.gtk2.extraConfig",
-      "description": "Extra configuration lines to add verbatim to ~/.gtkrc-2.0.",
+      "description": "Extra lines to add to ~/.gtkrc-2.0.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
         }
       ],
       "note": null,
@@ -3970,13 +4040,69 @@
       "example": "\"gtk-can-change-accels = 1\""
     },
     {
+      "title": "gtk.gtk2.font",
+      "description": "Font for GTK 2 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.font",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk2.font.package",
+      "description": "Package providing the font. This package will be installed to your profile. If null then the font\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.dejavu_fonts"
+    },
+    {
+      "title": "gtk.gtk2.font.name",
+      "description": "The family name of the font within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"DejaVu Sans\""
+    },
+    {
+      "title": "gtk.gtk2.font.size",
+      "description": "The size of the font.",
+      "type": "null or signed integer or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"8\""
+    },
+    {
       "title": "gtk.gtk2.force",
       "description": "Whether to enable GTK 2 config force overwrite without creating a backup.",
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
         }
       ],
       "note": null,
@@ -3984,13 +4110,111 @@
       "example": "true"
     },
     {
+      "title": "gtk.gtk2.iconTheme",
+      "description": "Icon theme for GTK 2 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.iconTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk2.iconTheme.package",
+      "description": "Package providing the icon theme. This package will be installed to your profile. If null then the icon theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.adwaita-icon-theme"
+    },
+    {
+      "title": "gtk.gtk2.iconTheme.name",
+      "description": "The name of the icon theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
+      "title": "gtk.gtk2.theme",
+      "description": "Theme for GTK 2 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.theme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk2.theme.package",
+      "description": "Package providing the theme. This package will be installed to your profile. If null then the theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": "For the theme to apply to GTK 4, this option is mandatory.",
+      "default": "null",
+      "example": "pkgs.gnome.gnome-themes-extra"
+    },
+    {
+      "title": "gtk.gtk2.theme.name",
+      "description": "The name of the theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk2.nix",
+          "text": "home-manager/modules/misc/gtk/gtk2.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
+      "title": "gtk.gtk3.enable",
+      "description": "Whether to enable GTK 3 configuration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
       "title": "gtk.gtk3.bookmarks",
-      "description": "Bookmarks in the sidebar of the GTK file browser",
+      "description": "File browser bookmarks.",
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
         }
       ],
       "note": null,
@@ -3998,13 +4222,69 @@
       "example": "[\n  \"file:///home/jane/Documents\"\n]\n"
     },
     {
+      "title": "gtk.gtk3.cursorTheme",
+      "description": "Cursor theme for GTK 3 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.cursorTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk3.cursorTheme.package",
+      "description": "Package providing the cursor theme. This package will be installed to your profile. If null then the cursor theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.vanilla-dmz"
+    },
+    {
+      "title": "gtk.gtk3.cursorTheme.name",
+      "description": "The name of the cursor theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Vanilla-DMZ\""
+    },
+    {
+      "title": "gtk.gtk3.cursorTheme.size",
+      "description": "The size of the cursor.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "16"
+    },
+    {
       "title": "gtk.gtk3.extraConfig",
-      "description": "Extra configuration options to add to $XDG_CONFIG_HOME/gtk-3.0/settings.ini.",
+      "description": "Extra settings for $XDG_CONFIG_HOME/gtk-3.0/settings.ini.",
       "type": "attribute set of (boolean or signed integer or string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
         }
       ],
       "note": null,
@@ -4013,12 +4293,12 @@
     },
     {
       "title": "gtk.gtk3.extraCss",
-      "description": "Extra configuration lines to add verbatim to $XDG_CONFIG_HOME/gtk-3.0/gtk.css.",
+      "description": "Extra CSS for $XDG_CONFIG_HOME/gtk-3.0/gtk.css.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
         }
       ],
       "note": null,
@@ -4026,13 +4306,223 @@
       "example": null
     },
     {
+      "title": "gtk.gtk3.font",
+      "description": "Font for GTK 3 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.font",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk3.font.package",
+      "description": "Package providing the font. This package will be installed to your profile. If null then the font\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.dejavu_fonts"
+    },
+    {
+      "title": "gtk.gtk3.font.name",
+      "description": "The family name of the font within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"DejaVu Sans\""
+    },
+    {
+      "title": "gtk.gtk3.font.size",
+      "description": "The size of the font.",
+      "type": "null or signed integer or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"8\""
+    },
+    {
+      "title": "gtk.gtk3.iconTheme",
+      "description": "Icon theme for GTK 3 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.iconTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk3.iconTheme.package",
+      "description": "Package providing the icon theme. This package will be installed to your profile. If null then the icon theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.adwaita-icon-theme"
+    },
+    {
+      "title": "gtk.gtk3.iconTheme.name",
+      "description": "The name of the icon theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
+      "title": "gtk.gtk3.theme",
+      "description": "Theme for GTK 3 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.theme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk3.theme.package",
+      "description": "Package providing the theme. This package will be installed to your profile. If null then the theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": "For the theme to apply to GTK 4, this option is mandatory.",
+      "default": "null",
+      "example": "pkgs.gnome.gnome-themes-extra"
+    },
+    {
+      "title": "gtk.gtk3.theme.name",
+      "description": "The name of the theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
+      "title": "gtk.gtk4.enable",
+      "description": "Whether to enable GTK 4 configuration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "true"
+    },
+    {
+      "title": "gtk.gtk4.cursorTheme",
+      "description": "Cursor theme for GTK 4 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.cursorTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk4.cursorTheme.package",
+      "description": "Package providing the cursor theme. This package will be installed to your profile. If null then the cursor theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.vanilla-dmz"
+    },
+    {
+      "title": "gtk.gtk4.cursorTheme.name",
+      "description": "The name of the cursor theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Vanilla-DMZ\""
+    },
+    {
+      "title": "gtk.gtk4.cursorTheme.size",
+      "description": "The size of the cursor.",
+      "type": "null or signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "16"
+    },
+    {
       "title": "gtk.gtk4.extraConfig",
-      "description": "Extra configuration options to add to $XDG_CONFIG_HOME/gtk-4.0/settings.ini.",
+      "description": "Extra settings for $XDG_CONFIG_HOME/gtk-4.0/settings.ini.",
       "type": "attribute set of (boolean or signed integer or string)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
         }
       ],
       "note": null,
@@ -4041,12 +4531,12 @@
     },
     {
       "title": "gtk.gtk4.extraCss",
-      "description": "Extra configuration lines to add verbatim to $XDG_CONFIG_HOME/gtk-4.0/gtk.css.",
+      "description": "Extra CSS for $XDG_CONFIG_HOME/gtk-4.0/gtk.css.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
-          "text": "home-manager/modules/misc/gtk.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
         }
       ],
       "note": null,
@@ -4054,8 +4544,148 @@
       "example": null
     },
     {
+      "title": "gtk.gtk4.font",
+      "description": "Font for GTK 4 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.font",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk4.font.package",
+      "description": "Package providing the font. This package will be installed to your profile. If null then the font\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.dejavu_fonts"
+    },
+    {
+      "title": "gtk.gtk4.font.name",
+      "description": "The family name of the font within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"DejaVu Sans\""
+    },
+    {
+      "title": "gtk.gtk4.font.size",
+      "description": "The size of the font.",
+      "type": "null or signed integer or floating point number",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"8\""
+    },
+    {
+      "title": "gtk.gtk4.iconTheme",
+      "description": "Icon theme for GTK 4 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.iconTheme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk4.iconTheme.package",
+      "description": "Package providing the icon theme. This package will be installed to your profile. If null then the icon theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "pkgs.adwaita-icon-theme"
+    },
+    {
+      "title": "gtk.gtk4.iconTheme.name",
+      "description": "The name of the icon theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
+      "title": "gtk.gtk4.theme",
+      "description": "Theme for GTK 4 applications.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.theme",
+      "example": null
+    },
+    {
+      "title": "gtk.gtk4.theme.package",
+      "description": "Package providing the theme. This package will be installed to your profile. If null then the theme\nis assumed to already be available in your profile.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": "For the theme to apply to GTK 4, this option is mandatory.",
+      "default": "null",
+      "example": "pkgs.gnome.gnome-themes-extra"
+    },
+    {
+      "title": "gtk.gtk4.theme.name",
+      "description": "The name of the theme within the package.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"Adwaita\""
+    },
+    {
       "title": "gtk.iconTheme",
-      "description": "The icon theme to use.",
+      "description": "Default icon theme for all GTK versions.",
       "type": "null or (submodule)",
       "declared_by": [
         {
@@ -4069,7 +4699,7 @@
     },
     {
       "title": "gtk.iconTheme.package",
-      "description": "Package providing the icon theme. This package will be installed to your profile. If null then the theme\nis assumed to already be available in your profile.",
+      "description": "Package providing the icon theme. This package will be installed to your profile. If null then the icon theme\nis assumed to already be available in your profile.",
       "type": "null or package",
       "declared_by": [
         {
@@ -4097,7 +4727,7 @@
     },
     {
       "title": "gtk.theme",
-      "description": "The GTK+2/3 theme to use.",
+      "description": "Default theme for all GTK versions.",
       "type": "null or (submodule)",
       "declared_by": [
         {
@@ -34770,6 +35400,48 @@
       "example": "{\n  columns = 3;\n  key_map = {\n    down = \"focus_down\";\n    h = \"focus_left\";\n    j = \"focus_up\";\n    k = \"focus_down\";\n    l = \"focus_right\";\n    left = \"focus_left\";\n    right = \"focus_right\";\n    up = \"focus_up\";\n  };\n  sorting = false;\n}\n"
     },
     {
+      "title": "programs.trippy.enable",
+      "description": "Whether to enable trippy.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/trippy.nix",
+          "text": "home-manager/modules/programs/trippy.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.trippy.package",
+      "description": "The trippy package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/trippy.nix",
+          "text": "home-manager/modules/programs/trippy.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.trippy",
+      "example": null
+    },
+    {
+      "title": "programs.trippy.settings",
+      "description": "Configuration settings for trippy. All the available options can be found here: https://trippy.rs/reference/configuration/",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/trippy.nix",
+          "text": "home-manager/modules/programs/trippy.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  bindings = {\n    toggle-help = \"h\";\n    toggle-help-alt = \"?\";\n    toggle-settings = \"s\";\n    toggle-settings-dns = \"3\";\n    toggle-settings-geoip = \"4\";\n    toggle-settings-trace = \"2\";\n    toggle-settings-tui = \"1\";\n  };\n  theme-colors = {\n    bg-color = \"black\";\n    border-color = \"gray\";\n    tab-text-color = \"green\";\n    text-color = \"gray\";\n  };\n}\n"
+    },
+    {
       "title": "programs.twitch-tui.enable",
       "description": "Whether to enable twitch-tui.",
       "type": "boolean",
@@ -35692,6 +36364,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  haskell = {\n    fixme = {\n      body = [\n        \"$LINE_COMMENT FIXME: $0\"\n      ];\n      description = \"Insert a FIXME remark\";\n      prefix = [\n        \"fixme\"\n      ];\n    };\n  };\n}\n"
+    },
+    {
+      "title": "programs.vscode.profiles.<name>.userMcp",
+      "description": "Configuration written to Visual Studio Code’s mcp.json.\nThis can be a JSON object or a path to a custom JSON file.",
+      "type": "absolute path or JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vscode",
+          "text": "home-manager/modules/programs/vscode"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"servers\": {\n    \"Github\": {\n      \"url\": \"https://api.githubcopilot.com/mcp/\"\n    }\n  }\n}\n\n"
     },
     {
       "title": "programs.vscode.profiles.<name>.userSettings",
@@ -55033,7 +55719,7 @@
     {
       "title": "wayland.windowManager.wayfire.settings",
       "description": "Wayfire configuration written in Nix.",
-      "type": "attribute set of attribute set of (string or boolean or signed integer or floating point number)",
+      "type": "attribute set of attribute set of (string or absolute path or boolean or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
@@ -55131,7 +55817,7 @@
     {
       "title": "wayland.windowManager.wayfire.wf-shell.settings",
       "description": "Wf-shell configuration written in Nix.",
-      "type": "attribute set of attribute set of (string or boolean or signed integer or floating point number)",
+      "type": "attribute set of attribute set of (string or absolute path or boolean or signed integer or floating point number)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/wayfire.nix",
