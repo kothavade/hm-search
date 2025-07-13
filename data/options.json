@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 12 Jul 2025 02:59:12 GMT",
+  "last_update": "Sun, 13 Jul 2025 03:07:07 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -37878,6 +37878,20 @@
       "example": null
     },
     {
+      "title": "programs.zellij.layouts",
+      "description": "Configuration written to $XDG_CONFIG_HOME/zellij/layouts/<layout>.kdl.",
+      "type": "attribute set of (YAML 1.1 value or absolute path or strings concatenated with “\\n”)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zellij.nix",
+          "text": "home-manager/modules/programs/zellij.nix"
+        }
+      ],
+      "note": "See https://zellij.dev/documentation for the full\nlist of options.",
+      "default": "{ }",
+      "example": "{\n  dev = {\n    layout = {\n      _children = [\n        {\n          default_tab_template = {\n            _children = [\n              {\n                pane = {\n                  size = 1;\n                  borderless = true;\n                  plugin = {\n                    location = \"zellij:tab-bar\";\n                  };\n                };\n              }\n              { \"children\" = { }; }\n              {\n                pane = {\n                  size = 2;\n                  borderless = true;\n                  plugin = {\n                    location = \"zellij:status-bar\";\n                  };\n                };\n              }\n            ];\n          };\n        }\n        {\n          tab = {\n            _props = {\n              name = \"Project\";\n              focus = true;\n            };\n            _children = [\n              {\n                pane = {\n                  command = \"nvim\";\n                };\n              }\n            ];\n          };\n        }\n        {\n          tab = {\n            _props = {\n              name = \"Git\";\n            };\n            _children = [\n              {\n                pane = {\n                  command = \"lazygit\";\n                };\n              }\n            ];\n          };\n        }\n        {\n          tab = {\n            _props = {\n              name = \"Files\";\n            };\n            _children = [\n              {\n                pane = {\n                  command = \"yazi\";\n                };\n              }\n            ];\n          };\n        }\n        {\n          tab = {\n            _props = {\n              name = \"Shell\";\n            };\n            _children = [\n              {\n                pane = {\n                  command = \"zsh\";\n                };\n              }\n            ];\n          };\n        }\n      ];\n    };\n  };\n}\n\n"
+    },
+    {
       "title": "programs.zellij.settings",
       "description": "Configuration written to $XDG_CONFIG_HOME/zellij/config.kdl.",
       "type": "YAML 1.1 value",
@@ -37889,7 +37903,7 @@
       ],
       "note": "If programs.zellij.package.version is older than 0.32.0, then\nthe configuration is written to $XDG_CONFIG_HOME/zellij/config.yaml.",
       "default": "{ }",
-      "example": "{\n  theme = \"custom\";\n  themes.custom.fg = \"#ffffff\";\n}\n\n"
+      "example": "{\n  theme = \"custom\";\n  themes.custom.fg = \"#ffffff\";\n  keybinds._props.clear-defaults = true;\n  keybinds.pane._children = [\n    {\n      bind = {\n        _args = [\"e\"];\n        _children = [\n          { TogglePaneEmbedOrFloating = {}; }\n          { SwitchToMode._args = [\"locked\"]; }\n        ];\n      };\n    }\n    {\n      bind = {\n        _args = [\"left\"];\n        MoveFocus = [\"left\"];\n      };\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.zellij.themes",
@@ -38303,8 +38317,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38317,8 +38331,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": "This file will still be periodically re-written to trim it when the\nnumber of lines grows 20% beyond the value specified by\nprograms.zsh.history.save.",
@@ -38331,8 +38345,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38345,8 +38359,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38359,8 +38373,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38373,8 +38387,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38387,8 +38401,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38401,8 +38415,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38415,8 +38429,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38429,8 +38443,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38443,8 +38457,8 @@
       "type": "signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38457,8 +38471,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38471,8 +38485,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38485,8 +38499,8 @@
       "type": "signed integer",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38499,8 +38513,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38513,8 +38527,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38527,8 +38541,8 @@
       "type": "(list of string) or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38541,8 +38555,8 @@
       "type": "(list of string) or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/history.nix",
+          "text": "home-manager/modules/programs/zsh/history.nix"
         }
       ],
       "note": null,
@@ -38611,8 +38625,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38625,8 +38639,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38639,8 +38653,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38653,8 +38667,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38667,8 +38681,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38681,8 +38695,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38695,8 +38709,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/oh-my-zsh.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/oh-my-zsh.nix"
         }
       ],
       "note": null,
@@ -38709,8 +38723,8 @@
       "type": "list of (submodule)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins",
+          "text": "home-manager/modules/programs/zsh/plugins"
         }
       ],
       "note": null,
@@ -38723,8 +38737,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins",
+          "text": "home-manager/modules/programs/zsh/plugins"
         }
       ],
       "note": null,
@@ -38737,8 +38751,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins",
+          "text": "home-manager/modules/programs/zsh/plugins"
         }
       ],
       "note": null,
@@ -38751,8 +38765,8 @@
       "type": "string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins",
+          "text": "home-manager/modules/programs/zsh/plugins"
         }
       ],
       "note": null,
@@ -38765,8 +38779,8 @@
       "type": "absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins",
+          "text": "home-manager/modules/programs/zsh/plugins"
         }
       ],
       "note": "Will be added to fpath and PATH.",
@@ -38779,8 +38793,8 @@
       "type": "submodule",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38793,8 +38807,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38807,8 +38821,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38821,8 +38835,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38835,8 +38849,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38849,8 +38863,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38863,8 +38877,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38877,8 +38891,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38891,8 +38905,8 @@
       "type": "null or one of “emacs”, “vi”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38905,8 +38919,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38919,8 +38933,8 @@
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38933,8 +38947,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38947,8 +38961,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38961,8 +38975,8 @@
       "type": "null or one of “dirty”, “untracked”, “all”, “none”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38975,8 +38989,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -38989,8 +39003,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39003,8 +39017,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39017,8 +39031,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39031,8 +39045,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39045,8 +39059,8 @@
       "type": "list of absolute path",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39059,8 +39073,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39073,8 +39087,8 @@
       "type": "null or one of “short”, “long”, “full”",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39087,8 +39101,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39101,8 +39115,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39115,8 +39129,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39129,8 +39143,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39143,8 +39157,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39157,8 +39171,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39171,8 +39185,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39185,8 +39199,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39199,8 +39213,8 @@
       "type": "list of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39213,8 +39227,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39227,8 +39241,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39241,8 +39255,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39255,8 +39269,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39269,8 +39283,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39283,8 +39297,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39297,8 +39311,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39311,8 +39325,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39325,8 +39339,8 @@
       "type": "null or string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39339,8 +39353,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39353,8 +39367,8 @@
       "type": "null or boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/prezto.nix",
-          "text": "home-manager/modules/programs/zsh/prezto.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/prezto.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/prezto.nix"
         }
       ],
       "note": null,
@@ -39388,6 +39402,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  MAILCHECK = 30;\n}\n"
+    },
+    {
+      "title": "programs.zsh.setOptions",
+      "description": "Configure zsh options. See zshoptions(1).",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
+        }
+      ],
+      "note": "To unset an option, prefix it with “NO_”.",
+      "default": "[ ]",
+      "example": "[\n  \"EXTENDED_HISTORY\"\n  \"RM_STAR_WAIT\"\n  \"NO_BEEP\"\n]\n"
     },
     {
       "title": "programs.zsh.shellAliases",
@@ -39577,8 +39605,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
-          "text": "home-manager/modules/programs/zsh"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/zprof.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/zprof.nix"
         }
       ],
       "note": null,
@@ -39591,8 +39619,8 @@
       "type": "boolean",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/zsh-abbr.nix",
-          "text": "home-manager/modules/programs/zsh/zsh-abbr.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/zsh-abbr.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/zsh-abbr.nix"
         }
       ],
       "note": null,
@@ -39605,8 +39633,8 @@
       "type": "package",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/zsh-abbr.nix",
-          "text": "home-manager/modules/programs/zsh/zsh-abbr.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/zsh-abbr.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/zsh-abbr.nix"
         }
       ],
       "note": null,
@@ -39619,8 +39647,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/zsh-abbr.nix",
-          "text": "home-manager/modules/programs/zsh/zsh-abbr.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/zsh-abbr.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/zsh-abbr.nix"
         }
       ],
       "note": null,
@@ -39633,8 +39661,8 @@
       "type": "attribute set of string",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/zsh-abbr.nix",
-          "text": "home-manager/modules/programs/zsh/zsh-abbr.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh/plugins/zsh-abbr.nix",
+          "text": "home-manager/modules/programs/zsh/plugins/zsh-abbr.nix"
         }
       ],
       "note": null,
