@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 13 Jul 2025 03:07:07 GMT",
+  "last_update": "Mon, 14 Jul 2025 03:05:56 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -17394,6 +17394,48 @@
       "note": null,
       "default": "pkgs.granted",
       "example": null
+    },
+    {
+      "title": "programs.gurk-rs.enable",
+      "description": "Whether to enable gurk-rs.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gurk-rs.nix",
+          "text": "home-manager/modules/programs/gurk-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.gurk-rs.package",
+      "description": "The gurk-rs package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gurk-rs.nix",
+          "text": "home-manager/modules/programs/gurk-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gurk-rs",
+      "example": null
+    },
+    {
+      "title": "programs.gurk-rs.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/.config/gurk/gurk.toml or Library/Application Support/gurk/gurk.toml. Options are\ndeclared at https://github.com/boxdot/gurk-rs/blob/main/src/config.rs.\nNote that data_path and signal_db_path should be set.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gurk-rs.nix",
+          "text": "home-manager/modules/programs/gurk-rs.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  data_path = \"/home/USERNAME/.local/share/gurk/gurk.data.json\";\n  signal_db_path = \"/home/USERNAME/.local/share/gurk/signal-db\";\n  first_name_only = false;\n  show_receipts = true;\n  notifications = true;\n  bell = true;\n  colored_messages = false;\n  default_keybindings = true;\n  user = {\n    name = \"MYNAME\";\n    phone_number = \"MYNUMBER\";\n  };\n  keybindings =  { };\n}\n\n"
     },
     {
       "title": "programs.halloy.enable",
