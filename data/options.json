@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 17 Jul 2025 03:01:16 GMT",
+  "last_update": "Fri, 18 Jul 2025 03:03:42 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -25190,7 +25190,7 @@
         }
       ],
       "note": null,
-      "default": "\"\\${pkgs.xdg-utils}/bin/xdg-open\"",
+      "default": "${pkgs.xdg-utils}/bin/xdg-open",
       "example": null
     },
     {
@@ -28986,6 +28986,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  colors = {\n    hints = {\n      bg = \"#000000\";\n      fg = \"#ffffff\";\n    };\n    tabs.bar.bg = \"#000000\";\n  };\n  tabs.tabs_are_windows = true;\n}\n\n"
+    },
+    {
+      "title": "programs.radio-cli.enable",
+      "description": "Whether to enable radio-cli.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/radio-cli.nix",
+          "text": "home-manager/modules/programs/radio-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.radio-cli.package",
+      "description": "The radio-cli package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/radio-cli.nix",
+          "text": "home-manager/modules/programs/radio-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.radio-cli",
+      "example": null
+    },
+    {
+      "title": "programs.radio-cli.settings",
+      "description": "Configuration settings for radio-cli. For an example config, refer to: https://github.com/margual56/radio-cli/blob/main/config.json",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/radio-cli.nix",
+          "text": "home-manager/modules/programs/radio-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  config_version = \"2.3.0\";\n  country = \"ES\";\n  data = [\n    {\n      station = \"lofi\";\n      url = \"https://www.youtube.com/live/jfKfPfyJRdk?si=WDl-XdfuhxBfe6XN\";\n    }\n  ];\n  max_lines = 7;\n}\n"
     },
     {
       "title": "programs.ranger.enable",
@@ -32793,6 +32835,20 @@
       ],
       "note": null,
       "default": "pkgs.starship",
+      "example": null
+    },
+    {
+      "title": "programs.starship.configPath",
+      "description": "Relative path to the user’s home directory where the Starship config should be stored.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/starship.nix",
+          "text": "home-manager/modules/programs/starship.nix"
+        }
+      ],
+      "note": null,
+      "default": "${config.xdg.configHome}/starship.toml",
       "example": null
     },
     {
@@ -41990,7 +42046,7 @@
         }
       ],
       "note": null,
-      "default": "\"\\${pkgs.soundfont-fluid}/share/soundfonts/FluidR3_GM2-2.sf2\"",
+      "default": "",
       "example": null
     },
     {
@@ -49277,6 +49333,48 @@
       "example": "true"
     },
     {
+      "title": "services.ssh-tpm-agent.enable",
+      "description": "Whether to enable SSH agent for TPMs.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ssh-tpm-agent.nix",
+          "text": "home-manager/modules/services/ssh-tpm-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.ssh-tpm-agent.package",
+      "description": "The ssh-tpm-agent package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ssh-tpm-agent.nix",
+          "text": "home-manager/modules/services/ssh-tpm-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.ssh-tpm-agent",
+      "example": null
+    },
+    {
+      "title": "services.ssh-tpm-agent.keyDir",
+      "description": "Path of the directory to look for TPM sealed keys in, defaults to $HOME/.ssh if unset",
+      "type": "null or absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ssh-tpm-agent.nix",
+          "text": "home-manager/modules/services/ssh-tpm-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "services.stalonetray.enable",
       "description": "Whether to enable Stalonetray system tray.",
       "type": "boolean",
@@ -50464,7 +50562,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{ main.activation_command = \"\\${pkgs.hello}/bin/hello\"; }"
+      "example": "{ main.activation_command = \"${pkgs.hello}/bin/hello\"; }"
     },
     {
       "title": "services.twmn.host",
@@ -54328,7 +54426,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#5f676a\";\n  border = \"#333333\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.background",
@@ -54342,7 +54440,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#000000\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.bindingMode",
@@ -54356,7 +54454,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#900000\";\n  border = \"#2f343a\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.focusedBackground",
@@ -54412,7 +54510,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#285577\";\n  border = \"#4c7899\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.inactiveWorkspace",
@@ -54426,7 +54524,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#222222\";\n  border = \"#333333\";\n  text = \"#888888\";\n}\n"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.separator",
@@ -54440,7 +54538,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#666666\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.statusline",
@@ -54454,7 +54552,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#ffffff\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.colors.urgentWorkspace",
@@ -54468,7 +54566,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#900000\";\n  border = \"#2f343a\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.command",
@@ -54481,7 +54579,7 @@
         }
       ],
       "note": null,
-      "default": "\"i3bar\"",
+      "default": "i3bar",
       "example": "\"\\${pkgs.waybar}/bin/waybar\""
     },
     {
@@ -54524,7 +54622,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"hide\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.id",
@@ -54552,7 +54650,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"dock\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.position",
@@ -54566,7 +54664,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"bottom\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.statusCommand",
@@ -54580,7 +54678,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"\\${pkgs.i3status}/bin/i3status\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.trayOutput",
@@ -54594,7 +54692,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"*\""
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.trayPadding",
@@ -54608,7 +54706,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "null"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.workspaceButtons",
@@ -54622,7 +54720,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bars.*.workspaceNumbers",
@@ -54636,7 +54734,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": null
     },
     {
       "title": "wayland.windowManager.sway.config.bindkeysToCode",
@@ -55182,7 +55280,7 @@
       ],
       "note": "Consider to use lib.mkOptionDefault function to extend or override\ndefault keybindings instead of specifying all of them from scratch.",
       "default": "\"Default sway keybindings.\"",
-      "example": "let\n  modifier = config.wayland.windowManager.sway.config.modifier;\nin lib.mkOptionDefault {\n  \"${modifier}+Return\" = \"exec ${pkgs.foot}/bin/foot\";\n  \"${modifier}+Shift+q\" = \"kill\";\n  \"${modifier}+d\" = \"exec ${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --\";\n}\n\n"
+      "example": "let\n  modifier = config.wayland.windowManager.sway.config.modifier;\nin lib.mkOptionDefault {\n  \"${modifier}+Return\" = \"exec ${cfg.config.terminal}\";\n  \"${modifier}+Shift+q\" = \"kill\";\n  \"${modifier}+d\" = \"exec ${cfg.config.menu}\";\n}\n\n"
     },
     {
       "title": "wayland.windowManager.sway.config.keycodebindings",
@@ -55223,7 +55321,7 @@
         }
       ],
       "note": null,
-      "default": "\"\\${pkgs.dmenu}/bin/dmenu_path | \\${pkgs.dmenu}/bin/dmenu | \\${pkgs.findutils}/bin/xargs swaymsg exec --\"",
+      "default": "${pkgs.dmenu}/bin/dmenu_path | ${pkgs.dmenu}/bin/dmenu | ${pkgs.findutils}/bin/xargs swaymsg exec --",
       "example": "\"bemenu-run\""
     },
     {
@@ -55349,7 +55447,7 @@
         }
       ],
       "note": null,
-      "default": "\"\\${pkgs.foot}/bin/foot\"",
+      "default": "${pkgs.foot}/bin/foot",
       "example": "\"alacritty\""
     },
     {
@@ -58178,7 +58276,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#5f676a\";\n  border = \"#333333\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.background",
@@ -58192,7 +58290,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#000000\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.bindingMode",
@@ -58206,7 +58304,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#900000\";\n  border = \"#2f343a\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.focusedBackground",
@@ -58262,7 +58360,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#285577\";\n  border = \"#4c7899\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.inactiveWorkspace",
@@ -58276,7 +58374,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#222222\";\n  border = \"#333333\";\n  text = \"#888888\";\n}\n"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.separator",
@@ -58290,7 +58388,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#666666\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.statusline",
@@ -58304,7 +58402,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"#ffffff\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.colors.urgentWorkspace",
@@ -58318,7 +58416,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "{\n  background = \"#900000\";\n  border = \"#2f343a\";\n  text = \"#ffffff\";\n}\n"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.command",
@@ -58331,7 +58429,7 @@
         }
       ],
       "note": null,
-      "default": "\"i3bar\"",
+      "default": "i3bar",
       "example": "\"\\${pkgs.i3}/bin/i3bar -t\""
     },
     {
@@ -58374,7 +58472,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"hide\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.id",
@@ -58402,7 +58500,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"dock\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.position",
@@ -58416,7 +58514,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"bottom\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.statusCommand",
@@ -58430,7 +58528,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"\\${pkgs.i3status}/bin/i3status\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.trayOutput",
@@ -58444,7 +58542,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "\"primary\""
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.trayPadding",
@@ -58458,7 +58556,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "null"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.workspaceButtons",
@@ -58472,7 +58570,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.bars.*.workspaceNumbers",
@@ -58486,7 +58584,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "true"
+      "example": null
     },
     {
       "title": "xsession.windowManager.i3.config.colors",
@@ -58961,7 +59059,7 @@
         }
       ],
       "note": null,
-      "default": "\"\\${pkgs.dmenu}/bin/dmenu_run\"",
+      "default": "${pkgs.dmenu}/bin/dmenu_run",
       "example": "\"bemenu-run\""
     },
     {
