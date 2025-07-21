@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 20 Jul 2025 03:11:47 GMT",
+  "last_update": "Mon, 21 Jul 2025 03:09:39 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -687,6 +687,10 @@
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        },
+        {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/khard.nix",
           "text": "home-manager/modules/programs/khard.nix"
         },
@@ -964,6 +968,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.thunderbird.enable",
+      "description": "Whether to enable the Thunderbird mail client for this account.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.thunderbird.profiles",
+      "description": "List of Thunderbird profiles for which this account should be enabled. If this list is empty (the default), this account will\nbe enabled for all declared profiles.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[ \"profile1\" \"profile2\" ]\n\n"
+    },
+    {
+      "title": "accounts.contact.accounts.<name>.thunderbird.token",
+      "description": "A token is generated when adding an address book manually to Thunderbird, this can be entered here.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/thunderbird.nix",
+          "text": "home-manager/modules/programs/thunderbird.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"secret_token\""
     },
     {
       "title": "accounts.contact.accounts.<name>.vdirsyncer.enable",
@@ -37876,6 +37922,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  features = {\n    copilot = false;\n  };\n  telemetry = {\n    metrics = false;\n  };\n  vim_mode = false;\n  ui_font_size = 16;\n  buffer_font_size = 16;\n}\n\n"
+    },
+    {
+      "title": "programs.zed-editor.userTasks",
+      "description": "Configuration written to Zed’s tasks.json.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zed-editor.nix",
+          "text": "home-manager/modules/programs/zed-editor.nix"
+        }
+      ],
+      "note": "List of tasks that can be run from the\ncommand palette.",
+      "default": "[ ]",
+      "example": "[\n  {\n    label = \"Format Code\";\n    command = \"nix\";\n    args = [ \"fmt\" \"$ZED_WORKTREE_ROOT\" ];\n  }\n]\n\n"
     },
     {
       "title": "programs.zellij.enable",
