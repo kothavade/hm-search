@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 23 Jul 2025 03:04:15 GMT",
+  "last_update": "Thu, 24 Jul 2025 03:02:57 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -37406,6 +37406,34 @@
       "example": "\"sway-session.target\""
     },
     {
+      "title": "programs.yarn.enable",
+      "description": "Whether to enable management of yarn config.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yarn",
+          "text": "home-manager/modules/programs/yarn"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.yarn.settings",
+      "description": "Available configuration options for yarn see: https://yarnpkg.com/configuration/yarnrc",
+      "type": "YAML 1.1 value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yarn",
+          "text": "home-manager/modules/programs/yarn"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "''\n  {\n    httpProxy = \"http://proxy.example.org:3128\";\n    httpsProxy = \"http://proxy.example.org:3128\";\n  }\n''\n"
+    },
+    {
       "title": "programs.yazi.enable",
       "description": "Whether to enable yazi.",
       "type": "boolean",
@@ -37586,6 +37614,62 @@
       "note": "See https://yazi-rs.github.io/docs/configuration/theme\nfor the full list of options",
       "default": "{ }",
       "example": "{\n  filetype = {\n    rules = [\n      { fg = \"#7AD9E5\"; mime = \"image/*\"; }\n      { fg = \"#F3D398\"; mime = \"video/*\"; }\n      { fg = \"#F3D398\"; mime = \"audio/*\"; }\n      { fg = \"#CD9EFC\"; mime = \"application/bzip\"; }\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.yofi.enable",
+      "description": "Whether to enable yofi.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yofi.nix",
+          "text": "home-manager/modules/programs/yofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.yofi.package",
+      "description": "The yofi package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yofi.nix",
+          "text": "home-manager/modules/programs/yofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.yofi",
+      "example": null
+    },
+    {
+      "title": "programs.yofi.blacklist",
+      "description": "List of .desktop files yofi should ignore.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yofi.nix",
+          "text": "home-manager/modules/programs/yofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"firefox\"\n  \"librewolf\"\n  \"com.obsproject.Studio\"\n  \"com.rtosta.zapzap\"\n  \"cups\"\n  \"kitty-open\"\n  \"nvim\"\n]\n"
+    },
+    {
+      "title": "programs.yofi.settings",
+      "description": "Configuration settings for yofi. For all the available options see: https://github.com/l4l/yofi/wiki/Configuration#main-configuration",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/yofi.nix",
+          "text": "home-manager/modules/programs/yofi.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  bg_border_color = \"0x131411ff\";\n  bg_color = \"0x272822ee\";\n  corner_radius = \"0\";\n  font_size = 24;\n  force_window = false;\n  height = 512;\n  input_text = {\n    bg_color = \"0x75715eff\";\n    font_color = \"0xf8f8f2ff\";\n    margin = \"5\";\n    padding = \"1.7 -4\";\n  };\n  width = 400;\n}\n"
     },
     {
       "title": "programs.yt-dlp.enable",
