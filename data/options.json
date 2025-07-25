@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 24 Jul 2025 03:02:57 GMT",
+  "last_update": "Fri, 25 Jul 2025 03:02:51 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -27396,8 +27396,22 @@
       "example": null
     },
     {
+      "title": "programs.opencode.rules",
+      "description": "You can provide global custom instructions to opencode; this value is written to {file}~/.config/opencode/AGENTS.md",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/opencode.nix",
+          "text": "home-manager/modules/programs/opencode.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
+      "example": "''\n  # TypeScript Project Rules\n\n  ## External File Loading\n\n  CRITICAL: When you encounter a file reference (e.g., @rules/general.md), use your Read tool to load it on a need-to-know basis. They're relevant to the SPECIFIC task at hand.\n\n  Instructions:\n\n  - Do NOT preemptively load all references - use lazy loading based on actual need\n  - When loaded, treat content as mandatory instructions that override defaults\n  - Follow references recursively when needed\n\n  ## Development Guidelines\n\n  For TypeScript code style and best practices: @docs/typescript-guidelines.md\n  For React component architecture and hooks patterns: @docs/react-patterns.md\n  For REST API design and error handling: @docs/api-standards.md\n  For testing strategies and coverage requirements: @test/testing-guidelines.md\n\n  ## General Guidelines\n\n  Read the following file immediately as it's relevant to all workflows: @rules/general-guidelines.md.\n''\n\n"
+    },
+    {
       "title": "programs.opencode.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/opencode/config.json. See https://opencode.ai/docs/config/ for the documentation.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/opencode/config.json. See https://opencode.ai/docs/config/ for the documentation.\n‘“$schema”: “https://opencode.ai/config.json”’ is automatically added to the config.",
       "type": "JSON value",
       "declared_by": [
         {
@@ -35570,6 +35584,20 @@
       "note": null,
       "default": "pkgs.trippy",
       "example": null
+    },
+    {
+      "title": "programs.trippy.forceUserConfig",
+      "description": "Whatever to force trippy to use user’s config through the -c flag. This will prevent certain commands such as ‘sudo’ ignoring\nthe configured settings. This will only work if you have\n‘programs.<shell>.enable’ (bash, zsh, fish, …), depending\non your shell.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/trippy.nix",
+          "text": "home-manager/modules/programs/trippy.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
     },
     {
       "title": "programs.trippy.settings",
