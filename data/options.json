@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 25 Jul 2025 03:02:51 GMT",
+  "last_update": "Sat, 26 Jul 2025 02:57:25 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -4870,6 +4870,20 @@
       "example": "{\n  myActivationAction = lib.hm.dag.entryAfter [\"writeBoundary\"] ''\n    run ln -s $VERBOSE_ARG \\\n        ${builtins.toPath ./link-me-directly} $HOME\n  '';\n}\n\n"
     },
     {
+      "title": "home.checks",
+      "description": "Packages that are added as dependencies of the home’s build, usually for the purpose of validating some part of the configuration.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/home-environment.nix",
+          "text": "home-manager/modules/home-environment.nix"
+        }
+      ],
+      "note": "Unlike home.extraDependencies, these store paths do not\nbecome part of the built home configuration.",
+      "default": "[ ]",
+      "example": null
+    },
+    {
       "title": "home.extraDependencies",
       "description": "A list of paths that should be included in the home closure but generally not visible.",
       "type": "list of path in the Nix store",
@@ -4879,7 +4893,7 @@
           "text": "home-manager/modules/home-environment.nix"
         }
       ],
-      "note": null,
+      "note": "For built-time checks the home.checks option is more appropriate\nfor that purpose as checks should not leave a trace in the built\nhome configuration.",
       "default": "[ ]",
       "example": null
     },
@@ -12472,8 +12486,8 @@
       "example": "true"
     },
     {
-      "title": "programs.docker-cli.configPath",
-      "description": "Relative path to the user’s home directory where the Docker CLI settings should be stored.",
+      "title": "programs.docker-cli.configDir",
+      "description": "Folder relative to the user’s home directory where the Docker CLI settings should be stored.",
       "type": "string",
       "declared_by": [
         {
@@ -12482,7 +12496,7 @@
         }
       ],
       "note": null,
-      "default": "\".docker/config.json\"",
+      "default": "\".docker\"",
       "example": null
     },
     {
@@ -12497,7 +12511,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  {\n    \"proxies\" = {\n      \"default\" = {\n        \"httpProxy\" = \"http://proxy.example.org:3128\";\n        \"httpsProxy\" = \"http://proxy.example.org:3128\";\n        \"noProxy\" = \"localhost\";\n      };\n    };\n''\n"
+      "example": "{\n  \"proxies\" = {\n    \"default\" = {\n      \"httpProxy\" = \"http://proxy.example.org:3128\";\n      \"httpsProxy\" = \"http://proxy.example.org:3128\";\n      \"noProxy\" = \"localhost\";\n    };\n  };\n\n"
     },
     {
       "title": "programs.earthly.enable",
@@ -37459,7 +37473,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "''\n  {\n    httpProxy = \"http://proxy.example.org:3128\";\n    httpsProxy = \"http://proxy.example.org:3128\";\n  }\n''\n"
+      "example": "{\n  httpProxy = \"http://proxy.example.org:3128\";\n  httpsProxy = \"http://proxy.example.org:3128\";\n}\n\n"
     },
     {
       "title": "programs.yazi.enable",
@@ -38551,7 +38565,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  docs  = \"$HOME/Documents\";\n  vids  = \"$HOME/Videos\";\n  dl    = \"$HOME/Downloads\";\n}\n\n"
+      "example": "{\n  docs  = \"$\\{config.home.homeDirectory}/Documents\";\n  vids  = \"$\\{config.home.homeDirectory}/Videos\";\n  dl    = \"$\\{config.home.homeDirectory}/Downloads\";\n}\n\n"
     },
     {
       "title": "programs.zsh.dotDir",
@@ -38564,8 +38578,8 @@
         }
       ],
       "note": null,
-      "default": "null",
-      "example": "\".config/zsh\""
+      "default": "\"`config.home.homeDirectory`\"",
+      "example": "\"`\\${config.xdg.configHome}/zsh`\""
     },
     {
       "title": "programs.zsh.envExtra",
@@ -38718,8 +38732,8 @@
         }
       ],
       "note": null,
-      "default": "",
-      "example": "\"${config.xdg.dataHome}/zsh/zsh_history\""
+      "default": "\"`\\${config.programs.zsh.dotDir}/.zsh_history`\"",
+      "example": "\"`\\${config.xdg.dataHome}/zsh/zsh_history`\""
     },
     {
       "title": "programs.zsh.history.save",
@@ -38943,7 +38957,7 @@
       ],
       "note": null,
       "default": "\"\"",
-      "example": "\"$HOME/my_customizations\""
+      "example": "\"\\${config.home.homeDirectory}/my_customizations\""
     },
     {
       "title": "programs.zsh.oh-my-zsh.extraConfig",
@@ -45292,7 +45306,7 @@
     },
     {
       "title": "services.mpd.extraConfig",
-      "description": "Extra directives added to to the end of MPD’s configuration file, mpd.conf. Basic configuration\nlike file location and uid/gid is added automatically to the\nbeginning of the file. For available options see\nmpd.conf(5).",
+      "description": "Extra directives added to the end of MPD’s configuration file, mpd.conf. Basic configuration\nlike file location and uid/gid is added automatically to the\nbeginning of the file. For available options see\nmpd.conf(5).",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
