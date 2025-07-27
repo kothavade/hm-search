@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 26 Jul 2025 02:57:25 GMT",
+  "last_update": "Sun, 27 Jul 2025 03:14:16 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9254,7 +9254,7 @@
     {
       "title": "programs.ashell.settings",
       "description": "Ashell configuration written to $XDG_CONFIG_HOME/ashell/config.toml (0.5.0+) or $XDG_CONFIG_HOME/ashell/config.yaml (<0.5.0).\nFor available settings see\nhttps://github.com/MalpenZibo/ashell?tab=readme-ov-file#configuration.",
-      "type": "TOML value",
+      "type": "null or TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ashell.nix",
@@ -11928,7 +11928,7 @@
     {
       "title": "programs.codex.settings",
       "description": "Configuration written to ~/.codex/config.toml (0.2.0+) or ~/.codex/config.yaml (<0.2.0). See https://github.com/openai/codex/blob/main/codex-rs/config.md for supported values.",
-      "type": "TOML value",
+      "type": "null or TOML value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/codex.nix",
@@ -18349,7 +18349,7 @@
       ],
       "note": null,
       "default": "",
-      "example": "[\n  \"$\"\n  \"bezier\"\n  \"monitor\"\n  \"size\"\n]\n"
+      "example": null
     },
     {
       "title": "programs.hyprlock.settings",
@@ -18367,7 +18367,7 @@
     },
     {
       "title": "programs.hyprlock.sourceFirst",
-      "description": "Whether to enable putting source entries at the top of the configuration .",
+      "description": "Whether to enable putting source entries at the top of the configuration.",
       "type": "boolean",
       "declared_by": [
         {
@@ -26594,7 +26594,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "config.programs.obsidian.defaultSettings.app",
       "example": null
     },
     {
@@ -26608,7 +26608,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "config.programs.obsidian.defaultSettings.appearance",
       "example": null
     },
     {
@@ -26622,7 +26622,7 @@
         }
       ],
       "note": null,
-      "default": "[ ]",
+      "default": "config.programs.obsidian.defaultSettings.communityPlugins",
       "example": null
     },
     {
@@ -26678,7 +26678,7 @@
         }
       ],
       "note": null,
-      "default": "",
+      "default": "config.programs.obsidian.defaultSettings.corePlugins",
       "example": null
     },
     {
@@ -26734,7 +26734,7 @@
         }
       ],
       "note": null,
-      "default": "[ ]",
+      "default": "config.programs.obsidian.defaultSettings.cssSnippets",
       "example": null
     },
     {
@@ -26804,7 +26804,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "config.programs.obsidian.defaultSettings.extraFiles",
       "example": null
     },
     {
@@ -26860,7 +26860,7 @@
         }
       ],
       "note": null,
-      "default": "{ }",
+      "default": "config.programs.obsidian.defaultSettings.hotkeys",
       "example": null
     },
     {
@@ -26902,7 +26902,7 @@
         }
       ],
       "note": null,
-      "default": "[ ]",
+      "default": "config.programs.obsidian.defaultSettings.themes",
       "example": null
     },
     {
@@ -33314,7 +33314,7 @@
         }
       ],
       "note": null,
-      "default": "\"graphical-session.target\"",
+      "default": "config.wayland.systemd.target",
       "example": null
     },
     {
@@ -36450,7 +36450,7 @@
         }
       ],
       "note": null,
-      "default": "true",
+      "default": "(removeAttrs config.programs.vscode.profiles [ \"default\" ]) == { }",
       "example": "false"
     },
     {
@@ -37444,7 +37444,7 @@
         }
       ],
       "note": "When setting this value to \"sway-session.target\",\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
-      "default": "\"graphical-session.target\"",
+      "default": "config.wayland.systemd.target",
       "example": "\"sway-session.target\""
     },
     {
@@ -41042,7 +41042,7 @@
         }
       ],
       "note": "When setting this value to [\"sway-session.target\"],\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
-      "default": "",
+      "default": "[ config.wayland.systemd.target ]",
       "example": "\"sway-session.target\""
     },
     {
@@ -43632,7 +43632,7 @@
         }
       ],
       "note": null,
-      "default": "\"graphical-session.target\"",
+      "default": "config.wayland.systemd.target",
       "example": null
     },
     {
@@ -51741,7 +51741,7 @@
         }
       ],
       "note": null,
-      "default": "\"graphical-session.target\"",
+      "default": "config.wayland.systemd.target",
       "example": null
     },
     {
@@ -55269,7 +55269,7 @@
         }
       ],
       "note": "See https://i3wm.org/docs/userguide.html#_focus_wrapping",
-      "default": "\"no\"",
+      "default": "if focus.forceWrapping then \"yes\" else \"no\"",
       "example": null
     },
     {
@@ -59035,7 +59035,7 @@
         }
       ],
       "note": "See https://i3wm.org/docs/userguide.html#_focus_wrapping",
-      "default": "\"yes\"",
+      "default": "if focus.forceWrapping then \"force\" else \"yes\"",
       "example": null
     },
     {
