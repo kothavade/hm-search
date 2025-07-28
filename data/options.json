@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 27 Jul 2025 03:14:16 GMT",
+  "last_update": "Mon, 28 Jul 2025 03:11:41 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18363,7 +18363,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  general = {\n    disable_loading_bar = true;\n    grace = 300;\n    hide_cursor = true;\n    no_fade_in = false;\n  };\n\n  background = [\n    {\n      path = \"screenshot\";\n      blur_passes = 3;\n      blur_size = 8;\n    }\n  ];\n\n  input-field = [\n    {\n      size = \"200, 50\";\n      position = \"0, -80\";\n      monitor = \"\";\n      dots_center = true;\n      fade_on_empty = false;\n      font_color = \"rgb(202, 211, 245)\";\n      inner_color = \"rgb(91, 96, 120)\";\n      outer_color = \"rgb(24, 25, 38)\";\n      outline_thickness = 5;\n      placeholder_text = '\\'<span foreground=\"##cad3f5\">Password...</span>'\\';\n      shadow_passes = 2;\n    }\n  ];\n}\n\n"
+      "example": "{\n  general = {\n    hide_cursor = true;\n    ignore_empty_input = true;\n  };\n\n  animations = {\n    enabled = true;\n    fade_in = {\n      duration = 300;\n      bezier = \"easeOutQuint\";\n    };\n    fade_out = {\n      duration = 300;\n      bezier = \"easeOutQuint\";\n    };\n  };\n\n  background = [\n    {\n      path = \"screenshot\";\n      blur_passes = 3;\n      blur_size = 8;\n    }\n  ];\n\n  input-field = [\n    {\n      size = \"200, 50\";\n      position = \"0, -80\";\n      monitor = \"\";\n      dots_center = true;\n      fade_on_empty = false;\n      font_color = \"rgb(202, 211, 245)\";\n      inner_color = \"rgb(91, 96, 120)\";\n      outer_color = \"rgb(24, 25, 38)\";\n      outline_thickness = 5;\n      placeholder_text = '\\'<span foreground=\"##cad3f5\">Password...</span>'\\';\n      shadow_passes = 2;\n    }\n  ];\n}\n\n"
     },
     {
       "title": "programs.hyprlock.sourceFirst",
@@ -27411,7 +27411,7 @@
     },
     {
       "title": "programs.opencode.rules",
-      "description": "You can provide global custom instructions to opencode; this value is written to {file}~/.config/opencode/AGENTS.md",
+      "description": "You can provide global custom instructions to opencode; this value is written to $XDG_CONFIG_HOME/opencode/AGENTS.md.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -27425,7 +27425,7 @@
     },
     {
       "title": "programs.opencode.settings",
-      "description": "Configuration written to $XDG_CONFIG_HOME/opencode/config.json. See https://opencode.ai/docs/config/ for the documentation.\n‘“$schema”: “https://opencode.ai/config.json”’ is automatically added to the config.",
+      "description": "Configuration written to $XDG_CONFIG_HOME/opencode/config.json. See https://opencode.ai/docs/config/ for the documentation.",
       "type": "JSON value",
       "declared_by": [
         {
@@ -27433,7 +27433,7 @@
           "text": "home-manager/modules/programs/opencode.nix"
         }
       ],
-      "note": null,
+      "note": "Note, \"$schema\": \"https://opencode.ai/config.json\" is automatically added to the configuration.",
       "default": "{ }",
       "example": "{\n  theme = \"opencode\";\n  model = \"anthropic/claude-sonnet-4-20250514\";\n  autoshare = false;\n  autoupdate = true;\n}\n\n"
     },
@@ -57315,6 +57315,48 @@
       "note": null,
       "default": "[ ]",
       "example": "[ \"/usr/share\" \"/usr/local/share\" ]"
+    },
+    {
+      "title": "xdg.terminal-exec.enable",
+      "description": "Whether to enable xdg-terminal-exec, the proposed\nDefault Terminal Execution Specification.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-terminal-exec.nix",
+          "text": "home-manager/modules/misc/xdg-terminal-exec.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "xdg.terminal-exec.package",
+      "description": "The xdg-terminal-exec package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-terminal-exec.nix",
+          "text": "home-manager/modules/misc/xdg-terminal-exec.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.xdg-terminal-exec",
+      "example": null
+    },
+    {
+      "title": "xdg.terminal-exec.settings",
+      "description": "Configuration options for the Default Terminal Execution Specification.",
+      "type": "attribute set of list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/xdg-terminal-exec.nix",
+          "text": "home-manager/modules/misc/xdg-terminal-exec.nix"
+        }
+      ],
+      "note": "The keys are the desktop environments that are matched (case-insensitively) against XDG_CURRENT_DESKTOP,\nor default which is used when the current desktop environment is not found in the configuration.\nThe values are a list of terminals’ desktop file IDs to try in order of decreasing priority.",
+      "default": "{ }",
+      "example": "{\n  GNOME = [\n    \"com.raggesilver.BlackBox.desktop\"\n    \"org.gnome.Terminal.desktop\"\n  ];\n  default = [\n    \"kitty.desktop\"\n  ];\n}\n"
     },
     {
       "title": "xdg.userDirs.enable",
