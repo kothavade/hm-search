@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 29 Jul 2025 03:17:26 GMT",
+  "last_update": "Wed, 30 Jul 2025 03:07:24 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11282,6 +11282,20 @@
       "example": "true"
     },
     {
+      "title": "programs.browserpass.package",
+      "description": "The browserpass package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/browserpass.nix",
+          "text": "home-manager/modules/programs/browserpass.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.browserpass",
+      "example": null
+    },
+    {
       "title": "programs.browserpass.browsers",
       "description": "Which browsers to install browserpass for",
       "type": "list of (one of “brave”, “chrome”, “chromium”, “firefox”, “librewolf”, “vivaldi”)",
@@ -18842,6 +18856,20 @@
       "example": "true"
     },
     {
+      "title": "programs.info.package",
+      "description": "The texinfo package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/info.nix",
+          "text": "home-manager/modules/programs/info.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.texinfoInteractive",
+      "example": null
+    },
+    {
       "title": "programs.inori.enable",
       "description": "Whether to enable inori.",
       "type": "boolean",
@@ -18952,6 +18980,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.irssi.package",
+      "description": "The irssi package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/irssi.nix",
+          "text": "home-manager/modules/programs/irssi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.irssi",
+      "example": null
     },
     {
       "title": "programs.irssi.aliases",
@@ -28360,6 +28402,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "programs.powerline-go.package",
+      "description": "The powerline-go package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/powerline-go.nix",
+          "text": "home-manager/modules/programs/powerline-go.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.powerline-go",
+      "example": null
     },
     {
       "title": "programs.powerline-go.extraUpdatePS1",
@@ -39828,6 +39884,20 @@
       "example": "true"
     },
     {
+      "title": "programs.zsh.zplug.package",
+      "description": "The zplug package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zplug.nix",
+          "text": "home-manager/modules/programs/zplug.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.zplug",
+      "example": null
+    },
+    {
       "title": "programs.zsh.zplug.plugins",
       "description": "List of zplug plugins.",
       "type": "list of (submodule)",
@@ -40388,6 +40458,20 @@
       "example": "{\n  default = {\n    time = 1.0;\n    y-offset = 0.5;\n    fade-in = 0.1;\n    fade-out = 0.2;\n    padding = 10;\n  };\n}\n\n"
     },
     {
+      "title": "services.barrier.package",
+      "description": "The barrier package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/barrier.nix",
+          "text": "home-manager/modules/services/barrier.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.barrier",
+      "example": null
+    },
+    {
       "title": "services.barrier.client.enable",
       "description": "Whether to enable Barrier Client daemon.",
       "type": "boolean",
@@ -40612,6 +40696,20 @@
       "example": "true"
     },
     {
+      "title": "services.blueman-applet.package",
+      "description": "The blueman package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/blueman-applet.nix",
+          "text": "home-manager/modules/services/blueman-applet.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.blueman",
+      "example": null
+    },
+    {
       "title": "services.borgmatic.enable",
       "description": "Whether to enable Borgmatic service.",
       "type": "boolean",
@@ -40750,6 +40848,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.caffeine.package",
+      "description": "The caffeine-ng package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/caffeine.nix",
+          "text": "home-manager/modules/services/caffeine.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.caffeine-ng",
+      "example": null
     },
     {
       "title": "services.cbatticon.enable",
@@ -41592,6 +41704,20 @@
       "example": "true"
     },
     {
+      "title": "services.devilspie2.package",
+      "description": "The devilspie2 package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/devilspie2.nix",
+          "text": "home-manager/modules/services/devilspie2.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.devilspie2",
+      "example": null
+    },
+    {
       "title": "services.devilspie2.config",
       "description": "Content of file placed in the devilspie2 config directory.",
       "type": "strings concatenated with “\\n”",
@@ -41618,6 +41744,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.dropbox.package",
+      "description": "The dropbox-cli package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/dropbox.nix",
+          "text": "home-manager/modules/services/dropbox.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.dropbox-cli",
+      "example": null
     },
     {
       "title": "services.dropbox.path",
@@ -42208,6 +42348,20 @@
       "example": "true"
     },
     {
+      "title": "services.fluidsynth.package",
+      "description": "The fluidsynth package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/fluidsynth.nix",
+          "text": "home-manager/modules/services/fluidsynth.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.fluidsynth",
+      "example": null
+    },
+    {
       "title": "services.fluidsynth.extraOptions",
       "description": "Extra arguments, added verbatim to the fluidsynth command. See fluidsynth.conf(1).",
       "type": "list of string",
@@ -42558,6 +42712,20 @@
       "example": "true"
     },
     {
+      "title": "services.getmail.package",
+      "description": "The getmail package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/getmail.nix",
+          "text": "home-manager/modules/services/getmail.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.getmail6",
+      "example": null
+    },
+    {
       "title": "services.getmail.frequency",
       "description": "The refresh frequency. Check man systemd.time for more information on the syntax. If you use a gpg-agent in\ncombination with the passwordCommand, keep the poll\nfrequency below the cache-ttl value (as set by the\ndefault) to avoid pinentry asking\npermanently for a password.",
       "type": "string",
@@ -42724,6 +42892,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.gnome-keyring.package",
+      "description": "The gnome-keyring package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/gnome-keyring.nix",
+          "text": "home-manager/modules/services/gnome-keyring.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gnome-keyring",
+      "example": null
     },
     {
       "title": "services.gnome-keyring.components",
@@ -43018,6 +43200,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.grobi.package",
+      "description": "The grobi package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/grobi.nix",
+          "text": "home-manager/modules/services/grobi.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.grobi",
+      "example": null
     },
     {
       "title": "services.grobi.executeAfter",
@@ -43326,6 +43522,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.hound.package",
+      "description": "The hound package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hound.nix",
+          "text": "home-manager/modules/services/hound.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hound",
+      "example": null
     },
     {
       "title": "services.hound.databasePath",
@@ -43675,12 +43885,26 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"--identity\"\n]\n"
+      "example": "[\n  \"--verbose\"\n]\n"
     },
     {
-      "title": "services.hyprsunset.transitions",
-      "description": "Set of transitions for different times of day (e.g., sunrise, sunset)",
-      "type": "attribute set of (submodule)",
+      "title": "services.hyprsunset.importantPrefixes",
+      "description": "List of prefix of attributes to source at the top of the config.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": null,
+      "default": "",
+      "example": "[\n  \"$\"\n]\n"
+    },
+    {
+      "title": "services.hyprsunset.settings",
+      "description": "Hyprsunset configuration written in Nix. Entries with the same key should be written as lists. Variables’ and colors’ names should be\nquoted. See https://wiki.hypr.land/Hypr-Ecosystem/hyprsunset/ for more examples.",
+      "type": "Hyprsunset configuration value",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
@@ -43689,11 +43913,11 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  sunrise = {\n    calendar = \"*-*-* 06:00:00\";\n    requests = [\n      [ \"temperature\" \"6500\" ]\n      [ \"gamma 100\" ]\n    ];\n  };\n  sunset = {\n    calendar = \"*-*-* 19:00:00\";\n    requests = [\n      [ \"temperature\" \"3500\" ]\n    ];\n  };\n}\n\n"
+      "example": "{\n  max-gamma = 150;\n\n  profile = [\n    {\n      time = \"7:30\";\n      identity = true;\n    }\n    {\n      time = \"21:00\";\n      temperature = 5000;\n      gamma = 0.8;\n    }\n  ];\n};\n\n"
     },
     {
-      "title": "services.hyprsunset.transitions.<name>.calendar",
-      "description": "Systemd calendar expression for when to run this transition.",
+      "title": "services.hyprsunset.systemdTarget",
+      "description": "Systemd target to bind to.",
       "type": "string",
       "declared_by": [
         {
@@ -43702,12 +43926,40 @@
         }
       ],
       "note": null,
+      "default": "config.wayland.systemd.target",
+      "example": "\"hyprland-session.target\""
+    },
+    {
+      "title": "services.hyprsunset.transitions",
+      "description": "Deprecated - Use services.hyprsunset.settings instead to manage transitions.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": "Set of transitions for different times of day (e.g., sunrise, sunset)",
+      "default": "{ }",
+      "example": "{\n  sunrise = {\n    calendar = \"*-*-* 06:00:00\";\n    requests = [\n      [ \"temperature\" \"6500\" ]\n      [ \"gamma 100\" ]\n    ];\n  };\n  sunset = {\n    calendar = \"*-*-* 19:00:00\";\n    requests = [\n      [ \"temperature\" \"3500\" ]\n    ];\n  };\n}\n\n"
+    },
+    {
+      "title": "services.hyprsunset.transitions.<name>.calendar",
+      "description": "Deprecated - Use services.hyprsunset.settings instead to manage transitions.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/hyprsunset.nix",
+          "text": "home-manager/modules/services/hyprsunset.nix"
+        }
+      ],
+      "note": "Systemd calendar expression for when to run this transition.",
       "default": null,
       "example": "\"*-*-* 06:00:00\""
     },
     {
       "title": "services.hyprsunset.transitions.<name>.requests",
-      "description": "List of requests to pass to hyprctl hyprsunset for this transition. Each inner list represents a separate command.",
+      "description": "Deprecated - Use services.hyprsunset.settings instead to manage transitions.",
       "type": "list of list of string",
       "declared_by": [
         {
@@ -43715,7 +43967,7 @@
           "text": "home-manager/modules/services/hyprsunset.nix"
         }
       ],
-      "note": null,
+      "note": "List of requests to pass to hyprctl hyprsunset for this transition. Each inner list represents a separate command.",
       "default": "[ ]",
       "example": "[\n  [ \"temperature\" \"3500\" ]\n]\n\n"
     },
@@ -44367,6 +44619,20 @@
       "example": "true"
     },
     {
+      "title": "services.kbfs.package",
+      "description": "The kbfs package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/kbfs.nix",
+          "text": "home-manager/modules/services/kbfs.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.kbfs",
+      "example": null
+    },
+    {
       "title": "services.kbfs.extraFlags",
       "description": "Additional flags to pass to the Keybase filesystem on launch.",
       "type": "list of string",
@@ -44451,6 +44717,20 @@
       "example": "true"
     },
     {
+      "title": "services.keybase.package",
+      "description": "The keybase package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/keybase.nix",
+          "text": "home-manager/modules/services/keybase.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.keybase",
+      "example": null
+    },
+    {
       "title": "services.keynav.enable",
       "description": "Whether to enable keynav.",
       "type": "boolean",
@@ -44463,6 +44743,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.keynav.package",
+      "description": "The keynav package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/keynav.nix",
+          "text": "home-manager/modules/services/keynav.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.keynav",
+      "example": null
     },
     {
       "title": "services.librespot.enable",
@@ -45823,6 +46117,34 @@
       "example": "true"
     },
     {
+      "title": "services.mpris-proxy.package",
+      "description": "The bluez package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/mpris-proxy.nix",
+          "text": "home-manager/modules/services/mpris-proxy.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.bluez",
+      "example": null
+    },
+    {
+      "title": "services.muchsync.package",
+      "description": "The muchsync package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/muchsync.nix",
+          "text": "home-manager/modules/services/muchsync.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.muchsync",
+      "example": null
+    },
+    {
       "title": "services.muchsync.remotes",
       "description": "Muchsync remotes to synchronise with.",
       "type": "attribute set of (submodule)",
@@ -45975,6 +46297,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.network-manager-applet.package",
+      "description": "The networkmanagerapplet package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/network-manager-applet.nix",
+          "text": "home-manager/modules/services/network-manager-applet.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.networkmanagerapplet",
+      "example": null
     },
     {
       "title": "services.nextcloud-client.enable",
@@ -46397,6 +46733,20 @@
       "example": "true"
     },
     {
+      "title": "services.pasystray.package",
+      "description": "The pasystray package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pasystray.nix",
+          "text": "home-manager/modules/services/pasystray.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pasystray",
+      "example": null
+    },
+    {
       "title": "services.pasystray.extraOptions",
       "description": "Extra command-line arguments to pass to pasystray.",
       "type": "list of string",
@@ -46731,6 +47081,20 @@
       "note": null,
       "default": "",
       "example": "{ }"
+    },
+    {
+      "title": "services.plan9port.package",
+      "description": "The plan9port package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/plan9port.nix",
+          "text": "home-manager/modules/services/plan9port.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.plan9port",
+      "example": null
     },
     {
       "title": "services.plan9port.fontsrv.enable",
@@ -48147,6 +48511,20 @@
       "example": "true"
     },
     {
+      "title": "services.poweralertd.package",
+      "description": "The poweralertd package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/poweralertd.nix",
+          "text": "home-manager/modules/services/poweralertd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.poweralertd",
+      "example": null
+    },
+    {
       "title": "services.poweralertd.extraArgs",
       "description": "Extra command line arguments to pass to poweralertd.",
       "type": "list of string",
@@ -48173,6 +48551,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.psd.package",
+      "description": "The profile-sync-daemon package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/psd.nix",
+          "text": "home-manager/modules/services/psd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.profile-sync-daemon",
+      "example": null
     },
     {
       "title": "services.psd.backupLimit",
@@ -48340,6 +48732,20 @@
       ],
       "note": null,
       "default": "true",
+      "example": null
+    },
+    {
+      "title": "services.random-background.package",
+      "description": "The feh package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/random-background.nix",
+          "text": "home-manager/modules/services/random-background.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.feh",
       "example": null
     },
     {
@@ -49043,6 +49449,20 @@
       "example": "true"
     },
     {
+      "title": "services.rsibreak.package",
+      "description": "The rsibreak package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/rsibreak.nix",
+          "text": "home-manager/modules/services/rsibreak.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.rsibreak",
+      "example": null
+    },
+    {
       "title": "services.safeeyes.enable",
       "description": "Whether to enable The Safe Eyes OSGI service.",
       "type": "boolean",
@@ -49237,6 +49657,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.sctd.package",
+      "description": "The sct package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/sctd.nix",
+          "text": "home-manager/modules/services/sctd.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sct",
+      "example": null
     },
     {
       "title": "services.sctd.baseTemperature",
@@ -49517,6 +49951,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.ssh-agent.package",
+      "description": "The openssh package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ssh-agent.nix",
+          "text": "home-manager/modules/services/ssh-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.openssh",
+      "example": null
     },
     {
       "title": "services.ssh-tpm-agent.enable",
@@ -50499,6 +50947,20 @@
       "example": "true"
     },
     {
+      "title": "services.systembus-notify.package",
+      "description": "The systembus-notify package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/systembus-notify.nix",
+          "text": "home-manager/modules/services/systembus-notify.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.systembus-notify",
+      "example": null
+    },
+    {
       "title": "services.taffybar.enable",
       "description": "Whether to enable Taffybar.",
       "type": "boolean",
@@ -50539,6 +51001,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.tahoe-lafs.package",
+      "description": "The tahoelafs package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/tahoe-lafs.nix",
+          "text": "home-manager/modules/services/tahoe-lafs.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.tahoelafs",
+      "example": null
     },
     {
       "title": "services.taskwarrior-sync.enable",
@@ -51155,6 +51631,20 @@
       "note": "Note, if you use NixOS then you must add\nservices.udisks2.enable = true\nto your system configuration. Otherwise mounting will fail because\nthe Udisk2 DBus service is not found.",
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.udiskie.package",
+      "description": "The udiskie package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/udiskie.nix",
+          "text": "home-manager/modules/services/udiskie.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.udiskie",
+      "example": null
     },
     {
       "title": "services.udiskie.automount",
@@ -51955,6 +52445,20 @@
       "example": "true"
     },
     {
+      "title": "services.xcape.package",
+      "description": "The xcape package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/xcape.nix",
+          "text": "home-manager/modules/services/xcape.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.xcape",
+      "example": null
+    },
+    {
       "title": "services.xcape.mapExpression",
       "description": "The value has the grammar Key[|OtherKey].",
       "type": "attribute set of string",
@@ -52261,6 +52765,20 @@
       "note": null,
       "default": "false",
       "example": "true"
+    },
+    {
+      "title": "services.xsuspender.package",
+      "description": "The xsuspender package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/xsuspender.nix",
+          "text": "home-manager/modules/services/xsuspender.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.xsuspender",
+      "example": null
     },
     {
       "title": "services.xsuspender.debug",
