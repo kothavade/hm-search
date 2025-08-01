@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 31 Jul 2025 03:06:28 GMT",
+  "last_update": "Fri, 01 Aug 2025 03:20:58 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -8596,7 +8596,7 @@
     {
       "title": "programs.anki.language",
       "description": "Display language. Should be an underscore separated language tag. See https://github.com/ankitects/anki/blob/main/pylib/anki/lang.py for\nsupported tags.",
-      "type": "null or string",
+      "type": "non-empty string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anki",
@@ -8604,8 +8604,8 @@
         }
       ],
       "note": null,
-      "default": "null",
-      "example": "\"en_US\""
+      "default": "\"en_US\"",
+      "example": "\"ja_JP\""
     },
     {
       "title": "programs.anki.legacyImportExport",
@@ -25492,6 +25492,20 @@
       "example": "\"--keep 5 --keep-since 3d\""
     },
     {
+      "title": "programs.nh.darwinFlake",
+      "description": "The string that will be used for the NH_DARWIN_FLAKE environment variable.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "NH_DARWIN_FLAKE is used by nh as the default flake for performing\nnh darwin actions, such as nh darwin switch.\nSetting this will take priority over the flake option.",
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "programs.nh.flake",
       "description": "The path that will be used for the FLAKE environment variable.",
       "type": "null or (optionally newline-terminated) single-line string or absolute path",
@@ -25502,6 +25516,34 @@
         }
       ],
       "note": "FLAKE is used by nh as the default flake for performing actions,\nlike nh os switch.",
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.nh.homeFlake",
+      "description": "The string that will be used for the NH_HOME_FLAKE environment variable.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "NH_HOME_FLAKE is used by nh as the default flake for performing nh home\nactions, such as nh home switch.\nSetting this will take priority over the flake option.",
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.nh.osFlake",
+      "description": "The string that will be used for the NH_OS_FLAKE environment variable.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
+          "text": "home-manager/modules/programs/nh.nix"
+        }
+      ],
+      "note": "NH_OS_FLAKE is used by nh as the default flake for performing nh os\nactions, such as nh os switch.\nSetting this will take priority over the flake option.",
       "default": "null",
       "example": null
     },
