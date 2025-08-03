@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 02 Aug 2025 02:58:31 GMT",
+  "last_update": "Sun, 03 Aug 2025 03:18:26 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -33669,7 +33669,7 @@
     },
     {
       "title": "programs.television.channels",
-      "description": "Each set of channels are written to $XDG_CONFIG_HOME/television/NAME-channels.toml",
+      "description": "Each set of channels are written to $XDG_CONFIG_HOME/television/cable/NAME.toml",
       "type": "attribute set of (TOML value)",
       "declared_by": [
         {
@@ -33677,9 +33677,9 @@
           "text": "home-manager/modules/programs/television.nix"
         }
       ],
-      "note": "See https://github.com/alexpasmantier/television/blob/main/docs/channels.md\nfor options",
+      "note": "See https://alexpasmantier.github.io/television/docs/Users/channels\nfor options",
       "default": "{ }",
-      "example": "{\n  my-custom = {\n    cable_channel = [\n      {\n        name = \"git-log\";\n        source_command = \"git log --oneline --date=short --pretty=\\\"format:%h %s %an %cd\\\" \\\"$@\\\"\";\n        preview_command = \"git show -p --stat --pretty=fuller --color=always {0}\";\n      }\n      {\n        name = \"git-log\";\n        source_command = \"git log --oneline --date=short --pretty=\\\"format:%h %s %an %cd\\\" \\\"$@\\\"\";\n        preview_command = \"git show -p --stat --pretty=fuller --color=always {0}\";\n      }\n    ];\n  };\n}\n\n"
+      "example": "{\n  git-diff = {\n    metadata = {\n      description = \"A channel to select files from git diff commands\";\n      name = \"git-diff\";\n      requirements = [\n        \"git\"\n      ];\n    };\n    preview = {\n      command = \"git diff HEAD --color=always -- '{}'\";\n    };\n    source = {\n      command = \"git diff --name-only HEAD\";\n    };\n  };\n  git-log = {\n    metadata = {\n      description = \"A channel to select from git log entries\";\n      name = \"git-log\";\n      requirements = [\n        \"git\"\n      ];\n    };\n    preview = {\n      command = \"git show -p --stat --pretty=fuller --color=always '{0}'\";\n    };\n    source = {\n      command = \"git log --oneline --date=short --pretty=\\\"format:%h %s %an %cd\\\" \\\"$@\\\"\";\n      output = \"{split: :0}\";\n    };\n  };\n}\n"
     },
     {
       "title": "programs.television.settings",
