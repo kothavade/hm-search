@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 05 Aug 2025 03:10:28 GMT",
+  "last_update": "Wed, 06 Aug 2025 03:08:19 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3806,6 +3806,20 @@
       "example": null
     },
     {
+      "title": "fonts.fontconfig.antialiasing",
+      "description": "Whether to enable font antialiasing.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "true"
+    },
+    {
       "title": "fonts.fontconfig.defaultFonts.emoji",
       "description": "Per-user default emoji font(s). Multiple fonts may be listed in case a font does not support all emoji.",
       "type": "list of string",
@@ -3860,6 +3874,34 @@
       "note": null,
       "default": "[ ]",
       "example": null
+    },
+    {
+      "title": "fonts.fontconfig.hinting",
+      "description": "The font hinting mode.",
+      "type": "null or one of “none”, “slight”, “medium”, “full”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"slight\""
+    },
+    {
+      "title": "fonts.fontconfig.subpixelRendering",
+      "description": "The sub-pixel rendering mode.",
+      "type": "null or one of “none”, “rgb”, “bgr”, “vertical-rgb”, “vertical-bgr”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/fontconfig.nix",
+          "text": "home-manager/modules/misc/fontconfig.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"rgb\""
     },
     {
       "title": "gtk.enable",
@@ -15300,6 +15342,48 @@
       "example": "{\n  extractor.base-directory = \"~/Downloads\";\n}\n\n"
     },
     {
+      "title": "programs.gcc.enable",
+      "description": "Whether to enable gcc…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gcc.nix",
+          "text": "home-manager/modules/programs/gcc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.gcc.package",
+      "description": "The gcc package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gcc.nix",
+          "text": "home-manager/modules/programs/gcc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gcc",
+      "example": null
+    },
+    {
+      "title": "programs.gcc.colors",
+      "description": "Settings for GCC_COLORS",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gcc.nix",
+          "text": "home-manager/modules/programs/gcc.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  error = \"01;31\";\n}\n"
+    },
+    {
       "title": "programs.gh.enable",
       "description": "Whether to enable GitHub CLI tool.",
       "type": "boolean",
@@ -17468,6 +17552,48 @@
       "note": null,
       "default": "pkgs.granted",
       "example": null
+    },
+    {
+      "title": "programs.grep.enable",
+      "description": "Whether to enable grep…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/grep.nix",
+          "text": "home-manager/modules/programs/grep.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.grep.package",
+      "description": "The grep package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/grep.nix",
+          "text": "home-manager/modules/programs/grep.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gnugrep",
+      "example": null
+    },
+    {
+      "title": "programs.grep.colors",
+      "description": "Settings for GREP_COLORS",
+      "type": "attribute set of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/grep.nix",
+          "text": "home-manager/modules/programs/grep.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  error = \"01;31\";\n}\n"
     },
     {
       "title": "programs.gurk-rs.enable",
@@ -25758,6 +25884,62 @@
       "example": "{\n  maintainers = [\n    \"figsoda\"\n  ];\n  nixpkgs = \"<nixpkgs>\";\n  commit = true;\n  access-tokens = {\n    github.com = \"ghp_blahblahblah...\";\n    gitlab.com = {\n      command = [\n        \"secret-tool\"\n        \"or\"\n        \"whatever\"\n        \"you\"\n        \"use\"\n      ];\n    };\n    gitlab.gnome.org = {\n      file = \"/path/to/api/token\";\n    };\n  };\n}\n\n"
     },
     {
+      "title": "programs.nix-search-tv.enable",
+      "description": "Whether to enable nix-search-tv.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-search-tv.nix",
+          "text": "home-manager/modules/programs/nix-search-tv.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.nix-search-tv.enableTelevisionIntegration",
+      "description": "Enables integration with television. Creates a channel through programs.television.channels.nix-search-tv, which are set as defaults\nand can be overridden.\nSee programs.television.channels\nfor more information",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-search-tv.nix",
+          "text": "home-manager/modules/programs/nix-search-tv.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.programs.television.enable",
+      "example": "true"
+    },
+    {
+      "title": "programs.nix-search-tv.package",
+      "description": "The nix-search-tv package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-search-tv.nix",
+          "text": "home-manager/modules/programs/nix-search-tv.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.nix-search-tv",
+      "example": null
+    },
+    {
+      "title": "programs.nix-search-tv.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/nix-search-tv/config.json. See https://github.com/3timeslazy/nix-search-tv?tab=readme-ov-file#configuration\nfor the full list of options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nix-search-tv.nix",
+          "text": "home-manager/modules/programs/nix-search-tv.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  indexes = [ \"nixpkgs\" \"home-manager\" \"nixos\" ];\n\n  experimental = {\n    render_docs_indexes = {\n      nvf = \"https://notashelf.github.io/nvf/options.html\";\n    };\n  };\n}\n\n"
+    },
+    {
       "title": "programs.nix-your-shell.enable",
       "description": "Whether to enable nix-your-shell, a wrapper for nix develop or nix-shell to retain the same shell inside the new environment.",
       "type": "boolean",
@@ -31328,6 +31510,104 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.sherlock.enable",
+      "description": "Enable Sherlock, a fast and lightweight application launcher for Wayland.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "See https://github.com/Skxxtz/sherlock for more information.",
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sherlock.package",
+      "description": "The sherlock package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sherlock-launcher",
+      "example": null
+    },
+    {
+      "title": "programs.sherlock.aliases",
+      "description": "Defines custom aliases.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "Written to sherlock_alias.json.",
+      "default": "{ }",
+      "example": "{\n  \"NixOS Wiki\" = {\n    exec = \"firefox https://nixos.wiki/index.php?search=%s\";\n    icon = \"nixos\";\n    keywords = \"nix wiki docs\";\n    name = \"NixOS Wiki\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.sherlock.ignore",
+      "description": "A list of desktop entry IDs to ignore.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "Written to sherlockignore.",
+      "default": "\"\"",
+      "example": "''\n  hicolor-icon-theme.desktop\n  user-dirs.desktop\n''\n"
+    },
+    {
+      "title": "programs.sherlock.launchers",
+      "description": "Defines fallback launchers.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "Written to fallback.json.",
+      "default": "[ ]",
+      "example": null
+    },
+    {
+      "title": "programs.sherlock.settings",
+      "description": "Configuration for Sherlock.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "Written to config.toml.",
+      "default": "{ }",
+      "example": "{\n  max_results = 8;\n  theme = \"dark\";\n  width = 500;\n}\n"
+    },
+    {
+      "title": "programs.sherlock.style",
+      "description": "Custom CSS to style the Sherlock UI.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": "Written to main.css.",
+      "default": "\"\"",
+      "example": "''\n  window {\n    background-color: #2E3440;\n  }\n''\n"
     },
     {
       "title": "programs.sioyek.enable",
@@ -39826,6 +40106,20 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  UUID = \"$(uuidgen | tr -d \\\\n)\";\n  G = \"| grep\";\n}\n\n"
+    },
+    {
+      "title": "programs.zsh.siteFunctions",
+      "description": "Functions that are added to the Zsh environment and are subject to autoloading. The key is the name and the value is the body of\nthe function to be autoloaded.",
+      "type": "attribute set of strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/zsh",
+          "text": "home-manager/modules/programs/zsh"
+        }
+      ],
+      "note": "They are also already marked for autoloading through autoload -Uz.",
+      "default": "{ }",
+      "example": "{\n  mkcd = ''\n    mkdir --parents \"$1\" && cd \"$1\"\n  '';\n}\n"
     },
     {
       "title": "programs.zsh.syntaxHighlighting",
