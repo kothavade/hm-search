@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 06 Aug 2025 03:08:19 GMT",
+  "last_update": "Thu, 07 Aug 2025 03:08:38 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -16392,6 +16392,62 @@
       "example": "{\n  header = \"Changelog\";\n  trim = true;\n}\n\n"
     },
     {
+      "title": "programs.git-credential-keepassxc.enable",
+      "description": "Whether to enable git-credential-keepassxc…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-credential-keepassxc.nix",
+          "text": "home-manager/modules/programs/git-credential-keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.git-credential-keepassxc.package",
+      "description": "The git-credential-keepassxc package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-credential-keepassxc.nix",
+          "text": "home-manager/modules/programs/git-credential-keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.git-credential-keepassxc",
+      "example": null
+    },
+    {
+      "title": "programs.git-credential-keepassxc.groups",
+      "description": "The KeePassXC groups used for storing and fetching of credentials. By default, the groups created by\ngit-credential-keepassxc configure [--group <GROUP>] are used.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-credential-keepassxc.nix",
+          "text": "home-manager/modules/programs/git-credential-keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"Git\""
+    },
+    {
+      "title": "programs.git-credential-keepassxc.hosts",
+      "description": "Hosts for which git-credential-keepassxc is enabled.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/git-credential-keepassxc.nix",
+          "text": "home-manager/modules/programs/git-credential-keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"https://github.com\"\n]\n"
+    },
+    {
       "title": "programs.git-credential-oauth.enable",
       "description": "Whether to enable Git authentication handler for OAuth.",
       "type": "boolean",
@@ -17243,6 +17299,62 @@
       ],
       "note": null,
       "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.goto.enable",
+      "description": "Whether to enable goto…",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/goto.nix",
+          "text": "home-manager/modules/programs/goto.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.goto.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/goto.nix",
+          "text": "home-manager/modules/programs/goto.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.goto.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/goto.nix",
+          "text": "home-manager/modules/programs/goto.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.goto.package",
+      "description": "The goto package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/goto.nix",
+          "text": "home-manager/modules/programs/goto.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.goto",
       "example": null
     },
     {
@@ -20660,6 +20772,20 @@
       "note": null,
       "default": "pkgs.keepassxc",
       "example": null
+    },
+    {
+      "title": "programs.keepassxc.autostart",
+      "description": "Whether to start Keepassxc automatically on login through the XDG autostart mechanism.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/keepassxc.nix",
+          "text": "home-manager/modules/programs/keepassxc.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.keepassxc.settings",
@@ -49433,6 +49559,48 @@
       "note": null,
       "default": "",
       "example": null
+    },
+    {
+      "title": "services.rescrobbled.enable",
+      "description": "Whether to enable rescrobbled, a MPRIS music scrobbler daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/rescrobbled.nix",
+          "text": "home-manager/modules/services/rescrobbled.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.rescrobbled.package",
+      "description": "The rescrobbled package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/rescrobbled.nix",
+          "text": "home-manager/modules/services/rescrobbled.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.rescrobbled",
+      "example": null
+    },
+    {
+      "title": "services.rescrobbled.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/rescrobbled/config.toml See https://github.com/InputUsername/rescrobbled#configuration for\nthe full list of options.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/rescrobbled.nix",
+          "text": "home-manager/modules/services/rescrobbled.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  filter-script = \"path/to/script\";\n  lastfm-key = \"Last.fm API key\";\n  lastfm-secret = \"Last.fm API secret\";\n  listenbrainz = [\n    {\n      token = \"User token\";\n      url = \"Custom API URL\";\n    }\n  ];\n  min-play-time = 0;\n  player-whitelist = [\n    \"Player MPRIS identity or bus name\"\n  ];\n  use-track-start-timestamp = false;\n}\n"
     },
     {
       "title": "services.restic.enable",
