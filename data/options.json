@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 07 Aug 2025 03:08:38 GMT",
+  "last_update": "Fri, 08 Aug 2025 03:07:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -1384,6 +1384,20 @@
       "example": null
     },
     {
+      "title": "accounts.email.accounts.<name>.enable",
+      "description": "Whether this account is enabled.  Potentially useful to allow setting email configuration globally then enabling or disabling on\nspecific systems.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
+          "text": "home-manager/modules/accounts/email.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": null
+    },
+    {
       "title": "accounts.email.accounts.<name>.address",
       "description": "The email address of this account.",
       "type": "string matching the pattern .*@.*",
@@ -1722,7 +1736,7 @@
     {
       "title": "accounts.email.accounts.<name>.flavor",
       "description": "Some email providers have peculiar behavior that require special treatment. This option is therefore intended to\nindicate the nature of the provider.",
-      "type": "one of “plain”, “gmail.com”, “runbox.com”, “fastmail.com”, “yandex.com”, “outlook.office365.com”, “migadu.com”",
+      "type": "one of “davmail”, “fastmail.com”, “gmail.com”, “migadu.com”, “outlook.office365.com”, “plain”, “runbox.com”, “yandex.com”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
@@ -1970,6 +1984,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.imap.authentication",
+      "description": "The authentication mechanism.",
+      "type": "null or string or one of “anonymous”, “apop”, “clear”, “cram_md5”, “digest_md5”, “gssapi”, “login”, “ntlm”, “plain”, “xoauth2”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
+          "text": "home-manager/modules/accounts/email.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"plain\""
     },
     {
       "title": "accounts.email.accounts.<name>.imap.host",
@@ -3426,6 +3454,20 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "accounts.email.accounts.<name>.smtp.authentication",
+      "description": "The authentication mechanism.",
+      "type": "null or string or one of “anonymous”, “apop”, “clear”, “cram_md5”, “digest_md5”, “gssapi”, “login”, “ntlm”, “plain”, “xoauth2”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/accounts/email.nix",
+          "text": "home-manager/modules/accounts/email.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"plain\""
     },
     {
       "title": "accounts.email.accounts.<name>.smtp.host",
@@ -11983,7 +12025,7 @@
     },
     {
       "title": "programs.codex.settings",
-      "description": "Configuration written to ~/.codex/config.toml (0.2.0+) or ~/.codex/config.yaml (<0.2.0). See https://github.com/openai/codex/blob/main/codex-rs/config.md for supported values.",
+      "description": "Configuration written to CODEX_HOME/config.toml (0.2.0+) or ~/.codex/config.yaml (<0.2.0). Per default CODEX_HOME\ndefaults to ~/.codex.\nSee https://github.com/openai/codex/blob/main/codex-rs/config.md for supported values.",
       "type": "null or TOML value",
       "declared_by": [
         {
@@ -24470,6 +24512,48 @@
       "example": null
     },
     {
+      "title": "programs.mullvad-vpn.enable",
+      "description": "Whether to enable Mullvad VPN.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mullvad-vpn.nix",
+          "text": "home-manager/modules/programs/mullvad-vpn.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mullvad-vpn.package",
+      "description": "The mullvad-vpn package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mullvad-vpn.nix",
+          "text": "home-manager/modules/programs/mullvad-vpn.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mullvad-vpn",
+      "example": null
+    },
+    {
+      "title": "programs.mullvad-vpn.settings",
+      "description": "Written to XDG_CONFIG_HOME/Mullvad VPN/gui_settings.json or ~/Library/Application Support/Mullvad VPN/gui_settings.json.\nSee https://github.com/mullvad/mullvadvpn-app/blob/main/desktop/packages/mullvad-vpn/src/main/gui-settings.ts\nfor options.",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mullvad-vpn.nix",
+          "text": "home-manager/modules/programs/mullvad-vpn.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  animateMap = true;\n  autoConnect = false;\n  browsedForSplitTunnelingApplications = [ ];\n  changelogDisplayedForVersion = \"\";\n  enableSystemNotifications = true;\n  monochromaticIcon = false;\n  preferredLocale = \"system\";\n  startMinimized = false;\n  unpinnedWindow = true;\n  updateDismissedForVersion = \"\";\n}\n"
+    },
+    {
       "title": "programs.navi.enable",
       "description": "Whether to enable Navi.",
       "type": "boolean",
@@ -31636,6 +31720,90 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.sheldon.enable",
+      "description": "Whether to enable sheldon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.sheldon.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.sheldon.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.sheldon.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.sheldon.package",
+      "description": "The sheldon package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.sheldon",
+      "example": null
+    },
+    {
+      "title": "programs.sheldon.settings",
+      "description": "Type: TOML value",
+      "type": "",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sheldon.nix",
+          "text": "home-manager/modules/programs/sheldon.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": ""
     },
     {
       "title": "programs.sherlock.enable",
