@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 10 Aug 2025 03:09:09 GMT",
+  "last_update": "Mon, 11 Aug 2025 03:07:32 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -13887,7 +13887,7 @@
     },
     {
       "title": "programs.firefoxpwa.profiles",
-      "description": "Attribute set of profile options. The keys of that attribute set consist of ULIDs. A ULID is made of 16 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.",
+      "description": "Attribute set of profile options. The keys of that attribute set consist of ULIDs. A ULID is made of 26 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.",
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
@@ -13929,7 +13929,7 @@
     },
     {
       "title": "programs.firefoxpwa.profiles.<name>.sites",
-      "description": "Attribute set of site options for this profile. The keys of that attribute set consist of ULIDs. A ULID is made of 16 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.\nSite ULIDs must be unique across profiles.",
+      "description": "Attribute set of site options for this profile. The keys of that attribute set consist of ULIDs. A ULID is made of 26 characters, each of which is one of\n‘0123456789ABCDEFGHJKMNPQRSTVWXYZ’ (Excluding I, L, O and U). See\nhttps://github.com/ulid/spec?tab=readme-ov-file#canonical-string-representation.\nSite ULIDs must be unique across profiles.",
       "type": "attribute set of (submodule)",
       "declared_by": [
         {
@@ -19792,6 +19792,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  theme = {\n    chromaStyleOverrides = {\n      kc = \"#009900 underline\";\n    };\n    name = \"monokai\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.jrnl.enable",
+      "description": "Whether to enable jrnl.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jrnl.nix",
+          "text": "home-manager/modules/programs/jrnl.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.jrnl.package",
+      "description": "The jrnl package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jrnl.nix",
+          "text": "home-manager/modules/programs/jrnl.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.jrnl",
+      "example": null
+    },
+    {
+      "title": "programs.jrnl.settings",
+      "description": "Configuration for the jrnl binary. Available configuration options are described in the jrnl documentation:\nhttps://jrnl.sh/en/stable/reference-config-file/.",
+      "type": "YAML 1.1 value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/jrnl.nix",
+          "text": "home-manager/modules/programs/jrnl.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
     },
     {
       "title": "programs.jujutsu.enable",
