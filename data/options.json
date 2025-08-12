@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 11 Aug 2025 03:07:32 GMT",
+  "last_update": "Tue, 12 Aug 2025 02:51:34 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -22188,8 +22188,8 @@
       "example": null
     },
     {
-      "title": "programs.less.keys",
-      "description": "Extra configuration for less written to $XDG_CONFIG_HOME/lesskey.",
+      "title": "programs.less.config",
+      "description": "Configuration for less, written to $XDG_CONFIG_HOME/lesskey.",
       "type": "strings concatenated with “\\n”",
       "declared_by": [
         {
@@ -22199,7 +22199,21 @@
       ],
       "note": null,
       "default": "\"\"",
-      "example": "''\n  s        back-line\n  t        forw-line\n''\n"
+      "example": "''\n  #command\n  s        back-line\n  t        forw-line\n''\n"
+    },
+    {
+      "title": "programs.less.options",
+      "description": "GNU-style options to be set via $LESS.",
+      "type": "attribute set of (boolean or signed integer or string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/less.nix",
+          "text": "home-manager/modules/programs/less.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  RAW-CONTROL-CHARS = true;\n  quiet = true;\n  wheel-lines = 3;\n}\n"
     },
     {
       "title": "programs.lesspipe.enable",
@@ -47755,6 +47769,174 @@
       "example": "{ }"
     },
     {
+      "title": "services.pizauth.enable",
+      "description": "Whether to enable Pizauth, a commandline OAuth2 authentication daemon .",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.pizauth.package",
+      "description": "The pizauth package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pizauth",
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts",
+      "description": "Pizauth accounts that should be configured",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.authUri",
+      "description": "The OAuth2 server’s authentication URI.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.clientId",
+      "description": "The OAuth2 client ID.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.clientSecret",
+      "description": "The OAuth2 client secret.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.extraConfig",
+      "description": "Additional configuration that will be added to the account configuration. See pizauth.conf(5) for available options.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.loginHint",
+      "description": "An optional login hint for the account provider.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.name",
+      "description": "Unique identifier of the account. This is set to the attribute name of the account configuration.",
+      "type": "string (read only)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.scopes",
+      "description": "The scopes which the OAuth2 token will give access to. Optional. Note that Office365 requires the non-standard “offline_access” scope to be specified in order for pizauth to be able to operate successfully.",
+      "type": "null or (list of string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "[\n  \"https://outlook.office365.com/IMAP.AccessAsUser.All\"\n  \"https://outlook.office365.com/SMTP.Send\"\n  \"offline_access\"\n]\n"
+    },
+    {
+      "title": "services.pizauth.accounts.<name>.tokenUri",
+      "description": "The OAuth2 server’s token URI.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "services.pizauth.extraConfig",
+      "description": "Additional global configuration. See pizauth.conf(5) for a available options.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/pizauth.nix",
+          "text": "home-manager/modules/services/pizauth.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "services.plan9port.package",
       "description": "The plan9port package to use.",
       "type": "package",
@@ -51115,6 +51297,20 @@
       "example": null
     },
     {
+      "title": "services.swww.extraArgs",
+      "description": "Options given to swww-daemon when the service is run.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/swww.nix",
+          "text": "home-manager/modules/services/swww.nix"
+        }
+      ],
+      "note": "See swww-daemon --help for more information.",
+      "default": "[ ]",
+      "example": "[\n  \"--no-cache\"\n  \"--layer\"\n  \"bottom\"\n]\n"
+    },
+    {
       "title": "services.sxhkd.enable",
       "description": "Whether to enable simple X hotkey daemon.",
       "type": "boolean",
@@ -52666,6 +52862,118 @@
       ],
       "note": null,
       "default": "pkgs.volnoti",
+      "example": null
+    },
+    {
+      "title": "services.walker.enable",
+      "description": "Whether to enable walker.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.walker.package",
+      "description": "The walker package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.walker",
+      "example": null
+    },
+    {
+      "title": "services.walker.settings",
+      "description": "Configuration settings for walker. All the available options can be found here: https://github.com/abenz1267/walker/wiki/Basic-Configuration",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  app_launch_prefix = \"\";\n  as_window = false;\n  close_when_open = false;\n  disable_click_to_close = false;\n  force_keyboard_focus = false;\n  hotreload_theme = false;\n  locale = \"\";\n  monitor = \"\";\n  terminal_title_flag = \"\";\n  theme = \"default\";\n  timeout = 0;\n}\n"
+    },
+    {
+      "title": "services.walker.systemd.enable",
+      "description": "Whatever to enable Walker’s Systemd Unit.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.walker.theme",
+      "description": "The custom theme used by walker. Setting this option overrides settings.theme.",
+      "type": "null or (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "services.walker.theme.layout",
+      "description": "The layout of the theme.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": "See https://github.com/abenz1267/walker/wiki/Theming for the full list of options.",
+      "default": "{ }",
+      "example": null
+    },
+    {
+      "title": "services.walker.theme.name",
+      "description": "The theme name.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"nixos\"",
+      "example": null
+    },
+    {
+      "title": "services.walker.theme.style",
+      "description": "The styling of the theme, written in GTK CSS.",
+      "type": "strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/walker.nix",
+          "text": "home-manager/modules/services/walker.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"\"",
       "example": null
     },
     {
