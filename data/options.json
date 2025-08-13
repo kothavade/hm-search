@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 12 Aug 2025 02:51:34 GMT",
+  "last_update": "Wed, 13 Aug 2025 02:53:57 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -15424,6 +15424,104 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  error = \"01;31\";\n}\n"
+    },
+    {
+      "title": "programs.gemini-cli.enable",
+      "description": "Whether to enable gemini-cli.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.gemini-cli.package",
+      "description": "The gemini-cli package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.gemini-cli",
+      "example": null
+    },
+    {
+      "title": "programs.gemini-cli.commands",
+      "description": "An attribute set of custom commands that will be globally available. The name of the attribute set will be the name of each command.\nYou may use subdirectories to create namespaced commands, such as git/fix becoming /git:fix.\nSee https://github.com/google-gemini/gemini-cli/blob/main/docs/cli/commands.md#custom-commands for more information.",
+      "type": "attribute set of (string)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "changelog = {\n  prompt =\n    ''\n    Your task is to parse the `<version>`, `<change_type>`, and `<message>` from their input and use the `write_file` tool to correctly update the `CHANGELOG.md` file.\n    '';\n  description = \"Adds a new entry to the project's CHANGELOG.md file.\";\n};\n\"git/fix\" = { # Becomes /git:fix\n  prompt = \"Please analyze the staged git changes and provide a code fix for the issue described here: {{args}}.\";\n  description = \"Generates a fix for a given GitHub issue.\";\n};\n\n"
+    },
+    {
+      "title": "programs.gemini-cli.commands.<name>.description",
+      "description": "A brief, one-line description of what the command does. This text will be displayed next to your command in the /help menu.\nIf you omit this field, a generic description will be generated from the filename.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.gemini-cli.commands.<name>.prompt",
+      "description": "The prompt that will be sent to the Gemini model when the command is executed. This can be a single-line or multi-line string.\nThe special placeholder {{args}} will be replaced with the text the user typed after the command name.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": null
+    },
+    {
+      "title": "programs.gemini-cli.defaultModel",
+      "description": "The default model to use for the CLI. Will be set as $GEMINI_MODEL.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"gemini-2.5-pro\"",
+      "example": "\"gemini-2.5-flash\""
+    },
+    {
+      "title": "programs.gemini-cli.settings",
+      "description": "JSON config for gemini-cli",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/gemini-cli.nix",
+          "text": "home-manager/modules/programs/gemini-cli.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  \"theme\": \"Default\",\n  \"vimMode\": true,\n  \"preferredEditor\": \"nvim\",\n  \"autoAccept\": true\n}\n\n"
     },
     {
       "title": "programs.gh.enable",
