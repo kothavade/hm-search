@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 15 Aug 2025 02:55:57 GMT",
+  "last_update": "Sat, 16 Aug 2025 02:48:20 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -20929,7 +20929,7 @@
     },
     {
       "title": "programs.keepassxc.enable",
-      "description": "Whether to enable keepassxc.",
+      "description": "Whether to enable KeePassXC.",
       "type": "boolean",
       "declared_by": [
         {
@@ -20937,7 +20937,7 @@
           "text": "home-manager/modules/programs/keepassxc.nix"
         }
       ],
-      "note": null,
+      "note": "NoteWhen this flag is set, KeePassXC’ builtin native messaging manifest for\ncommunication with its browser extension is automatically installed.\nThis conflicts with KeePassXC’ builtin installation mechanism. To\nprevent error messages, either set\nprograms.keepassxc.settings.Browser.UpdateBinaryPath to\nfalse, or untick the checkboxApplication Settings/\nBrowser Integration/\nAdvanced/\nUpdate native messaging manifest files at startupin the GUI.",
       "default": "false",
       "example": "true"
     },
@@ -20957,7 +20957,7 @@
     },
     {
       "title": "programs.keepassxc.autostart",
-      "description": "Whether to start Keepassxc automatically on login through the XDG autostart mechanism.",
+      "description": "Whether to start KeePassXC automatically on login through the XDG autostart mechanism.",
       "type": "boolean",
       "declared_by": [
         {
