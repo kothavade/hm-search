@@ -1,5 +1,5 @@
 {
-  "last_update": "Sat, 16 Aug 2025 02:48:20 GMT",
+  "last_update": "Sun, 17 Aug 2025 02:59:58 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -11882,6 +11882,90 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
+      "title": "programs.claude-code.enable",
+      "description": "Whether to enable Claude Code, Anthropic’s official CLI.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.claude-code.package",
+      "description": "The claude-code package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.claude-code",
+      "example": null
+    },
+    {
+      "title": "programs.claude-code.agents",
+      "description": "Custom agents for Claude Code. The attribute name becomes the agent filename, and the value is the file content with frontmatter.\nAgents are stored in .claude/agents/ directory.",
+      "type": "attribute set of strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  code-reviewer = ''\n    ---\n    name: code-reviewer\n    description: Specialized code review agent\n    tools: Read, Edit, Grep\n    ---\n    \n    You are a senior software engineer specializing in code reviews.\n    Focus on code quality, security, and maintainability.\n  '';\n  documentation = ''\n    ---\n    name: documentation\n    description: Documentation writing assistant\n    model: claude-3-5-sonnet-20241022\n    tools: Read, Write, Edit\n    ---\n    \n    You are a technical writer who creates clear, comprehensive documentation.\n    Focus on user-friendly explanations and examples.\n  '';\n}\n"
+    },
+    {
+      "title": "programs.claude-code.commands",
+      "description": "Custom commands for Claude Code. The attribute name becomes the command filename, and the value is the file content.\nCommands are stored in .claude/commands/ directory.",
+      "type": "attribute set of strings concatenated with “\\n”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  changelog = ''\n    ---\n    allowed-tools: Bash(git log:*), Bash(git diff:*)\n    argument-hint: [version] [change-type] [message]\n    description: Update CHANGELOG.md with new entry\n    ---\n    Parse the version, change type, and message from the input\n    and update the CHANGELOG.md file accordingly.\n  '';\n  commit = ''\n    ---\n    allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)\n    description: Create a git commit with proper message\n    ---\n    ## Context\n    \n    - Current git status: !`git status`\n    - Current git diff: !`git diff HEAD`\n    - Recent commits: !`git log --oneline -5`\n    \n    ## Task\n    \n    Based on the changes above, create a single atomic git commit with a descriptive message.\n  '';\n  fix-issue = ''\n    ---\n    allowed-tools: Bash(git status:*), Read\n    argument-hint: [issue-number]\n    description: Fix GitHub issue following coding standards\n    ---\n    Fix issue #$ARGUMENTS following our coding standards and best practices.\n  '';\n}\n"
+    },
+    {
+      "title": "programs.claude-code.mcpServers",
+      "description": "MCP (Model Context Protocol) servers configuration",
+      "type": "attribute set of (JSON value)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  customTransport = {\n    customOption = \"value\";\n    timeout = 5000;\n    type = \"websocket\";\n    url = \"wss://example.com/mcp\";\n  };\n  database = {\n    args = [\n      \"-y\"\n      \"@bytebase/dbhub\"\n      \"--dsn\"\n      \"postgresql://user:pass@localhost:5432/db\"\n    ];\n    command = \"npx\";\n    env = {\n      DATABASE_URL = \"postgresql://user:pass@localhost:5432/db\";\n    };\n    type = \"stdio\";\n  };\n  filesystem = {\n    args = [\n      \"-y\"\n      \"@modelcontextprotocol/server-filesystem\"\n      \"/tmp\"\n    ];\n    command = \"npx\";\n    type = \"stdio\";\n  };\n  github = {\n    type = \"http\";\n    url = \"https://api.githubcopilot.com/mcp/\";\n  };\n}\n"
+    },
+    {
+      "title": "programs.claude-code.settings",
+      "description": "JSON configuration for Claude Code settings.json",
+      "type": "JSON value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/claude-code.nix",
+          "text": "home-manager/modules/programs/claude-code.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  hooks = {\n    PostToolUse = [\n      {\n        hooks = [\n          {\n            command = \"nix fmt $(jq -r '.tool_input.file_path' <<< '$CLAUDE_TOOL_INPUT')\";\n            type = \"command\";\n          }\n        ];\n        matcher = \"Edit|MultiEdit|Write\";\n      }\n    ];\n    PreToolUse = [\n      {\n        hooks = [\n          {\n            command = \"echo 'Running command: $CLAUDE_TOOL_INPUT'\";\n            type = \"command\";\n          }\n        ];\n        matcher = \"Bash\";\n      }\n    ];\n  };\n  includeCoAuthoredBy = false;\n  model = \"claude-3-5-sonnet-20241022\";\n  permissions = {\n    additionalDirectories = [\n      \"../docs/\"\n    ];\n    allow = [\n      \"Bash(git diff:*)\"\n      \"Edit\"\n    ];\n    ask = [\n      \"Bash(git push:*)\"\n    ];\n    defaultMode = \"acceptEdits\";\n    deny = [\n      \"WebFetch\"\n      \"Bash(curl:*)\"\n      \"Read(./.env)\"\n      \"Read(./secrets/**)\"\n    ];\n    disableBypassPermissionsMode = \"disable\";\n  };\n  statusLine = {\n    command = \"input=$(cat); echo \\\"[$(echo \\\"$input\\\" | jq -r '.model.display_name')] 📁 $(basename \\\"$(echo \\\"$input\\\" | jq -r '.workspace.current_dir')\\\")\\\"\";\n    padding = 0;\n    type = \"command\";\n  };\n  theme = \"dark\";\n}\n"
     },
     {
       "title": "programs.clock-rs.enable",
@@ -32058,6 +32142,20 @@
       "example": "''\n  window {\n    background-color: #2E3440;\n  }\n''\n"
     },
     {
+      "title": "programs.sherlock.systemd.enable",
+      "description": "Whether to enable sherlock as a daemon.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/sherlock.nix",
+          "text": "home-manager/modules/programs/sherlock.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
       "title": "programs.sioyek.enable",
       "description": "Whether to enable Sioyek, a PDF viewer designed for reading research papers and technical books.",
       "type": "boolean",
@@ -35840,7 +35938,7 @@
     {
       "title": "programs.tmux.package",
       "description": "The tmux package to use.",
-      "type": "package",
+      "type": "null or package",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/tmux.nix",
