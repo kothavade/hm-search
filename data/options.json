@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 17 Aug 2025 02:59:58 GMT",
+  "last_update": "Mon, 18 Aug 2025 03:03:43 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -18926,6 +18926,48 @@
       "example": "true"
     },
     {
+      "title": "programs.hyprshot.enable",
+      "description": "Whether to enable Hyprshot the Hyprland screenshot utility.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprshot.nix",
+          "text": "home-manager/modules/programs/hyprshot.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.hyprshot.package",
+      "description": "The hyprshot package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprshot.nix",
+          "text": "home-manager/modules/programs/hyprshot.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.hyprshot",
+      "example": null
+    },
+    {
+      "title": "programs.hyprshot.saveLocation",
+      "description": "Set the $HYPRSHOT_DIR environment variable to the given location.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/hyprshot.nix",
+          "text": "home-manager/modules/programs/hyprshot.nix"
+        }
+      ],
+      "note": "Hypershot will save screenshots to the first expression that resolves:",
+      "default": "null",
+      "example": "\"$HOME/Pictures/Screenshots\""
+    },
+    {
       "title": "programs.i3bar-river.enable",
       "description": "Whether to enable i3bar-river.",
       "type": "boolean",
@@ -24790,6 +24832,48 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  animateMap = true;\n  autoConnect = false;\n  browsedForSplitTunnelingApplications = [ ];\n  changelogDisplayedForVersion = \"\";\n  enableSystemNotifications = true;\n  monochromaticIcon = false;\n  preferredLocale = \"system\";\n  startMinimized = false;\n  unpinnedWindow = true;\n  updateDismissedForVersion = \"\";\n}\n"
+    },
+    {
+      "title": "programs.mypy.enable",
+      "description": "Whether to enable mypy.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mypy.nix",
+          "text": "home-manager/modules/programs/mypy.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.mypy.package",
+      "description": "The mypy package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mypy.nix",
+          "text": "home-manager/modules/programs/mypy.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.mypy",
+      "example": null
+    },
+    {
+      "title": "programs.mypy.settings",
+      "description": "Configuration written to $XDG_CONFIG_HOME/mypy/config.",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/mypy.nix",
+          "text": "home-manager/modules/programs/mypy.nix"
+        }
+      ],
+      "note": "See https://mypy.readthedocs.io/en/stable/config_file.html\nfor more information.",
+      "default": "{ }",
+      "example": "{\n  mypy = {\n    warn_return_any = true;\n    warn_unused_configs = true;\n  };\n}\n\n"
     },
     {
       "title": "programs.navi.enable",
@@ -49587,6 +49671,62 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  \"-s\"\n  \"-S\"\n]\n"
+    },
+    {
+      "title": "services.protonmail-bridge.enable",
+      "description": "Whether to enable ProtonMail Bridge.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/protonmail-bridge.nix",
+          "text": "home-manager/modules/services/protonmail-bridge.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "services.protonmail-bridge.package",
+      "description": "The protonmail-bridge package to use.",
+      "type": "package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/protonmail-bridge.nix",
+          "text": "home-manager/modules/services/protonmail-bridge.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.protonmail-bridge",
+      "example": null
+    },
+    {
+      "title": "services.protonmail-bridge.extraPackages",
+      "description": "List of derivations to place in ProtonMail Bridge’s service path.",
+      "type": "list of package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/protonmail-bridge.nix",
+          "text": "home-manager/modules/services/protonmail-bridge.nix"
+        }
+      ],
+      "note": null,
+      "default": "[ ]",
+      "example": "with pkgs; [ pass gnome-keyring ]"
+    },
+    {
+      "title": "services.protonmail-bridge.logLevel",
+      "description": "Log level of the ProtonMail Bridge service.",
+      "type": "null or one of “panic”, “fatal”, “error”, “warn”, “info”, “debug”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/protonmail-bridge.nix",
+          "text": "home-manager/modules/services/protonmail-bridge.nix"
+        }
+      ],
+      "note": "If set to null, the service uses its default log level.",
+      "default": "null",
+      "example": null
     },
     {
       "title": "services.psd.enable",
