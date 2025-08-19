@@ -1,5 +1,5 @@
 {
-  "last_update": "Mon, 18 Aug 2025 03:03:43 GMT",
+  "last_update": "Tue, 19 Aug 2025 02:45:48 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7980,7 +7980,7 @@
     {
       "title": "programs.aerospace.userSettings.key-mapping.preset",
       "description": "Keymapping preset.",
-      "type": "one of “qwerty”, “dvorak”",
+      "type": "one of “qwerty”, “dvorak”, “colemak”",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/aerospace.nix",
@@ -9053,6 +9053,20 @@
       ],
       "note": null,
       "default": "\"overlay\"",
+      "example": null
+    },
+    {
+      "title": "programs.anyrun.config.margin",
+      "description": "Add a margin around the window to allow for CSS shadow styling",
+      "type": "signed integer",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/anyrun.nix",
+          "text": "home-manager/modules/programs/anyrun.nix"
+        }
+      ],
+      "note": null,
+      "default": "0",
       "example": null
     },
     {
@@ -26152,7 +26166,7 @@
     {
       "title": "programs.nh.darwinFlake",
       "description": "The string that will be used for the NH_DARWIN_FLAKE environment variable.",
-      "type": "null or string",
+      "type": "null or (optionally newline-terminated) single-line string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
@@ -26180,7 +26194,7 @@
     {
       "title": "programs.nh.homeFlake",
       "description": "The string that will be used for the NH_HOME_FLAKE environment variable.",
-      "type": "null or string",
+      "type": "null or (optionally newline-terminated) single-line string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
@@ -26194,7 +26208,7 @@
     {
       "title": "programs.nh.osFlake",
       "description": "The string that will be used for the NH_OS_FLAKE environment variable.",
-      "type": "null or string",
+      "type": "null or (optionally newline-terminated) single-line string or absolute path",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/nh.nix",
@@ -51197,6 +51211,20 @@
       "note": null,
       "default": "pkgs.openssh",
       "example": null
+    },
+    {
+      "title": "services.ssh-agent.socket",
+      "description": "The agent’s socket; interpreted as a suffix to $XDG_RUNTIME_DIR.",
+      "type": "string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/ssh-agent.nix",
+          "text": "home-manager/modules/services/ssh-agent.nix"
+        }
+      ],
+      "note": null,
+      "default": "\"ssh-agent\"",
+      "example": "\"ssh-agent/socket\""
     },
     {
       "title": "services.ssh-tpm-agent.enable",
