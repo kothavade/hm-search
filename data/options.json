@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 19 Aug 2025 02:45:48 GMT",
+  "last_update": "Wed, 20 Aug 2025 02:43:40 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -9057,7 +9057,7 @@
     },
     {
       "title": "programs.anyrun.config.margin",
-      "description": "Add a margin around the window to allow for CSS shadow styling",
+      "description": "Add a margin around the window to allow for CSS shadow styling.",
       "type": "signed integer",
       "declared_by": [
         {
@@ -31342,6 +31342,48 @@
       "note": null,
       "default": null,
       "example": null
+    },
+    {
+      "title": "programs.satty.enable",
+      "description": "Whether to enable Satty - Modern Screenshot Annotation.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/satty.nix",
+          "text": "home-manager/modules/programs/satty.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.satty.package",
+      "description": "The satty package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/satty.nix",
+          "text": "home-manager/modules/programs/satty.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.satty",
+      "example": null
+    },
+    {
+      "title": "programs.satty.settings",
+      "description": "Configuration for Satty written to $XDG_CONFIG_HOME/satty/config.toml.",
+      "type": "TOML value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/satty.nix",
+          "text": "home-manager/modules/programs/satty.nix"
+        }
+      ],
+      "note": "See the Satty documentation\nfor available options.",
+      "default": "{ }",
+      "example": "{\n  general = {\n    fullscreen = true;\n    corner-roundness = 12;\n    initial-tool = \"brush\";\n    output-filename = \"/tmp/test-%Y-%m-%d_%H:%M:%S.png\";\n  };\n  color-palette = {\n    palette = [ \"#00ffff\" \"#a52a2a\" \"#dc143c\" \"#ff1493\" \"#ffd700\" \"#008000\" ];\n  };\n}\n\n"
     },
     {
       "title": "programs.sbt.enable",
