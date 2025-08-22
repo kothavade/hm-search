@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 21 Aug 2025 02:43:22 GMT",
+  "last_update": "Fri, 22 Aug 2025 02:43:42 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7320,9 +7320,9 @@
       "example": null
     },
     {
-      "title": "nix.gc.frequency",
+      "title": "nix.gc.dates",
       "description": "When to run the Nix garbage collector.",
-      "type": "string",
+      "type": "(optionally newline-terminated) single-line string or list of string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/nix-gc.nix",
@@ -30457,23 +30457,23 @@
           "text": "home-manager/modules/programs/rclone.nix"
         }
       ],
-      "note": "Note: If using secret management solutions like agenix or sops-nix with\nhome-manager, you need to ensure their services are activated before switching\nto this home-manager generation. Consider setting\nsystemd.user.startServices to \"sd-switch\" for automatic service\nstartup.",
+      "note": "These values are expanded in a shell context within a systemd service, so\nyou can use bash features like command substitution or variable expansion\n(e.g. “${XDG_RUNTIME_DIR}” as used by agenix).",
       "default": "{ }",
       "example": "{\n  password = \"/run/secrets/password\";\n  api_key = config.age.secrets.api-key.path;\n}\n"
     },
     {
-      "title": "programs.rclone.writeAfter",
-      "description": "Controls when the rclone configuration is written during Home Manager activation. You should not need to change this unless you have very specific activation order\nrequirements.",
-      "type": "string",
+      "title": "programs.rclone.requiresUnit",
+      "description": "The name of a systemd user service that must complete before the rclone configuration file is written.",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/rclone.nix",
           "text": "home-manager/modules/programs/rclone.nix"
         }
       ],
-      "note": null,
-      "default": "\"reloadSystemd\"",
-      "example": null
+      "note": "This is typically used when secrets are managed by an external provisioner\nwhose service must run before the secrets are accessible.",
+      "default": "null",
+      "example": "\"agenix.service\""
     },
     {
       "title": "programs.readline.enable",
@@ -41730,6 +41730,20 @@
       "note": null,
       "default": "pkgs.blueman",
       "example": null
+    },
+    {
+      "title": "services.blueman-applet.systemdTargets",
+      "description": "The systemd targets that will automatically start the cliphist service.",
+      "type": "list of string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/blueman-applet.nix",
+          "text": "home-manager/modules/services/blueman-applet.nix"
+        }
+      ],
+      "note": "When setting this value to [\"sway-session.target\"],\nmake sure to also enable wayland.windowManager.sway.systemd.enable,\notherwise the service may never be started.",
+      "default": "",
+      "example": "[\n  \"sway-session.target\"\n]\n"
     },
     {
       "title": "services.borgmatic.enable",
