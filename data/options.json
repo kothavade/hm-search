@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 26 Aug 2025 02:44:46 GMT",
+  "last_update": "Wed, 27 Aug 2025 02:38:49 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7236,6 +7236,20 @@
       "example": "false"
     },
     {
+      "title": "meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
+    },
+    {
       "title": "news.display",
       "description": "How unread and relevant news should be presented when running home-manager build and\nhome-manager switch.",
       "type": "one of “silent”, “notify”, “show”",
@@ -13550,6 +13564,20 @@
       "example": null
     },
     {
+      "title": "programs.firefox.profiles.<name>.bookmarks.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
+    },
+    {
       "title": "programs.firefox.profiles.<name>.bookmarks.settings",
       "description": "Custom bookmarks.",
       "type": "(list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it",
@@ -13884,6 +13912,20 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.firefox.profiles.<name>.search.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
     },
     {
       "title": "programs.firefox.profiles.<name>.search.order",
@@ -14628,6 +14670,20 @@
       "example": null
     },
     {
+      "title": "programs.floorp.profiles.<name>.bookmarks.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
+    },
+    {
       "title": "programs.floorp.profiles.<name>.bookmarks.settings",
       "description": "Custom bookmarks.",
       "type": "(list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it",
@@ -14962,6 +15018,20 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.floorp.profiles.<name>.search.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
     },
     {
       "title": "programs.floorp.profiles.<name>.search.order",
@@ -22776,6 +22846,20 @@
       "example": null
     },
     {
+      "title": "programs.librewolf.profiles.<name>.bookmarks.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
+    },
+    {
       "title": "programs.librewolf.profiles.<name>.bookmarks.settings",
       "description": "Custom bookmarks.",
       "type": "(list of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) or (attribute set of ((bookmark submodule) or (directory submodule) or value “separator” (singular enum))) convertible to it",
@@ -23110,6 +23194,20 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.librewolf.profiles.<name>.search.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
     },
     {
       "title": "programs.librewolf.profiles.<name>.search.order",
@@ -33150,6 +33248,20 @@
       "example": "true"
     },
     {
+      "title": "programs.ssh.enableDefaultConfig",
+      "description": "Whether to enable or not the old default config values. This option will become deprecated in the future.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "true",
+      "example": "false"
+    },
+    {
       "title": "programs.ssh.package",
       "description": "The openssh package to use. By default, the client provided by your system is used.",
       "type": "null or package",
@@ -33162,76 +33274,6 @@
       "note": null,
       "default": "null",
       "example": null
-    },
-    {
-      "title": "programs.ssh.addKeysToAgent",
-      "description": "When enabled, a private key that is used during authentication will be added to ssh-agent if it is running (with confirmation enabled if\nset to ‘confirm’). The argument must be ‘no’ (the default), ‘yes’, ‘confirm’\n(optionally followed by a time interval), ‘ask’ or a time interval (e.g. ‘1h’).",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"no\"",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.compression",
-      "description": "Specifies whether to use compression.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.controlMaster",
-      "description": "Configure sharing of multiple sessions over a single network connection.",
-      "type": "one of “yes”, “no”, “ask”, “auto”, “autoask”",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"no\"",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.controlPath",
-      "description": "Specify path to the control socket used for connection sharing.",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"~/.ssh/master-%r@%n:%p\"",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.controlPersist",
-      "description": "Whether control socket should remain open in the background.",
-      "type": "string",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "\"no\"",
-      "example": "\"10m\""
     },
     {
       "title": "programs.ssh.extraConfig",
@@ -33262,34 +33304,6 @@
       "example": null
     },
     {
-      "title": "programs.ssh.forwardAgent",
-      "description": "Whether the connection to the authentication agent (if any) will be forwarded to the remote machine.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.hashKnownHosts",
-      "description": "Indicates that ssh(1)\nshould hash host names and addresses when they are added to\nthe known hosts file.",
-      "type": "boolean",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "false",
-      "example": null
-    },
-    {
       "title": "programs.ssh.includes",
       "description": "File globs of ssh config files that should be included via the Include directive.",
       "type": "list of string",
@@ -33316,6 +33330,20 @@
       "note": "See\nssh_config(5)\nfor more information.",
       "default": "{ }",
       "example": "{\n  \"john.example.com\" = {\n    hostname = \"example.com\";\n    user = \"john\";\n  };\n  foo = lib.hm.dag.entryBefore [\"john.example.com\"] {\n    hostname = \"example.com\";\n    identityFile = \"/home/john/.ssh/foo_rsa\";\n  };\n};\n\n"
+    },
+    {
+      "title": "programs.ssh.matchBlocks.<name>.addKeysToAgent",
+      "description": "When enabled, a private key that is used during authentication will be added to ssh-agent if it is running (with confirmation enabled if\nset to ‘confirm’). The argument must be ‘no’ (the default), ‘yes’, ‘confirm’\n(optionally followed by a time interval), ‘ask’ or a time interval (e.g. ‘1h’).",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
     },
     {
       "title": "programs.ssh.matchBlocks.<name>.addressFamily",
@@ -33372,6 +33400,48 @@
       "note": null,
       "default": "null",
       "example": null
+    },
+    {
+      "title": "programs.ssh.matchBlocks.<name>.controlMaster",
+      "description": "Configure sharing of multiple sessions over a single network connection.",
+      "type": "null or one of “yes”, “no”, “ask”, “auto”, “autoask”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.ssh.matchBlocks.<name>.controlPath",
+      "description": "Specify path to the control socket used for connection sharing.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
+      "title": "programs.ssh.matchBlocks.<name>.controlPersist",
+      "description": "Whether control socket should remain open in the background.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"10m\""
     },
     {
       "title": "programs.ssh.matchBlocks.<name>.dynamicForwards",
@@ -33469,6 +33539,20 @@
       ],
       "note": null,
       "default": "false",
+      "example": null
+    },
+    {
+      "title": "programs.ssh.matchBlocks.<name>.hashKnownHosts",
+      "description": "Indicates that ssh(1)\nshould hash host names and addresses when they are added to\nthe known hosts file.",
+      "type": "null or boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
+          "text": "home-manager/modules/programs/ssh.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
       "example": null
     },
     {
@@ -33754,7 +33838,7 @@
     {
       "title": "programs.ssh.matchBlocks.<name>.serverAliveCountMax",
       "description": "Sets the number of server alive messages which may be sent without SSH receiving any messages back from the server.",
-      "type": "positive integer, meaning >0",
+      "type": "null or (positive integer, meaning >0)",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
@@ -33762,13 +33846,13 @@
         }
       ],
       "note": null,
-      "default": "3",
+      "default": "null",
       "example": null
     },
     {
       "title": "programs.ssh.matchBlocks.<name>.serverAliveInterval",
       "description": "Set timeout in seconds after which response will be requested.",
-      "type": "signed integer",
+      "type": "null or signed integer",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
@@ -33776,7 +33860,7 @@
         }
       ],
       "note": null,
-      "default": "0",
+      "default": "null",
       "example": null
     },
     {
@@ -33808,37 +33892,9 @@
       "example": null
     },
     {
-      "title": "programs.ssh.serverAliveCountMax",
-      "description": "Sets the default number of server alive messages which may be sent without SSH receiving any messages back from the server.",
-      "type": "positive integer, meaning >0",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "3",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.serverAliveInterval",
-      "description": "Set default timeout in seconds after which response will be requested.",
-      "type": "signed integer",
-      "declared_by": [
-        {
-          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
-          "text": "home-manager/modules/programs/ssh.nix"
-        }
-      ],
-      "note": null,
-      "default": "0",
-      "example": null
-    },
-    {
-      "title": "programs.ssh.userKnownHostsFile",
+      "title": "programs.ssh.matchBlocks.<name>.userKnownHostsFile",
       "description": "Specifies one or more files to use for the user host key database, separated by whitespace. The default is\n~/.ssh/known_hosts.",
-      "type": "string",
+      "type": "null or string",
       "declared_by": [
         {
           "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/ssh.nix",
@@ -33846,7 +33902,7 @@
         }
       ],
       "note": null,
-      "default": "\"~/.ssh/known_hosts\"",
+      "default": "null",
       "example": null
     },
     {
@@ -35724,6 +35780,20 @@
       "note": null,
       "default": "false",
       "example": null
+    },
+    {
+      "title": "programs.thunderbird.profiles.<name>.search.meta.maintainers",
+      "description": "List of maintainers of each module. This option should be defined at most once per module.",
+      "type": "list of (maintainer)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+        }
+      ],
+      "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
+      "default": "[ ]",
+      "example": "[ lib.maintainers.alice lib.maintainers.bob ]"
     },
     {
       "title": "programs.thunderbird.profiles.<name>.search.order",
@@ -41733,7 +41803,7 @@
     },
     {
       "title": "services.blueman-applet.systemdTargets",
-      "description": "The systemd targets that will automatically start the cliphist service.",
+      "description": "The systemd targets that will automatically start the blueman applet service.",
       "type": "list of string",
       "declared_by": [
         {
