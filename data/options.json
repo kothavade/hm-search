@@ -1,5 +1,5 @@
 {
-  "last_update": "Fri, 29 Aug 2025 02:38:43 GMT",
+  "last_update": "Sat, 30 Aug 2025 02:23:59 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -5832,7 +5832,7 @@
         }
       ],
       "note": null,
-      "default": "<derivation fcitx5-with-addons-5.1.12>",
+      "default": "<derivation fcitx5-with-addons-5.1.14>",
       "example": "pkgs.kdePackages.fcitx5-with-addons"
     },
     {
@@ -7241,8 +7241,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -13569,8 +13569,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -13919,8 +13919,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -14675,8 +14675,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -15025,8 +15025,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -22851,8 +22851,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -23201,8 +23201,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -33249,7 +33249,7 @@
     },
     {
       "title": "programs.ssh.enableDefaultConfig",
-      "description": "Whether to enable or not the old default config values. This option will become deprecated in the future.",
+      "description": "Whether to enable or not the old default config values. This option will become deprecated in the future.\nFor an equivalent, copy and paste the following\ncode snippet in your config:",
       "type": "boolean",
       "declared_by": [
         {
@@ -33257,7 +33257,7 @@
           "text": "home-manager/modules/programs/ssh.nix"
         }
       ],
-      "note": null,
+      "note": "programs.ssh.matchBlocks.“*” = {\nforwardAgent = false;\naddKeysToAgent = “no”;\ncompression = false;\nserverAliveInterval = 0;\nserverAliveCountMax = 3;\nhashKnownHosts = false;\nuserKnownHostsFile = “~/.ssh/known_hosts”;\ncontrolMaster = “no”;\ncontrolPath = “~/.ssh/master-%r@%n:%p”;\ncontrolPersist = “no”;\n};",
       "default": "true",
       "example": "false"
     },
@@ -35787,8 +35787,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/4xmrynrj6xmkhpq8zcjs31y8ssb5hwz8-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/yvik6vckfmcacdjqm85p8mdan2rr3mi1-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
