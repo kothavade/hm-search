@@ -1,5 +1,5 @@
 {
-  "last_update": "Tue, 02 Sep 2025 02:41:31 GMT",
+  "last_update": "Wed, 03 Sep 2025 02:23:01 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -26581,7 +26581,7 @@
       ],
       "note": null,
       "default": "{ }",
-      "example": "{\n  maintainers = [\n    \"figsoda\"\n  ];\n  nixpkgs = \"<nixpkgs>\";\n  commit = true;\n  access-tokens = {\n    github.com = \"ghp_blahblahblah...\";\n    gitlab.com = {\n      command = [\n        \"secret-tool\"\n        \"or\"\n        \"whatever\"\n        \"you\"\n        \"use\"\n      ];\n    };\n    gitlab.gnome.org = {\n      file = \"/path/to/api/token\";\n    };\n  };\n}\n\n"
+      "example": "{\n  maintainers = [\n    \"figsoda\"\n  ];\n  nixpkgs = \"<nixpkgs>\";\n  commit = true;\n  access-tokens = {\n    \"github.com\" = \"ghp_blahblahblah...\";\n    \"gitlab.com\" = {\n      command = [\n        \"secret-tool\"\n        \"or\"\n        \"whatever\"\n        \"you\"\n        \"use\"\n      ];\n    };\n    \"gitlab.gnome.org\" = {\n      file = \"/path/to/api/token\";\n    };\n  };\n}\n\n"
     },
     {
       "title": "programs.nix-search-tv.enable",
@@ -34282,6 +34282,48 @@
       "note": null,
       "default": "{ }",
       "example": "myTheme = {\n  code_syntax_highlight = \"catppuccin-latte\";\n\n  file_panel_border = \"#101010\";\n  sidebar_border = \"#101011\";\n  footer_border = \"#101012\";\n\n  gradient_color = [\n    \"#101013\"\n    \"#101014\"\n  ];\n\n  # ...\n};\nmyOtherFavoriteTheme = {\n  code_syntax_highlight = \"catppuccin-mocha\";\n\n  file_panel_border = \"#505050\";\n  sidebar_border = \"#505051\";\n  footer_border = \"#505052\";\n\n  gradient_color = [\n    \"#505053\"\n    \"#505054\"\n  ];\n\n  # ...\n};\n\n"
+    },
+    {
+      "title": "programs.swappy.enable",
+      "description": "Whether to enable swappy.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swappy.nix",
+          "text": "home-manager/modules/programs/swappy.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.swappy.package",
+      "description": "The swappy package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swappy.nix",
+          "text": "home-manager/modules/programs/swappy.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.swappy",
+      "example": null
+    },
+    {
+      "title": "programs.swappy.settings",
+      "description": "Configuration settings for swappy. All the available options can be found here: https://github.com/jtheoof/swappy?tab=readme-ov-file#config",
+      "type": "attribute set of section of an INI file (attrs of INI atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/swappy.nix",
+          "text": "home-manager/modules/programs/swappy.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  Default = {\n    auto_save = false;\n    custom_color = \"rgba(193,125,17,1)\";\n    early_exit = false;\n    fill_shape = false;\n    line_size = 5;\n    paint_mode = \"brush\";\n    save_dir = \"$HOME/Desktop\";\n    save_filename_format = \"swappy-%Y%m%d-%H%M%S.png\";\n    show_panel = false;\n    text_font = \"sans-serif\";\n    text_size = 20;\n    transparency = 50;\n    transparent = false;\n  };\n}\n"
     },
     {
       "title": "programs.sway-easyfocus.enable",
@@ -56293,6 +56335,34 @@
       "note": null,
       "default": "true",
       "example": "true"
+    },
+    {
+      "title": "wayland.windowManager.hyprland.submaps",
+      "description": "Attribute set of Hyprland submaps.",
+      "type": "attribute set of (submodule)",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": "See https://wiki.hypr.land/Configuring/Binds#submaps to learn about submaps",
+      "default": "{ }",
+      "example": "{\n  # submap to change window focus with vim keys\n  move_focus = {\n    settings = {\n      bind = [\n        \", h, movefocus, l\"\n        \", j, movefocus, d\"\n        \", k, movefocus, u\"\n        \", l, movefocus, r\"\n\n        \", escape, submap, reset\"\n      ];\n    };\n  };\n\n  other_submap = {\n    settings = {\n      # ...\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "wayland.windowManager.hyprland.submaps.<name>.settings",
+      "description": "Hyprland binds to be put in the submap",
+      "type": "Hyprland binds",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/services/window-managers/hyprland.nix",
+          "text": "home-manager/modules/services/window-managers/hyprland.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  binde = [\n   \", right, resizeactive, 10 0\"\n   \", left, resizeactive, -10 0\"\n   \", up, resizeactive, 0 -10\"\n   \", down, resizeactive, 0 10\"\n  ];\n\n  bind = [\n    \", escape, submap, reset\"\n  ];\n}\n\n"
     },
     {
       "title": "wayland.windowManager.hyprland.systemd.enable",
