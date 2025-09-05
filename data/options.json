@@ -1,5 +1,5 @@
 {
-  "last_update": "Thu, 04 Sep 2025 02:23:37 GMT",
+  "last_update": "Fri, 05 Sep 2025 02:35:03 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -7989,7 +7989,7 @@
       ],
       "note": null,
       "default": "[ ]",
-      "example": "[\n  \"/bin/bash\"\n  \"-c\"\n  \"sketchybar --trigger aerospace_workspace_change FOCUSED=$AEROSPACE_FOCUSED_WORKSPACE\"\n]\n"
+      "example": "[\n  \"/bin/bash\"\n  \"-c\"\n  \"sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE\"\n]\n"
     },
     {
       "title": "programs.aerospace.userSettings.key-mapping.preset",
@@ -19020,8 +19020,8 @@
         }
       ],
       "note": "You might want to set this to false, because hyprpanel’s notification\ndaemon is buggy and you may prefer something else.",
-      "default": "true",
-      "example": "false"
+      "default": "false",
+      "example": "true"
     },
     {
       "title": "programs.hyprpanel.settings",
@@ -37600,6 +37600,132 @@
       "note": null,
       "default": "[ ]",
       "example": "[\n  pkgs.kdePackages.plasma-browser-integration\n]\n\n"
+    },
+    {
+      "title": "programs.vivid.enable",
+      "description": "Whether to enable vivid.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.vivid.enableBashIntegration",
+      "description": "Whether to enable Bash integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableBashIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.vivid.enableFishIntegration",
+      "description": "Whether to enable Fish integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableFishIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.vivid.enableZshIntegration",
+      "description": "Whether to enable Zsh integration.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "home.shell.enableZshIntegration",
+      "example": "false"
+    },
+    {
+      "title": "programs.vivid.package",
+      "description": "The vivid package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.vivid",
+      "example": null
+    },
+    {
+      "title": "programs.vivid.activeTheme",
+      "description": "Active theme for vivid.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"molokai\""
+    },
+    {
+      "title": "programs.vivid.colorMode",
+      "description": "Color mode for vivid.",
+      "type": "null or string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": "\"8-bit\""
+    },
+    {
+      "title": "programs.vivid.filetypes",
+      "description": "Filetype database for vivid. You can find an example config at: https://github.com/sharkdp/vivid/blob/master/config/filetypes.yml.",
+      "type": "YAML 1.1 value",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  text = {\n    licenses = [\n      \"LICENCE\"\n      \"COPYRIGHT\"\n    ];\n    special = [\n      \"CHANGELOG.md\"\n      \"CODE_OF_CONDUCT.md\"\n      \"CONTRIBUTING.md\"\n    ];\n    todo = [\n      \"TODO.md\"\n      \"TODO.txt\"\n    ];\n  };\n}\n"
+    },
+    {
+      "title": "programs.vivid.themes",
+      "description": "Theme for vivid",
+      "type": "attribute set of absolute path",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/vivid.nix",
+          "text": "home-manager/modules/programs/vivid.nix"
+        }
+      ],
+      "note": null,
+      "default": "{ }",
+      "example": "{\n  ayu = builtins.fetchurl {\n    url = \"https://raw.githubusercontent.com/NearlyTRex/Vivid/refs/heads/master/themes/ayu.yml\";\n    hash = \"sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\";\n  };\n\n  mocha = builtins.fetchurl {\n    url = \"https://raw.githubusercontent.com/NearlyTRex/Vivid/refs/heads/master/themes/catppuccin-mocha.yml\";\n    hash = \"sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=\";\n  };\n}\n\n"
     },
     {
       "title": "programs.vscode.enable",
