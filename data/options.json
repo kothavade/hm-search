@@ -1,5 +1,5 @@
 {
-  "last_update": "Sun, 07 Sep 2025 02:39:04 GMT",
+  "last_update": "Mon, 08 Sep 2025 02:42:23 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -3960,6 +3960,20 @@
       "example": "true"
     },
     {
+      "title": "gtk.colorScheme",
+      "description": "Default color scheme for all GTK versions",
+      "type": "null or one of “dark”, “light”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk.nix",
+          "text": "home-manager/modules/misc/gtk.nix"
+        }
+      ],
+      "note": null,
+      "default": "null",
+      "example": null
+    },
+    {
       "title": "gtk.cursorTheme",
       "description": "Default cursor theme for all GTK versions.",
       "type": "null or (submodule)",
@@ -4352,6 +4366,20 @@
       "example": "[\n  \"file:///home/jane/Documents\"\n]\n"
     },
     {
+      "title": "gtk.gtk3.colorScheme",
+      "description": "Color scheme for GTK 3 applications.",
+      "type": "null or one of “dark”, “light”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk3.nix",
+          "text": "home-manager/modules/misc/gtk/gtk3.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.colorScheme",
+      "example": null
+    },
+    {
       "title": "gtk.gtk3.cursorTheme",
       "description": "Cursor theme for GTK 3 applications.",
       "type": "null or (submodule)",
@@ -4588,6 +4616,20 @@
       "note": null,
       "default": "true",
       "example": "true"
+    },
+    {
+      "title": "gtk.gtk4.colorScheme",
+      "description": "Color scheme for GTK 4 applications.",
+      "type": "null or one of “dark”, “light”",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/misc/gtk/gtk4.nix",
+          "text": "home-manager/modules/misc/gtk/gtk4.nix"
+        }
+      ],
+      "note": null,
+      "default": "config.gtk.colorScheme",
+      "example": null
     },
     {
       "title": "gtk.gtk4.cursorTheme",
@@ -7241,8 +7283,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -13597,8 +13639,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -13947,8 +13989,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -14717,8 +14759,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -15067,8 +15109,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -22907,8 +22949,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -23257,8 +23299,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -35885,8 +35927,8 @@
       "type": "list of (maintainer)",
       "declared_by": [
         {
-          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix",
-          "text": "/nix/store/j6jp9j5lsxzvxyd29hy6zk52advf9kzk-source/modules/generic/meta-maintainers.nix"
+          "link": "https://github.com/nix-community/home-manager/blob/master//nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix",
+          "text": "/nix/store/4cn0hqhmsg8crw8ns75wklw2i5snm80i-source/modules/generic/meta-maintainers.nix"
         }
       ],
       "note": "The option value is not a list of maintainers, but an attribute set that maps module file names to lists of maintainers.",
@@ -56716,7 +56758,7 @@
     },
     {
       "title": "wayland.windowManager.river.package",
-      "description": "The river package to use. Set to null to not add any river package to your path. This should be done if you want to use the NixOS river module to install river.",
+      "description": "The river-classic package to use. Set to null to not add any river package to your path. This should be done if you want to use the NixOS river module to install river.",
       "type": "null or package",
       "declared_by": [
         {
@@ -56725,7 +56767,7 @@
         }
       ],
       "note": null,
-      "default": "pkgs.river",
+      "default": "pkgs.river-classic",
       "example": null
     },
     {
