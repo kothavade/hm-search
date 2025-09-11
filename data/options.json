@@ -1,5 +1,5 @@
 {
-  "last_update": "Wed, 10 Sep 2025 02:23:18 GMT",
+  "last_update": "Thu, 11 Sep 2025 02:36:04 GMT",
   "options": [
     {
       "title": "_module.args",
@@ -29088,6 +29088,76 @@
       "note": null,
       "default": "{ }",
       "example": "{\n  main = {\n    smart_completion = true;\n    vi = true;\n  };\n\n  \"named queries\".simple = \"select * from abc where a is not Null\";\n}\n\n"
+    },
+    {
+      "title": "programs.pianobar.enable",
+      "description": "Whether to enable Enable pianobar.",
+      "type": "boolean",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pianobar.nix",
+          "text": "home-manager/modules/programs/pianobar.nix"
+        }
+      ],
+      "note": null,
+      "default": "false",
+      "example": "true"
+    },
+    {
+      "title": "programs.pianobar.package",
+      "description": "The pianobar package to use.",
+      "type": "null or package",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pianobar.nix",
+          "text": "home-manager/modules/programs/pianobar.nix"
+        }
+      ],
+      "note": null,
+      "default": "pkgs.pianobar",
+      "example": null
+    },
+    {
+      "title": "programs.pianobar.settings",
+      "description": "Apply configurations for pianobar via key/value attributes.",
+      "type": "attribute set of (atom (null, bool, int, float or string))",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pianobar.nix",
+          "text": "home-manager/modules/programs/pianobar.nix"
+        }
+      ],
+      "note": "Note; it is recommended to use sops-nix, or similar, secrets\nmanagement solution for providing\nprograms.pianobar.settings.password_command value.",
+      "default": "{ }",
+      "example": "{\n  programs.pianobar = {\n    enable = true;\n    settings = {\n      user = \"groovy-tunes@example.com\";\n      password_command = \"cat /run/secrets/pianobar/groovy-tunes\";\n    };\n  };\n}\n\n"
+    },
+    {
+      "title": "programs.pianobar.settings.password_command",
+      "description": "Command pianobar will use to access password for Pandora music service authentication",
+      "type": "non-empty string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pianobar.nix",
+          "text": "home-manager/modules/programs/pianobar.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"\\\"cat /run/secrets/pianobar/groovy-tunes\\\"\""
+    },
+    {
+      "title": "programs.pianobar.settings.user",
+      "description": "Username or emaill address for Pandora music service authentication",
+      "type": "non-empty string",
+      "declared_by": [
+        {
+          "link": "https://github.com/nix-community/home-manager/blob/master/modules/programs/pianobar.nix",
+          "text": "home-manager/modules/programs/pianobar.nix"
+        }
+      ],
+      "note": null,
+      "default": null,
+      "example": "\"\\\"groovy-tunes@example.com\\\"\""
     },
     {
       "title": "programs.pidgin.enable",
